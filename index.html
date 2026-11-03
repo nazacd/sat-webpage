@@ -695,6 +695,7 @@ table.xy th,table.xy td{border:1.5px solid #111;padding:4px 22px;text-align:cent
 </style>
 </head>
 <body>
+<noscript><div style="background:#c8102e;color:#fff;padding:14px 18px;font:600 15px/1.5 system-ui,sans-serif;text-align:center">This test needs JavaScript, and this viewer can't run it. On iPhone, the Files app preview can't run it either. Open the test from a web link in Safari instead.</div></noscript>
 
 <!-- ======================= START ======================= -->
 <section id="start" class="screen">
@@ -796,7 +797,7 @@ table.xy th,table.xy td{border:1.5px solid #111;padding:4px 22px;text-align:cent
     <svg class="hourglass" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 5h24M12 43h24M14 5c0 10 10 13 10 19S14 33 14 43M34 5c0 10-10 13-10 19s10 9 10 19"/><path class="sand" d="M18 39c2-4 4-5 6-6 2 1 4 2 6 6z"/></svg>
     <h2 id="transTitle">Module 1 complete</h2>
     <p id="transMsg">Your answers were submitted.</p>
-    <p>Module 2 begins automatically — the timer can't be paused.</p>
+    <p id="transNext">Module 2 begins automatically — the timer can't be paused.</p>
     <div class="count" id="transCount">5</div>
   </div>
 </section>
@@ -897,16 +898,18 @@ function submitModule(auto) {
   S.used[S.mod] = Math.min(MOD_SEC, Math.round((Date.now() - S.modStart) / 1000));
   closeAllPopups();
   $('#confirm').hidden = true;
-  if (S.mod === 0) {
+  if (S.mod < DATA.modules.length - 1) {
+    const a = S.mod + 1, b = S.mod + 2;
     show('trans');
-    $('#transTitle').textContent = 'Module 1 complete';
-    $('#transMsg').textContent = auto ? "Time's up. Your Module 1 answers were submitted automatically." : 'Your Module 1 answers were submitted.';
+    $('#transTitle').textContent = `Module ${a} complete`;
+    $('#transMsg').textContent = auto ? `Time's up. Your Module ${a} answers were submitted automatically.` : `Your Module ${a} answers were submitted.`;
+    $('#transNext').textContent = `Module ${b} begins automatically — the timer can't be paused.`;
     let n = 5;
     $('#transCount').textContent = n;
     const t = setInterval(() => {
       n -= 1;
       $('#transCount').textContent = Math.max(n, 0);
-      if (n <= 0) { clearInterval(t); startModule(1); }
+      if (n <= 0) { clearInterval(t); startModule(b - 1); }
     }, 1000);
   } else {
     finish();
@@ -1103,9 +1106,9 @@ function openConfirm() {
   const un = S.ans[S.mod].filter((a) => a === '').length;
   $('#cfTitle').textContent = `Submit Module ${S.mod + 1}?`;
   $('#cfText').textContent = (un ? `You have ${un} unanswered question${un > 1 ? 's' : ''}. ` : 'All questions are answered. ') +
-    (S.mod === 0 ? "Once you submit, you can't return to Module 1, and Module 2 starts right away." : 'Once you submit, the test ends and your score is calculated.') +
+    (S.mod < DATA.modules.length - 1 ? `Once you submit, you can't return to Module ${S.mod + 1}, and Module ${S.mod + 2} starts right away.` : 'Once you submit, the test ends and your score is calculated.') +
     ' The timer keeps running while this message is open.';
-  $('#cfOk').textContent = S.mod === 0 ? 'Submit Module 1' : 'Submit Test';
+  $('#cfOk').textContent = S.mod < DATA.modules.length - 1 ? `Submit Module ${S.mod + 1}` : 'Submit Test';
   $('#confirm').hidden = false;
   $('#cfOk').focus();
 }
@@ -1119,8 +1122,8 @@ function finish() {
     return (q.type === 'mcq' ? a === q.answer : checkSPR(a, q.accept)) ? 'ok' : 'bad';
   }));
   const right = RES.map((r) => r.filter((x) => x === 'ok').length);
-  const raw = right[0] + right[1];
-  const nq = RES[0].length + RES[1].length;
+  const raw = right.reduce((x, y) => x + y, 0);
+  const nq = RES.reduce((x, r) => x + r.length, 0);
   const score = SCALE[Math.min(44, Math.round((raw * 44) / nq))];
   const pct = ((score - 200) / 600) * 100;
   const omitted = RES.flat().filter((x) => x === 'om').length;
@@ -1144,8 +1147,7 @@ function finish() {
         <div class="scale-ends"><span>200</span><span>500</span><span>800</span></div>
         <div class="stats">
           <div class="stat"><b>${raw} / ${nq}</b><span>correct overall</span></div>
-          <div class="stat"><b>${right[0]} / ${RES[0].length}</b><span>Module 1 · ${fmt(S.used[0])} used</span></div>
-          <div class="stat"><b>${right[1]} / ${RES[1].length}</b><span>Module 2 · ${fmt(S.used[1])} used</span></div>
+          ${RES.map((r, m) => `<div class="stat"><b>${right[m]} / ${r.length}</b><span>Module ${m + 1} · ${fmt(S.used[m])} used</span></div>`).join('')}
         </div>
       </div>
       <p class="score-note">Estimate based on a typical raw-to-scaled conversion for the SAT Math section. Real SAT scores depend on the test form and adaptive routing.${omitted ? ` ${omitted} question${omitted > 1 ? 's were' : ' was'} left unanswered.` : ''}</p>
