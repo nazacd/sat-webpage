@@ -1,0 +1,1389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAT Math Mock Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Math&display=swap" rel="stylesheet">
+<style>
+/*
+Temml.woff2 is a clone of KaTeX_Script-Regular, except that the code points
+have been changed from ASCII to Unicode Mathematical Alphanumeric Symbols Script capitals,
+Unicode range 1D49C to 1D4B5.
+*/
+
+@font-face {
+  font-family: 'Temml';
+  src: url(data:font/woff2;base64,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) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+math {
+  font-family: "Cambria Math", 'STIXTwoMath-Regular', 'NotoSansMath-Regular', math;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size-adjust: none;
+  text-indent: 0;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  direction: ltr;
+  /* Prevent Firefox from omitting the dot on i or j. */
+  font-feature-settings: "dtls" off;
+}
+
+math * {
+  border-color: currentColor;
+}
+
+/* display: block is necessary in Firefox and Safari.
+ * Not in Chromium, which recognizes display: "block math" written inline. */
+ math.tml-display {
+  display: block;
+  width: 100%;
+}
+
+*.mathcal {
+  /* NotoSans */
+  font-feature-settings: 'ss01';
+}
+
+math .mathscr {
+  font-family: "Temml";
+}
+
+mo.tml-prime {
+  font-family: Temml;
+}
+
+/* Cramped superscripts in WebKit */
+mfrac > :nth-child(2),
+msqrt,
+mover > :first-child {
+  math-shift: compact
+}
+
+.menclose {
+  display: inline-block;
+  position: relative;
+  padding: 0.5ex 0ex;
+}
+.tml-cancelto {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5ex 0ex;
+  background-color: currentColor;
+  /* Use the SVG as an alpha mask (painted by background-color) */
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><defs><marker id='a' markerHeight='5' markerUnits='strokeWidth' markerWidth='7' orient='auto' refX='7' refY='2.5'><path fill='black' d='m0 0 7 2.5L0 5z'/></marker></defs><line x2='100%25' y1='100%25' stroke='black' stroke-width='.06em' marker-end='url(%23a)' vector-effect='non-scaling-stroke'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><defs><marker id='a' markerHeight='5' markerUnits='strokeWidth' markerWidth='7' orient='auto' refX='7' refY='2.5'><path fill='black' d='m0 0 7 2.5L0 5z'/></marker></defs><line x2='100%25' y1='100%25' stroke='black' stroke-width='.06em' marker-end='url(%23a)' vector-effect='non-scaling-stroke'/></svg>");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+}
+
+@supports (-moz-appearance: none) {
+  /* \vec w/o italic correction for Firefox */
+  .tml-vec {
+    transform: scale(0.75)
+  }
+  /* Fix \cancelto in Firefox */
+  .ff-narrow {
+    width: 0em;
+  }
+  .ff-nudge-left {
+    margin-left: -0.2em;
+  }
+  /* Squash hidden mrows in \bordermatrix. Messes with centering, but necessary to squash. */
+  .ff-squash mtd {
+    display: block;
+    height: 0;
+  }
+}
+
+@supports (not (-moz-appearance: none)) {
+  /* Chromium and WebKit */
+  /* prime vertical alignment */
+  mo.tml-prime {
+    font-family: Temml;
+  }
+  /* Italic correction on superscripts */
+  .tml-sml-pad {
+    padding-left: 0.05em;
+  }
+  .tml-med-pad {
+    padding-left: 0.10em;
+  }
+  .tml-lrg-pad {
+    padding-left: 0.15em;
+  }
+}
+
+@supports (-webkit-backdrop-filter: blur(1px)) {
+  /* WebKit vertical & italic correction on accents */
+  .wbk-acc {
+    /* lower by x-height distance */
+    transform: translate(0em, 0.431em);
+  }
+  .wbk-sml {
+    transform: translate(0.07em, 0);
+  }
+  .wbk-sml-acc {
+    transform: translate(0.07em, 0.431em);
+  }
+  .wbk-sml-vec {
+    transform: scale(0.75) translate(0.07em, 0);
+  }
+  .wbk-med {
+    transform: translate(0.14em, 0);
+  }
+  .wbk-med-acc {
+    transform: translate(0.14em, 0.431em);
+  }
+  .wbk-med-vec {
+    transform: scale(0.75) translate(0.14em, 0);
+  }
+  .wbk-lrg {
+    transform: translate(0.21em, 0);
+  }
+  .wbk-lrg-acc {
+    transform: translate(0.21em, 0.431em);
+  }
+  .wbk-lrg-vec {
+    transform: scale(0.75) translate(0.21em, 0);
+  }
+}
+
+/* \cancel & \phase use background images. Get them to print. */
+menclose {
+  -webkit-print-color-adjust: exact;  /* Chrome & Edge */
+          print-color-adjust: exact;
+}
+
+/* Array cell justification in Firefox & WebKit */
+.tml-right {
+  text-align: right;
+}
+.tml-left {
+  text-align: left;
+}
+
+/* For CD labels that grow to the left in Firefox and WebKit */
+.tml-shift-left { margin-left:-200% }
+
+/* Styles for Chromium only */
+@supports (not (-webkit-backdrop-filter: blur(1px))) and (not (-moz-appearance: none)) {
+  /* Italic correction on accents */
+  .chr-sml {
+    transform: translate(0.07em, 0)
+  }
+  .chr-sml-vec {
+    transform: scale(0.75) translate(0.07em, 0)
+  }
+  .chr-med {
+    transform: translate(0.14em, 0)
+  }
+  .chr-med-vec {
+    transform: scale(0.75) translate(0.14em, 0)
+  }
+  .chr-lrg {
+    transform: translate(0.21em, 0)
+  }
+  .chr-lrg-vec {
+    transform: scale(0.75) translate(0.21em, 0)
+  }
+
+  /* For CD labels that grow to the left */
+  .tml-shift-left { margin-left:-100% }
+
+  /* MathML Core & Chromium do not support the MathML 3.0 element <menclose> attributes. */
+  /* So use styles. */
+  menclose {
+    position: relative;
+    padding: 0.5ex 0ex;
+  }
+  
+    .tml-overline {
+    padding: 0.1em 0 0 0;
+    border-top: 0.065em solid;
+  }
+
+  .tml-underline {
+    padding: 0 0 0.1em 0;
+    border-bottom: 0.065em solid;
+  }
+
+  .tml-cancel {
+    display: inline-block;
+    position: absolute;
+    left: 0.5px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+  }
+  .upstrike {
+    clip-path: polygon(0.05em 100%, 0em calc(100% - 0.05em), calc(100% - 0.05em) 0em, 100% 0.05em);
+  }
+  .downstrike {
+    clip-path: polygon(0em 0.05em, 0.05em 0em, 100% calc(100% - 0.05em), calc(100% - 0.05em) 100%);
+  }
+  .sout {
+    clip-path: polygon(0em calc(55% + 0.0333em), 0em calc(55% - 0.0333em), 100% calc(55% - 0.0333em), 100% calc(55% + 0.0333em));
+  }
+  .tml-xcancel {
+    clip-path: polygon(0.05em 0em, 0em 0.05em, calc(50% - 0.05em) 50%, 0em calc(100% - 0.05em), 0.05em 100%, 50% calc(50% + 0.05em), calc(100% - 0.05em) 100%, 100% calc(100% - 0.05em), calc(50% + 0.05em) 50%, 100% 0.05em, calc(100% - 0.05em) 0%, 50% calc(50% - 0.05em));
+  }
+
+  .longdiv-top {
+    border-top: 0.067em solid;
+    padding: 0.1em 0.2em 0.2em 0.433em;
+  }
+  .longdiv-arc {
+    position: absolute;
+    top: 0;
+    bottom: 0.1em;
+    left: -0.4em;
+    width: 0.7em;
+    border: 0.067em solid;
+    transform: translateY(-0.067em);
+    border-radius: 70%;
+    clip-path: inset(0 0 0 0.4em);
+    box-sizing: border-box;}
+    .menclose {display: inline-block;
+    text-align: left;
+    position: relative;
+  }
+  
+  .phasor-bottom {
+    border-bottom: 0.067em solid;
+    padding: 0.2em 0.2em 0.1em 0.6em;
+  }
+  .phasor-angle {
+    display: inline-block;
+    position: absolute;
+    left: 0.5px;
+    bottom: -0.04em;
+    height: 100%;
+    aspect-ratio: 0.5;
+    background-color: currentColor;
+    clip-path: polygon(0.05em 100%, 0em calc(100% - 0.05em), calc(100% - 0.05em) 0em, 100% 0.05em);
+  }
+
+  .tml-fbox {
+    padding: 3pt;
+    border: 1px solid;
+  }
+
+  .circle-pad {
+    padding: 0.267em;
+  }
+  .textcircle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: 0.067em solid;
+    border-radius: 50%;
+   }
+
+   .actuarial {
+    padding: 0.03889em 0.03889em 0 0.03889em;
+    border-width: 0.08em 0.08em 0em 0em;
+    border-style: solid;
+    margin-right: 0.03889em;
+   }
+
+   /* Stretch \widetilde */
+  .tml-tilde-2 {
+    transform: scale(2.0, 1.1)
+  }
+  .tml-tilde-3 {
+    transform: scale(3.0, 1.1)
+  }
+  .tml-tilde-4 {
+    transform: scale(4.0, 1.1)
+  }
+  /* Stretch \widehat */
+  .tml-hat-1 {
+    transform: scale(1.9, 1.0)
+  }
+  .tml-hat-2 {
+    transform: scale(3.9, 1.0)
+  }
+  .tml-hat-3 {
+    transform: scale(5.8, 1.0)
+  }
+  .tml-hat-4 {
+    transform: scale(7.8, 1.0)
+  }
+  
+  /* set array cell justification */
+  .tml-right {
+    text-align: -webkit-right;
+  }
+  .tml-left {
+    text-align: -webkit-left;
+  }
+}
+
+.special-fraction {
+  font-family: 'STIX TWO', 'Times New Roman', Times, Tinos, serif;
+}
+
+/* flex-wrap for line-breaking in Chromium */
+math {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+math > mrow {
+  padding: 0.5ex 0ex;
+}
+
+/* Default mtd top padding is 0.5ex per MathML-Core and user-agent CSS */
+/* We adjust for jot and small */
+mtable.tml-jot > mtr > mtd {
+  padding-top: 0.7ex;
+  padding-bottom: 0.7ex;
+}
+mtable.tml-small mtd {
+  padding-top: 0.35ex;
+  padding-bottom: 0.35ex;
+}
+
+/* Firefox */
+@-moz-document url-prefix() {
+  /* Avoid flex-wrap */
+  math { display: inline; }
+  math > mrow { padding: 0 }
+  /* Adjust Firefox spacing between array rows */
+  mtd, mtable.tml-small mtd { padding-top: 0; padding-bottom: 0; }
+  mtable.tml-jot > mtr > mtd { padding-top: 0.2ex; padding-bottom: 0.2ex; }
+}
+
+/* AMS environment auto-numbering via CSS counter. */
+.tml-eqn::before {
+  counter-increment: tmlEqnNo;
+  content: "(" counter(tmlEqnNo) ")";
+}
+
+body {
+  counter-reset: tmlEqnNo;
+}
+
+:root{
+  --blue:#324dc7; --blue-dk:#273ea6; --ink:#1e1e1e; --muted:#5b6170; --line:#d5d9e0;
+  --soft:#f2f4f8; --bar:#f7f8fb; --red:#c8102e; --green:#17803d;
+  --ui:"Noto Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --serif:"Noto Serif",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#fff;color:var(--ink);font-family:var(--ui);-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer;color:inherit}
+[hidden]{display:none!important}
+math{font-family:"Cambria Math","STIX Two Math","STIXTwoMath-Regular","Latin Modern Math","Noto Sans Math",math;font-size:1.06em}
+math[display=block]{margin:.6em 0}
+.screen{min-height:100%}
+
+/* ---------- shared buttons ---------- */
+.btn-primary{background:var(--blue);color:#fff;border:0;border-radius:999px;padding:10px 26px;font-weight:600;font-size:15px;line-height:1.2}
+.btn-primary:hover{background:var(--blue-dk)}
+.btn-primary:focus-visible,.btn-outline:focus-visible,.choice:focus-visible,.cell:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.btn-outline{background:#fff;color:var(--blue);border:1.5px solid var(--blue);border-radius:999px;padding:9px 22px;font-weight:600;font-size:15px}
+.btn-outline:hover{background:#eef1fc}
+.btn-lg{padding:14px 40px;font-size:17px}
+.xbtn{background:none;border:0;font-size:26px;line-height:1;padding:2px 6px;color:inherit}
+
+/* ---------- start screen ---------- */
+#start{background:linear-gradient(180deg,#eef2fb 0,#fff 340px);display:flex;flex-direction:column}
+.start-top{height:64px;display:flex;align-items:center;padding:0 28px;font-weight:700;letter-spacing:.2px;color:#1d2b5c;gap:10px}
+.logo-dot{width:28px;height:28px;border-radius:7px;background:var(--blue);display:grid;place-items:center;color:#fff;font-size:15px;font-weight:700}
+.all-tests{margin-left:auto;font-size:14px;font-weight:600;color:var(--blue);text-decoration:none;border:1.5px solid var(--blue);border-radius:999px;padding:6px 14px}
+.all-tests:hover{background:#eef1fc}
+.start-main{flex:1;display:flex;justify-content:center;padding:24px 16px 48px}
+.start-card{width:min(680px,100%);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 30px rgba(29,43,92,.08);padding:36px 40px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.start-card h1{font-size:32px;margin:8px 0 4px;letter-spacing:-.01em}
+.start-sub{color:var(--muted);margin:0 0 24px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.fact{background:var(--soft);border-radius:12px;padding:14px 16px}
+.fact b{display:block;font-size:24px}
+.fact span{font-size:13px;color:var(--muted)}
+.rules{margin:0 0 24px;padding:0;list-style:none;display:grid;gap:10px}
+.rules li{display:flex;gap:10px;align-items:flex-start;line-height:1.45;font-size:15px}
+.rules li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--blue);margin-top:7px}
+.rules .warn::before{background:var(--red)}
+.resume{display:flex;align-items:center;justify-content:space-between;gap:12px 16px;flex-wrap:wrap;background:#eef1fc;border:1.5px solid var(--blue);border-radius:12px;padding:14px 16px;margin:0 0 22px}
+.resume b{display:block;font-size:16px;margin-bottom:2px}
+.resume span{font-size:14px;color:#3d4352}
+.name-field{display:block;font-size:14px;font-weight:600;margin-bottom:22px}
+.name-field input{display:block;width:100%;margin-top:6px;font:inherit;font-weight:400;font-size:16px;padding:11px 14px;border:1px solid #a9b0bd;border-radius:10px}
+.name-field input:focus{outline:2px solid var(--blue);border-color:var(--blue)}
+.start-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.start-note{font-size:13px;color:var(--muted)}
+@media (max-width:560px){.start-card{padding:26px 20px}.facts{grid-template-columns:1fr 1fr 1fr;gap:8px}.fact{padding:10px}.fact b{font-size:20px}.start-card h1{font-size:26px}}
+
+/* ---------- test shell ---------- */
+#test{height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.hdr{flex:none;height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 24px;background:var(--bar);position:relative}
+.hdr::after,.ftr::before{content:"";position:absolute;left:0;right:0;height:3px;background:repeating-linear-gradient(90deg,#26304a 0 16px,transparent 16px 22px)}
+.hdr::after{bottom:0}
+.ftr::before{top:0}
+.sec-title{font-weight:700;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dir-btn{background:none;border:0;padding:4px 0;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:4px;margin-top:2px}
+.dir-btn svg{width:14px;height:14px;transition:transform .15s}
+.dir-btn[aria-expanded=true] svg{transform:rotate(180deg)}
+.hdr-center{display:flex;flex-direction:column;align-items:center;gap:3px}
+.timer{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.02em;min-height:28px;display:flex;align-items:center}
+.timer.low{color:var(--red)}
+.timer .clock{width:24px;height:24px}
+.pill{background:#fff;border:1px solid #6b7280;border-radius:999px;font-size:12px;font-weight:600;padding:2px 12px}
+.hdr-right{display:flex;justify-content:flex-end;gap:6px}
+.tool{background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:600;padding:6px 10px;border-radius:8px}
+.tool:hover{background:#e9edf5}
+.tool[aria-pressed=true]{color:var(--blue)}
+.tool svg{width:22px;height:22px}
+.main{flex:1;min-height:0;display:flex;position:relative}
+.q-area{flex:1;min-width:0;overflow:auto;position:relative}
+.ftr{flex:none;height:60px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 24px;background:var(--bar);position:relative}
+.stu{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-pill{background:var(--ink);color:#fff;border:0;border-radius:8px;padding:8px 14px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:8px}
+.nav-pill svg{width:14px;height:14px;transition:transform .15s}
+.nav-pill[aria-expanded=true] svg{transform:rotate(180deg)}
+.ftr-right{display:flex;justify-content:flex-end;gap:10px}
+
+/* ---------- question: shared ---------- */
+.q-head{display:flex;align-items:stretch;gap:14px;background:#eceef2;height:40px;position:relative;margin-bottom:6px}
+.q-head::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:repeating-linear-gradient(90deg,#3a3f4b 0 6px,transparent 6px 10px)}
+.q-num{background:var(--ink);color:#fff;font-weight:700;min-width:36px;display:grid;place-items:center;font-size:16px}
+.mark-btn{background:none;border:0;display:flex;align-items:center;gap:6px;font-size:14px;font-weight:500;padding:0 4px}
+.mark-btn svg path{fill:none;stroke:var(--ink);stroke-width:1.8}
+.mark-btn.on svg path{fill:var(--red);stroke:var(--red)}
+.mark-btn.on{font-weight:700}
+.abc-btn{margin:6px 8px 6px auto;border:1.5px solid var(--ink);background:#fff;border-radius:5px;padding:0 6px;font-weight:700;font-size:12px;letter-spacing:.04em;position:relative}
+.abc-btn span{text-decoration:line-through;text-decoration-thickness:1.5px}
+.abc-btn.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.q-body{padding-top:10px}
+.q-stem{font-family:var(--serif);font-size:17px;line-height:1.65}
+.q-stem p{margin:12px 0}
+.fig{margin:14px 0 6px;text-align:center}
+.fig-row{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.fig-row .fsvg{margin:0}
+.fig-note{font-family:var(--serif);font-style:italic;font-size:14px;margin:4px 0 0;color:#333}
+.fsvg{max-width:100%;height:auto;display:block;margin:0 auto}
+.fsvg .g{stroke:#c7cbd3;stroke-width:1}
+.fsvg .a{stroke:#111;stroke-width:1.4;fill:none}
+.fsvg .ah{fill:#111}
+.fsvg .ln{stroke:#111;stroke-width:2.2;fill:none;stroke-linejoin:round}
+.fsvg .dot{fill:#111}
+.fsvg .bar{fill:#dfe3ea;stroke:#222;stroke-width:1.2}
+.fsvg text{font-family:Georgia,"Times New Roman",serif;fill:#111}
+.fsvg .t{font-size:12.5px;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
+.fsvg .t-s{font-size:11.5px}
+.fsvg .t-b{font-size:15px;font-weight:700}
+.fsvg .t-l{font-size:17px}
+.fsvg .i{font-style:italic}
+
+/* ---------- multiple choice ---------- */
+.q-col{max-width:780px;margin:0 auto;padding:26px 32px 56px}
+.choices{margin-top:14px}
+.choice-row{display:flex;align-items:center;gap:12px;margin:12px 0}
+.choice{flex:1;display:flex;align-items:center;gap:14px;text-align:left;background:#fff;border:1.5px solid var(--ink);border-radius:10px;padding:10px 14px;font-family:var(--serif);font-size:17px;line-height:1.45;min-height:52px;position:relative}
+button.choice:hover{box-shadow:0 0 0 1px var(--ink)}
+.choice .ltr{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-family:var(--ui);font-weight:700;font-size:14px;background:#fff}
+.choice .ctext{flex:1;min-width:0}
+.choice.sel{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue)}
+button.choice.sel:hover{box-shadow:0 0 0 2px var(--blue)}
+.choice.sel .ltr{background:var(--blue);border-color:var(--blue);color:#fff}
+.choice.elim{color:#8a909c;border-color:#9aa1ad}
+.choice.elim .ltr{border-color:#9aa1ad;color:#8a909c}
+.choice.elim::after{content:"";position:absolute;left:-7px;right:-7px;top:50%;height:2px;background:#2b2f38}
+.elim-btn{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;font-weight:700;font-size:13px;position:relative;padding:0}
+.elim-btn::after{content:"";position:absolute;left:-5px;right:-5px;top:50%;height:1.5px;background:var(--ink)}
+.undo-btn{flex:none;width:40px;background:none;border:0;text-decoration:underline;font-weight:700;font-size:13px;padding:0}
+table.dt{margin:10px auto}
+table.xy{border-collapse:collapse;font-family:var(--serif);font-size:16px;margin:2px 0}
+table.xy th,table.xy td{border:1.5px solid #111;padding:4px 22px;text-align:center;font-weight:400}
+
+/* ---------- student-produced response ---------- */
+.spr{display:grid;grid-template-columns:minmax(0,1fr) 5px minmax(0,1fr);height:100%}
+.spr-left,.spr-right{overflow:auto;padding:26px 32px 56px}
+.spr-div{background:#d3d7de}
+.spr-dir h3{font-size:18px;margin:0 0 10px}
+.spr-dir ul{padding-left:20px;margin:0 0 18px;line-height:1.5;font-size:15px}
+.spr-dir li{margin:6px 0}
+.spr-dir h4{margin:0 0 8px;font-size:15px}
+.ex{border-collapse:collapse;width:100%;font-size:14px}
+.ex th,.ex td{border:1px solid #b9bfca;padding:7px 8px;vertical-align:top;text-align:left}
+.ex th{background:var(--soft);font-weight:700}
+.spr-entry{margin:22px 0 10px}
+.spr-input{width:190px;max-width:100%;font-family:var(--ui);font-size:22px;padding:9px 12px;border:1.5px solid var(--ink);border-bottom-width:3px;border-radius:8px;letter-spacing:.04em}
+.spr-input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 2px rgba(50,77,199,.25)}
+.spr-preview{font-size:15px;display:flex;align-items:center;gap:8px;min-height:44px}
+.spr-preview math{font-size:1.25em}
+
+/* ---------- popups ---------- */
+.dir-pop{position:absolute;top:72px;left:16px;width:min(760px,calc(100vw - 32px));max-height:calc(100% - 150px);overflow:auto;background:#fff;border-radius:12px;box-shadow:0 14px 44px rgba(0,0,0,.25);padding:22px 26px;z-index:60;font-size:15px;line-height:1.55}
+.dir-pop h3{margin:0 0 8px}
+.dir-pop ul{margin:6px 0 12px;padding-left:22px}
+.dir-foot{display:flex;justify-content:flex-end;margin-top:10px}
+.navpop{position:fixed;bottom:74px;left:50%;transform:translateX(-50%);width:min(600px,calc(100vw - 24px));background:#fff;border-radius:14px;box-shadow:0 14px 44px rgba(0,0,0,.28);padding:18px 22px 20px;z-index:60}
+.navpop::after{content:"";position:absolute;bottom:-9px;left:50%;margin-left:-9px;width:18px;height:18px;background:#fff;transform:rotate(45deg);box-shadow:4px 4px 8px rgba(0,0,0,.08)}
+.np-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:10px}
+.np-head h3{margin:0;font-size:16px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;margin:12px 0 4px;color:#333}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.lg-un{width:16px;height:16px;border:1.5px dashed #6b7280;display:inline-block}
+.legend svg{width:15px;height:15px}
+.lg-pin path{fill:var(--ink)}
+.lg-flag path{fill:var(--red)}
+.ngrid{display:flex;flex-wrap:wrap;gap:20px 12px;padding:22px 2px 6px}
+.ngrid.big{gap:22px 16px;justify-content:center}
+.cell{width:40px;height:40px;border:1.5px dashed #6b7280;background:#fff;color:var(--blue);font-weight:700;font-size:15px;position:relative;padding:0;border-radius:2px}
+.ngrid.big .cell{width:46px;height:46px;font-size:17px}
+.cell:hover{background:#eef1fc}
+.cell.ans{background:var(--blue);color:#fff;border:1.5px solid var(--blue)}
+.cell.ans:hover{background:var(--blue-dk)}
+.cell .ic-pin{position:absolute;top:-19px;left:50%;margin-left:-8px;width:16px;height:16px}
+.cell .ic-pin path{fill:var(--ink)}
+.cell .ic-flag{position:absolute;top:-7px;right:-7px;width:15px;height:15px}
+.cell .ic-flag path{fill:var(--red);stroke:#fff;stroke-width:1.5}
+.np-foot{display:flex;justify-content:center;margin-top:12px}
+
+.review{max-width:760px;margin:0 auto;padding:36px 24px 56px;text-align:center}
+.review h1{font-size:30px;margin:0 0 10px}
+.review>p{color:#333;margin:0 auto 24px;max-width:600px;line-height:1.55}
+.rv-card{background:#fff;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.12);padding:20px 26px 26px;text-align:left}
+.rv-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.rv-head h2{font-size:17px;margin:0}
+.rv-head .legend{margin:0}
+
+/* ---------- calculator + reference ---------- */
+.calc{flex:none;width:430px;display:flex;flex-direction:column;border-right:2px solid #c3c8d1;background:#fff;z-index:30}
+.calc.wide{width:min(760px,62vw)}
+.calc-head,.ref-head{display:flex;align-items:center;justify-content:space-between;background:var(--ink);color:#fff;padding:7px 12px;font-weight:600;font-size:14px}
+.calc-head .xbtn,.ref-head .xbtn{color:#fff;font-size:22px}
+.calc-head button.wbtn{background:none;border:1px solid #888;color:#fff;border-radius:6px;font-size:12px;padding:3px 8px;margin-right:6px}
+.desmos{flex:1;min-height:0;position:relative}
+.calc-msg{padding:28px 22px;text-align:center;color:var(--muted);line-height:1.6;font-size:14px}
+.ref{position:fixed;top:86px;right:20px;width:min(640px,calc(100vw - 24px));max-height:calc(100vh - 170px);background:#fff;border-radius:12px;box-shadow:0 14px 44px rgba(0,0,0,.3);display:flex;flex-direction:column;z-index:55;overflow:hidden}
+.ref-head{cursor:move;user-select:none;touch-action:none}
+.ref-body{overflow:auto;padding:16px 18px 20px}
+.ref-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px 10px}
+.ref-item{text-align:center;font-size:15px}
+.ref-item .rsvg{display:block;margin:0 auto 4px}
+.rsvg .s{fill:none;stroke:#111;stroke-width:1.5}
+.rsvg .d{fill:none;stroke:#111;stroke-width:1.2;stroke-dasharray:4 3}
+.rsvg .f{fill:#111}
+.rsvg text{font-family:Georgia,"Times New Roman",serif;font-size:14px;fill:#111}
+.ref-item div{line-height:1.7}
+.ref-cap{font-size:12px;color:var(--muted)}
+.ref-facts{border-top:1px solid var(--line);margin-top:16px;padding-top:12px;font-size:14.5px;line-height:1.6}
+.ref-facts p{margin:4px 0}
+
+/* ---------- overlays ---------- */
+.overlay{position:fixed;inset:0;background:rgba(18,22,33,.45);display:flex;align-items:center;justify-content:center;padding:16px;z-index:80}
+.dialog{background:#fff;border-radius:14px;max-width:460px;width:100%;padding:26px 26px 22px;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.dialog h3{margin:0 0 8px;font-size:20px}
+.dialog p{margin:0 0 20px;line-height:1.55;color:#333}
+.dlg-btns{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.toast{position:fixed;top:84px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;font-weight:600;font-size:14px;z-index:90;box-shadow:0 8px 24px rgba(0,0,0,.25);max-width:calc(100vw - 32px);text-align:center}
+.toast.alert{background:var(--red)}
+
+/* ---------- transition ---------- */
+#trans{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bar);padding:16px}
+.trans-card{text-align:center;max-width:460px}
+.hourglass{width:64px;height:64px;margin:0 auto 18px;animation:spin 2s ease-in-out infinite}
+.hourglass path{fill:none;stroke:var(--blue);stroke-width:2.4;stroke-linejoin:round}
+.hourglass .sand{fill:var(--blue);stroke:none}
+@keyframes spin{0%,40%{transform:rotate(0)}60%,100%{transform:rotate(180deg)}}
+.trans-card h2{margin:0 0 8px;font-size:26px}
+.trans-card p{color:var(--muted);line-height:1.55;margin:6px 0}
+.count{font-size:46px;font-weight:700;color:var(--blue);margin-top:10px;font-variant-numeric:tabular-nums}
+
+/* ---------- results ---------- */
+#results{background:var(--soft);min-height:100vh}
+.res-top{height:64px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;gap:12px}
+.res-top b{font-size:16px}
+.res-wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+.score-card{background:#fff;border-radius:18px;box-shadow:0 4px 20px rgba(0,0,0,.06);padding:28px 32px;display:grid;grid-template-columns:auto 1fr;gap:12px 40px;align-items:center}
+.score-lbl{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.score-big{font-size:76px;font-weight:700;line-height:1;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.score-range{color:var(--muted);font-size:14px;margin-top:6px}
+.scale{position:relative;height:12px;border-radius:99px;background:#e3e7ef;margin:26px 0 8px}
+.scale-fill{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--blue)}
+.scale-mark{position:absolute;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:#fff;border:4px solid var(--blue)}
+.scale-ends{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.stat{background:var(--soft);border-radius:10px;padding:10px 14px}
+.stat b{display:block;font-size:20px;font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--muted)}
+.score-note{grid-column:1/-1;font-size:12.5px;color:var(--muted);margin:4px 0 0}
+.res-h2{font-size:22px;margin:34px 0 4px}
+.res-sub{color:var(--muted);margin:0 0 14px;font-size:14.5px}
+.res-legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13.5px;margin-bottom:14px}
+.res-legend span{display:inline-flex;align-items:center;gap:7px}
+.sw{width:16px;height:16px;border-radius:4px;border:2px solid}
+.sw.ok{background:#e4f5ea;border-color:var(--green)}
+.sw.bad{background:#fde9ec;border-color:var(--red)}
+.sw.om{background:#f3f4f6;border-color:#9ca3af;border-style:dashed}
+.res-mod{background:#fff;border-radius:14px;padding:18px 22px 22px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.res-mod h3{margin:0 0 14px;font-size:16px;display:flex;justify-content:space-between;gap:8px}
+.res-mod h3 span{color:var(--muted);font-weight:600;font-size:14px}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:10px}
+.rtile{height:64px;border-radius:10px;border:2px solid;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-weight:700;font-size:17px;background:#fff;padding:0}
+.rtile small{font-size:11.5px;font-weight:600;opacity:.9}
+.rtile.ok{background:#e4f5ea;border-color:var(--green);color:#0f5129}
+.rtile.bad{background:#fde9ec;border-color:var(--red);color:#7a0d1e}
+.rtile.om{background:#f6f7f9;border-color:#9ca3af;border-style:dashed;color:#4b5563}
+.rtile:hover{filter:brightness(.96);transform:translateY(-1px)}
+.res-actions{display:flex;justify-content:center;margin-top:26px}
+@media (max-width:700px){.score-card{grid-template-columns:1fr;padding:22px}.score-big{font-size:64px}.stats{grid-template-columns:1fr 1fr 1fr}.stat b{font-size:17px}}
+
+.rv-modal{position:fixed;inset:0;background:rgba(18,22,33,.5);z-index:85;display:flex;align-items:stretch;justify-content:center;padding:24px 16px}
+.rv-panel{background:#fff;border-radius:14px;width:min(860px,100%);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.rv-top{display:flex;align-items:center;gap:12px;padding:12px 16px 12px 20px;border-bottom:1px solid var(--line)}
+.rv-top h3{margin:0;font-size:17px;flex:1}
+.status{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:99px}
+.status.ok{background:#e4f5ea;color:#0f5129}
+.status.bad{background:#fde9ec;color:#7a0d1e}
+.status.om{background:#eceef2;color:#4b5563}
+.rv-body{flex:1;overflow:auto;padding:8px 28px 30px}
+.rv-bottom{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-top:1px solid var(--line);gap:10px}
+.rv-bottom span{font-size:13px;color:var(--muted)}
+.choice.r-ok{border-color:var(--green);box-shadow:0 0 0 2px var(--green);background:#f3fbf6}
+.choice.r-ok .ltr{background:var(--green);border-color:var(--green);color:#fff}
+.choice.r-bad{border-color:var(--red);box-shadow:0 0 0 2px var(--red);background:#fff6f7}
+.choice.r-bad .ltr{background:var(--red);border-color:var(--red);color:#fff}
+.rtag{flex:none;font-family:var(--ui);font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;margin-left:8px}
+.r-ok .rtag{background:var(--green);color:#fff}
+.r-bad .rtag{background:var(--red);color:#fff}
+.spr-review{display:grid;gap:10px;margin-top:20px;max-width:440px}
+.srow{display:flex;align-items:center;justify-content:space-between;gap:12px;border:2px solid;border-radius:10px;padding:12px 16px}
+.srow .slab{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.srow .sval{font-size:19px;font-weight:600}
+.srow.ok{border-color:var(--green);background:#f3fbf6}
+.srow.bad{border-color:var(--red);background:#fff6f7}
+.srow.om{border-color:#9ca3af;border-style:dashed;background:#f6f7f9}
+.srow.key{border-color:var(--green);background:#f3fbf6}
+
+/* ---------- small screens ---------- */
+@media (max-width:820px){
+  .hdr,.ftr{padding:0 12px}
+  .sec-title{font-size:14px}
+  .tool span{display:none}
+  .tool{padding:6px}
+  .q-col{padding:18px 16px 40px}
+  .spr{grid-template-columns:1fr;height:auto}
+  .spr-left,.spr-right{overflow:visible;padding:18px 16px}
+  .spr-left{order:2;border-top:5px solid #d3d7de}
+  .spr-div{display:none}
+  .calc,.calc.wide{position:absolute;inset:0;width:auto}
+  .stu{display:none}
+  .ftr{grid-template-columns:auto 1fr}
+  .ftr-center{justify-self:start}
+  .btn-primary{padding:9px 18px}
+  .q-stem,.choice{font-size:16px}
+  .rv-body{padding:6px 16px 24px}
+}
+@media (max-width:420px){.dir-btn{font-size:12px}.timer{font-size:18px}.nav-pill{padding:7px 10px;font-size:13px}}
+</style>
+</head>
+<body>
+<noscript><div style="background:#c8102e;color:#fff;padding:14px 18px;font:600 15px/1.5 system-ui,sans-serif;text-align:center">This test needs JavaScript, and this viewer can't run it. On iPhone, the Files app preview can't run it either. Open the test from a web link in Safari instead.</div></noscript>
+
+<!-- ======================= START ======================= -->
+<section id="start" class="screen">
+  <div class="start-top"><span class="logo-dot">∑</span> Practice Test<a class="all-tests" href="./">All tests</a></div>
+  <div class="start-main">
+    <div class="start-card">
+      <div class="kicker">Digital SAT · Math</div>
+      <h1>SAT Math Mock Test</h1>
+      <p class="start-sub">May 2025 · Version 1 · Math section only</p>
+      <div class="facts">
+        <div class="fact"><b>43</b><span>questions</span></div>
+        <div class="fact"><b>2</b><span>modules (22 + 21)</span></div>
+        <div class="fact"><b>70</b><span>minutes (35 per module)</span></div>
+      </div>
+      <ul class="rules">
+        <li class="warn">The timer starts the moment you click Start and cannot be paused.</li>
+        <li class="warn">Module 2 starts automatically after Module 1. You can't go back to Module 1.</li>
+        <li>You can submit a module early from the review page. If time runs out, your answers are submitted automatically.</li>
+        <li>Your progress is saved in this browser. If you leave, you can come back and resume, but the timer keeps running while you're away.</li>
+        <li>A graphing calculator and a reference sheet are available during the test.</li>
+        <li>Unanswered questions are scored as incorrect, so answer every question.</li>
+      </ul>
+      <div class="resume" id="resumeBox" hidden>
+        <div><b id="resumeTitle">You have a test in progress</b><span id="resumeText"></span></div>
+        <button class="btn-primary" id="resumeBtn">Resume</button>
+      </div>
+      <label class="name-field">Your name (optional)
+        <input id="nameInput" type="text" maxlength="40" autocomplete="name" placeholder="Student">
+      </label>
+      <div class="start-actions">
+        <button id="startBtn" class="btn-primary btn-lg">Start Test</button>
+        <span class="start-note">You'll get an estimated score (200–800) and a question review at the end.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TEST ======================= -->
+<section id="test" class="screen" hidden>
+  <header class="hdr">
+    <div class="hdr-left" style="min-width:0">
+      <div class="sec-title" id="secTitle">Section 2, Module 1: Math</div>
+      <button class="dir-btn" id="dirBtn" aria-expanded="false" aria-controls="dirPop">Directions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>
+    </div>
+    <div class="hdr-center">
+      <div class="timer" id="timer" role="timer" aria-live="off">35:00</div>
+      <button class="pill" id="hideBtn">Hide</button>
+    </div>
+    <div class="hdr-right">
+      <button class="tool" id="calcBtn" aria-pressed="false" title="Graphing calculator">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="2.5" width="14" height="19" rx="2.2"/><rect x="8" y="5.5" width="8" height="4" rx=".8"/><circle cx="9" cy="13" r=".9" fill="currentColor"/><circle cx="12" cy="13" r=".9" fill="currentColor"/><circle cx="15" cy="13" r=".9" fill="currentColor"/><circle cx="9" cy="16.5" r=".9" fill="currentColor"/><circle cx="12" cy="16.5" r=".9" fill="currentColor"/><circle cx="15" cy="16.5" r=".9" fill="currentColor"/></svg>
+        <span>Calculator</span></button>
+      <button class="tool" id="refBtn" aria-pressed="false" title="Reference sheet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2.5h8.5l4 4v15H6z"/><path d="M14.5 2.5v4h4"/><path d="M9 12.5h6M9 15.5h6M9 18.5h3.5"/></svg>
+        <span>Reference</span></button>
+    </div>
+  </header>
+
+  <div class="main">
+    <aside class="calc" id="calc" hidden aria-label="Graphing calculator">
+      <div class="calc-head"><span>Calculator</span><div><button class="wbtn" id="calcWide">Expand</button><button class="xbtn" id="calcClose" aria-label="Close calculator">×</button></div></div>
+      <div class="desmos" id="desmos"><div class="calc-msg">Loading calculator…</div></div>
+    </aside>
+    <div class="q-area" id="qArea"></div>
+
+    <div class="dir-pop" id="dirPop" hidden role="dialog" aria-label="Directions">
+      <h3>Directions</h3>
+      <p>The questions in this section address a number of important math skills. Use of a calculator is permitted for all questions. A reference sheet, calculator, and these directions can be accessed throughout the test.</p>
+      <p><b>Unless otherwise indicated:</b></p>
+      <ul>
+        <li>All variables and expressions represent real numbers.</li>
+        <li>Figures provided are drawn to scale.</li>
+        <li>All figures lie in a plane.</li>
+        <li>The domain of a given function <i>f</i> is the set of all real numbers <i>x</i> for which <i>f</i>(<i>x</i>) is a real number.</li>
+      </ul>
+      <p>For <b>multiple-choice questions</b>, solve each problem and choose the correct answer from the choices provided. Each multiple-choice question has a single correct answer.</p>
+      <p>For <b>student-produced response questions</b>, solve each problem and enter your answer in the box. The rules for entering answers are shown next to each of those questions.</p>
+      <div class="dir-foot"><button class="btn-primary" id="dirClose">Close</button></div>
+    </div>
+  </div>
+
+  <footer class="ftr">
+    <div class="stu" id="stuName">Student</div>
+    <div class="ftr-center"><button class="nav-pill" id="navBtn" aria-expanded="false" aria-controls="navPop"><span id="navLabel">Question 1 of 22</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M6 15l6-6 6 6"/></svg></button></div>
+    <div class="ftr-right"><button class="btn-primary" id="backBtn">Back</button><button class="btn-primary" id="nextBtn">Next</button></div>
+  </footer>
+
+  <div class="navpop" id="navPop" hidden role="dialog" aria-label="Question navigation">
+    <div class="np-head"><h3 id="npTitle">Section 2, Module 1: Math Questions</h3><button class="xbtn" id="npClose" aria-label="Close">×</button></div>
+    <div class="legend" id="npLegend"></div>
+    <div id="npGrid"></div>
+    <div class="np-foot"><button class="btn-outline" id="goReview">Go to Review Page</button></div>
+  </div>
+
+  <div class="ref" id="ref" hidden role="dialog" aria-label="Reference sheet">
+    <div class="ref-head" id="refHead"><span>Reference Sheet</span><button class="xbtn" id="refClose" aria-label="Close reference sheet">×</button></div>
+    <div class="ref-body" id="refBody"></div>
+  </div>
+</section>
+
+<!-- ======================= TRANSITION ======================= -->
+<section id="trans" class="screen" hidden>
+  <div class="trans-card">
+    <svg class="hourglass" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 5h24M12 43h24M14 5c0 10 10 13 10 19S14 33 14 43M34 5c0 10-10 13-10 19s10 9 10 19"/><path class="sand" d="M18 39c2-4 4-5 6-6 2 1 4 2 6 6z"/></svg>
+    <h2 id="transTitle">Module 1 complete</h2>
+    <p id="transMsg">Your answers were submitted.</p>
+    <p id="transNext">Module 2 begins automatically — the timer can't be paused.</p>
+    <div class="count" id="transCount">5</div>
+  </div>
+</section>
+
+<!-- ======================= RESULTS ======================= -->
+<section id="results" class="screen" hidden>
+  <div class="res-top"><b>SAT Math Mock Test · Results</b><span id="resName" style="color:var(--muted);font-size:14px"></span></div>
+  <div class="res-wrap" id="resWrap"></div>
+</section>
+
+<div class="rv-modal" id="rvModal" hidden role="dialog" aria-modal="true" aria-labelledby="rvTitle">
+  <div class="rv-panel">
+    <div class="rv-top"><h3 id="rvTitle">Question</h3><span class="status" id="rvStatus"></span><button class="xbtn" id="rvClose" aria-label="Close review">×</button></div>
+    <div class="rv-body" id="rvBody"></div>
+    <div class="rv-bottom"><button class="btn-outline" id="rvPrev">Previous</button><span id="rvPos"></span><button class="btn-primary" id="rvNext">Next</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="confirm" hidden role="dialog" aria-modal="true" aria-labelledby="cfTitle">
+  <div class="dialog">
+    <h3 id="cfTitle">Submit Module 1?</h3>
+    <p id="cfText"></p>
+    <div class="dlg-btns"><button class="btn-outline" id="cfCancel">Keep Working</button><button class="btn-primary" id="cfOk">Submit Module</button></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+const DATA = {"id":"May 2025 · Version 1 · Math section only","modules":[{"title":"Module 1","questions":[{"type":"spr","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mn>13</mn><mi>x</mi><mo>=</mo><mn>42</mn><mo>−</mo><mi>x</mi></mrow></math><p>What value of <math><mi>x</mi></math> is the solution to the given equation?</p>","accept":[3],"show":"3"},{"type":"mcq","stem":"<p>An arborist measured and recorded the heights of red maple trees in a certain area. Of the red maple tree heights recorded in this area, the minimum was 42 feet and the maximum was 57 feet. Which inequality is true for all possible values of <math><mi>t</mi></math>, where <math><mi>t</mi></math> represents the recorded height, in feet, of a red maple tree in this area?</p>","choices":["<math><mrow><mi>t</mi><mo>≤</mo><mn>42</mn></mrow></math>","<math><mrow><mi>t</mi><mo>≥</mo><mn>57</mn></mrow></math>","<math><mrow><mi>t</mi><mo>≥</mo><mn>99</mn></mrow></math>","<math><mrow><mn>42</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>57</mn></mrow></math>"],"answer":"D"},{"type":"mcq","stem":"<p>Javier deposits $45 in a savings account at the end of each week. At the beginning of the 1st week of a year there was $700 in that savings account. How much money, in dollars, will be in the account at the end of the 6th week of the year?</p>","choices":["430","745","751","970"],"answer":"D"},{"type":"spr","stem":"<p>The <math><mi>y</mi></math>-intercept of the graph of <math><mrow><mi>y</mi><mo>=</mo><mn>2</mn><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>27</mn></mrow></math> is <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0</mn><mo separator=\"true\">,</mo><mi>y</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>. What is the value of <math><mi>y</mi></math>?</p>","accept":[27],"show":"27"},{"type":"mcq","fig":"population","stem":"<p>In 2000, a census was taken to determine the population of a certain town. The graph gives the estimated population <math><mi>y</mi></math>, in thousands, of this town <math><mi>x</mi></math> years after the 2000 census was taken, where <math><mrow><mn>0</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>5</mn></mrow></math>. Based on the graph, which of the following is the closest to the estimated population 2 years after the 2000 census was taken?</p>","choices":["7,400","6,200","4,300","3,000"],"answer":"C"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>5</mn><mi>x</mi><mo>+</mo><mi>b</mi></mrow></math><p>For the linear function <math><mi>f</mi></math>, <math><mi>b</mi></math> is a constant and <math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>7</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>35</mn></mrow></math>. What is the value of <math><mi>b</mi></math>?</p>","choices":["0","1","5","7"],"answer":"A"},{"type":"mcq","stem":"<p>The function <math><mi>h</mi></math> is defined by <math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>5</mn><mi>|</mi><mi>x</mi><mi>|</mi></mrow></math>. What is the value of <math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>3</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>?</p>","choices":["<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>15</mn></mrow></math>","2","8","15"],"answer":"D"},{"type":"mcq","stem":"<p>The table shows the frequency of values in a data set.</p>{{FIG}}<p>What is the minimum value of the data set?</p>","fig":"freqTable","choices":["1","8","13","20"],"answer":"C"},{"type":"spr","stem":"<p>The list gives the mass, in grams, of 5 ruffed lemurs.</p><p style=\"text-align:center\">3,910; 3,910; 3,130; 3,950; 3,150</p><p>What is the mean mass, in grams, of these 5 ruffed lemurs?</p>","accept":[3610],"show":"3610"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" class=\"tml-jot\"><mtr><mtd class=\"tml-right\" style=\"padding-left:0em;padding-right:0em;\"><mi>y</mi></mtd><mtd class=\"tml-left\" style=\"padding-left:0em;padding-right:0em;\"><mrow><mo>=</mo><mn>5</mn><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding-left:0em;padding-right:0em;\"><mi>y</mi></mtd><mtd class=\"tml-left\" style=\"padding-left:0em;padding-right:0em;\"><mrow><mo>=</mo><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mn>2</mn></msup></mrow></mtd></mtr></mtable></math><p>Which ordered pair <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo separator=\"true\">,</mo><mi>y</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math> is a solution to the given system of equations?</p>","choices":["<math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>8</mn><mo separator=\"true\">,</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>5</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>","<math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>8</mn><mo separator=\"true\">,</mo><mn>25</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>","<math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>3</mn><mo separator=\"true\">,</mo><mn>8</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>","<math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>2</mn><mo separator=\"true\">,</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>5</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>"],"answer":"B"},{"type":"mcq","stem":"<p>Scientists collected fallen acorns that each housed a colony of the ant species <i>P. ohioensis</i> and analyzed each colony's structure. For any of these colonies, if the colony has <math><mi>x</mi></math> worker ants, the equation <math><mrow><mi>y</mi><mo>=</mo><mn>0.67</mn><mi>x</mi><mo>+</mo><mn>2.6</mn></mrow></math>, where <math><mrow><mn>20</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>110</mn></mrow></math>, gives the predicted number of larvae, <math><mi>y</mi></math>, in the colony. If one of these colonies has 46 worker ants, which of the following is closest to the predicted number of larvae in the colony?</p>","choices":["33","49","65","150"],"answer":"A"},{"type":"mcq","stem":"<p>Liam has $150 in an account. Each year he expects to have 2.8% more money in the account than he had the previous year. Which of the following models best describes how Liam expects the money in his account to change over time?</p>","choices":["Decreasing exponential","Decreasing linear","Increasing exponential","Increasing linear"],"answer":"C"},{"type":"spr","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" class=\"tml-jot\"><mtr><mtd class=\"tml-right\" style=\"padding-left:0em;padding-right:0em;\"><mrow><mn>9</mn><mi>x</mi><mo>+</mo><mn>5</mn><mi>y</mi></mrow></mtd><mtd class=\"tml-left\" style=\"padding-left:0em;padding-right:0em;\"><mrow><mo>=</mo><mn>19</mn></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding-left:0em;padding-right:0em;\"><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>9</mn><mi>x</mi><mo>−</mo><mn>3</mn><mi>y</mi></mrow></mtd><mtd class=\"tml-left\" style=\"padding-left:0em;padding-right:0em;\"><mrow><mo>=</mo><mn>7</mn></mrow></mtd></mtr></mtable></math><p>The solution to the given system of equations is <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo separator=\"true\">,</mo><mi>y</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>. What is the value of <math><mrow><mn>2</mn><mi>y</mi></mrow></math>?</p>","accept":[26],"show":"26"},{"type":"mcq","stem":"<p>Line <math><mi>k</mi></math> is defined by <math><mrow><mi>y</mi><mo>=</mo><mn>6</mn><mi>x</mi><mo>+</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow></math>. Line <math><mi>j</mi></math> is perpendicular to line <math><mi>k</mi></math> in the <math><mrow><mi>x</mi><mi>y</mi></mrow></math>-plane. What is the slope of line <math><mi>j</mi></math>?</p>","choices":["<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>9</mn></mrow></math>","<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math>","<math><mfrac><mn>1</mn><mn>9</mn></mfrac></math>","<math><mn>6</mn></math>"],"answer":"B"},{"type":"spr","stem":"<p>The product of a positive number <math><mi>x</mi></math> and the number that is 7 less than <math><mi>x</mi></math> is equal to 228. What is the value of <math><mi>x</mi></math>?</p>","accept":[19],"show":"19"},{"type":"spr","stem":"<p>Raheem bought 9 shirts that were each the same price. He used a coupon for $54 off the entire purchase. The cost for the entire purchase after using the coupon was $108. What was the original price, in dollars, for 1 shirt?</p>","accept":[18],"show":"18"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mn>7</mn><mi>|</mi><mi>x</mi><mo>−</mo><mn>7</mn><mi>|</mi><mo>=</mo><mn>42</mn></mrow></math><p>What is the sum of the solutions to the given equation?</p>","choices":["<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>6</mn></mrow></math>","0","14","49"],"answer":"C"},{"type":"spr","fig":"triUVRST","stem":"<p>In the figure, <math><mrow><mi>R</mi><mi>T</mi><mo>=</mo><mi>T</mi><mi>U</mi></mrow></math>, the measure of angle <math><mrow><mi>V</mi><mi>S</mi><mi>T</mi></mrow></math> is <math><msup><mn>23</mn><mo>∘</mo></msup></math>, and the measure of angle <math><mrow><mi>R</mi><mi>V</mi><mi>S</mi></mrow></math> is <math><msup><mn>34</mn><mo>∘</mo></msup></math>. What is the value of <math><mi>x</mi></math>?</p>","accept":[158],"show":"158"},{"type":"mcq","stem":"<p>A cube has an edge length of 82 inches. A solid sphere with a radius of 41 inches is inside the cube, such that the sphere touches the center of each face of the cube. To the nearest cubic inch, what is the volume of the space in the cube <u>not</u> taken up by the sphere?</p>","choices":["262,672","288,532","334,846","546,087"],"answer":"A"},{"type":"mcq","stem":"<p>The function <math><mi>h</mi></math> is defined by <math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><msup><mi>a</mi><mi>x</mi></msup><mo>+</mo><mi>b</mi></mrow></math>, where <math><mi>a</mi></math> and <math><mi>b</mi></math> are positive constants. The graph of <math><mrow><mi>y</mi><mo>=</mo><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> in the <math><mrow><mi>x</mi><mi>y</mi></mrow></math>-plane passes through the points <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0</mn><mo separator=\"true\">,</mo><mn>8</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math> and <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>2</mn><mo separator=\"true\">,</mo><mn>32</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>. What is the value of <math><mrow><mi>a</mi><mi>b</mi></mrow></math>?</p>","choices":["32","35","40","64"],"answer":"B"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mi>k</mi><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>1.84</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math><p>The function <math><mi>f</mi></math> is defined by the given equation, where <math><mi>k</mi></math> is a constant. The value of <math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> increases by <math><mrow><mi>p</mi><mi>%</mi></mrow></math> for every increase of <math><mi>x</mi></math> by 1. For which of the following functions, where <math><mi>k</mi></math> is a constant, does the value of <math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> increase by <math><mrow><mi>p</mi><mi>%</mi></mrow></math> for every increase of <math><mi>x</mi></math> by 4?</p>","choices":["<math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mi>k</mi><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"true\">(</mo><msup><mn>1.84</mn><mi>x</mi></msup><mo fence=\"true\" form=\"postfix\" stretchy=\"true\">)</mo></mrow><mfrac><mn scriptlevel=\"2\" style=\"math-depth:2;\">1</mn><mn scriptlevel=\"2\" style=\"math-depth:2;\">4</mn></mfrac></msup></mrow></math>","<math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mi>k</mi><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"true\">(</mo><msup><mn>1.84</mn><mi>x</mi></msup><mo fence=\"true\" form=\"postfix\" stretchy=\"true\">)</mo></mrow><mn>4</mn></msup></mrow></math>","<math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mi>k</mi><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>1.84</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>","<math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mi>k</mi><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>1.84</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow></msup></mrow></math>"],"answer":"A"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><msqrt><mrow><mn>5</mn><mi>x</mi><mo>+</mo><mn>6</mn></mrow></msqrt></mrow></math><p>The function <math><mi>f</mi></math> is defined by the given equation. If <math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>a</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>5</mn><mi>a</mi></mrow></math>, where <math><mi>a</mi></math> is a constant, what is the value of <math><mi>a</mi></math>?</p>","choices":["<math><mfrac><mn>3</mn><mn>5</mn></mfrac></math>","<math><mfrac><mn>2</mn><mn>5</mn></mfrac></math>","<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mfrac><mn>2</mn><mn>5</mn></mfrac></mrow></math>","<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mfrac><mn>3</mn><mn>5</mn></mfrac></mrow></math>"],"answer":"C"}]},{"title":"Module 2","questions":[{"type":"mcq","stem":"<p>If <math><mrow><mn>2</mn><mi>x</mi><mo>=</mo><mn>10</mn></mrow></math>, what is the value of <math><mrow><mn>4</mn><mi>x</mi></mrow></math>?</p>","choices":["7","10","12","20"],"answer":"D"},{"type":"mcq","fig":"line12","stem":"<p>What is an equation of the graph shown?</p>","choices":["<math><mrow><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>12</mn></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>12</mn></mrow></math>"],"answer":"B"},{"type":"mcq","fig":"hTable","stem":"<p>The table shows the exponential relationship between the number of years, <math><mi>x</mi></math>, since Hana started training in pole vault, and the estimated height <math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>, in meters, of her best pole vault for that year. Which of the following functions best represents this relationship, where <math><mrow><mi>x</mi><mo>≤</mo><mn>4</mn></mrow></math>?</p>","choices":["<math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>1.20</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0.25</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>","<math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>1.20</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>1.25</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>","<math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>1.25</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0.20</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>","<math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>1.25</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>1.20</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>"],"answer":"D"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>=</mo><mn>2,601</mn></mrow></math><p>How many distinct real solutions does the given equation have?</p>","choices":["Zero","Exactly one","Exactly two","Infinitely many"],"answer":"C"},{"type":"mcq","stem":"<p>The function <math><mrow><mi>P</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>533</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>1.011</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math> models the population of a certain town each year from 1951 through 1966, where <math><mi>x</mi></math> is the number of years after 1951. Which of the following is the best interpretation of “<math><mrow><mi>P</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>5</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> is approximately equal to 563” in this context?</p>","choices":["The population of the town is estimated to be approximately 5 greater in 1956 than in 1951.","The population of the town is estimated to be approximately 563 in 1956.","The population of the town is estimated to be approximately 5 times greater in 1956 than in 1951.","The population of the town is estimated to increase by approximately 563 every 5 years between 1951 and 1966."],"answer":"B"},{"type":"mcq","fig":"ageTable","stem":"<p>The table shows the distribution of people in a certain city by age group.</p>{{FIG}}<p>If a person in this city is selected at random, which of the following is closest to the probability of selecting a person who is greater than 65 years old, given that the person is at least 18 years old?</p>","choices":["0.21","0.29","0.73","0.79"],"answer":"B"},{"type":"mcq","stem":"<p>For a certain rectangular region, the ratio of its length to its width is 10 to 4. If the width of the rectangular region increases by 7 units, how must the length change to maintain this ratio?</p>","choices":["It must decrease by 7 units.","It must increase by 7 units.","It must increase by 17.5 units.","It must decrease by 17.5 units."],"answer":"C"},{"type":"spr","stem":"<p>The expression <math><mrow><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>9</mn><mi>x</mi><mo>−</mo><mn>28</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>15</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> is equivalent to the expression <math><mrow><mi>a</mi><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></mrow></math>, where <math><mi>a</mi></math>, <math><mi>b</mi></math>, and <math><mi>c</mi></math> are constants. What is the value of <math><mi>b</mi></math>?</p>","accept":[-384],"show":"-384"},{"type":"mcq","stem":"<p>Rectangles <math><mrow><mi>A</mi><mi>B</mi><mi>C</mi><mi>D</mi></mrow></math> and <math><mrow><mi>E</mi><mi>F</mi><mi>G</mi><mi>H</mi></mrow></math> are similar. The length of each side of <math><mrow><mi>E</mi><mi>F</mi><mi>G</mi><mi>H</mi></mrow></math> is 6 times the length of the corresponding side of <math><mrow><mi>A</mi><mi>B</mi><mi>C</mi><mi>D</mi></mrow></math>. The area of <math><mrow><mi>A</mi><mi>B</mi><mi>C</mi><mi>D</mi></mrow></math> is 96 square units. What is the area, in square units, of <math><mrow><mi>E</mi><mi>F</mi><mi>G</mi><mi>H</mi></mrow></math>?</p>","choices":["16","36","576","3,456"],"answer":"D"},{"type":"mcq","stem":"<p style=\"text-align:center\">Data set A: 8, 11, 12, 15, 21, 27<br>Data set B: 9, 12, 13, 16, 22, <math><mi>h</mi></math></p><p>Data sets A and B each consist of 6 values as shown, where <math><mi>h</mi></math> is a constant. If the standard deviation of data set A is greater than the standard deviation of data set B, which of the following could be the value of <math><mi>h</mi></math>?</p><p style=\"margin-left:1.2em\">I. 23<br>II. 28<br>III. 29</p>","choices":["I only","II only","III only","II or III"],"answer":"A"},{"type":"mcq","fig":"stars","stem":"<p>A certain open star cluster contains M-type stars and K-type stars. The estimated total mass of M-type and K-type stars in this open star cluster is 132,778 quettagrams. The graph shown models the possible combinations of the number of M-type stars, <math><mi>x</mi></math>, and K-type stars, <math><mi>y</mi></math>, that could be in this open star cluster if all the M-type stars have the same estimated mass and all the K-type stars have the same estimated mass. Based on the graph, which of the following is closest to the estimated mass, in quettagrams, of each M-type star in this cluster?</p>","choices":["828","973","52,992","79,786"],"answer":"A"},{"type":"spr","stem":"<p>The function <math><mi>f</mi></math> is defined by <math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo>−</mo><mn>9</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo>−</mo><mn>6</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo>−</mo><mn>5</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>. In the <math><mrow><mi>x</mi><mi>y</mi></mrow></math>-plane, the graph of <math><mrow><mi>y</mi><mo>=</mo><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> is the result of translating the graph of <math><mrow><mi>y</mi><mo>=</mo><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> up 4 units. What is the value of <math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>?</p>","accept":[-266],"show":"-266"},{"type":"mcq","stem":"<p>At a depth of <math><mi>h</mi></math> meters below the surface, the estimated total pressure <math><msub><mi>P</mi><mn>1</mn></msub></math>, in kilopascals (kPa), a diver experienced is given by <math><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>=</mo><mn>10</mn><mi>h</mi><mo>+</mo><mn>101</mn></mrow></math>, which is a combination of estimated water pressure and estimated atmospheric pressure. After maintaining a certain depth, the diver descended <math><mi>d</mi></math> additional meters. The estimated total pressure <math><msub><mi>P</mi><mn>2</mn></msub></math>, in kPa, the diver experienced after descending these <math><mi>d</mi></math> additional meters is given by <math><mrow><msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><mn>10</mn><mi>d</mi><mo>+</mo><mn>311</mn></mrow></math>. Which of the following is the best interpretation of 311 in this context?</p>","choices":["The estimated total pressure, in kPa, the diver experienced at a depth of <math><mi>d</mi></math> meters","The estimated increase in the total pressure, in kPa, the diver experienced for each increase in the depth by 1 meter","The estimated increase in the total pressure, in kPa, the diver experienced for each increase in the depth by <math><mi>d</mi></math> meters","The estimated total pressure, in kPa, the diver experienced when the diver began to descend <math><mi>d</mi></math> additional meters"],"answer":"D"},{"type":"mcq","stem":"<p>A circle has diameters <math><menclose notation=\"top\" class=\"tml-overline\"><mrow><mi>A</mi><mi>C</mi></mrow></menclose></math> and <math><menclose notation=\"top\" class=\"tml-overline\"><mrow><mi>B</mi><mi>D</mi></mrow></menclose></math>. The circumference of the circle is <math><mrow><mn>84</mn><mi>π</mi></mrow></math>, and the length of arc <math><mrow><mi>D</mi><mi>A</mi></mrow></math> is 2 times the length of arc <math><mrow><mi>A</mi><mi>B</mi></mrow></math>. What is the length of arc <math><mrow><mi>B</mi><mi>C</mi></mrow></math>?</p>","choices":["<math><mrow><mn>2</mn><mi>π</mi></mrow></math>","<math><mrow><mn>14</mn><mi>π</mi></mrow></math>","<math><mrow><mn>21</mn><mi>π</mi></mrow></math>","<math><mrow><mn>28</mn><mi>π</mi></mrow></math>"],"answer":"D"},{"type":"spr","stem":"<p>In triangle <math><mrow><mi>X</mi><mi>Y</mi><mi>Z</mi></mrow></math>, angle <math><mi>Y</mi></math> is a right angle, the measure of angle <math><mi>Z</mi></math> is <math><msup><mn>39</mn><mo>∘</mo></msup></math>, and the length of <math><menclose notation=\"top\" class=\"tml-overline\"><mrow><mi>Y</mi><mi>Z</mi></mrow></menclose></math> is 22 units. If the area, in square units, of triangle <math><mrow><mi>X</mi><mi>Y</mi><mi>Z</mi></mrow></math> can be represented by the expression <math><mrow><mi>k</mi><mrow><mspace width=\"0.1667em\"></mspace><mi>tan</mi><mo>⁡</mo><mspace width=\"0.1667em\"></mspace></mrow><msup><mn>39</mn><mo>∘</mo></msup></mrow></math>, where <math><mi>k</mi></math> is a constant, what is the value of <math><mi>k</mi></math>?</p>","accept":[242],"show":"242"},{"type":"mcq","stem":"<p>In right triangle <math><mrow><mi>R</mi><mi>S</mi><mi>T</mi></mrow></math>, the sum of the measures of angle <math><mi>R</mi></math> and angle <math><mi>S</mi></math> is 90 degrees. The value of <math><mrow><mrow><mi>sin</mi><mo>⁡</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>R</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> is <math><mfrac><mrow><mn>3</mn><msqrt><mn>17</mn></msqrt></mrow><mn>13</mn></mfrac></math>. What is the value of <math><mrow><mrow><mi>cos</mi><mo>⁡</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>S</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>?</p>","choices":["<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>4</mn><msqrt><mn>17</mn></msqrt></mrow><mn>51</mn></mfrac></mstyle></math>","<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>3</mn><msqrt><mn>17</mn></msqrt></mrow><mn>13</mn></mfrac></mstyle></math>","<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>13</mn><msqrt><mn>17</mn></msqrt></mrow><mn>51</mn></mfrac></mstyle></math>","<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>3</mn><msqrt><mn>17</mn></msqrt></mrow><mn>4</mn></mfrac></mstyle></math>"],"answer":"B"},{"type":"spr","stem":"<p>The composition of an animal is defined as the muscles, bones, and fat of the animal. A scientist studied the composition of one young swamp buffalo and determined the buffalo had 133 kilograms of muscle, which made up approximately 65.9% of its composition. Of the remaining composition of this buffalo, approximately 46.2% was bone, and the remainder was fat. Based on these approximations, to the nearest tenth, how many kilograms of this buffalo's composition was bone?</p>","accept":[31.8],"show":"31.8"},{"type":"mcq","stem":"<p>Which of the following expressions has a factor of <math><mrow><mi>x</mi><mo>+</mo><mn>2</mn><mi>b</mi></mrow></math>, where <math><mi>b</mi></math> is a positive integer constant?</p>","choices":["<math><mrow><mn>3</mn><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>9</mn><mi>x</mi><mo>+</mo><mn>18</mn><mi>b</mi></mrow></math>","<math><mrow><mn>3</mn><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>24</mn><mi>x</mi><mo>+</mo><mn>18</mn><mi>b</mi></mrow></math>","<math><mrow><mn>3</mn><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>30</mn><mi>x</mi><mo>+</mo><mn>18</mn><mi>b</mi></mrow></math>","<math><mrow><mn>3</mn><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>39</mn><mi>x</mi><mo>+</mo><mn>18</mn><mi>b</mi></mrow></math>"],"answer":"D"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mn>31</mn><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo>−</mo><mi>n</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>31</mn><mi>y</mi><mo>+</mo><mn>31</mn><mi>n</mi></mrow></math><p>One of the equations in a system of two linear equations is given, where <math><mi>n</mi></math> is a positive constant. The system has no solution. Which equation could be the second equation in this system?</p>","choices":["<math><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>6</mn><mi>n</mi></mrow></math>","<math><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>3</mn><mi>n</mi></mrow></math>","<math><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>6</mn><mi>n</mi></mrow></math>","<math><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>3</mn><mi>n</mi></mrow></math>"],"answer":"D"},{"type":"mcq","stem":"<p>The cost of renting a piece of equipment is <math><mrow><mi>$</mi><mn>64</mn><mi>n</mi></mrow></math> for the first day and <math><mrow><mi>$</mi><mn>32</mn><mi>n</mi></mrow></math> for each additional day, where <math><mi>n</mi></math> is a positive integer. Which of the following functions gives the cost <math><mrow><mi>C</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>, in dollars, of renting this equipment for <math><mi>x</mi></math> days, where <math><mi>x</mi></math> is a positive integer?</p>","choices":["<math><mrow><mi>C</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>32</mn><mi>n</mi><mi>x</mi><mo>+</mo><mn>32</mn><mi>n</mi></mrow></math>","<math><mrow><mi>C</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>32</mn><mi>n</mi><mi>x</mi><mo>+</mo><mn>64</mn><mi>n</mi></mrow></math>","<math><mrow><mi>C</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>64</mn><mi>n</mi><mi>x</mi><mo>+</mo><mn>32</mn><mi>n</mi></mrow></math>","<math><mrow><mi>C</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>64</mn><mi>n</mi><mi>x</mi><mo>−</mo><mn>32</mn><mi>n</mi></mrow></math>"],"answer":"A"},{"type":"mcq","stem":"<p>In triangle <math><mrow><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math> and triangle <math><mrow><mi>D</mi><mi>E</mi><mi>F</mi></mrow></math>, sides <math><mrow><mi>A</mi><mi>B</mi></mrow></math> and <math><mrow><mi>D</mi><mi>E</mi></mrow></math> each have a side length of 6 inches, and angles <math><mi>A</mi></math> and <math><mi>D</mi></math> each have an angle measure of <math><msup><mn>40</mn><mo>∘</mo></msup></math>. Which of the following additional pieces of information is(are) sufficient to prove whether triangle <math><mrow><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math> is congruent to triangle <math><mrow><mi>D</mi><mi>E</mi><mi>F</mi></mrow></math>?</p><p style=\"margin-left:1.2em\">I. The measures of angles <math><mi>B</mi></math> and <math><mi>C</mi></math> are equal.<br>II. The lengths of sides <math><mrow><mi>A</mi><mi>C</mi></mrow></math> and <math><mrow><mi>D</mi><mi>F</mi></mrow></math> are equal.<br>III. The lengths of sides <math><mrow><mi>B</mi><mi>C</mi></mrow></math> and <math><mrow><mi>E</mi><mi>F</mi></mrow></math> are equal.</p>","choices":["I is sufficient, but II and III are not.","II is sufficient, but I and III are not.","III is sufficient, but I and II are not.","II is sufficient and III is sufficient, but I is not."],"answer":"B"}]}],"figs":{"population":"<svg class=\"fsvg\" viewBox=\"0 0 416 352\" width=\"416\" role=\"img\" aria-label=\"Graph of estimated population in thousands over 5 years\"><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"20\" class=\"g\"/><line x1=\"134\" y1=\"300\" x2=\"134\" y2=\"20\" class=\"g\"/><line x1=\"198\" y1=\"300\" x2=\"198\" y2=\"20\" class=\"g\"/><line x1=\"262\" y1=\"300\" x2=\"262\" y2=\"20\" class=\"g\"/><line x1=\"326\" y1=\"300\" x2=\"326\" y2=\"20\" class=\"g\"/><line x1=\"390\" y1=\"300\" x2=\"390\" y2=\"20\" class=\"g\"/><line x1=\"70\" y1=\"300\" x2=\"390\" y2=\"300\" class=\"g\"/><line x1=\"70\" y1=\"280\" x2=\"390\" y2=\"280\" class=\"g\"/><line x1=\"70\" y1=\"260\" x2=\"390\" y2=\"260\" class=\"g\"/><line x1=\"70\" y1=\"240\" x2=\"390\" y2=\"240\" class=\"g\"/><line x1=\"70\" y1=\"220\" x2=\"390\" y2=\"220\" class=\"g\"/><line x1=\"70\" y1=\"200\" x2=\"390\" y2=\"200\" class=\"g\"/><line x1=\"70\" y1=\"180\" x2=\"390\" y2=\"180\" class=\"g\"/><line x1=\"70\" y1=\"160\" x2=\"390\" y2=\"160\" class=\"g\"/><line x1=\"70\" y1=\"140\" x2=\"390\" y2=\"140\" class=\"g\"/><line x1=\"70\" y1=\"120\" x2=\"390\" y2=\"120\" class=\"g\"/><line x1=\"70\" y1=\"100\" x2=\"390\" y2=\"100\" class=\"g\"/><line x1=\"70\" y1=\"80\" x2=\"390\" y2=\"80\" class=\"g\"/><line x1=\"70\" y1=\"60\" x2=\"390\" y2=\"60\" class=\"g\"/><line x1=\"70\" y1=\"40\" x2=\"390\" y2=\"40\" class=\"g\"/><line x1=\"70\" y1=\"20\" x2=\"390\" y2=\"20\" class=\"g\"/><line x1=\"70\" y1=\"300\" x2=\"404\" y2=\"300\" class=\"a\"/><polygon points=\"404,300 397,296 397,304\" class=\"ah\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"8\" class=\"a\"/><polygon points=\"70,8 66,15 74,15\" class=\"ah\"/><text x=\"134\" y=\"317\" text-anchor=\"middle\" class=\"t\">1</text><text x=\"198\" y=\"317\" text-anchor=\"middle\" class=\"t\">2</text><text x=\"262\" y=\"317\" text-anchor=\"middle\" class=\"t\">3</text><text x=\"326\" y=\"317\" text-anchor=\"middle\" class=\"t\">4</text><text x=\"390\" y=\"317\" text-anchor=\"middle\" class=\"t\">5</text><text x=\"63\" y=\"284\" text-anchor=\"end\" class=\"t\">1</text><text x=\"63\" y=\"264\" text-anchor=\"end\" class=\"t\">2</text><text x=\"63\" y=\"244\" text-anchor=\"end\" class=\"t\">3</text><text x=\"63\" y=\"224\" text-anchor=\"end\" class=\"t\">4</text><text x=\"63\" y=\"204\" text-anchor=\"end\" class=\"t\">5</text><text x=\"63\" y=\"184\" text-anchor=\"end\" class=\"t\">6</text><text x=\"63\" y=\"164\" text-anchor=\"end\" class=\"t\">7</text><text x=\"63\" y=\"144\" text-anchor=\"end\" class=\"t\">8</text><text x=\"63\" y=\"124\" text-anchor=\"end\" class=\"t\">9</text><text x=\"63\" y=\"104\" text-anchor=\"end\" class=\"t\">10</text><text x=\"63\" y=\"84\" text-anchor=\"end\" class=\"t\">11</text><text x=\"63\" y=\"64\" text-anchor=\"end\" class=\"t\">12</text><text x=\"63\" y=\"44\" text-anchor=\"end\" class=\"t\">13</text><text x=\"63\" y=\"24\" text-anchor=\"end\" class=\"t\">14</text><text x=\"63\" y=\"315\" text-anchor=\"end\" class=\"t i\">O</text><text x=\"408\" y=\"305\" text-anchor=\"start\" class=\"t i\">x</text><text x=\"78\" y=\"12\" text-anchor=\"start\" class=\"t i\">y</text><text x=\"230\" y=\"344\" text-anchor=\"middle\" class=\"t\">Years after census was taken</text><text transform=\"translate(18 160) rotate(-90)\" text-anchor=\"middle\" class=\"t\">Population (in thousands)</text><polyline points=\"70,240 76.4,238.9 82.8,237.77 89.2,236.63 95.6,235.46 102,234.27 108.4,233.06 114.8,231.83 121.2,230.58 127.6,229.3 134,228 140.4,226.68 146.8,225.33 153.2,223.95 159.6,222.55 166,221.13 172.4,219.68 178.8,218.2 185.2,216.69 191.6,215.16 198,213.6 204.4,212.01 210.8,210.39 217.2,208.74 223.6,207.06 230,205.35 236.4,203.61 242.8,201.84 249.2,200.03 255.6,198.19 262,196.32 268.4,194.41 274.8,192.47 281.2,190.49 287.6,188.48 294,186.42 300.4,184.33 306.8,182.21 313.2,180.04 319.6,177.83 326,175.58 332.4,173.29 338.8,170.96 345.2,168.59 351.6,166.17 358,163.71 364.4,161.2 370.8,158.65 377.2,156.05 383.6,153.4 390,150.7\" class=\"ln\"/></svg>","triUVRST":"<svg class=\"fsvg\" viewBox=\"0 0 410 260\" width=\"410\" role=\"img\" aria-label=\"Triangle figure with points U, V, R on a line, T on segment US\"><line x1=\"40\" y1=\"225\" x2=\"365\" y2=\"225\" class=\"ln\"/><line x1=\"40\" y1=\"225\" x2=\"370\" y2=\"20\" class=\"ln\"/><line x1=\"200.05\" y1=\"125.58\" x2=\"365\" y2=\"225\" class=\"ln\"/><line x1=\"370\" y1=\"20\" x2=\"270\" y2=\"225\" class=\"ln\"/><text x=\"34\" y=\"245\" text-anchor=\"middle\" class=\"t-l i\">U</text><text x=\"270\" y=\"245\" text-anchor=\"middle\" class=\"t-l i\">V</text><text x=\"369\" y=\"245\" text-anchor=\"middle\" class=\"t-l i\">R</text><text x=\"374\" y=\"14\" text-anchor=\"middle\" class=\"t-l i\">S</text><text x=\"194.05\" y=\"115.58\" text-anchor=\"middle\" class=\"t-l i\">T</text><text x=\"202.05\" y=\"147.57\" text-anchor=\"middle\" class=\"t\"><tspan class=\"i\">x</tspan>°</text></svg><p class=\"fig-note\">Note: Figure not drawn to scale.</p>","line12":"<svg class=\"fsvg\" viewBox=\"0 0 230 332\" width=\"230\" role=\"img\" aria-label=\"Graph of a decreasing line in the xy-plane\"><line x1=\"30\" y1=\"302\" x2=\"30\" y2=\"30\" class=\"g\"/><line x1=\"47\" y1=\"302\" x2=\"47\" y2=\"30\" class=\"g\"/><line x1=\"64\" y1=\"302\" x2=\"64\" y2=\"30\" class=\"g\"/><line x1=\"81\" y1=\"302\" x2=\"81\" y2=\"30\" class=\"g\"/><line x1=\"98\" y1=\"302\" x2=\"98\" y2=\"30\" class=\"g\"/><line x1=\"115\" y1=\"302\" x2=\"115\" y2=\"30\" class=\"g\"/><line x1=\"132\" y1=\"302\" x2=\"132\" y2=\"30\" class=\"g\"/><line x1=\"149\" y1=\"302\" x2=\"149\" y2=\"30\" class=\"g\"/><line x1=\"166\" y1=\"302\" x2=\"166\" y2=\"30\" class=\"g\"/><line x1=\"183\" y1=\"302\" x2=\"183\" y2=\"30\" class=\"g\"/><line x1=\"200\" y1=\"302\" x2=\"200\" y2=\"30\" class=\"g\"/><line x1=\"30\" y1=\"302\" x2=\"200\" y2=\"302\" class=\"g\"/><line x1=\"30\" y1=\"285\" x2=\"200\" y2=\"285\" class=\"g\"/><line x1=\"30\" y1=\"268\" x2=\"200\" y2=\"268\" class=\"g\"/><line x1=\"30\" y1=\"251\" x2=\"200\" y2=\"251\" class=\"g\"/><line x1=\"30\" y1=\"234\" x2=\"200\" y2=\"234\" class=\"g\"/><line x1=\"30\" y1=\"217\" x2=\"200\" y2=\"217\" class=\"g\"/><line x1=\"30\" y1=\"200\" x2=\"200\" y2=\"200\" class=\"g\"/><line x1=\"30\" y1=\"183\" x2=\"200\" y2=\"183\" class=\"g\"/><line x1=\"30\" y1=\"166\" x2=\"200\" y2=\"166\" class=\"g\"/><line x1=\"30\" y1=\"149\" x2=\"200\" y2=\"149\" class=\"g\"/><line x1=\"30\" y1=\"132\" x2=\"200\" y2=\"132\" class=\"g\"/><line x1=\"30\" y1=\"115\" x2=\"200\" y2=\"115\" class=\"g\"/><line x1=\"30\" y1=\"98\" x2=\"200\" y2=\"98\" class=\"g\"/><line x1=\"30\" y1=\"81\" x2=\"200\" y2=\"81\" class=\"g\"/><line x1=\"30\" y1=\"64\" x2=\"200\" y2=\"64\" class=\"g\"/><line x1=\"30\" y1=\"47\" x2=\"200\" y2=\"47\" class=\"g\"/><line x1=\"30\" y1=\"30\" x2=\"200\" y2=\"30\" class=\"g\"/><line x1=\"24\" y1=\"166\" x2=\"216\" y2=\"166\" class=\"a\"/><polygon points=\"216,166 209,162 209,170\" class=\"ah\"/><line x1=\"115\" y1=\"308\" x2=\"115\" y2=\"14\" class=\"a\"/><polygon points=\"115,14 111,21 119,21\" class=\"ah\"/><polygon points=\"24,166 31,162 31,170\" class=\"ah\"/><polygon points=\"115,308 111,301 119,301\" class=\"ah\"/><line x1=\"30\" y1=\"163\" x2=\"30\" y2=\"169\" class=\"a\"/><text x=\"30\" y=\"182\" text-anchor=\"middle\" class=\"t\">−10</text><line x1=\"47\" y1=\"163\" x2=\"47\" y2=\"169\" class=\"a\"/><text x=\"47\" y=\"182\" text-anchor=\"middle\" class=\"t\">−8</text><line x1=\"64\" y1=\"163\" x2=\"64\" y2=\"169\" class=\"a\"/><text x=\"64\" y=\"182\" text-anchor=\"middle\" class=\"t\">−6</text><line x1=\"81\" y1=\"163\" x2=\"81\" y2=\"169\" class=\"a\"/><text x=\"81\" y=\"182\" text-anchor=\"middle\" class=\"t\">−4</text><line x1=\"98\" y1=\"163\" x2=\"98\" y2=\"169\" class=\"a\"/><text x=\"98\" y=\"182\" text-anchor=\"middle\" class=\"t\">−2</text><line x1=\"132\" y1=\"163\" x2=\"132\" y2=\"169\" class=\"a\"/><text x=\"132\" y=\"182\" text-anchor=\"middle\" class=\"t\">2</text><line x1=\"149\" y1=\"163\" x2=\"149\" y2=\"169\" class=\"a\"/><text x=\"149\" y=\"182\" text-anchor=\"middle\" class=\"t\">4</text><line x1=\"166\" y1=\"163\" x2=\"166\" y2=\"169\" class=\"a\"/><text x=\"166\" y=\"182\" text-anchor=\"middle\" class=\"t\">6</text><line x1=\"183\" y1=\"163\" x2=\"183\" y2=\"169\" class=\"a\"/><text x=\"183\" y=\"182\" text-anchor=\"middle\" class=\"t\">8</text><line x1=\"200\" y1=\"163\" x2=\"200\" y2=\"169\" class=\"a\"/><text x=\"200\" y=\"182\" text-anchor=\"middle\" class=\"t\">10</text><line x1=\"112\" y1=\"302\" x2=\"118\" y2=\"302\" class=\"a\"/><text x=\"108\" y=\"306\" text-anchor=\"end\" class=\"t\">−16</text><line x1=\"112\" y1=\"285\" x2=\"118\" y2=\"285\" class=\"a\"/><text x=\"108\" y=\"289\" text-anchor=\"end\" class=\"t\">−14</text><line x1=\"112\" y1=\"268\" x2=\"118\" y2=\"268\" class=\"a\"/><text x=\"108\" y=\"272\" text-anchor=\"end\" class=\"t\">−12</text><line x1=\"112\" y1=\"251\" x2=\"118\" y2=\"251\" class=\"a\"/><text x=\"108\" y=\"255\" text-anchor=\"end\" class=\"t\">−10</text><line x1=\"112\" y1=\"234\" x2=\"118\" y2=\"234\" class=\"a\"/><text x=\"108\" y=\"238\" text-anchor=\"end\" class=\"t\">−8</text><line x1=\"112\" y1=\"217\" x2=\"118\" y2=\"217\" class=\"a\"/><text x=\"108\" y=\"221\" text-anchor=\"end\" class=\"t\">−6</text><line x1=\"112\" y1=\"200\" x2=\"118\" y2=\"200\" class=\"a\"/><text x=\"108\" y=\"204\" text-anchor=\"end\" class=\"t\">−4</text><line x1=\"112\" y1=\"183\" x2=\"118\" y2=\"183\" class=\"a\"/><text x=\"108\" y=\"187\" text-anchor=\"end\" class=\"t\">−2</text><line x1=\"112\" y1=\"149\" x2=\"118\" y2=\"149\" class=\"a\"/><text x=\"108\" y=\"153\" text-anchor=\"end\" class=\"t\">2</text><line x1=\"112\" y1=\"132\" x2=\"118\" y2=\"132\" class=\"a\"/><text x=\"108\" y=\"136\" text-anchor=\"end\" class=\"t\">4</text><line x1=\"112\" y1=\"115\" x2=\"118\" y2=\"115\" class=\"a\"/><text x=\"108\" y=\"119\" text-anchor=\"end\" class=\"t\">6</text><line x1=\"112\" y1=\"98\" x2=\"118\" y2=\"98\" class=\"a\"/><text x=\"108\" y=\"102\" text-anchor=\"end\" class=\"t\">8</text><line x1=\"112\" y1=\"81\" x2=\"118\" y2=\"81\" class=\"a\"/><text x=\"108\" y=\"85\" text-anchor=\"end\" class=\"t\">10</text><line x1=\"112\" y1=\"64\" x2=\"118\" y2=\"64\" class=\"a\"/><text x=\"108\" y=\"68\" text-anchor=\"end\" class=\"t\">12</text><line x1=\"112\" y1=\"47\" x2=\"118\" y2=\"47\" class=\"a\"/><text x=\"108\" y=\"51\" text-anchor=\"end\" class=\"t\">14</text><line x1=\"112\" y1=\"30\" x2=\"118\" y2=\"30\" class=\"a\"/><text x=\"108\" y=\"34\" text-anchor=\"end\" class=\"t\">16</text><text x=\"108\" y=\"181\" text-anchor=\"end\" class=\"t i\">O</text><text x=\"219\" y=\"171\" text-anchor=\"start\" class=\"t i\">x</text><text x=\"123\" y=\"18\" text-anchor=\"start\" class=\"t i\">y</text><line x1=\"81\" y1=\"30\" x2=\"200\" y2=\"149\" class=\"ln\"/></svg>","stars":"<svg class=\"fsvg\" viewBox=\"0 0 388 360\" width=\"388\" role=\"img\" aria-label=\"Graph of possible numbers of M-type and K-type stars\"><g transform=\"translate(56 4)\"><line x1=\"30\" y1=\"302\" x2=\"30\" y2=\"30\" class=\"g\"/><line x1=\"47\" y1=\"302\" x2=\"47\" y2=\"30\" class=\"g\"/><line x1=\"64\" y1=\"302\" x2=\"64\" y2=\"30\" class=\"g\"/><line x1=\"81\" y1=\"302\" x2=\"81\" y2=\"30\" class=\"g\"/><line x1=\"98\" y1=\"302\" x2=\"98\" y2=\"30\" class=\"g\"/><line x1=\"115\" y1=\"302\" x2=\"115\" y2=\"30\" class=\"g\"/><line x1=\"132\" y1=\"302\" x2=\"132\" y2=\"30\" class=\"g\"/><line x1=\"149\" y1=\"302\" x2=\"149\" y2=\"30\" class=\"g\"/><line x1=\"166\" y1=\"302\" x2=\"166\" y2=\"30\" class=\"g\"/><line x1=\"183\" y1=\"302\" x2=\"183\" y2=\"30\" class=\"g\"/><line x1=\"200\" y1=\"302\" x2=\"200\" y2=\"30\" class=\"g\"/><line x1=\"217\" y1=\"302\" x2=\"217\" y2=\"30\" class=\"g\"/><line x1=\"234\" y1=\"302\" x2=\"234\" y2=\"30\" class=\"g\"/><line x1=\"251\" y1=\"302\" x2=\"251\" y2=\"30\" class=\"g\"/><line x1=\"268\" y1=\"302\" x2=\"268\" y2=\"30\" class=\"g\"/><line x1=\"285\" y1=\"302\" x2=\"285\" y2=\"30\" class=\"g\"/><line x1=\"302\" y1=\"302\" x2=\"302\" y2=\"30\" class=\"g\"/><line x1=\"30\" y1=\"302\" x2=\"302\" y2=\"302\" class=\"g\"/><line x1=\"30\" y1=\"285\" x2=\"302\" y2=\"285\" class=\"g\"/><line x1=\"30\" y1=\"268\" x2=\"302\" y2=\"268\" class=\"g\"/><line x1=\"30\" y1=\"251\" x2=\"302\" y2=\"251\" class=\"g\"/><line x1=\"30\" y1=\"234\" x2=\"302\" y2=\"234\" class=\"g\"/><line x1=\"30\" y1=\"217\" x2=\"302\" y2=\"217\" class=\"g\"/><line x1=\"30\" y1=\"200\" x2=\"302\" y2=\"200\" class=\"g\"/><line x1=\"30\" y1=\"183\" x2=\"302\" y2=\"183\" class=\"g\"/><line x1=\"30\" y1=\"166\" x2=\"302\" y2=\"166\" class=\"g\"/><line x1=\"30\" y1=\"149\" x2=\"302\" y2=\"149\" class=\"g\"/><line x1=\"30\" y1=\"132\" x2=\"302\" y2=\"132\" class=\"g\"/><line x1=\"30\" y1=\"115\" x2=\"302\" y2=\"115\" class=\"g\"/><line x1=\"30\" y1=\"98\" x2=\"302\" y2=\"98\" class=\"g\"/><line x1=\"30\" y1=\"81\" x2=\"302\" y2=\"81\" class=\"g\"/><line x1=\"30\" y1=\"64\" x2=\"302\" y2=\"64\" class=\"g\"/><line x1=\"30\" y1=\"47\" x2=\"302\" y2=\"47\" class=\"g\"/><line x1=\"30\" y1=\"30\" x2=\"302\" y2=\"30\" class=\"g\"/><line x1=\"24\" y1=\"302\" x2=\"318\" y2=\"302\" class=\"a\"/><polygon points=\"318,302 311,298 311,306\" class=\"ah\"/><line x1=\"30\" y1=\"308\" x2=\"30\" y2=\"14\" class=\"a\"/><polygon points=\"30,14 26,21 34,21\" class=\"ah\"/><line x1=\"64\" y1=\"299\" x2=\"64\" y2=\"305\" class=\"a\"/><text x=\"64\" y=\"318\" text-anchor=\"middle\" class=\"t\">20</text><line x1=\"98\" y1=\"299\" x2=\"98\" y2=\"305\" class=\"a\"/><text x=\"98\" y=\"318\" text-anchor=\"middle\" class=\"t\">40</text><line x1=\"132\" y1=\"299\" x2=\"132\" y2=\"305\" class=\"a\"/><text x=\"132\" y=\"318\" text-anchor=\"middle\" class=\"t\">60</text><line x1=\"166\" y1=\"299\" x2=\"166\" y2=\"305\" class=\"a\"/><text x=\"166\" y=\"318\" text-anchor=\"middle\" class=\"t\">80</text><line x1=\"200\" y1=\"299\" x2=\"200\" y2=\"305\" class=\"a\"/><text x=\"200\" y=\"318\" text-anchor=\"middle\" class=\"t\">100</text><line x1=\"234\" y1=\"299\" x2=\"234\" y2=\"305\" class=\"a\"/><text x=\"234\" y=\"318\" text-anchor=\"middle\" class=\"t\">120</text><line x1=\"268\" y1=\"299\" x2=\"268\" y2=\"305\" class=\"a\"/><text x=\"268\" y=\"318\" text-anchor=\"middle\" class=\"t\">140</text><line x1=\"302\" y1=\"299\" x2=\"302\" y2=\"305\" class=\"a\"/><text x=\"302\" y=\"318\" text-anchor=\"middle\" class=\"t\">160</text><line x1=\"27\" y1=\"268\" x2=\"33\" y2=\"268\" class=\"a\"/><text x=\"23\" y=\"272\" text-anchor=\"end\" class=\"t\">20</text><line x1=\"27\" y1=\"234\" x2=\"33\" y2=\"234\" class=\"a\"/><text x=\"23\" y=\"238\" text-anchor=\"end\" class=\"t\">40</text><line x1=\"27\" y1=\"200\" x2=\"33\" y2=\"200\" class=\"a\"/><text x=\"23\" y=\"204\" text-anchor=\"end\" class=\"t\">60</text><line x1=\"27\" y1=\"166\" x2=\"33\" y2=\"166\" class=\"a\"/><text x=\"23\" y=\"170\" text-anchor=\"end\" class=\"t\">80</text><line x1=\"27\" y1=\"132\" x2=\"33\" y2=\"132\" class=\"a\"/><text x=\"23\" y=\"136\" text-anchor=\"end\" class=\"t\">100</text><line x1=\"27\" y1=\"98\" x2=\"33\" y2=\"98\" class=\"a\"/><text x=\"23\" y=\"102\" text-anchor=\"end\" class=\"t\">120</text><line x1=\"27\" y1=\"64\" x2=\"33\" y2=\"64\" class=\"a\"/><text x=\"23\" y=\"68\" text-anchor=\"end\" class=\"t\">140</text><line x1=\"27\" y1=\"30\" x2=\"33\" y2=\"30\" class=\"a\"/><text x=\"23\" y=\"34\" text-anchor=\"end\" class=\"t\">160</text><text x=\"23\" y=\"317\" text-anchor=\"end\" class=\"t i\">O</text><text x=\"321\" y=\"307\" text-anchor=\"start\" class=\"t i\">x</text><text x=\"38\" y=\"18\" text-anchor=\"start\" class=\"t i\">y</text><line x1=\"30\" y1=\"69.95\" x2=\"302.68\" y2=\"302\" class=\"ln\"/></g><text x=\"222\" y=\"350\" text-anchor=\"middle\" class=\"t\">Number of M-type stars</text><text transform=\"translate(20 170) rotate(-90)\" text-anchor=\"middle\" class=\"t\">Number of K-type stars</text></svg>","freqTable":"<table class=\"xy dt\"><tr><th>Value</th><th>Frequency</th></tr><tr><td>13</td><td>8</td></tr><tr><td>20</td><td>1</td></tr><tr><td>27</td><td>8</td></tr><tr><td>34</td><td>6</td></tr></table>","hTable":"<table class=\"xy dt\"><tr><th><i>x</i></th><th><i>h</i>(<i>x</i>)</th></tr><tr><td>0</td><td>1.25</td></tr><tr><td>2</td><td>1.80</td></tr><tr><td>4</td><td>2.59</td></tr></table>","ageTable":"<table class=\"xy dt\"><tr><th>Age group</th><th>Proportion</th></tr><tr><td>Less than 18 years old</td><td>27%</td></tr><tr><td>18–40 years old</td><td>24%</td></tr><tr><td>41–65 years old</td><td>28%</td></tr><tr><td>Greater than 65 years old</td><td>21%</td></tr></table>"},"sprDir":"<h3>Student-produced response directions</h3><ul>\n<li>If you find <b>more than one correct answer</b>, enter only one answer.</li>\n<li>You can enter up to 5 characters for a <b>positive</b> answer and up to 6 characters (including the negative sign) for a <b>negative</b> answer.</li>\n<li>If your answer is a <b>fraction</b> that doesn't fit in the provided space, enter the decimal equivalent.</li>\n<li>If your answer is a <b>decimal</b> that doesn't fit in the provided space, enter it by truncating or rounding at the fourth digit.</li>\n<li>If your answer is a <b>mixed number</b> (such as 3½), enter it as an improper fraction (7/2) or its decimal equivalent (3.5).</li>\n<li>Don't enter <b>symbols</b> such as a percent sign, comma, or dollar sign.</li></ul>\n<h4>Examples</h4><table class=\"ex\"><tr><th>Answer</th><th>Acceptable ways to enter answer</th><th>Unacceptable: will NOT receive credit</th></tr>\n<tr><td>3.5</td><td>3.5<br>3.50<br>7/2</td><td>31/2<br>3 1/2</td></tr>\n<tr><td><math><mfrac><mn>2</mn><mn>3</mn></mfrac></math></td><td>2/3<br>.6666<br>.6667<br>0.666<br>0.667</td><td>0.66<br>.66<br>0.67<br>.67</td></tr>\n<tr><td><math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math></td><td>-1/3<br>-.3333<br>-0.333</td><td>-.33<br>-0.33</td></tr></table>","refHTML":"<div class=\"ref-grid\"><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><circle cx=\"62\" cy=\"50\" r=\"36\" class=\"s\"/><circle cx=\"62\" cy=\"50\" r=\"2\" class=\"f\"/><line x1=\"62\" y1=\"50\" x2=\"98\" y2=\"50\" class=\"s\"/><text x=\"80\" y=\"45\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text></svg><div><math><mrow><mi>A</mi><mo>=</mo><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup></mrow></math></div><div><math><mrow><mi>C</mi><mo>=</mo><mn>2</mn><mi>π</mi><mi>r</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><rect x=\"18\" y=\"24\" width=\"92\" height=\"52\" class=\"s\"/><text x=\"64\" y=\"92\" text-anchor=\"middle\"><tspan font-style=\"italic\">ℓ</tspan></text><text x=\"118\" y=\"55\" text-anchor=\"start\"><tspan font-style=\"italic\">w</tspan></text></svg><div><math><mrow><mi>A</mi><mo>=</mo><mi>ℓ</mi><mi>w</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"10,80 118,80 42,18\" class=\"s\"/><line x1=\"42\" y1=\"18\" x2=\"42\" y2=\"80\" class=\"d\"/><polyline points=\"42,72 50,72 50,80\" class=\"s\"/><text x=\"36\" y=\"56\" text-anchor=\"end\"><tspan font-style=\"italic\">h</tspan></text><text x=\"64\" y=\"95\" text-anchor=\"middle\"><tspan font-style=\"italic\">b</tspan></text></svg><div><math><mrow><mi>A</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mi>b</mi><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"14,80 110,80 110,20\" class=\"s\"/><polyline points=\"102,80 102,72 110,72\" class=\"s\"/><text x=\"56\" y=\"44\" text-anchor=\"end\"><tspan font-style=\"italic\">c</tspan></text><text x=\"117\" y=\"54\" text-anchor=\"start\"><tspan font-style=\"italic\">a</tspan></text><text x=\"62\" y=\"95\" text-anchor=\"middle\"><tspan font-style=\"italic\">b</tspan></text></svg><div><math><mrow><msup><mi>c</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 140 104\" width=\"140\" height=\"104\" aria-hidden=\"true\"><polygon points=\"22,84 22,22 120,84\" class=\"s\"/><polyline points=\"22,76 30,76 30,84\" class=\"s\"/><text x=\"16\" y=\"57\" text-anchor=\"end\"><tspan font-style=\"italic\">x</tspan></text><text x=\"71\" y=\"98\" text-anchor=\"middle\"><tspan font-style=\"italic\">x</tspan>√3</text><text x=\"76\" y=\"46\" text-anchor=\"start\">2<tspan font-style=\"italic\">x</tspan></text><text x=\"28\" y=\"40\" text-anchor=\"start\">60°</text><text x=\"94\" y=\"80\" text-anchor=\"end\">30°</text></svg><div class=\"ref-cap\">Special right triangles</div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 104\" width=\"130\" height=\"104\" aria-hidden=\"true\"><polygon points=\"22,84 22,24 82,84\" class=\"s\"/><polyline points=\"22,76 30,76 30,84\" class=\"s\"/><text x=\"16\" y=\"58\" text-anchor=\"end\"><tspan font-style=\"italic\">s</tspan></text><text x=\"52\" y=\"98\" text-anchor=\"middle\"><tspan font-style=\"italic\">s</tspan></text><text x=\"58\" y=\"50\" text-anchor=\"start\"><tspan font-style=\"italic\">s</tspan>√2</text><text x=\"28\" y=\"42\" text-anchor=\"start\">45°</text><text x=\"62\" y=\"80\" text-anchor=\"end\">45°</text></svg><div class=\"ref-cap\">Special right triangles</div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"14,40 84,40 84,86 14,86\" class=\"s\"/><polygon points=\"14,40 40,18 110,18 84,40\" class=\"s\"/><polygon points=\"84,40 110,18 110,64 84,86\" class=\"s\"/><polyline points=\"14,86 40,64 110,64\" class=\"d\"/><line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"64\" class=\"d\"/><text x=\"49\" y=\"98\" text-anchor=\"middle\"><tspan font-style=\"italic\">ℓ</tspan></text><text x=\"101\" y=\"84\" text-anchor=\"start\"><tspan font-style=\"italic\">w</tspan></text><text x=\"118\" y=\"44\" text-anchor=\"start\"><tspan font-style=\"italic\">h</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mi>ℓ</mi><mi>w</mi><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><ellipse cx=\"62\" cy=\"20\" rx=\"36\" ry=\"10\" class=\"s\"/><path d=\"M26 20 V80 A36 10 0 0 0 98 80 V20\" class=\"s\"/><path d=\"M26 80 A36 10 0 0 1 98 80\" class=\"d\"/><line x1=\"62\" y1=\"20\" x2=\"98\" y2=\"20\" class=\"s\"/><circle cx=\"62\" cy=\"20\" r=\"1.8\" class=\"f\"/><text x=\"80\" y=\"15\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text><text x=\"106\" y=\"54\" text-anchor=\"start\"><tspan font-style=\"italic\">h</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><circle cx=\"62\" cy=\"50\" r=\"38\" class=\"s\"/><path d=\"M24 50 A38 11 0 0 0 100 50\" class=\"s\"/><path d=\"M24 50 A38 11 0 0 1 100 50\" class=\"d\"/><line x1=\"62\" y1=\"50\" x2=\"100\" y2=\"50\" class=\"s\"/><circle cx=\"62\" cy=\"50\" r=\"1.8\" class=\"f\"/><text x=\"82\" y=\"45\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>4</mn><mn>3</mn></mfrac></mstyle><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">3</mn></msup></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><path d=\"M24 80 L62 12 L100 80\" class=\"s\"/><path d=\"M24 80 A38 10 0 0 0 100 80\" class=\"s\"/><path d=\"M24 80 A38 10 0 0 1 100 80\" class=\"d\"/><line x1=\"62\" y1=\"12\" x2=\"62\" y2=\"80\" class=\"d\"/><line x1=\"62\" y1=\"80\" x2=\"100\" y2=\"80\" class=\"s\"/><polyline points=\"62,73 69,73 69,80\" class=\"s\"/><text x=\"56\" y=\"52\" text-anchor=\"end\"><tspan font-style=\"italic\">h</tspan></text><text x=\"82\" y=\"76\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"14,82 86,82 112,64 40,64\" class=\"d\"/><polyline points=\"40,64 14,82 86,82 112,64\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"14\" y2=\"82\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"86\" y2=\"82\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"112\" y2=\"64\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"40\" y2=\"64\" class=\"d\"/><line x1=\"62\" y1=\"12\" x2=\"62\" y2=\"73\" class=\"d\"/><text x=\"56\" y=\"50\" text-anchor=\"end\"><tspan font-style=\"italic\">h</tspan></text><text x=\"50\" y=\"96\" text-anchor=\"middle\"><tspan font-style=\"italic\">ℓ</tspan></text><text x=\"104\" y=\"80\" text-anchor=\"start\"><tspan font-style=\"italic\">w</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mi>ℓ</mi><mi>w</mi><mi>h</mi></mrow></math></div></div></div><div class=\"ref-facts\"><p>The number of degrees of arc in a circle is 360.</p><p>The number of radians of arc in a circle is <math><mrow><mn>2</mn><mi>π</mi></mrow></math>.</p><p>The sum of the measures in degrees of the angles of a triangle is 180.</p></div>"};
+const MOD_SEC = 35 * 60;
+const LETTERS = ['A', 'B', 'C', 'D'];
+// Estimated raw score (0-44 correct) -> scaled Math score
+const SCALE = [200,200,210,230,250,270,290,310,330,350,370,390,400,410,420,430,440,450,460,470,480,490,500,510,520,530,540,550,560,570,580,600,610,620,640,650,670,680,700,710,730,750,770,790,800];
+const STORE_KEY = 'sat-mock-progress:' + DATA.id;
+const DESMOS_KEY = 'dcb31709b452b1cf9dc26972add0fda6'; // Desmos public demo key; replace with your own for production use
+
+const ICON = {
+  bookmark: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>',
+  pin: '<svg class="ic-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg>',
+  flag: '<svg class="ic-flag" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4.2L6 21z"/></svg>',
+  clock: '<svg class="clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-label="Timer hidden"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2.5h5"/></svg>',
+};
+
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const fmt = (sec) => `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`;
+
+const S = {
+  name: 'Student', mod: 0, idx: 0, view: 'q',
+  ans: DATA.modules.map((m) => m.questions.map(() => '')),
+  mark: DATA.modules.map((m) => m.questions.map(() => false)),
+  elim: DATA.modules.map((m) => m.questions.map(() => ({}))),
+  abc: false, endAt: 0, modStart: 0, timerHidden: false, warned: false,
+  used: DATA.modules.map(() => 0), inTest: false, timerId: null, phase: '',
+};
+let RES = null, RV = null, calc = null, desmosStarted = false;
+
+function show(id) { document.querySelectorAll('.screen').forEach((el) => (el.hidden = el.id !== id)); }
+const total = () => DATA.modules[S.mod].questions.length;
+const curQ = () => DATA.modules[S.mod].questions[S.idx];
+
+/* ---------------- flow ---------------- */
+function startTest() {
+  if (load() && !confirm('Start a new test? Your saved progress on this test will be erased.')) return;
+  clearSave();
+  S.name = $('#nameInput').value.trim() || 'Student';
+  $('#stuName').textContent = S.name;
+  S.inTest = true;
+  startModule(0);
+}
+
+function startModule(m) {
+  S.mod = m; S.idx = 0; S.view = 'q'; S.warned = false; S.timerHidden = false; S.phase = 'test';
+  S.modStart = Date.now();
+  S.endAt = S.modStart + MOD_SEC * 1000;
+  closeAllPopups();
+  show('test');
+  render();
+  clearInterval(S.timerId);
+  S.timerId = setInterval(tick, 250);
+  tick();
+}
+
+function tick() {
+  const left = Math.max(0, Math.ceil((S.endAt - Date.now()) / 1000));
+  const el = $('#timer');
+  if (left <= 300 && !S.warned) {
+    S.warned = true; S.timerHidden = false;
+    toast('5 minutes remain in this module.', true);
+    save();
+  }
+  el.classList.toggle('low', left <= 300);
+  if (S.timerHidden) { if (!el.querySelector('.clock')) el.innerHTML = ICON.clock; }
+  else el.textContent = fmt(left);
+  $('#hideBtn').textContent = S.timerHidden ? 'Show' : 'Hide';
+  if (left === 0) submitModule(true);
+}
+
+function submitModule(auto) {
+  clearInterval(S.timerId);
+  S.used[S.mod] = Math.min(MOD_SEC, Math.round((Date.now() - S.modStart) / 1000));
+  closeAllPopups();
+  $('#confirm').hidden = true;
+  if (S.mod < DATA.modules.length - 1) {
+    const a = S.mod + 1, b = S.mod + 2;
+    S.phase = 'trans';
+    save();
+    show('trans');
+    $('#transTitle').textContent = `Module ${a} complete`;
+    $('#transMsg').textContent = auto ? `Time's up. Your Module ${a} answers were submitted automatically.` : `Your Module ${a} answers were submitted.`;
+    $('#transNext').textContent = `Module ${b} begins automatically — the timer can't be paused.`;
+    let n = 5;
+    $('#transCount').textContent = n;
+    const t = setInterval(() => {
+      n -= 1;
+      $('#transCount').textContent = Math.max(n, 0);
+      if (n <= 0) { clearInterval(t); startModule(b - 1); }
+    }, 1000);
+  } else {
+    finish();
+  }
+}
+
+/* ---------------- rendering: test ---------------- */
+function render() {
+  const n = total();
+  $('#secTitle').textContent = `Section 2, Module ${S.mod + 1}: Math`;
+  $('#navLabel').textContent = `Question ${S.idx + 1} of ${n}`;
+  $('#navBtn').hidden = S.view !== 'q';
+  $('#backBtn').style.visibility = S.view === 'q' && S.idx === 0 ? 'hidden' : 'visible';
+  const area = $('#qArea');
+  area.innerHTML = S.view === 'q' ? questionHTML() : reviewPageHTML();
+  area.scrollTop = 0;
+  const inp = $('#sprInput');
+  if (inp) inp.addEventListener('input', onSprInput);
+  if (!$('#navPop').hidden) fillNavPop();
+  save();
+}
+
+// Re-render in place (same question) keeping scroll positions
+function refresh() {
+  const pos = [...document.querySelectorAll('#qArea, #qArea .spr-left, #qArea .spr-right')].map((e) => e.scrollTop);
+  render();
+  [...document.querySelectorAll('#qArea, #qArea .spr-left, #qArea .spr-right')].forEach((e, i) => (e.scrollTop = pos[i] || 0));
+}
+
+function stemHTML(q) {
+  const fig = q.fig ? `<div class="fig">${DATA.figs[q.fig]}</div>` : '';
+  return q.stem.includes('{{FIG}}')
+    ? `<div class="q-stem">${q.stem.replace('{{FIG}}', fig)}</div>`
+    : `${fig}<div class="q-stem">${q.stem}</div>`;
+}
+
+function questionHTML() {
+  const q = curQ(), m = S.mod, i = S.idx;
+  const marked = S.mark[m][i];
+  const head = `<div class="q-head"><div class="q-num">${i + 1}</div>
+    <button class="mark-btn${marked ? ' on' : ''}" data-act="mark" aria-pressed="${marked}">${ICON.bookmark}<span>Mark for Review</span></button>
+    ${q.type === 'mcq' ? `<button class="abc-btn${S.abc ? ' on' : ''}" data-act="abc" aria-pressed="${S.abc}" title="Cross out answer choices"><span>ABC</span></button>` : ''}</div>`;
+  if (q.type === 'mcq') {
+    const choices = q.choices.map((c, k) => {
+      const L = LETTERS[k], sel = S.ans[m][i] === L, el = !!S.elim[m][i][L];
+      const side = !S.abc ? '' : el
+        ? `<button class="undo-btn" data-act="elim" data-l="${L}" aria-label="Undo cross out for choice ${L}">Undo</button>`
+        : `<button class="elim-btn" data-act="elim" data-l="${L}" aria-label="Cross out choice ${L}">${L}</button>`;
+      return `<div class="choice-row"><button class="choice${sel ? ' sel' : ''}${el ? ' elim' : ''}" data-act="pick" data-l="${L}" aria-pressed="${sel}"><span class="ltr">${L}</span><span class="ctext">${c}</span></button>${side}</div>`;
+    }).join('');
+    return `<div class="q-col">${head}<div class="q-body">${stemHTML(q)}<div class="choices">${choices}</div></div></div>`;
+  }
+  return `<div class="spr"><div class="spr-left spr-dir">${DATA.sprDir}</div><div class="spr-div"></div>
+    <div class="spr-right">${head}<div class="q-body">${stemHTML(q)}
+      <div class="spr-entry"><input id="sprInput" class="spr-input" type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" value="${esc(S.ans[m][i])}" aria-label="Enter your answer"></div>
+      <div class="spr-preview">Answer Preview: <span id="sprPrev">${preview(S.ans[m][i])}</span></div>
+    </div></div></div>`;
+}
+
+function legendHTML(withCurrent) {
+  return `${withCurrent ? `<span><svg class="lg-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg>Current</span>` : ''}
+    <span><i class="lg-un"></i>Unanswered</span>
+    <span><svg class="lg-flag" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4.2L6 21z"/></svg>For Review</span>`;
+}
+
+function gridHTML(big) {
+  const m = S.mod;
+  return `<div class="ngrid${big ? ' big' : ''}">` + DATA.modules[m].questions.map((q, i) => {
+    const a = S.ans[m][i] !== '', mk = S.mark[m][i], cur = !big && S.view === 'q' && i === S.idx;
+    const cls = ['cell', a ? 'ans' : '', mk ? 'mk' : '', cur ? 'cur' : ''].filter(Boolean).join(' ');
+    const label = `Question ${i + 1}, ${a ? 'answered' : 'unanswered'}${mk ? ', marked for review' : ''}${cur ? ', current' : ''}`;
+    return `<button class="${cls}" data-act="goto" data-i="${i}" aria-label="${label}">${cur ? ICON.pin : ''}${mk ? ICON.flag : ''}${i + 1}</button>`;
+  }).join('') + '</div>';
+}
+
+function reviewPageHTML() {
+  const un = S.ans[S.mod].filter((a) => a === '').length;
+  return `<div class="review"><h1>Check Your Work</h1>
+    <p>Select any question to go back to it. When you're ready, select <b>Next</b> to submit Module ${S.mod + 1} early. You can't return to it after submitting.${un ? ` You have <b>${un}</b> unanswered question${un > 1 ? 's' : ''}.` : ''}</p>
+    <div class="rv-card"><div class="rv-head"><h2>Section 2, Module ${S.mod + 1}: Math Questions</h2><div class="legend">${legendHTML(false)}</div></div>${gridHTML(true)}</div></div>`;
+}
+
+/* ---------------- student-produced responses ---------------- */
+function onSprInput(e) {
+  let v = e.target.value.replace(/[^0-9./-]/g, '');
+  v = v.replace(/(?!^)-/g, '');
+  const parts = v.split('/');
+  if (parts.length > 2) v = parts[0] + '/' + parts.slice(1).join('');
+  v = v.slice(0, v.startsWith('-') ? 6 : 5);
+  if (v !== e.target.value) e.target.value = v;
+  S.ans[S.mod][S.idx] = v;
+  save();
+  $('#sprPrev').innerHTML = preview(v);
+}
+
+function preview(v) {
+  if (!v) return '';
+  const neg = v.startsWith('-');
+  const body = neg ? v.slice(1) : v;
+  const num = (t) => (t ? `<mn>${esc(t)}</mn>` : '<mrow></mrow>');
+  const inner = body.includes('/') ? `<mfrac>${num(body.split('/')[0])}${num(body.split('/')[1])}</mfrac>` : num(body);
+  return `<math>${neg ? '<mo>−</mo>' : ''}${inner}</math>`;
+}
+
+function checkSPR(raw, accept) {
+  const v = (raw || '').trim();
+  if (!v) return false;
+  let val, dec = 0;
+  if (/^-?\d+\/\d+$/.test(v)) {
+    const [a, b] = v.replace('-', '').split('/').map(Number);
+    if (b === 0) return false;
+    val = (v.startsWith('-') ? -1 : 1) * (a / b);
+  } else if (/^-?(\d+\.?\d*|\.\d+)$/.test(v)) {
+    val = parseFloat(v);
+    dec = v.includes('.') ? v.split('.')[1].length : 0;
+  } else return false;
+  const full = v.length >= (v.startsWith('-') ? 6 : 5);
+  return accept.some((x) => {
+    if (Math.abs(val - x) < 1e-9) return true;
+    if (dec > 0 && full) { // decimal that fills the box: truncated or rounded is accepted
+      const p = 10 ** dec, s = x < 0 ? -1 : 1;
+      const tr = (s * Math.floor(Math.abs(x) * p + 1e-9)) / p;
+      const rd = (s * Math.round(Math.abs(x) * p)) / p;
+      return Math.abs(val - tr) < 1e-9 || Math.abs(val - rd) < 1e-9;
+    }
+    return false;
+  });
+}
+
+/* ---------------- popups ---------------- */
+function fillNavPop() {
+  $('#npTitle').textContent = `Section 2, Module ${S.mod + 1}: Math Questions`;
+  $('#npLegend').innerHTML = legendHTML(true);
+  $('#npGrid').innerHTML = gridHTML(false);
+}
+function toggleNav(force) {
+  const p = $('#navPop');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#navBtn').setAttribute('aria-expanded', open);
+  if (open) { fillNavPop(); toggleDir(false); }
+}
+function toggleDir(force) {
+  const p = $('#dirPop');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#dirBtn').setAttribute('aria-expanded', open);
+  if (open) toggleNav(false);
+}
+function toggleRef(force) {
+  const p = $('#ref');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#refBtn').setAttribute('aria-pressed', open);
+}
+function toggleCalc(force) {
+  const p = $('#calc');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#calcBtn').setAttribute('aria-pressed', open);
+  if (open) {
+    if (!desmosStarted) { desmosStarted = true; loadDesmos(0); }
+    else if (calc) calc.resize();
+  }
+}
+function closeAllPopups() { toggleNav(false); toggleDir(false); }
+
+function loadDesmos(k) {
+  const versions = ['v1.11', 'v1.10', 'v1.9'];
+  if (k >= versions.length) {
+    $('#desmos').innerHTML = `<div class="calc-msg">The graphing calculator couldn't load. It needs an internet connection.<br><br><a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Open the Desmos calculator in a new tab</a></div>`;
+    return;
+  }
+  const s = document.createElement('script');
+  s.src = `https://www.desmos.com/api/${versions[k]}/calculator.js?apiKey=${DESMOS_KEY}`;
+  s.onload = () => {
+    try {
+      $('#desmos').innerHTML = '';
+      calc = Desmos.GraphingCalculator($('#desmos'), { keypad: true, expressions: true, settingsMenu: true, zoomButtons: true, border: false });
+    } catch (err) { s.onerror(); }
+  };
+  s.onerror = () => { s.remove(); loadDesmos(k + 1); };
+  document.head.appendChild(s);
+}
+
+function toast(msg, alert) {
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.toggle('alert', !!alert);
+  t.hidden = false;
+  clearTimeout(toast.tm);
+  toast.tm = setTimeout(() => (t.hidden = true), 5000);
+}
+
+function openConfirm() {
+  const un = S.ans[S.mod].filter((a) => a === '').length;
+  $('#cfTitle').textContent = `Submit Module ${S.mod + 1}?`;
+  $('#cfText').textContent = (un ? `You have ${un} unanswered question${un > 1 ? 's' : ''}. ` : 'All questions are answered. ') +
+    (S.mod < DATA.modules.length - 1 ? `Once you submit, you can't return to Module ${S.mod + 1}, and Module ${S.mod + 2} starts right away.` : 'Once you submit, the test ends and your score is calculated.') +
+    ' The timer keeps running while this message is open.';
+  $('#cfOk').textContent = S.mod < DATA.modules.length - 1 ? `Submit Module ${S.mod + 1}` : 'Submit Test';
+  $('#confirm').hidden = false;
+  $('#cfOk').focus();
+}
+
+/* ---------------- results ---------------- */
+function finish() {
+  S.inTest = false;
+  S.phase = 'done';
+  save();
+  RES = DATA.modules.map((mod, m) => mod.questions.map((q, i) => {
+    const a = S.ans[m][i];
+    if (a === '') return 'om';
+    return (q.type === 'mcq' ? a === q.answer : checkSPR(a, q.accept)) ? 'ok' : 'bad';
+  }));
+  const right = RES.map((r) => r.filter((x) => x === 'ok').length);
+  const raw = right.reduce((x, y) => x + y, 0);
+  const nq = RES.reduce((x, r) => x + r.length, 0);
+  const score = SCALE[Math.min(44, Math.round((raw * 44) / nq))];
+  const pct = ((score - 200) / 600) * 100;
+  const omitted = RES.flat().filter((x) => x === 'om').length;
+
+  const tile = (m, i) => {
+    const st = RES[m][i], q = DATA.modules[m].questions[i];
+    const word = st === 'ok' ? 'Correct' : st === 'bad' ? 'Incorrect' : 'Omitted';
+    const sym = st === 'ok' ? '✓' : st === 'bad' ? '✗' : '–';
+    return `<button class="rtile ${st}" data-m="${m}" data-i="${i}" aria-label="Module ${m + 1} question ${i + 1}: ${word}">${i + 1}<small>${sym} ${q.type === 'spr' ? 'SPR' : 'MC'}</small></button>`;
+  };
+  $('#resName').textContent = S.name;
+  $('#resWrap').innerHTML = `
+    <div class="score-card">
+      <div>
+        <div class="score-lbl">Estimated Math Score</div>
+        <div class="score-big">${score}</div>
+        <div class="score-range">on a 200–800 scale</div>
+      </div>
+      <div>
+        <div class="scale" aria-hidden="true"><div class="scale-fill" style="width:${pct}%"></div><div class="scale-mark" style="left:${pct}%"></div></div>
+        <div class="scale-ends"><span>200</span><span>500</span><span>800</span></div>
+        <div class="stats">
+          <div class="stat"><b>${raw} / ${nq}</b><span>correct overall</span></div>
+          ${RES.map((r, m) => `<div class="stat"><b>${right[m]} / ${r.length}</b><span>Module ${m + 1} · ${fmt(S.used[m])} used</span></div>`).join('')}
+        </div>
+      </div>
+      <p class="score-note">Estimate based on a typical raw-to-scaled conversion for the SAT Math section. Real SAT scores depend on the test form and adaptive routing.${omitted ? ` ${omitted} question${omitted > 1 ? 's were' : ' was'} left unanswered.` : ''}</p>
+    </div>
+    <h2 class="res-h2">Question Review</h2>
+    <p class="res-sub">Select a question to see your answer and the correct answer.</p>
+    <div class="res-legend"><span><i class="sw ok"></i>Correct</span><span><i class="sw bad"></i>Incorrect</span><span><i class="sw om"></i>Omitted</span></div>
+    ${DATA.modules.map((mod, m) => `
+      <div class="res-mod"><h3>Module ${m + 1}<span>${right[m]} of ${mod.questions.length} correct</span></h3>
+        <div class="rgrid">${mod.questions.map((_, i) => tile(m, i)).join('')}</div></div>`).join('')}
+    <div class="res-actions"><button class="btn-outline" id="retake">Retake Test</button></div>`;
+  show('results');
+  window.scrollTo(0, 0);
+}
+
+const FLAT = DATA.modules.flatMap((mod, m) => mod.questions.map((_, i) => [m, i]));
+function openReview(m, i) { RV = FLAT.findIndex(([a, b]) => a === m && b === i); renderReview(); $('#rvModal').hidden = false; $('#rvClose').focus(); }
+function renderReview() {
+  const [m, i] = FLAT[RV];
+  const q = DATA.modules[m].questions[i], a = S.ans[m][i], st = RES[m][i];
+  $('#rvTitle').textContent = `Module ${m + 1} · Question ${i + 1}`;
+  const stEl = $('#rvStatus');
+  stEl.className = `status ${st}`;
+  stEl.textContent = st === 'ok' ? 'Correct' : st === 'bad' ? 'Incorrect' : 'Omitted';
+  let ans;
+  if (q.type === 'mcq') {
+    ans = `<div class="choices">${q.choices.map((c, k) => {
+      const L = LETTERS[k], isKey = L === q.answer, isYou = L === a;
+      const cls = isKey ? ' r-ok' : isYou ? ' r-bad' : '';
+      const tag = isKey ? (isYou ? 'Your answer · Correct' : 'Correct answer') : isYou ? 'Your answer' : '';
+      return `<div class="choice-row"><div class="choice${cls}"><span class="ltr">${L}</span><span class="ctext">${c}</span>${tag ? `<span class="rtag">${tag}</span>` : ''}</div></div>`;
+    }).join('')}</div>`;
+    if (!a) ans = `<p class="res-sub" style="margin-top:14px">You didn't answer this question.</p>` + ans;
+  } else {
+    ans = `<div class="spr-review">
+      <div class="srow ${st}"><span class="slab">Your answer</span><span class="sval">${a ? preview(a) : '<em style="font-weight:400">Omitted</em>'}</span></div>
+      <div class="srow key"><span class="slab">Correct answer</span><span class="sval">${esc(q.show)}</span></div></div>`;
+  }
+  $('#rvBody').innerHTML = `<div class="q-body">${stemHTML(q)}${ans}</div>`;
+  $('#rvBody').scrollTop = 0;
+  $('#rvPos').textContent = `${RV + 1} of ${FLAT.length}`;
+  $('#rvPrev').disabled = RV === 0;
+  $('#rvNext').disabled = RV === FLAT.length - 1;
+  $('#rvPrev').style.opacity = RV === 0 ? 0.4 : 1;
+  $('#rvNext').style.opacity = RV === FLAT.length - 1 ? 0.4 : 1;
+}
+
+/* ---------------- events ---------------- */
+$('#startBtn').addEventListener('click', startTest);
+$('#nameInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') startTest(); });
+
+$('#qArea').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-act]');
+  if (!b) return;
+  const m = S.mod, i = S.idx, L = b.dataset.l;
+  switch (b.dataset.act) {
+    case 'mark': S.mark[m][i] = !S.mark[m][i]; break;
+    case 'abc': S.abc = !S.abc; break;
+    case 'pick': delete S.elim[m][i][L]; S.ans[m][i] = L; break;
+    case 'elim':
+      if (S.elim[m][i][L]) delete S.elim[m][i][L];
+      else { S.elim[m][i][L] = true; if (S.ans[m][i] === L) S.ans[m][i] = ''; }
+      break;
+    case 'goto': S.idx = +b.dataset.i; S.view = 'q'; render(); return;
+  }
+  refresh();
+});
+
+$('#npGrid').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-act=goto]');
+  if (!b) return;
+  S.idx = +b.dataset.i; S.view = 'q';
+  toggleNav(false);
+  render();
+});
+$('#goReview').addEventListener('click', () => { S.view = 'review'; toggleNav(false); render(); });
+$('#npClose').addEventListener('click', () => toggleNav(false));
+$('#navBtn').addEventListener('click', (e) => { e.stopPropagation(); toggleNav(); });
+$('#dirBtn').addEventListener('click', (e) => { e.stopPropagation(); toggleDir(); });
+$('#dirClose').addEventListener('click', () => toggleDir(false));
+$('#refBtn').addEventListener('click', () => toggleRef());
+$('#refClose').addEventListener('click', () => toggleRef(false));
+$('#calcBtn').addEventListener('click', () => toggleCalc());
+$('#calcClose').addEventListener('click', () => toggleCalc(false));
+$('#calcWide').addEventListener('click', () => {
+  const wide = $('#calc').classList.toggle('wide');
+  $('#calcWide').textContent = wide ? 'Collapse' : 'Expand';
+  if (calc) setTimeout(() => calc.resize(), 30);
+});
+$('#hideBtn').addEventListener('click', () => { S.timerHidden = !S.timerHidden; tick(); save(); });
+
+$('#nextBtn').addEventListener('click', () => {
+  if (S.view === 'q') {
+    if (S.idx < total() - 1) S.idx += 1; else S.view = 'review';
+    toggleNav(false);
+    render();
+  } else openConfirm();
+});
+$('#backBtn').addEventListener('click', () => {
+  if (S.view === 'review') { S.view = 'q'; S.idx = total() - 1; }
+  else if (S.idx > 0) S.idx -= 1;
+  toggleNav(false);
+  render();
+});
+$('#cfCancel').addEventListener('click', () => ($('#confirm').hidden = true));
+$('#cfOk').addEventListener('click', () => submitModule(false));
+
+document.addEventListener('click', (e) => {
+  if (!$('#navPop').hidden && !e.target.closest('#navPop, #navBtn')) toggleNav(false);
+  if (!$('#dirPop').hidden && !e.target.closest('#dirPop, #dirBtn')) toggleDir(false);
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (!$('#rvModal').hidden) $('#rvModal').hidden = true;
+    else if (!$('#confirm').hidden) $('#confirm').hidden = true;
+    else closeAllPopups();
+  }
+  if (!$('#rvModal').hidden) {
+    if (e.key === 'ArrowRight' && RV < FLAT.length - 1) { RV++; renderReview(); }
+    if (e.key === 'ArrowLeft' && RV > 0) { RV--; renderReview(); }
+  }
+});
+
+$('#resWrap').addEventListener('click', (e) => {
+  const t = e.target.closest('.rtile');
+  if (t) openReview(+t.dataset.m, +t.dataset.i);
+  if (e.target.closest('#retake') && confirm('Start a new attempt? Your current results will be cleared.')) { clearSave(); location.reload(); }
+});
+$('#rvClose').addEventListener('click', () => ($('#rvModal').hidden = true));
+$('#rvModal').addEventListener('click', (e) => { if (e.target.id === 'rvModal') $('#rvModal').hidden = true; });
+$('#rvPrev').addEventListener('click', () => { if (RV > 0) { RV--; renderReview(); } });
+$('#rvNext').addEventListener('click', () => { if (RV < FLAT.length - 1) { RV++; renderReview(); } });
+
+window.addEventListener('pagehide', () => { if (S.phase) save(); });
+document.addEventListener('visibilitychange', () => { if (S.phase) save(); });
+
+// Draggable reference sheet
+(() => {
+  const p = $('#ref'), h = $('#refHead');
+  let drag = null;
+  h.addEventListener('pointerdown', (e) => {
+    if (e.target.closest('button')) return;
+    const r = p.getBoundingClientRect();
+    drag = { sx: e.clientX, sy: e.clientY, ox: r.left, oy: r.top };
+    h.setPointerCapture(e.pointerId);
+  });
+  h.addEventListener('pointermove', (e) => {
+    if (!drag) return;
+    const x = Math.min(window.innerWidth - 80, Math.max(80 - p.offsetWidth, drag.ox + e.clientX - drag.sx));
+    const y = Math.min(window.innerHeight - 44, Math.max(0, drag.oy + e.clientY - drag.sy));
+    Object.assign(p.style, { left: x + 'px', top: y + 'px', right: 'auto' });
+  });
+  h.addEventListener('pointerup', () => (drag = null));
+})();
+
+$('#refBody').innerHTML = DATA.refHTML;
+
+/* ---------------- saved progress (this browser only) ---------------- */
+function save() {
+  if (!S.phase) return;
+  try {
+    localStorage.setItem(STORE_KEY, JSON.stringify({
+      v: 1, phase: S.phase, name: S.name, mod: S.mod, idx: S.idx, view: S.view, ans: S.ans, mark: S.mark, elim: S.elim,
+      abc: S.abc, endAt: S.endAt, modStart: S.modStart, used: S.used, timerHidden: S.timerHidden, warned: S.warned, savedAt: Date.now(),
+    }));
+  } catch (e) { /* storage unavailable (private mode, blocked) */ }
+}
+function load() {
+  try {
+    const d = JSON.parse(localStorage.getItem(STORE_KEY));
+    const ok = d && d.v === 1 && Array.isArray(d.ans) && d.ans.length === DATA.modules.length &&
+      d.ans.every((a, m) => Array.isArray(a) && a.length === DATA.modules[m].questions.length);
+    return ok ? d : null;
+  } catch (e) { return null; }
+}
+function clearSave() { try { localStorage.removeItem(STORE_KEY); } catch (e) { /* ignore */ } }
+
+function resume() {
+  const d = load();
+  if (!d) return;
+  for (const k of ['name', 'mod', 'idx', 'view', 'ans', 'mark', 'elim', 'abc', 'endAt', 'modStart', 'used', 'timerHidden', 'warned']) S[k] = d[k];
+  S.phase = d.phase;
+  $('#stuName').textContent = S.name;
+  if (d.phase === 'done') { finish(); return; }
+  S.inTest = true;
+  if (d.phase === 'trans') { startModule(S.mod + 1); return; }
+  closeAllPopups();
+  show('test');
+  render();
+  clearInterval(S.timerId);
+  S.timerId = setInterval(tick, 250);
+  tick();
+}
+
+(() => {
+  const d = load();
+  if (!d) return;
+  const n = DATA.modules.length;
+  if (d.name && d.name !== 'Student') $('#nameInput').value = d.name;
+  if (d.phase === 'done') {
+    $('#resumeTitle').textContent = 'You finished this test';
+    $('#resumeText').textContent = 'Your score and question review are saved in this browser.';
+    $('#resumeBtn').textContent = 'View Results';
+  } else {
+    const answered = d.ans[d.mod].filter((a) => a !== '').length;
+    const total = d.ans[d.mod].length;
+    const left = Math.max(0, Math.ceil((d.endAt - Date.now()) / 1000));
+    $('#resumeText').textContent = d.phase === 'trans'
+      ? `Module ${d.mod + 1} is submitted. Module ${d.mod + 2} starts when you resume.`
+      : `Module ${d.mod + 1}${n > 1 ? ` of ${n}` : ''} · ${answered} of ${total} answered · ` +
+        (left > 0 ? `${fmt(left)} left (the timer kept running)` : "time is up, so this module will be submitted when you resume");
+  }
+  $('#resumeBox').hidden = false;
+  $('#startBtn').textContent = 'Start New Test';
+})();
+$('#resumeBtn').addEventListener('click', resume);
+</script>
+</body>
+</html>
