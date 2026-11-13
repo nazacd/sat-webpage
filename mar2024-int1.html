@@ -1,0 +1,1389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAT Math Mock Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Math&display=swap" rel="stylesheet">
+<style>
+/*
+Temml.woff2 is a clone of KaTeX_Script-Regular, except that the code points
+have been changed from ASCII to Unicode Mathematical Alphanumeric Symbols Script capitals,
+Unicode range 1D49C to 1D4B5.
+*/
+
+@font-face {
+  font-family: 'Temml';
+  src: url(data:font/woff2;base64,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) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+math {
+  font-family: "Cambria Math", 'STIXTwoMath-Regular', 'NotoSansMath-Regular', math;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size-adjust: none;
+  text-indent: 0;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  direction: ltr;
+  /* Prevent Firefox from omitting the dot on i or j. */
+  font-feature-settings: "dtls" off;
+}
+
+math * {
+  border-color: currentColor;
+}
+
+/* display: block is necessary in Firefox and Safari.
+ * Not in Chromium, which recognizes display: "block math" written inline. */
+ math.tml-display {
+  display: block;
+  width: 100%;
+}
+
+*.mathcal {
+  /* NotoSans */
+  font-feature-settings: 'ss01';
+}
+
+math .mathscr {
+  font-family: "Temml";
+}
+
+mo.tml-prime {
+  font-family: Temml;
+}
+
+/* Cramped superscripts in WebKit */
+mfrac > :nth-child(2),
+msqrt,
+mover > :first-child {
+  math-shift: compact
+}
+
+.menclose {
+  display: inline-block;
+  position: relative;
+  padding: 0.5ex 0ex;
+}
+.tml-cancelto {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5ex 0ex;
+  background-color: currentColor;
+  /* Use the SVG as an alpha mask (painted by background-color) */
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><defs><marker id='a' markerHeight='5' markerUnits='strokeWidth' markerWidth='7' orient='auto' refX='7' refY='2.5'><path fill='black' d='m0 0 7 2.5L0 5z'/></marker></defs><line x2='100%25' y1='100%25' stroke='black' stroke-width='.06em' marker-end='url(%23a)' vector-effect='non-scaling-stroke'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><defs><marker id='a' markerHeight='5' markerUnits='strokeWidth' markerWidth='7' orient='auto' refX='7' refY='2.5'><path fill='black' d='m0 0 7 2.5L0 5z'/></marker></defs><line x2='100%25' y1='100%25' stroke='black' stroke-width='.06em' marker-end='url(%23a)' vector-effect='non-scaling-stroke'/></svg>");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+}
+
+@supports (-moz-appearance: none) {
+  /* \vec w/o italic correction for Firefox */
+  .tml-vec {
+    transform: scale(0.75)
+  }
+  /* Fix \cancelto in Firefox */
+  .ff-narrow {
+    width: 0em;
+  }
+  .ff-nudge-left {
+    margin-left: -0.2em;
+  }
+  /* Squash hidden mrows in \bordermatrix. Messes with centering, but necessary to squash. */
+  .ff-squash mtd {
+    display: block;
+    height: 0;
+  }
+}
+
+@supports (not (-moz-appearance: none)) {
+  /* Chromium and WebKit */
+  /* prime vertical alignment */
+  mo.tml-prime {
+    font-family: Temml;
+  }
+  /* Italic correction on superscripts */
+  .tml-sml-pad {
+    padding-left: 0.05em;
+  }
+  .tml-med-pad {
+    padding-left: 0.10em;
+  }
+  .tml-lrg-pad {
+    padding-left: 0.15em;
+  }
+}
+
+@supports (-webkit-backdrop-filter: blur(1px)) {
+  /* WebKit vertical & italic correction on accents */
+  .wbk-acc {
+    /* lower by x-height distance */
+    transform: translate(0em, 0.431em);
+  }
+  .wbk-sml {
+    transform: translate(0.07em, 0);
+  }
+  .wbk-sml-acc {
+    transform: translate(0.07em, 0.431em);
+  }
+  .wbk-sml-vec {
+    transform: scale(0.75) translate(0.07em, 0);
+  }
+  .wbk-med {
+    transform: translate(0.14em, 0);
+  }
+  .wbk-med-acc {
+    transform: translate(0.14em, 0.431em);
+  }
+  .wbk-med-vec {
+    transform: scale(0.75) translate(0.14em, 0);
+  }
+  .wbk-lrg {
+    transform: translate(0.21em, 0);
+  }
+  .wbk-lrg-acc {
+    transform: translate(0.21em, 0.431em);
+  }
+  .wbk-lrg-vec {
+    transform: scale(0.75) translate(0.21em, 0);
+  }
+}
+
+/* \cancel & \phase use background images. Get them to print. */
+menclose {
+  -webkit-print-color-adjust: exact;  /* Chrome & Edge */
+          print-color-adjust: exact;
+}
+
+/* Array cell justification in Firefox & WebKit */
+.tml-right {
+  text-align: right;
+}
+.tml-left {
+  text-align: left;
+}
+
+/* For CD labels that grow to the left in Firefox and WebKit */
+.tml-shift-left { margin-left:-200% }
+
+/* Styles for Chromium only */
+@supports (not (-webkit-backdrop-filter: blur(1px))) and (not (-moz-appearance: none)) {
+  /* Italic correction on accents */
+  .chr-sml {
+    transform: translate(0.07em, 0)
+  }
+  .chr-sml-vec {
+    transform: scale(0.75) translate(0.07em, 0)
+  }
+  .chr-med {
+    transform: translate(0.14em, 0)
+  }
+  .chr-med-vec {
+    transform: scale(0.75) translate(0.14em, 0)
+  }
+  .chr-lrg {
+    transform: translate(0.21em, 0)
+  }
+  .chr-lrg-vec {
+    transform: scale(0.75) translate(0.21em, 0)
+  }
+
+  /* For CD labels that grow to the left */
+  .tml-shift-left { margin-left:-100% }
+
+  /* MathML Core & Chromium do not support the MathML 3.0 element <menclose> attributes. */
+  /* So use styles. */
+  menclose {
+    position: relative;
+    padding: 0.5ex 0ex;
+  }
+  
+    .tml-overline {
+    padding: 0.1em 0 0 0;
+    border-top: 0.065em solid;
+  }
+
+  .tml-underline {
+    padding: 0 0 0.1em 0;
+    border-bottom: 0.065em solid;
+  }
+
+  .tml-cancel {
+    display: inline-block;
+    position: absolute;
+    left: 0.5px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+  }
+  .upstrike {
+    clip-path: polygon(0.05em 100%, 0em calc(100% - 0.05em), calc(100% - 0.05em) 0em, 100% 0.05em);
+  }
+  .downstrike {
+    clip-path: polygon(0em 0.05em, 0.05em 0em, 100% calc(100% - 0.05em), calc(100% - 0.05em) 100%);
+  }
+  .sout {
+    clip-path: polygon(0em calc(55% + 0.0333em), 0em calc(55% - 0.0333em), 100% calc(55% - 0.0333em), 100% calc(55% + 0.0333em));
+  }
+  .tml-xcancel {
+    clip-path: polygon(0.05em 0em, 0em 0.05em, calc(50% - 0.05em) 50%, 0em calc(100% - 0.05em), 0.05em 100%, 50% calc(50% + 0.05em), calc(100% - 0.05em) 100%, 100% calc(100% - 0.05em), calc(50% + 0.05em) 50%, 100% 0.05em, calc(100% - 0.05em) 0%, 50% calc(50% - 0.05em));
+  }
+
+  .longdiv-top {
+    border-top: 0.067em solid;
+    padding: 0.1em 0.2em 0.2em 0.433em;
+  }
+  .longdiv-arc {
+    position: absolute;
+    top: 0;
+    bottom: 0.1em;
+    left: -0.4em;
+    width: 0.7em;
+    border: 0.067em solid;
+    transform: translateY(-0.067em);
+    border-radius: 70%;
+    clip-path: inset(0 0 0 0.4em);
+    box-sizing: border-box;}
+    .menclose {display: inline-block;
+    text-align: left;
+    position: relative;
+  }
+  
+  .phasor-bottom {
+    border-bottom: 0.067em solid;
+    padding: 0.2em 0.2em 0.1em 0.6em;
+  }
+  .phasor-angle {
+    display: inline-block;
+    position: absolute;
+    left: 0.5px;
+    bottom: -0.04em;
+    height: 100%;
+    aspect-ratio: 0.5;
+    background-color: currentColor;
+    clip-path: polygon(0.05em 100%, 0em calc(100% - 0.05em), calc(100% - 0.05em) 0em, 100% 0.05em);
+  }
+
+  .tml-fbox {
+    padding: 3pt;
+    border: 1px solid;
+  }
+
+  .circle-pad {
+    padding: 0.267em;
+  }
+  .textcircle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: 0.067em solid;
+    border-radius: 50%;
+   }
+
+   .actuarial {
+    padding: 0.03889em 0.03889em 0 0.03889em;
+    border-width: 0.08em 0.08em 0em 0em;
+    border-style: solid;
+    margin-right: 0.03889em;
+   }
+
+   /* Stretch \widetilde */
+  .tml-tilde-2 {
+    transform: scale(2.0, 1.1)
+  }
+  .tml-tilde-3 {
+    transform: scale(3.0, 1.1)
+  }
+  .tml-tilde-4 {
+    transform: scale(4.0, 1.1)
+  }
+  /* Stretch \widehat */
+  .tml-hat-1 {
+    transform: scale(1.9, 1.0)
+  }
+  .tml-hat-2 {
+    transform: scale(3.9, 1.0)
+  }
+  .tml-hat-3 {
+    transform: scale(5.8, 1.0)
+  }
+  .tml-hat-4 {
+    transform: scale(7.8, 1.0)
+  }
+  
+  /* set array cell justification */
+  .tml-right {
+    text-align: -webkit-right;
+  }
+  .tml-left {
+    text-align: -webkit-left;
+  }
+}
+
+.special-fraction {
+  font-family: 'STIX TWO', 'Times New Roman', Times, Tinos, serif;
+}
+
+/* flex-wrap for line-breaking in Chromium */
+math {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+math > mrow {
+  padding: 0.5ex 0ex;
+}
+
+/* Default mtd top padding is 0.5ex per MathML-Core and user-agent CSS */
+/* We adjust for jot and small */
+mtable.tml-jot > mtr > mtd {
+  padding-top: 0.7ex;
+  padding-bottom: 0.7ex;
+}
+mtable.tml-small mtd {
+  padding-top: 0.35ex;
+  padding-bottom: 0.35ex;
+}
+
+/* Firefox */
+@-moz-document url-prefix() {
+  /* Avoid flex-wrap */
+  math { display: inline; }
+  math > mrow { padding: 0 }
+  /* Adjust Firefox spacing between array rows */
+  mtd, mtable.tml-small mtd { padding-top: 0; padding-bottom: 0; }
+  mtable.tml-jot > mtr > mtd { padding-top: 0.2ex; padding-bottom: 0.2ex; }
+}
+
+/* AMS environment auto-numbering via CSS counter. */
+.tml-eqn::before {
+  counter-increment: tmlEqnNo;
+  content: "(" counter(tmlEqnNo) ")";
+}
+
+body {
+  counter-reset: tmlEqnNo;
+}
+
+:root{
+  --blue:#324dc7; --blue-dk:#273ea6; --ink:#1e1e1e; --muted:#5b6170; --line:#d5d9e0;
+  --soft:#f2f4f8; --bar:#f7f8fb; --red:#c8102e; --green:#17803d;
+  --ui:"Noto Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --serif:"Noto Serif",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#fff;color:var(--ink);font-family:var(--ui);-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer;color:inherit}
+[hidden]{display:none!important}
+math{font-family:"Cambria Math","STIX Two Math","STIXTwoMath-Regular","Latin Modern Math","Noto Sans Math",math;font-size:1.06em}
+math[display=block]{margin:.6em 0}
+.screen{min-height:100%}
+
+/* ---------- shared buttons ---------- */
+.btn-primary{background:var(--blue);color:#fff;border:0;border-radius:999px;padding:10px 26px;font-weight:600;font-size:15px;line-height:1.2}
+.btn-primary:hover{background:var(--blue-dk)}
+.btn-primary:focus-visible,.btn-outline:focus-visible,.choice:focus-visible,.cell:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.btn-outline{background:#fff;color:var(--blue);border:1.5px solid var(--blue);border-radius:999px;padding:9px 22px;font-weight:600;font-size:15px}
+.btn-outline:hover{background:#eef1fc}
+.btn-lg{padding:14px 40px;font-size:17px}
+.xbtn{background:none;border:0;font-size:26px;line-height:1;padding:2px 6px;color:inherit}
+
+/* ---------- start screen ---------- */
+#start{background:linear-gradient(180deg,#eef2fb 0,#fff 340px);display:flex;flex-direction:column}
+.start-top{height:64px;display:flex;align-items:center;padding:0 28px;font-weight:700;letter-spacing:.2px;color:#1d2b5c;gap:10px}
+.logo-dot{width:28px;height:28px;border-radius:7px;background:var(--blue);display:grid;place-items:center;color:#fff;font-size:15px;font-weight:700}
+.all-tests{margin-left:auto;font-size:14px;font-weight:600;color:var(--blue);text-decoration:none;border:1.5px solid var(--blue);border-radius:999px;padding:6px 14px}
+.all-tests:hover{background:#eef1fc}
+.start-main{flex:1;display:flex;justify-content:center;padding:24px 16px 48px}
+.start-card{width:min(680px,100%);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 30px rgba(29,43,92,.08);padding:36px 40px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.start-card h1{font-size:32px;margin:8px 0 4px;letter-spacing:-.01em}
+.start-sub{color:var(--muted);margin:0 0 24px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.fact{background:var(--soft);border-radius:12px;padding:14px 16px}
+.fact b{display:block;font-size:24px}
+.fact span{font-size:13px;color:var(--muted)}
+.rules{margin:0 0 24px;padding:0;list-style:none;display:grid;gap:10px}
+.rules li{display:flex;gap:10px;align-items:flex-start;line-height:1.45;font-size:15px}
+.rules li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--blue);margin-top:7px}
+.rules .warn::before{background:var(--red)}
+.resume{display:flex;align-items:center;justify-content:space-between;gap:12px 16px;flex-wrap:wrap;background:#eef1fc;border:1.5px solid var(--blue);border-radius:12px;padding:14px 16px;margin:0 0 22px}
+.resume b{display:block;font-size:16px;margin-bottom:2px}
+.resume span{font-size:14px;color:#3d4352}
+.name-field{display:block;font-size:14px;font-weight:600;margin-bottom:22px}
+.name-field input{display:block;width:100%;margin-top:6px;font:inherit;font-weight:400;font-size:16px;padding:11px 14px;border:1px solid #a9b0bd;border-radius:10px}
+.name-field input:focus{outline:2px solid var(--blue);border-color:var(--blue)}
+.start-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.start-note{font-size:13px;color:var(--muted)}
+@media (max-width:560px){.start-card{padding:26px 20px}.facts{grid-template-columns:1fr 1fr 1fr;gap:8px}.fact{padding:10px}.fact b{font-size:20px}.start-card h1{font-size:26px}}
+
+/* ---------- test shell ---------- */
+#test{height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.hdr{flex:none;height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 24px;background:var(--bar);position:relative}
+.hdr::after,.ftr::before{content:"";position:absolute;left:0;right:0;height:3px;background:repeating-linear-gradient(90deg,#26304a 0 16px,transparent 16px 22px)}
+.hdr::after{bottom:0}
+.ftr::before{top:0}
+.sec-title{font-weight:700;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dir-btn{background:none;border:0;padding:4px 0;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:4px;margin-top:2px}
+.dir-btn svg{width:14px;height:14px;transition:transform .15s}
+.dir-btn[aria-expanded=true] svg{transform:rotate(180deg)}
+.hdr-center{display:flex;flex-direction:column;align-items:center;gap:3px}
+.timer{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.02em;min-height:28px;display:flex;align-items:center}
+.timer.low{color:var(--red)}
+.timer .clock{width:24px;height:24px}
+.pill{background:#fff;border:1px solid #6b7280;border-radius:999px;font-size:12px;font-weight:600;padding:2px 12px}
+.hdr-right{display:flex;justify-content:flex-end;gap:6px}
+.tool{background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:600;padding:6px 10px;border-radius:8px}
+.tool:hover{background:#e9edf5}
+.tool[aria-pressed=true]{color:var(--blue)}
+.tool svg{width:22px;height:22px}
+.main{flex:1;min-height:0;display:flex;position:relative}
+.q-area{flex:1;min-width:0;overflow:auto;position:relative}
+.ftr{flex:none;height:60px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 24px;background:var(--bar);position:relative}
+.stu{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-pill{background:var(--ink);color:#fff;border:0;border-radius:8px;padding:8px 14px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:8px}
+.nav-pill svg{width:14px;height:14px;transition:transform .15s}
+.nav-pill[aria-expanded=true] svg{transform:rotate(180deg)}
+.ftr-right{display:flex;justify-content:flex-end;gap:10px}
+
+/* ---------- question: shared ---------- */
+.q-head{display:flex;align-items:stretch;gap:14px;background:#eceef2;height:40px;position:relative;margin-bottom:6px}
+.q-head::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:repeating-linear-gradient(90deg,#3a3f4b 0 6px,transparent 6px 10px)}
+.q-num{background:var(--ink);color:#fff;font-weight:700;min-width:36px;display:grid;place-items:center;font-size:16px}
+.mark-btn{background:none;border:0;display:flex;align-items:center;gap:6px;font-size:14px;font-weight:500;padding:0 4px}
+.mark-btn svg path{fill:none;stroke:var(--ink);stroke-width:1.8}
+.mark-btn.on svg path{fill:var(--red);stroke:var(--red)}
+.mark-btn.on{font-weight:700}
+.abc-btn{margin:6px 8px 6px auto;border:1.5px solid var(--ink);background:#fff;border-radius:5px;padding:0 6px;font-weight:700;font-size:12px;letter-spacing:.04em;position:relative}
+.abc-btn span{text-decoration:line-through;text-decoration-thickness:1.5px}
+.abc-btn.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.q-body{padding-top:10px}
+.q-stem{font-family:var(--serif);font-size:17px;line-height:1.65}
+.q-stem p{margin:12px 0}
+.fig{margin:14px 0 6px;text-align:center}
+.fig-row{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.fig-row .fsvg{margin:0}
+.fig-note{font-family:var(--serif);font-style:italic;font-size:14px;margin:4px 0 0;color:#333}
+.fsvg{max-width:100%;height:auto;display:block;margin:0 auto}
+.fsvg .g{stroke:#c7cbd3;stroke-width:1}
+.fsvg .a{stroke:#111;stroke-width:1.4;fill:none}
+.fsvg .ah{fill:#111}
+.fsvg .ln{stroke:#111;stroke-width:2.2;fill:none;stroke-linejoin:round}
+.fsvg .dot{fill:#111}
+.fsvg .bar{fill:#dfe3ea;stroke:#222;stroke-width:1.2}
+.fsvg text{font-family:Georgia,"Times New Roman",serif;fill:#111}
+.fsvg .t{font-size:12.5px;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
+.fsvg .t-s{font-size:11.5px}
+.fsvg .t-b{font-size:15px;font-weight:700}
+.fsvg .t-l{font-size:17px}
+.fsvg .i{font-style:italic}
+
+/* ---------- multiple choice ---------- */
+.q-col{max-width:780px;margin:0 auto;padding:26px 32px 56px}
+.choices{margin-top:14px}
+.choice-row{display:flex;align-items:center;gap:12px;margin:12px 0}
+.choice{flex:1;display:flex;align-items:center;gap:14px;text-align:left;background:#fff;border:1.5px solid var(--ink);border-radius:10px;padding:10px 14px;font-family:var(--serif);font-size:17px;line-height:1.45;min-height:52px;position:relative}
+button.choice:hover{box-shadow:0 0 0 1px var(--ink)}
+.choice .ltr{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-family:var(--ui);font-weight:700;font-size:14px;background:#fff}
+.choice .ctext{flex:1;min-width:0}
+.choice.sel{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue)}
+button.choice.sel:hover{box-shadow:0 0 0 2px var(--blue)}
+.choice.sel .ltr{background:var(--blue);border-color:var(--blue);color:#fff}
+.choice.elim{color:#8a909c;border-color:#9aa1ad}
+.choice.elim .ltr{border-color:#9aa1ad;color:#8a909c}
+.choice.elim::after{content:"";position:absolute;left:-7px;right:-7px;top:50%;height:2px;background:#2b2f38}
+.elim-btn{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;font-weight:700;font-size:13px;position:relative;padding:0}
+.elim-btn::after{content:"";position:absolute;left:-5px;right:-5px;top:50%;height:1.5px;background:var(--ink)}
+.undo-btn{flex:none;width:40px;background:none;border:0;text-decoration:underline;font-weight:700;font-size:13px;padding:0}
+table.dt{margin:10px auto}
+table.xy{border-collapse:collapse;font-family:var(--serif);font-size:16px;margin:2px 0}
+table.xy th,table.xy td{border:1.5px solid #111;padding:4px 22px;text-align:center;font-weight:400}
+
+/* ---------- student-produced response ---------- */
+.spr{display:grid;grid-template-columns:minmax(0,1fr) 5px minmax(0,1fr);height:100%}
+.spr-left,.spr-right{overflow:auto;padding:26px 32px 56px}
+.spr-div{background:#d3d7de}
+.spr-dir h3{font-size:18px;margin:0 0 10px}
+.spr-dir ul{padding-left:20px;margin:0 0 18px;line-height:1.5;font-size:15px}
+.spr-dir li{margin:6px 0}
+.spr-dir h4{margin:0 0 8px;font-size:15px}
+.ex{border-collapse:collapse;width:100%;font-size:14px}
+.ex th,.ex td{border:1px solid #b9bfca;padding:7px 8px;vertical-align:top;text-align:left}
+.ex th{background:var(--soft);font-weight:700}
+.spr-entry{margin:22px 0 10px}
+.spr-input{width:190px;max-width:100%;font-family:var(--ui);font-size:22px;padding:9px 12px;border:1.5px solid var(--ink);border-bottom-width:3px;border-radius:8px;letter-spacing:.04em}
+.spr-input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 2px rgba(50,77,199,.25)}
+.spr-preview{font-size:15px;display:flex;align-items:center;gap:8px;min-height:44px}
+.spr-preview math{font-size:1.25em}
+
+/* ---------- popups ---------- */
+.dir-pop{position:absolute;top:72px;left:16px;width:min(760px,calc(100vw - 32px));max-height:calc(100% - 150px);overflow:auto;background:#fff;border-radius:12px;box-shadow:0 14px 44px rgba(0,0,0,.25);padding:22px 26px;z-index:60;font-size:15px;line-height:1.55}
+.dir-pop h3{margin:0 0 8px}
+.dir-pop ul{margin:6px 0 12px;padding-left:22px}
+.dir-foot{display:flex;justify-content:flex-end;margin-top:10px}
+.navpop{position:fixed;bottom:74px;left:50%;transform:translateX(-50%);width:min(600px,calc(100vw - 24px));background:#fff;border-radius:14px;box-shadow:0 14px 44px rgba(0,0,0,.28);padding:18px 22px 20px;z-index:60}
+.navpop::after{content:"";position:absolute;bottom:-9px;left:50%;margin-left:-9px;width:18px;height:18px;background:#fff;transform:rotate(45deg);box-shadow:4px 4px 8px rgba(0,0,0,.08)}
+.np-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:10px}
+.np-head h3{margin:0;font-size:16px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;margin:12px 0 4px;color:#333}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.lg-un{width:16px;height:16px;border:1.5px dashed #6b7280;display:inline-block}
+.legend svg{width:15px;height:15px}
+.lg-pin path{fill:var(--ink)}
+.lg-flag path{fill:var(--red)}
+.ngrid{display:flex;flex-wrap:wrap;gap:20px 12px;padding:22px 2px 6px}
+.ngrid.big{gap:22px 16px;justify-content:center}
+.cell{width:40px;height:40px;border:1.5px dashed #6b7280;background:#fff;color:var(--blue);font-weight:700;font-size:15px;position:relative;padding:0;border-radius:2px}
+.ngrid.big .cell{width:46px;height:46px;font-size:17px}
+.cell:hover{background:#eef1fc}
+.cell.ans{background:var(--blue);color:#fff;border:1.5px solid var(--blue)}
+.cell.ans:hover{background:var(--blue-dk)}
+.cell .ic-pin{position:absolute;top:-19px;left:50%;margin-left:-8px;width:16px;height:16px}
+.cell .ic-pin path{fill:var(--ink)}
+.cell .ic-flag{position:absolute;top:-7px;right:-7px;width:15px;height:15px}
+.cell .ic-flag path{fill:var(--red);stroke:#fff;stroke-width:1.5}
+.np-foot{display:flex;justify-content:center;margin-top:12px}
+
+.review{max-width:760px;margin:0 auto;padding:36px 24px 56px;text-align:center}
+.review h1{font-size:30px;margin:0 0 10px}
+.review>p{color:#333;margin:0 auto 24px;max-width:600px;line-height:1.55}
+.rv-card{background:#fff;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.12);padding:20px 26px 26px;text-align:left}
+.rv-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.rv-head h2{font-size:17px;margin:0}
+.rv-head .legend{margin:0}
+
+/* ---------- calculator + reference ---------- */
+.calc{flex:none;width:430px;display:flex;flex-direction:column;border-right:2px solid #c3c8d1;background:#fff;z-index:30}
+.calc.wide{width:min(760px,62vw)}
+.calc-head,.ref-head{display:flex;align-items:center;justify-content:space-between;background:var(--ink);color:#fff;padding:7px 12px;font-weight:600;font-size:14px}
+.calc-head .xbtn,.ref-head .xbtn{color:#fff;font-size:22px}
+.calc-head button.wbtn{background:none;border:1px solid #888;color:#fff;border-radius:6px;font-size:12px;padding:3px 8px;margin-right:6px}
+.desmos{flex:1;min-height:0;position:relative}
+.calc-msg{padding:28px 22px;text-align:center;color:var(--muted);line-height:1.6;font-size:14px}
+.ref{position:fixed;top:86px;right:20px;width:min(640px,calc(100vw - 24px));max-height:calc(100vh - 170px);background:#fff;border-radius:12px;box-shadow:0 14px 44px rgba(0,0,0,.3);display:flex;flex-direction:column;z-index:55;overflow:hidden}
+.ref-head{cursor:move;user-select:none;touch-action:none}
+.ref-body{overflow:auto;padding:16px 18px 20px}
+.ref-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px 10px}
+.ref-item{text-align:center;font-size:15px}
+.ref-item .rsvg{display:block;margin:0 auto 4px}
+.rsvg .s{fill:none;stroke:#111;stroke-width:1.5}
+.rsvg .d{fill:none;stroke:#111;stroke-width:1.2;stroke-dasharray:4 3}
+.rsvg .f{fill:#111}
+.rsvg text{font-family:Georgia,"Times New Roman",serif;font-size:14px;fill:#111}
+.ref-item div{line-height:1.7}
+.ref-cap{font-size:12px;color:var(--muted)}
+.ref-facts{border-top:1px solid var(--line);margin-top:16px;padding-top:12px;font-size:14.5px;line-height:1.6}
+.ref-facts p{margin:4px 0}
+
+/* ---------- overlays ---------- */
+.overlay{position:fixed;inset:0;background:rgba(18,22,33,.45);display:flex;align-items:center;justify-content:center;padding:16px;z-index:80}
+.dialog{background:#fff;border-radius:14px;max-width:460px;width:100%;padding:26px 26px 22px;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.dialog h3{margin:0 0 8px;font-size:20px}
+.dialog p{margin:0 0 20px;line-height:1.55;color:#333}
+.dlg-btns{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.toast{position:fixed;top:84px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;font-weight:600;font-size:14px;z-index:90;box-shadow:0 8px 24px rgba(0,0,0,.25);max-width:calc(100vw - 32px);text-align:center}
+.toast.alert{background:var(--red)}
+
+/* ---------- transition ---------- */
+#trans{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bar);padding:16px}
+.trans-card{text-align:center;max-width:460px}
+.hourglass{width:64px;height:64px;margin:0 auto 18px;animation:spin 2s ease-in-out infinite}
+.hourglass path{fill:none;stroke:var(--blue);stroke-width:2.4;stroke-linejoin:round}
+.hourglass .sand{fill:var(--blue);stroke:none}
+@keyframes spin{0%,40%{transform:rotate(0)}60%,100%{transform:rotate(180deg)}}
+.trans-card h2{margin:0 0 8px;font-size:26px}
+.trans-card p{color:var(--muted);line-height:1.55;margin:6px 0}
+.count{font-size:46px;font-weight:700;color:var(--blue);margin-top:10px;font-variant-numeric:tabular-nums}
+
+/* ---------- results ---------- */
+#results{background:var(--soft);min-height:100vh}
+.res-top{height:64px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;gap:12px}
+.res-top b{font-size:16px}
+.res-wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+.score-card{background:#fff;border-radius:18px;box-shadow:0 4px 20px rgba(0,0,0,.06);padding:28px 32px;display:grid;grid-template-columns:auto 1fr;gap:12px 40px;align-items:center}
+.score-lbl{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.score-big{font-size:76px;font-weight:700;line-height:1;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.score-range{color:var(--muted);font-size:14px;margin-top:6px}
+.scale{position:relative;height:12px;border-radius:99px;background:#e3e7ef;margin:26px 0 8px}
+.scale-fill{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--blue)}
+.scale-mark{position:absolute;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:#fff;border:4px solid var(--blue)}
+.scale-ends{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.stat{background:var(--soft);border-radius:10px;padding:10px 14px}
+.stat b{display:block;font-size:20px;font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--muted)}
+.score-note{grid-column:1/-1;font-size:12.5px;color:var(--muted);margin:4px 0 0}
+.res-h2{font-size:22px;margin:34px 0 4px}
+.res-sub{color:var(--muted);margin:0 0 14px;font-size:14.5px}
+.res-legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13.5px;margin-bottom:14px}
+.res-legend span{display:inline-flex;align-items:center;gap:7px}
+.sw{width:16px;height:16px;border-radius:4px;border:2px solid}
+.sw.ok{background:#e4f5ea;border-color:var(--green)}
+.sw.bad{background:#fde9ec;border-color:var(--red)}
+.sw.om{background:#f3f4f6;border-color:#9ca3af;border-style:dashed}
+.res-mod{background:#fff;border-radius:14px;padding:18px 22px 22px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.res-mod h3{margin:0 0 14px;font-size:16px;display:flex;justify-content:space-between;gap:8px}
+.res-mod h3 span{color:var(--muted);font-weight:600;font-size:14px}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:10px}
+.rtile{height:64px;border-radius:10px;border:2px solid;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-weight:700;font-size:17px;background:#fff;padding:0}
+.rtile small{font-size:11.5px;font-weight:600;opacity:.9}
+.rtile.ok{background:#e4f5ea;border-color:var(--green);color:#0f5129}
+.rtile.bad{background:#fde9ec;border-color:var(--red);color:#7a0d1e}
+.rtile.om{background:#f6f7f9;border-color:#9ca3af;border-style:dashed;color:#4b5563}
+.rtile:hover{filter:brightness(.96);transform:translateY(-1px)}
+.res-actions{display:flex;justify-content:center;margin-top:26px}
+@media (max-width:700px){.score-card{grid-template-columns:1fr;padding:22px}.score-big{font-size:64px}.stats{grid-template-columns:1fr 1fr 1fr}.stat b{font-size:17px}}
+
+.rv-modal{position:fixed;inset:0;background:rgba(18,22,33,.5);z-index:85;display:flex;align-items:stretch;justify-content:center;padding:24px 16px}
+.rv-panel{background:#fff;border-radius:14px;width:min(860px,100%);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.rv-top{display:flex;align-items:center;gap:12px;padding:12px 16px 12px 20px;border-bottom:1px solid var(--line)}
+.rv-top h3{margin:0;font-size:17px;flex:1}
+.status{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:99px}
+.status.ok{background:#e4f5ea;color:#0f5129}
+.status.bad{background:#fde9ec;color:#7a0d1e}
+.status.om{background:#eceef2;color:#4b5563}
+.rv-body{flex:1;overflow:auto;padding:8px 28px 30px}
+.rv-bottom{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-top:1px solid var(--line);gap:10px}
+.rv-bottom span{font-size:13px;color:var(--muted)}
+.choice.r-ok{border-color:var(--green);box-shadow:0 0 0 2px var(--green);background:#f3fbf6}
+.choice.r-ok .ltr{background:var(--green);border-color:var(--green);color:#fff}
+.choice.r-bad{border-color:var(--red);box-shadow:0 0 0 2px var(--red);background:#fff6f7}
+.choice.r-bad .ltr{background:var(--red);border-color:var(--red);color:#fff}
+.rtag{flex:none;font-family:var(--ui);font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;margin-left:8px}
+.r-ok .rtag{background:var(--green);color:#fff}
+.r-bad .rtag{background:var(--red);color:#fff}
+.spr-review{display:grid;gap:10px;margin-top:20px;max-width:440px}
+.srow{display:flex;align-items:center;justify-content:space-between;gap:12px;border:2px solid;border-radius:10px;padding:12px 16px}
+.srow .slab{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.srow .sval{font-size:19px;font-weight:600}
+.srow.ok{border-color:var(--green);background:#f3fbf6}
+.srow.bad{border-color:var(--red);background:#fff6f7}
+.srow.om{border-color:#9ca3af;border-style:dashed;background:#f6f7f9}
+.srow.key{border-color:var(--green);background:#f3fbf6}
+
+/* ---------- small screens ---------- */
+@media (max-width:820px){
+  .hdr,.ftr{padding:0 12px}
+  .sec-title{font-size:14px}
+  .tool span{display:none}
+  .tool{padding:6px}
+  .q-col{padding:18px 16px 40px}
+  .spr{grid-template-columns:1fr;height:auto}
+  .spr-left,.spr-right{overflow:visible;padding:18px 16px}
+  .spr-left{order:2;border-top:5px solid #d3d7de}
+  .spr-div{display:none}
+  .calc,.calc.wide{position:absolute;inset:0;width:auto}
+  .stu{display:none}
+  .ftr{grid-template-columns:auto 1fr}
+  .ftr-center{justify-self:start}
+  .btn-primary{padding:9px 18px}
+  .q-stem,.choice{font-size:16px}
+  .rv-body{padding:6px 16px 24px}
+}
+@media (max-width:420px){.dir-btn{font-size:12px}.timer{font-size:18px}.nav-pill{padding:7px 10px;font-size:13px}}
+</style>
+</head>
+<body>
+<noscript><div style="background:#c8102e;color:#fff;padding:14px 18px;font:600 15px/1.5 system-ui,sans-serif;text-align:center">This test needs JavaScript, and this viewer can't run it. On iPhone, the Files app preview can't run it either. Open the test from a web link in Safari instead.</div></noscript>
+
+<!-- ======================= START ======================= -->
+<section id="start" class="screen">
+  <div class="start-top"><span class="logo-dot">∑</span> Practice Test<a class="all-tests" href="./">All tests</a></div>
+  <div class="start-main">
+    <div class="start-card">
+      <div class="kicker">Digital SAT · Math</div>
+      <h1>SAT Math Mock Test</h1>
+      <p class="start-sub">March 2024 · International · Version 1 · Math section only</p>
+      <div class="facts">
+        <div class="fact"><b>44</b><span>questions</span></div>
+        <div class="fact"><b>2</b><span>modules (22 each)</span></div>
+        <div class="fact"><b>70</b><span>minutes (35 per module)</span></div>
+      </div>
+      <ul class="rules">
+        <li class="warn">The timer starts the moment you click Start and cannot be paused.</li>
+        <li class="warn">Module 2 starts automatically after Module 1. You can't go back to Module 1.</li>
+        <li>You can submit a module early from the review page. If time runs out, your answers are submitted automatically.</li>
+        <li>Your progress is saved in this browser. If you leave, you can come back and resume, but the timer keeps running while you're away.</li>
+        <li>A graphing calculator and a reference sheet are available during the test.</li>
+        <li>Unanswered questions are scored as incorrect, so answer every question.</li>
+      </ul>
+      <div class="resume" id="resumeBox" hidden>
+        <div><b id="resumeTitle">You have a test in progress</b><span id="resumeText"></span></div>
+        <button class="btn-primary" id="resumeBtn">Resume</button>
+      </div>
+      <label class="name-field">Your name (optional)
+        <input id="nameInput" type="text" maxlength="40" autocomplete="name" placeholder="Student">
+      </label>
+      <div class="start-actions">
+        <button id="startBtn" class="btn-primary btn-lg">Start Test</button>
+        <span class="start-note">You'll get an estimated score (200–800) and a question review at the end.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TEST ======================= -->
+<section id="test" class="screen" hidden>
+  <header class="hdr">
+    <div class="hdr-left" style="min-width:0">
+      <div class="sec-title" id="secTitle">Section 2, Module 1: Math</div>
+      <button class="dir-btn" id="dirBtn" aria-expanded="false" aria-controls="dirPop">Directions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>
+    </div>
+    <div class="hdr-center">
+      <div class="timer" id="timer" role="timer" aria-live="off">35:00</div>
+      <button class="pill" id="hideBtn">Hide</button>
+    </div>
+    <div class="hdr-right">
+      <button class="tool" id="calcBtn" aria-pressed="false" title="Graphing calculator">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="2.5" width="14" height="19" rx="2.2"/><rect x="8" y="5.5" width="8" height="4" rx=".8"/><circle cx="9" cy="13" r=".9" fill="currentColor"/><circle cx="12" cy="13" r=".9" fill="currentColor"/><circle cx="15" cy="13" r=".9" fill="currentColor"/><circle cx="9" cy="16.5" r=".9" fill="currentColor"/><circle cx="12" cy="16.5" r=".9" fill="currentColor"/><circle cx="15" cy="16.5" r=".9" fill="currentColor"/></svg>
+        <span>Calculator</span></button>
+      <button class="tool" id="refBtn" aria-pressed="false" title="Reference sheet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2.5h8.5l4 4v15H6z"/><path d="M14.5 2.5v4h4"/><path d="M9 12.5h6M9 15.5h6M9 18.5h3.5"/></svg>
+        <span>Reference</span></button>
+    </div>
+  </header>
+
+  <div class="main">
+    <aside class="calc" id="calc" hidden aria-label="Graphing calculator">
+      <div class="calc-head"><span>Calculator</span><div><button class="wbtn" id="calcWide">Expand</button><button class="xbtn" id="calcClose" aria-label="Close calculator">×</button></div></div>
+      <div class="desmos" id="desmos"><div class="calc-msg">Loading calculator…</div></div>
+    </aside>
+    <div class="q-area" id="qArea"></div>
+
+    <div class="dir-pop" id="dirPop" hidden role="dialog" aria-label="Directions">
+      <h3>Directions</h3>
+      <p>The questions in this section address a number of important math skills. Use of a calculator is permitted for all questions. A reference sheet, calculator, and these directions can be accessed throughout the test.</p>
+      <p><b>Unless otherwise indicated:</b></p>
+      <ul>
+        <li>All variables and expressions represent real numbers.</li>
+        <li>Figures provided are drawn to scale.</li>
+        <li>All figures lie in a plane.</li>
+        <li>The domain of a given function <i>f</i> is the set of all real numbers <i>x</i> for which <i>f</i>(<i>x</i>) is a real number.</li>
+      </ul>
+      <p>For <b>multiple-choice questions</b>, solve each problem and choose the correct answer from the choices provided. Each multiple-choice question has a single correct answer.</p>
+      <p>For <b>student-produced response questions</b>, solve each problem and enter your answer in the box. The rules for entering answers are shown next to each of those questions.</p>
+      <div class="dir-foot"><button class="btn-primary" id="dirClose">Close</button></div>
+    </div>
+  </div>
+
+  <footer class="ftr">
+    <div class="stu" id="stuName">Student</div>
+    <div class="ftr-center"><button class="nav-pill" id="navBtn" aria-expanded="false" aria-controls="navPop"><span id="navLabel">Question 1 of 22</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M6 15l6-6 6 6"/></svg></button></div>
+    <div class="ftr-right"><button class="btn-primary" id="backBtn">Back</button><button class="btn-primary" id="nextBtn">Next</button></div>
+  </footer>
+
+  <div class="navpop" id="navPop" hidden role="dialog" aria-label="Question navigation">
+    <div class="np-head"><h3 id="npTitle">Section 2, Module 1: Math Questions</h3><button class="xbtn" id="npClose" aria-label="Close">×</button></div>
+    <div class="legend" id="npLegend"></div>
+    <div id="npGrid"></div>
+    <div class="np-foot"><button class="btn-outline" id="goReview">Go to Review Page</button></div>
+  </div>
+
+  <div class="ref" id="ref" hidden role="dialog" aria-label="Reference sheet">
+    <div class="ref-head" id="refHead"><span>Reference Sheet</span><button class="xbtn" id="refClose" aria-label="Close reference sheet">×</button></div>
+    <div class="ref-body" id="refBody"></div>
+  </div>
+</section>
+
+<!-- ======================= TRANSITION ======================= -->
+<section id="trans" class="screen" hidden>
+  <div class="trans-card">
+    <svg class="hourglass" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 5h24M12 43h24M14 5c0 10 10 13 10 19S14 33 14 43M34 5c0 10-10 13-10 19s10 9 10 19"/><path class="sand" d="M18 39c2-4 4-5 6-6 2 1 4 2 6 6z"/></svg>
+    <h2 id="transTitle">Module 1 complete</h2>
+    <p id="transMsg">Your answers were submitted.</p>
+    <p id="transNext">Module 2 begins automatically — the timer can't be paused.</p>
+    <div class="count" id="transCount">5</div>
+  </div>
+</section>
+
+<!-- ======================= RESULTS ======================= -->
+<section id="results" class="screen" hidden>
+  <div class="res-top"><b>SAT Math Mock Test · Results</b><span id="resName" style="color:var(--muted);font-size:14px"></span></div>
+  <div class="res-wrap" id="resWrap"></div>
+</section>
+
+<div class="rv-modal" id="rvModal" hidden role="dialog" aria-modal="true" aria-labelledby="rvTitle">
+  <div class="rv-panel">
+    <div class="rv-top"><h3 id="rvTitle">Question</h3><span class="status" id="rvStatus"></span><button class="xbtn" id="rvClose" aria-label="Close review">×</button></div>
+    <div class="rv-body" id="rvBody"></div>
+    <div class="rv-bottom"><button class="btn-outline" id="rvPrev">Previous</button><span id="rvPos"></span><button class="btn-primary" id="rvNext">Next</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="confirm" hidden role="dialog" aria-modal="true" aria-labelledby="cfTitle">
+  <div class="dialog">
+    <h3 id="cfTitle">Submit Module 1?</h3>
+    <p id="cfText"></p>
+    <div class="dlg-btns"><button class="btn-outline" id="cfCancel">Keep Working</button><button class="btn-primary" id="cfOk">Submit Module</button></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+const DATA = {"id":"March 2024 · International · Version 1 · Math section only","modules":[{"title":"Module 1","questions":[{"type":"mcq","stem":"<p>Line <math><mi>q</mi></math> in the <math><mrow><mi>x</mi><mi>y</mi></mrow></math>-plane has a slope of <math><mfrac><mn>1</mn><mn>4</mn></mfrac></math> and passes through the point <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0,50</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>. Which equation defines line <math><mi>q</mi></math>?</p>","choices":["<math><mrow><mi>y</mi><mo>=</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mi>x</mi><mo>−</mo><mn>50</mn></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mi>x</mi><mo>−</mo><mn>46</mn></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mi>x</mi><mo>+</mo><mn>46</mn></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mi>x</mi><mo>+</mo><mn>50</mn></mrow></math>"],"answer":"D"},{"type":"mcq","stem":"<p>The function <math><mi>g</mi></math> is defined by <math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>7</mn><mi>x</mi><mo>+</mo><mn>40</mn></mrow></math>. What is the value of <math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> when <math><mrow><mi>x</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>2</mn></mrow></math>?</p>","choices":["54","31","26","<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>38</mn><mn>7</mn></mfrac></mstyle></math>"],"answer":"A"},{"type":"mcq","stem":"<p>Each face of a fair <math><mn>12</mn></math>-sided die is labeled with a number from <math><mn>1</mn></math> through <math><mn>12</mn></math>, with a different number appearing on each face. If the die is rolled one time, what is the probability of rolling a <math><mn>3</mn></math>?</p>","choices":["<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>12</mn></mfrac></mstyle></math>","<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>3</mn><mn>12</mn></mfrac></mstyle></math>","<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>9</mn><mn>12</mn></mfrac></mstyle></math>","<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>11</mn><mn>12</mn></mfrac></mstyle></math>"],"answer":"A"},{"type":"spr","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mn>8</mn><mi>x</mi><mo>+</mo><mn>14</mn><mo>=</mo><mn>8</mn><mi>x</mi><mo>+</mo><mi>k</mi></mrow></math><p>In the given equation, <math><mi>k</mi></math> is a constant. The equation has infinitely many solutions. What is the value of <math><mi>k</mi></math>?</p>","accept":[14],"show":"14"},{"type":"spr","stem":"<p>A triathlon is a multisport race consisting of three different consecutive events. A triathlon participant plans to complete the cycling event with an average speed of <math><mn>32,736</mn></math> yards per hour. What is this average speed, in <u>miles</u> per hour? (<math><mn>1</mn></math> mile <math><mrow><mo>=</mo><mn>1,760</mn></mrow></math> yards)</p>","accept":[18.6],"show":"18.6 or 93/5"},{"type":"mcq","stem":"<p>Dan bought some apples and oranges. The apples cost &#36;<math><mn>0.79</mn></math> per pound, and the oranges cost &#36;<math><mn>1.09</mn></math> per pound. If Dan spent &#36;<math><mn>5.94</mn></math> in total and bought twice as many pounds of oranges as pounds of apples, how many pounds of oranges did Dan buy?</p>","choices":["2","2.5","2.97","4"],"answer":"D"},{"type":"mcq","stem":"<p>Triangle R has an area of <math><mn>40</mn></math> square centimeters (<math><msup><mtext>cm</mtext><mn>2</mn></msup></math>). Square S has side lengths of <math><mn>6</mn></math> cm. What is the total area of triangle R and square S, in <math><msup><mtext>cm</mtext><mn>2</mn></msup></math>?</p>","choices":["23","26","46","76"],"answer":"D"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mi>y</mi><mo>=</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>7</mn></mrow></math><math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mi>y</mi><mo>=</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>9</mn></mrow></math><p>The solution to the given system of equations is <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo separator=\"true\">,</mo><mi>y</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>. What is the value of <math><mi>x</mi></math>?</p>","choices":["2","7","9","16"],"answer":"A"},{"type":"mcq","fig":"m1_q9","stem":"<p>The scatterplot shows the relationship between two variables, <math><mi>x</mi></math> and <math><mi>y</mi></math>.</p>{{FIG}}<p>Which of the following equations is the most appropriate linear model for the data shown?</p>","choices":["<math><mrow><mi>y</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>2</mn><mi>x</mi></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mi>x</mi></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mi>x</mi></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mn>2</mn><mi>x</mi></mrow></math>"],"answer":"C"},{"type":"mcq","stem":"<p>A rectangle has a length that is <math><mn>17</mn></math> times its width. The function <math><mrow><mi>y</mi><mo>=</mo><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>17</mn><mi>w</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>w</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> represents this situation, where <math><mi>y</mi></math> is the area, in square feet, of the rectangle and <math><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Which of the following is the best interpretation of <math><mrow><mn>17</mn><mi>w</mi></mrow></math> in this context?</p>","choices":["The length of the rectangle, in feet","The area of the rectangle, in square feet","The difference between the length and the width of the rectangle, in feet","The width of the rectangle, in feet"],"answer":"A"},{"type":"spr","stem":"<p>If <math><mrow><mfrac><mrow><mn>2</mn><mi>a</mi></mrow><mi>b</mi></mfrac><mo>=</mo><mn>5.8</mn></mrow></math> and <math><mrow><mfrac><mi>a</mi><mrow><mi>b</mi><mi>n</mi></mrow></mfrac><mo>=</mo><mn>23.2</mn></mrow></math>, what is the value of <math><mfrac><mn>1</mn><mi>n</mi></mfrac></math>?</p>","accept":[8],"show":"8"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>1,100</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0.5</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mfrac><mi scriptlevel=\"2\" style=\"math-depth:2;\">x</mi><mn scriptlevel=\"2\" style=\"math-depth:2;\">15</mn></mfrac></msup></mrow></math><p>The function <math><mi>f</mi></math> models the intensity of a beam, <math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>, in number of photons in the beam, <math><mi>x</mi></math> millimeters below the surface of a certain material. According to the model, what is the number of photons in the beam when it is at the surface of the material?</p>","choices":["2","11","15","1,100"],"answer":"D"},{"type":"mcq","stem":"<p>The gas mileage of a certain car is <math><mn>25</mn></math> miles per gallon when driven on the highway. If the car begins with <math><mn>5</mn></math> gallons of gas in the tank, which function predicts the amount of gas remaining in the tank, <math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>d</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>, after the car is driven <math><mi>d</mi></math> miles on the highway?</p>","choices":["<math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>d</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mi>d</mi><mn>25</mn></mfrac></mstyle><mo>−</mo><mn>5</mn></mrow></math>","<math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>d</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mi>d</mi><mo>−</mo><mn>5</mn></mrow></math>","<math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>d</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>5</mn><mo>−</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mi>d</mi><mn>25</mn></mfrac></mstyle></mrow></math>","<math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>d</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>5</mn><mo>−</mo><mi>d</mi></mrow></math>"],"answer":"C"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mi>P</mi><mi>C</mi><mo>=</mo><mi>N</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>85</mn><mo>−</mo><mi>C</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math><p>The given equation relates the variables <math><mi>P</mi></math>, <math><mi>N</mi></math>, and <math><mi>C</mi></math>. Which expression represents the value of <math><mi>C</mi></math> for distinct positive values of <math><mi>P</mi></math> and <math><mi>N</mi></math>?</p>","choices":["<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>C</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>N</mi><mo>+</mo><mi>P</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow><mi>N</mi></mfrac></mstyle></math>","<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>P</mi><mi>C</mi></mrow><mrow><mn>85</mn><mo>−</mo><mi>C</mi></mrow></mfrac></mstyle></math>","<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>85</mn><mi>N</mi></mrow><mrow><mi>N</mi><mo>+</mo><mi>P</mi></mrow></mfrac></mstyle></math>","<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>85</mn><mi>N</mi></mrow><mrow><mi>P</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle></math>"],"answer":"C"},{"type":"mcq","stem":"<p>In triangle <math><mrow><mi>D</mi><mi>E</mi><mi>F</mi></mrow></math>, the measure of angle <math><mi>D</mi></math> is <math><msup><mn>36</mn><mo>∘</mo></msup></math> and the measure of angle <math><mi>E</mi></math> is <math><msup><mn>101</mn><mo>∘</mo></msup></math>. In triangle <math><mrow><mi>R</mi><mi>S</mi><mi>T</mi></mrow></math>, the measure of angle <math><mi>R</mi></math> is <math><msup><mn>36</mn><mo>∘</mo></msup></math> and the measure of angle <math><mi>S</mi></math> is <math><msup><mn>101</mn><mo>∘</mo></msup></math>. Which of the following additional pieces of information is needed to determine whether triangle <math><mrow><mi>D</mi><mi>E</mi><mi>F</mi></mrow></math> is similar to triangle <math><mrow><mi>R</mi><mi>S</mi><mi>T</mi></mrow></math>?</p>","choices":["The measure of angle <math><mi>F</mi></math>","The measure of angle <math><mi>T</mi></math>","The measure of angle <math><mi>F</mi></math> and the measure of angle <math><mi>T</mi></math>","No additional information is needed."],"answer":"D"},{"type":"spr","stem":"<p>What is the slope of the graph of <math><mrow><mi>y</mi><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>15</mn><mi>x</mi><mo>+</mo><mn>14</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>+</mo><mn>3</mn><mi>x</mi></mrow></math> in the <math><mrow><mi>x</mi><mi>y</mi></mrow></math>-plane?</p>","accept":[6.75],"show":"27/4 or 6.75"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mi>y</mi><mo>=</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>9</mn></mrow></math><p>One of the two equations in a system of linear equations is given. The system has no solution. Which of the following could be the second equation in this system?</p>","choices":["<math><mrow><mi>y</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>18</mn></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mi>x</mi><mo>+</mo><mn>9</mn></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mi>x</mi><mo>−</mo><mn>9</mn></mrow></math>","<math><mrow><mi>y</mi><mo>=</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>18</mn></mrow></math>"],"answer":"D"},{"type":"spr","stem":"<p>A linear model estimates the population of a city from <math><mn>1995</mn></math> to <math><mn>2019</mn></math>. The model estimates the population was <math><mn>56</mn></math> thousand in <math><mn>1995</mn></math>, <math><mn>223</mn></math> thousand in <math><mn>2015</mn></math>, and <math><mi>x</mi></math> thousand in <math><mn>2019</mn></math>. To the nearest whole number, what is the value of <math><mi>x</mi></math>?</p>","accept":[256],"show":"256"},{"type":"spr","fig":"m1_q19","stem":"<p>In the triangle shown, <math><mrow><mi>R</mi><mi>S</mi><mo>=</mo><msqrt><mn>167</mn></msqrt></mrow></math>. What is the value of <math><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width=\"0.1667em\"></mspace></mrow><mi>R</mi></mrow></math>?</p>","accept":[0.9880952380952381],"show":"83/84 or .9880 or .9881"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mn>4</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mn>8</mn><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mn>4</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>+</mo><mn>16</mn><mo>=</mo><mn>0</mn></mrow></math><p>How many distinct real solutions does the given equation have?</p>","choices":["Exactly one","Exactly two","Infinitely many","Zero"],"answer":"A"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>y</mi><mo>−</mo><mn>18</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>169</mn></mrow></math><p>The graph of the given equation is a circle in the <math><mrow><mi>x</mi><mi>y</mi></mrow></math>-plane. The point <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>a</mi><mo separator=\"true\">,</mo><mi>b</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math> lies on the circle. Which of the following is a possible value for <math><mi>a</mi></math>?</p>","choices":["<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>16</mn></mrow></math>","<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>14</mn></mrow></math>","13","18"],"answer":"B"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>12</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>7</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math><p>The function <math><mi>f</mi></math> is defined by the given equation. If <math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>, which of the following equations defines the function <math><mi>g</mi></math>?</p>","choices":["<math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>36</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>7</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>","<math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>4,116</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>7</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>","<math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>36</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>21</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>","<math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>1,728</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>343</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>"],"answer":"B"}]},{"title":"Module 2","questions":[{"type":"mcq","fig":"m2_q1","stem":"{{FIG}}<p>The graph of <math><mrow><mi>y</mi><mo>=</mo><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> is shown in the <math><mrow><mi>x</mi><mi>y</mi></mrow></math>-plane. What is the value of <math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>?</p>","choices":["<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>2</mn></mrow></math>","<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>7</mn><mn>10</mn></mfrac></mstyle></mrow></math>","0","2"],"answer":"D"},{"type":"mcq","stem":"<p>Which expression is equivalent to <math><mrow><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>4</mn><mi>n</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>2</mn><mi>n</mi><mi>r</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>+</mo><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>7</mn><msup><mi>n</mi><mn>2</mn></msup><mi>r</mi><mo>+</mo><mn>3</mn><mi>n</mi><mi>r</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>?</p>","choices":["<math><mrow><mn>11</mn><msup><mi>n</mi><mn>2</mn></msup><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>5</mn><mi>n</mi><mi>r</mi></mrow></math>","<math><mrow><mn>11</mn><msup><mi>n</mi><mn>3</mn></msup><msup><mi>r</mi><mn class=\"tml-sml-pad\">3</mn></msup><mo>+</mo><mn>5</mn><msup><mi>n</mi><mn>2</mn></msup><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup></mrow></math>","<math><mrow><mn>28</mn><msup><mi>n</mi><mn>3</mn></msup><msup><mi>r</mi><mn class=\"tml-sml-pad\">3</mn></msup><mo>+</mo><mn>6</mn><msup><mi>n</mi><mn>2</mn></msup><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup></mrow></math>","<math><mrow><mn>4</mn><mi>n</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>7</mn><msup><mi>n</mi><mn>2</mn></msup><mi>r</mi><mo>+</mo><mn>5</mn><mi>n</mi><mi>r</mi></mrow></math>"],"answer":"D"},{"type":"spr","stem":"<p>The function <math><mi>g</mi></math> is defined by <math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>3</mn><mi>x</mi></mrow></math>. For what value of <math><mi>x</mi></math> is <math><mrow><mi>g</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>12</mn></mrow></math>?</p>","accept":[4],"show":"4"},{"type":"mcq","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mi>v</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mi>w</mi><mrow><mn>159</mn><mi>x</mi></mrow></mfrac></mstyle></mrow></math><p>The given equation relates the distinct positive numbers <math><mi>v</mi></math>, <math><mi>w</mi></math>, and <math><mi>x</mi></math>. Which equation correctly expresses <math><mi>w</mi></math> in terms of <math><mi>v</mi></math> and <math><mi>x</mi></math>?</p>","choices":["<math><mrow><mi>w</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>159</mn><mi>v</mi><mi>x</mi></mrow></math>","<math><mrow><mi>w</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>159</mn><mi>v</mi></mrow><mi>x</mi></mfrac></mstyle></mrow></math>","<math><mrow><mi>w</mi><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mi>x</mi><mrow><mn>159</mn><mi>v</mi></mrow></mfrac></mstyle></mrow></math>","<math><mrow><mi>w</mi><mo>=</mo><mi>v</mi><mo>+</mo><mn>159</mn><mi>x</mi></mrow></math>"],"answer":"A"},{"type":"spr","stem":"<p>A real estate company offers a series of three webinars. <math><mn>1,250</mn></math> people attended the first webinar. <math><mrow><mn>48</mn><mi>%</mi></mrow></math> of the people who attended the first webinar attended the second webinar, and <math><mrow><mn>38</mn><mi>%</mi></mrow></math> of the people who attended the first and second webinars attended the third webinar. How many people attended all three webinars?</p>","accept":[228],"show":"228"},{"type":"mcq","fig":"m2_q6","stem":"{{FIG}}<p>The graph of <math><mrow><mi>y</mi><mo>=</mo><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> is shown. What is the <span style=\"white-space:nowrap\"><math><mi>y</mi></math>-intercept</span> of the graph of <math><mrow><mi>y</mi><mo>=</mo><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>+</mo><mn>16</mn></mrow></math>?</p>","choices":["<math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0</mn><mo separator=\"true\">,</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>15</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>","<math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0,17</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>","<math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>1,16</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>","<math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>16,1</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>"],"answer":"B"},{"type":"mcq","stem":"<p>The function <math><mi>f</mi></math> is defined by <math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mi>|</mi><mi>x</mi><mo>−</mo><mn>4</mn><mi>x</mi><mi>|</mi></mrow></math>. What value of <math><mi>a</mi></math> satisfies <math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>5</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>−</mo><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>a</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>6</mn></mrow></math>?</p>","choices":["<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>11</mn></mrow></math>","2","7","18"],"answer":"C"},{"type":"spr","stem":"<p>If <math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>9</mn><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>13</mn><mo>−</mo><mn>5</mn><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>+</mo><mn>3</mn><mo>=</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>10</mn><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>13</mn><mo>−</mo><mn>5</mn><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>+</mo><mn>29</mn></mrow></math>, what is the value of <math><mrow><mn>13</mn><mo>−</mo><mn>5</mn><mi>x</mi></mrow></math>?</p>","accept":[26],"show":"26"},{"type":"mcq","stem":"<p>The minimum value of <math><mi>x</mi></math> is <math><mn>9</mn></math> less than <math><mn>5</mn></math> times another number <math><mi>n</mi></math>. Which inequality shows the possible values of <math><mi>x</mi></math>?</p>","choices":["<math><mrow><mi>x</mi><mo>≤</mo><mn>5</mn><mi>n</mi><mo>−</mo><mn>9</mn></mrow></math>","<math><mrow><mi>x</mi><mo>≥</mo><mn>5</mn><mi>n</mi><mo>−</mo><mn>9</mn></mrow></math>","<math><mrow><mi>x</mi><mo>≤</mo><mn>9</mn><mo>−</mo><mn>5</mn><mi>n</mi></mrow></math>","<math><mrow><mi>x</mi><mo>≥</mo><mn>9</mn><mo>−</mo><mn>5</mn><mi>n</mi></mrow></math>"],"answer":"B"},{"type":"mcq","fig":"m2_q10","stem":"{{FIG}}<p>The shaded region shown represents the solutions to the inequality <math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>14</mn><mi>y</mi><mo>&lt;</mo><mi>c</mi></mrow></math>, where <math><mi>c</mi></math> is a constant. What is the value of <math><mi>c</mi></math>?</p>","choices":["126","9","<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>9</mn></mrow></math>","<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>126</mn></mrow></math>"],"answer":"A"},{"type":"mcq","stem":"<p>At a constant temperature, a scuba diver combines two different concentrations of nitrox mix (oxygen-nitrogen gas mixture) to fill a tank to a total pressure of <math><mn>160</mn></math> atmospheres (atm), of which <math><mrow><mn>34</mn><mi>%</mi></mrow></math> is contributed by oxygen. Nitrox mix A contributes <math><mi>x</mi></math> atm of pressure to the tank, of which <math><mrow><mn>26</mn><mi>%</mi></mrow></math> is contributed by oxygen. Nitrox mix B contributes <math><mi>y</mi></math> atm of pressure to the tank, of which <math><mrow><mn>42</mn><mi>%</mi></mrow></math> is contributed by oxygen. Which system of equations represents this situation?</p>","choices":["<math><mtable><mtr><mtd class=\"tml-left\" style=\"padding-left:0pt;padding-right:0pt;\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>160</mn></mrow></mtd></mtr><mtr><mtd class=\"tml-left\" style=\"padding-left:0pt;padding-right:0pt;\"><mrow><mn>0.26</mn><mi>x</mi><mo>+</mo><mn>0.42</mn><mi>y</mi><mo>=</mo><mn>0.34</mn><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>160</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></mtd></mtr></mtable></math>","<math><mtable><mtr><mtd class=\"tml-left\" style=\"padding-left:0pt;padding-right:0pt;\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>160</mn></mrow></mtd></mtr><mtr><mtd class=\"tml-left\" style=\"padding-left:0pt;padding-right:0pt;\"><mrow><mn>0.42</mn><mi>x</mi><mo>+</mo><mn>0.26</mn><mi>y</mi><mo>=</mo><mn>0.34</mn><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>160</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></mtd></mtr></mtable></math>","<math><mtable><mtr><mtd class=\"tml-left\" style=\"padding-left:0pt;padding-right:0pt;\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>0.34</mn><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>160</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-left\" style=\"padding-left:0pt;padding-right:0pt;\"><mrow><mn>0.26</mn><mi>x</mi><mo>+</mo><mn>0.42</mn><mi>y</mi><mo>=</mo><mn>160</mn></mrow></mtd></mtr></mtable></math>","<math><mtable><mtr><mtd class=\"tml-left\" style=\"padding-left:0pt;padding-right:0pt;\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>0.34</mn><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>160</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-left\" style=\"padding-left:0pt;padding-right:0pt;\"><mrow><mn>0.42</mn><mi>x</mi><mo>+</mo><mn>0.26</mn><mi>y</mi><mo>=</mo><mn>160</mn></mrow></mtd></mtr></mtable></math>"],"answer":"A"},{"type":"mcq","fig":"m2_q12","stem":"{{FIG}}<p>The graph of the equation <math><mrow><mi>y</mi><mo>=</mo><msup><mn>5</mn><mi>x</mi></msup><mo>+</mo><mi>k</mi></mrow></math> is shown, where <math><mi>k</mi></math> is a constant. What is the value of <math><mi>k</mi></math>?</p>","choices":["<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>3</mn></mrow></math>","<math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>2</mn></mrow></math>","2","3"],"answer":"A"},{"type":"mcq","stem":"<p>A certain town has an area of <math><mn>3.59</mn></math> square miles. What is the area, in <u>square yards</u>, of this town? (<math><mn>1</mn></math> mile <math><mrow><mo>=</mo><mn>1,760</mn></mrow></math> yards)</p>","choices":["490","6,318","862,841","11,120,384"],"answer":"D"},{"type":"mcq","stem":"<p>The function <math><mi>f</mi></math> gives the product of a number, <math><mi>x</mi></math>, and a number that is <math><mn>96</mn></math> more than <math><mi>x</mi></math>. Which equation defines <math><mi>f</mi></math>?</p>","choices":["<math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>96</mn></mrow></math>","<math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>96</mn></mrow></math>","<math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>96</mn><mi>x</mi></mrow></math>","<math><mrow><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>96</mn><mi>x</mi><mo>+</mo><mn>96</mn></mrow></math>"],"answer":"C"},{"type":"spr","stem":"<p>One of the factors of <math><mrow><mn>3</mn><msup><mi>x</mi><mn class=\"tml-sml-pad\">3</mn></msup><mo>+</mo><mn>51</mn><msup><mi>x</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>216</mn><mi>x</mi></mrow></math> is <math><mrow><mi>x</mi><mo>+</mo><mi>b</mi></mrow></math>, where <math><mi>b</mi></math> is a positive constant. What is the smallest possible value of <math><mi>b</mi></math>?</p>","accept":[8],"show":"8"},{"type":"mcq","fig":"m2_q16","stem":"{{FIG}}<p>The table shows the exponential relationship between the number of years, <math><mi>x</mi></math>, since Hana started training in pole vault, and the estimated height <math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math>, in meters, of her best pole vault for that year. Which of the following functions best represents this relationship, where <math><mrow><mi>x</mi><mo>≤</mo><mn>4</mn></mrow></math>?</p>","choices":["<math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>1.17</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0.34</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>","<math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>1.17</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>1.34</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>","<math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>1.34</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0.17</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>","<math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>=</mo><mn>1.34</mn><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>1.17</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mi>x</mi></msup></mrow></math>"],"answer":"D"},{"type":"mcq","stem":"<p>Kenny engages in up to <math><mn>3</mn></math> types of exercise each week for a total of <math><mn>6</mn></math> hours while training for a triathlon. Kenny swims for the same number of <u>minutes</u> each week. The equation <math><mrow><mi>y</mi><mo>=</mo><mn>360</mn><mo>−</mo><mi>x</mi><mo>−</mo><mn>160</mn></mrow></math> represents the situation where Kenny bikes for <math><mi>x</mi></math> minutes during a week and runs for any remaining training time <math><mi>y</mi></math>, in minutes. If this equation is graphed in the <math><mrow><mi>x</mi><mi>y</mi></mrow></math>-plane, which statement is the best interpretation of the <span style=\"white-space:nowrap\"><math><mi>x</mi></math>-intercept</span> of the graph?</p>","choices":["During a week when Kenny swims for <math><mn>200</mn></math> minutes, he bikes for <math><mn>160</mn></math> minutes.","Each week, Kenny bikes and runs for a total of <math><mn>200</mn></math> minutes.","During a week when Kenny doesn’t bike, he runs for <math><mn>200</mn></math> minutes.","During a week when Kenny doesn’t run, he bikes for <math><mn>200</mn></math> minutes."],"answer":"D"},{"type":"mcq","stem":"<p>Two lines intersect at exactly one point, forming two acute angles and two obtuse angles. The measure of one of these angles is <math><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>9</mn><mi>x</mi><mo>−</mo><mn>140</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>∘</mo></msup></math>. Which of the following could NOT be the sum of the measures of any two of these angles?</p>","choices":["<math><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>18</mn><mi>x</mi><mo>+</mo><mn>280</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>∘</mo></msup></math>","<math><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mn>18</mn><mi>x</mi><mo>+</mo><mn>640</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>∘</mo></msup></math>","<math><msup><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>18</mn><mi>x</mi><mo>−</mo><mn>280</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mo>∘</mo></msup></math>","<math><msup><mn>180</mn><mo>∘</mo></msup></math>"],"answer":"A"},{"type":"spr","stem":"<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mn>5</mn><mn>7</mn></mfrac></mstyle><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>7</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"true\">(</mo><mi>x</mi><mo>+</mo><msqrt><mrow><mn>5</mn><mi>k</mi><mo>+</mo><mn>7</mn></mrow></msqrt><mo fence=\"true\" form=\"postfix\" stretchy=\"true\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"true\">(</mo><mi>x</mi><mo>−</mo><msqrt><mrow><mn>5</mn><mi>k</mi><mo>+</mo><mn>7</mn></mrow></msqrt><mo fence=\"true\" form=\"postfix\" stretchy=\"true\">)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math><p>In the given equation, <math><mi>k</mi></math> is a positive constant. The product of the solutions to the equation is <math><mn>84</mn></math>. What is the value of <math><mi>k</mi></math>?</p>","accept":[10.6],"show":"10.6 or 53/5"},{"type":"mcq","stem":"<p>Each of the following frequency tables represents a data set. Which of these frequency tables represents the data set with the smallest standard deviation?</p>","choices":["<table class=\"xy dt\"><tr><th>Value</th><th>Frequency</th></tr><tr><td><math><mn>5</mn></math></td><td><math><mn>0</mn></math></td></tr><tr><td><math><mn>6</mn></math></td><td><math><mn>10</mn></math></td></tr><tr><td><math><mn>7</mn></math></td><td><math><mn>30</mn></math></td></tr><tr><td><math><mn>8</mn></math></td><td><math><mn>10</mn></math></td></tr><tr><td><math><mn>9</mn></math></td><td><math><mn>0</mn></math></td></tr></table>","<table class=\"xy dt\"><tr><th>Value</th><th>Frequency</th></tr><tr><td><math><mn>5</mn></math></td><td><math><mn>6</mn></math></td></tr><tr><td><math><mn>6</mn></math></td><td><math><mn>12</mn></math></td></tr><tr><td><math><mn>7</mn></math></td><td><math><mn>14</mn></math></td></tr><tr><td><math><mn>8</mn></math></td><td><math><mn>12</mn></math></td></tr><tr><td><math><mn>9</mn></math></td><td><math><mn>6</mn></math></td></tr></table>","<table class=\"xy dt\"><tr><th>Value</th><th>Frequency</th></tr><tr><td><math><mn>5</mn></math></td><td><math><mn>10</mn></math></td></tr><tr><td><math><mn>6</mn></math></td><td><math><mn>10</mn></math></td></tr><tr><td><math><mn>7</mn></math></td><td><math><mn>10</mn></math></td></tr><tr><td><math><mn>8</mn></math></td><td><math><mn>10</mn></math></td></tr><tr><td><math><mn>9</mn></math></td><td><math><mn>10</mn></math></td></tr></table>","<table class=\"xy dt\"><tr><th>Value</th><th>Frequency</th></tr><tr><td><math><mn>5</mn></math></td><td><math><mn>13</mn></math></td></tr><tr><td><math><mn>6</mn></math></td><td><math><mn>9</mn></math></td></tr><tr><td><math><mn>7</mn></math></td><td><math><mn>6</mn></math></td></tr><tr><td><math><mn>8</mn></math></td><td><math><mn>9</mn></math></td></tr><tr><td><math><mn>9</mn></math></td><td><math><mn>13</mn></math></td></tr></table>"],"answer":"A"},{"type":"spr","fig":"m2_q21","stem":"{{FIG}}<p>The table shows the volume of two similar solids, right circular cylinder A and right circular cylinder B. The radius of right circular cylinder A is <math><mn>10</mn></math> units. The surface area of right circular cylinder A is <math><mrow><mi>k</mi><mi>π</mi></mrow></math> square units, and the surface area of right circular cylinder B is <math><mrow><mi>n</mi><mi>π</mi></mrow></math> square units, where <math><mi>k</mi></math> and <math><mi>n</mi></math> are constants. What is the value of <math><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></math>? (The surface area of a right circular cylinder with radius <math><mi>r</mi></math> and height <math><mi>h</mi></math> is <math><mrow><mn>2</mn><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>+</mo><mn>2</mn><mi>π</mi><mi>r</mi><mi>h</mi></mrow></math>.)</p>","accept":[4500],"show":"4500"},{"type":"spr","stem":"<p>Function <math><mi>f</mi></math> is a quadratic function. The graph of <math><mrow><mi>y</mi><mo>=</mo><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> in the <math><mrow><mi>x</mi><mi>y</mi></mrow></math>-plane has a vertex at <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>6,10</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>, contains the point <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>5,8</mn><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>, and has a <span style=\"white-space:nowrap\"><math><mi>y</mi></math>-intercept</span> at <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0</mn><mo separator=\"true\">,</mo><mi>a</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>. The graph of <math><mrow><mi>y</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>f</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math> has a <span style=\"white-space:nowrap\"><math><mi>y</mi></math>-intercept</span> at <math><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mn>0</mn><mo separator=\"true\">,</mo><mi>b</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></math>. What is the positive difference between <math><mi>a</mi></math> and <math><mi>b</mi></math>?</p>","accept":[186],"show":"186"}]}],"figs":{"m1_q9":"<svg class=\"fsvg\" viewBox=\"0 0 382 368\" width=\"382\" role=\"img\" aria-label=\"Scatterplot of 10 points that rise from lower left to upper right: approximately (1.5, 1.5), (2.4, 2.6), (4.3, 4.7), (5.2, 2.7), (7, 7.8), (8.3, 9.9), (9.5, 9.3), (10.1, 9.8), (11.6, 12.1), and (12.4, 11.6)\"><line x1=\"40\" y1=\"336\" x2=\"40\" y2=\"28\" class=\"g\"/><line x1=\"84\" y1=\"336\" x2=\"84\" y2=\"28\" class=\"g\"/><line x1=\"128\" y1=\"336\" x2=\"128\" y2=\"28\" class=\"g\"/><line x1=\"172\" y1=\"336\" x2=\"172\" y2=\"28\" class=\"g\"/><line x1=\"216\" y1=\"336\" x2=\"216\" y2=\"28\" class=\"g\"/><line x1=\"260\" y1=\"336\" x2=\"260\" y2=\"28\" class=\"g\"/><line x1=\"304\" y1=\"336\" x2=\"304\" y2=\"28\" class=\"g\"/><line x1=\"348\" y1=\"336\" x2=\"348\" y2=\"28\" class=\"g\"/><line x1=\"40\" y1=\"336\" x2=\"348\" y2=\"336\" class=\"g\"/><line x1=\"40\" y1=\"292\" x2=\"348\" y2=\"292\" class=\"g\"/><line x1=\"40\" y1=\"248\" x2=\"348\" y2=\"248\" class=\"g\"/><line x1=\"40\" y1=\"204\" x2=\"348\" y2=\"204\" class=\"g\"/><line x1=\"40\" y1=\"160\" x2=\"348\" y2=\"160\" class=\"g\"/><line x1=\"40\" y1=\"116\" x2=\"348\" y2=\"116\" class=\"g\"/><line x1=\"40\" y1=\"72\" x2=\"348\" y2=\"72\" class=\"g\"/><line x1=\"40\" y1=\"28\" x2=\"348\" y2=\"28\" class=\"g\"/><line x1=\"40\" y1=\"336\" x2=\"364\" y2=\"336\" class=\"a\"/><polygon points=\"364,336 357,332 357,340\" class=\"ah\"/><line x1=\"40\" y1=\"336\" x2=\"40\" y2=\"12\" class=\"a\"/><polygon points=\"40,12 36,19 44,19\" class=\"ah\"/><line x1=\"84\" y1=\"333\" x2=\"84\" y2=\"339\" class=\"a\"/><text x=\"84\" y=\"352\" text-anchor=\"middle\" class=\"t\">2</text><line x1=\"128\" y1=\"333\" x2=\"128\" y2=\"339\" class=\"a\"/><text x=\"128\" y=\"352\" text-anchor=\"middle\" class=\"t\">4</text><line x1=\"172\" y1=\"333\" x2=\"172\" y2=\"339\" class=\"a\"/><text x=\"172\" y=\"352\" text-anchor=\"middle\" class=\"t\">6</text><line x1=\"216\" y1=\"333\" x2=\"216\" y2=\"339\" class=\"a\"/><text x=\"216\" y=\"352\" text-anchor=\"middle\" class=\"t\">8</text><line x1=\"260\" y1=\"333\" x2=\"260\" y2=\"339\" class=\"a\"/><text x=\"260\" y=\"352\" text-anchor=\"middle\" class=\"t\">10</text><line x1=\"304\" y1=\"333\" x2=\"304\" y2=\"339\" class=\"a\"/><text x=\"304\" y=\"352\" text-anchor=\"middle\" class=\"t\">12</text><line x1=\"348\" y1=\"333\" x2=\"348\" y2=\"339\" class=\"a\"/><text x=\"348\" y=\"352\" text-anchor=\"middle\" class=\"t\">14</text><line x1=\"37\" y1=\"292\" x2=\"43\" y2=\"292\" class=\"a\"/><text x=\"33\" y=\"296\" text-anchor=\"end\" class=\"t\">2</text><line x1=\"37\" y1=\"248\" x2=\"43\" y2=\"248\" class=\"a\"/><text x=\"33\" y=\"252\" text-anchor=\"end\" class=\"t\">4</text><line x1=\"37\" y1=\"204\" x2=\"43\" y2=\"204\" class=\"a\"/><text x=\"33\" y=\"208\" text-anchor=\"end\" class=\"t\">6</text><line x1=\"37\" y1=\"160\" x2=\"43\" y2=\"160\" class=\"a\"/><text x=\"33\" y=\"164\" text-anchor=\"end\" class=\"t\">8</text><line x1=\"37\" y1=\"116\" x2=\"43\" y2=\"116\" class=\"a\"/><text x=\"33\" y=\"120\" text-anchor=\"end\" class=\"t\">10</text><line x1=\"37\" y1=\"72\" x2=\"43\" y2=\"72\" class=\"a\"/><text x=\"33\" y=\"76\" text-anchor=\"end\" class=\"t\">12</text><line x1=\"37\" y1=\"28\" x2=\"43\" y2=\"28\" class=\"a\"/><text x=\"33\" y=\"32\" text-anchor=\"end\" class=\"t\">14</text><text x=\"34\" y=\"351\" text-anchor=\"end\" class=\"t i\">O</text><text x=\"367\" y=\"341\" text-anchor=\"start\" class=\"t i\">x</text><text x=\"48\" y=\"18\" text-anchor=\"start\" class=\"t i\">y</text><circle cx=\"73\" cy=\"303\" r=\"4\" class=\"dot\"/><circle cx=\"92.8\" cy=\"278.8\" r=\"4\" class=\"dot\"/><circle cx=\"134.6\" cy=\"232.6\" r=\"4\" class=\"dot\"/><circle cx=\"154.4\" cy=\"276.6\" r=\"4\" class=\"dot\"/><circle cx=\"194\" cy=\"164.4\" r=\"4\" class=\"dot\"/><circle cx=\"222.6\" cy=\"118.2\" r=\"4\" class=\"dot\"/><circle cx=\"249\" cy=\"131.4\" r=\"4\" class=\"dot\"/><circle cx=\"262.2\" cy=\"120.4\" r=\"4\" class=\"dot\"/><circle cx=\"295.2\" cy=\"69.8\" r=\"4\" class=\"dot\"/><circle cx=\"312.8\" cy=\"80.8\" r=\"4\" class=\"dot\"/></svg>","m1_q19":"<svg class=\"fsvg\" viewBox=\"0 0 400 260\" width=\"400\" role=\"img\" aria-label=\"Right triangle RST with the right angle at S; T is at the bottom left, S at the bottom right, and R directly above S; hypotenuse TR is labeled 84\"><polygon points=\"40,225 350,225 350,25\" class=\"ln\"/><polyline points=\"336,225 336,211 350,211\" class=\"a\"/><text x=\"30\" y=\"242\" text-anchor=\"end\" class=\"t-l i\">T</text><text x=\"358\" y=\"246\" class=\"t-l i\">S</text><text x=\"358\" y=\"24\" class=\"t-l i\">R</text><text x=\"182\" y=\"112\" text-anchor=\"middle\" class=\"t-l\">84</text></svg><p class=\"fig-note\">Note: Figure not drawn to scale.</p>","m2_q1":"<svg class=\"fsvg\" viewBox=\"0 0 346 332\" width=\"346\" role=\"img\" aria-label=\"Graph of y = f of x with two branches. The right branch comes down steeply from (negative 1.4, 8), passes through (0, 2) and (1, 1.1), and levels off just above the x-axis for x greater than 5. The left branch starts near (negative 8, negative 1.6), passes through (negative 6, negative 2) and (negative 4, negative 3.2), and drops steeply to (negative 2.7, negative 8)\"><line x1=\"40\" y1=\"300\" x2=\"40\" y2=\"28\" class=\"g\"/><line x1=\"57\" y1=\"300\" x2=\"57\" y2=\"28\" class=\"g\"/><line x1=\"74\" y1=\"300\" x2=\"74\" y2=\"28\" class=\"g\"/><line x1=\"91\" y1=\"300\" x2=\"91\" y2=\"28\" class=\"g\"/><line x1=\"108\" y1=\"300\" x2=\"108\" y2=\"28\" class=\"g\"/><line x1=\"125\" y1=\"300\" x2=\"125\" y2=\"28\" class=\"g\"/><line x1=\"142\" y1=\"300\" x2=\"142\" y2=\"28\" class=\"g\"/><line x1=\"159\" y1=\"300\" x2=\"159\" y2=\"28\" class=\"g\"/><line x1=\"176\" y1=\"300\" x2=\"176\" y2=\"28\" class=\"g\"/><line x1=\"193\" y1=\"300\" x2=\"193\" y2=\"28\" class=\"g\"/><line x1=\"210\" y1=\"300\" x2=\"210\" y2=\"28\" class=\"g\"/><line x1=\"227\" y1=\"300\" x2=\"227\" y2=\"28\" class=\"g\"/><line x1=\"244\" y1=\"300\" x2=\"244\" y2=\"28\" class=\"g\"/><line x1=\"261\" y1=\"300\" x2=\"261\" y2=\"28\" class=\"g\"/><line x1=\"278\" y1=\"300\" x2=\"278\" y2=\"28\" class=\"g\"/><line x1=\"295\" y1=\"300\" x2=\"295\" y2=\"28\" class=\"g\"/><line x1=\"312\" y1=\"300\" x2=\"312\" y2=\"28\" class=\"g\"/><line x1=\"40\" y1=\"300\" x2=\"312\" y2=\"300\" class=\"g\"/><line x1=\"40\" y1=\"283\" x2=\"312\" y2=\"283\" class=\"g\"/><line x1=\"40\" y1=\"266\" x2=\"312\" y2=\"266\" class=\"g\"/><line x1=\"40\" y1=\"249\" x2=\"312\" y2=\"249\" class=\"g\"/><line x1=\"40\" y1=\"232\" x2=\"312\" y2=\"232\" class=\"g\"/><line x1=\"40\" y1=\"215\" x2=\"312\" y2=\"215\" class=\"g\"/><line x1=\"40\" y1=\"198\" x2=\"312\" y2=\"198\" class=\"g\"/><line x1=\"40\" y1=\"181\" x2=\"312\" y2=\"181\" class=\"g\"/><line x1=\"40\" y1=\"164\" x2=\"312\" y2=\"164\" class=\"g\"/><line x1=\"40\" y1=\"147\" x2=\"312\" y2=\"147\" class=\"g\"/><line x1=\"40\" y1=\"130\" x2=\"312\" y2=\"130\" class=\"g\"/><line x1=\"40\" y1=\"113\" x2=\"312\" y2=\"113\" class=\"g\"/><line x1=\"40\" y1=\"96\" x2=\"312\" y2=\"96\" class=\"g\"/><line x1=\"40\" y1=\"79\" x2=\"312\" y2=\"79\" class=\"g\"/><line x1=\"40\" y1=\"62\" x2=\"312\" y2=\"62\" class=\"g\"/><line x1=\"40\" y1=\"45\" x2=\"312\" y2=\"45\" class=\"g\"/><line x1=\"40\" y1=\"28\" x2=\"312\" y2=\"28\" class=\"g\"/><line x1=\"40\" y1=\"164\" x2=\"328\" y2=\"164\" class=\"a\"/><polygon points=\"328,164 321,160 321,168\" class=\"ah\"/><line x1=\"176\" y1=\"300\" x2=\"176\" y2=\"12\" class=\"a\"/><polygon points=\"176,12 172,19 180,19\" class=\"ah\"/><line x1=\"40\" y1=\"161\" x2=\"40\" y2=\"167\" class=\"a\"/><text x=\"40\" y=\"180\" text-anchor=\"middle\" class=\"t\">−8</text><line x1=\"74\" y1=\"161\" x2=\"74\" y2=\"167\" class=\"a\"/><text x=\"74\" y=\"180\" text-anchor=\"middle\" class=\"t\">−6</text><line x1=\"108\" y1=\"161\" x2=\"108\" y2=\"167\" class=\"a\"/><text x=\"108\" y=\"180\" text-anchor=\"middle\" class=\"t\">−4</text><line x1=\"142\" y1=\"161\" x2=\"142\" y2=\"167\" class=\"a\"/><text x=\"142\" y=\"180\" text-anchor=\"middle\" class=\"t\">−2</text><line x1=\"210\" y1=\"161\" x2=\"210\" y2=\"167\" class=\"a\"/><text x=\"210\" y=\"180\" text-anchor=\"middle\" class=\"t\">2</text><line x1=\"244\" y1=\"161\" x2=\"244\" y2=\"167\" class=\"a\"/><text x=\"244\" y=\"180\" text-anchor=\"middle\" class=\"t\">4</text><line x1=\"278\" y1=\"161\" x2=\"278\" y2=\"167\" class=\"a\"/><text x=\"278\" y=\"180\" text-anchor=\"middle\" class=\"t\">6</text><line x1=\"312\" y1=\"161\" x2=\"312\" y2=\"167\" class=\"a\"/><text x=\"312\" y=\"180\" text-anchor=\"middle\" class=\"t\">8</text><line x1=\"173\" y1=\"300\" x2=\"179\" y2=\"300\" class=\"a\"/><text x=\"169\" y=\"304\" text-anchor=\"end\" class=\"t\">−8</text><line x1=\"173\" y1=\"283\" x2=\"179\" y2=\"283\" class=\"a\"/><text x=\"169\" y=\"287\" text-anchor=\"end\" class=\"t\">−7</text><line x1=\"173\" y1=\"266\" x2=\"179\" y2=\"266\" class=\"a\"/><text x=\"169\" y=\"270\" text-anchor=\"end\" class=\"t\">−6</text><line x1=\"173\" y1=\"249\" x2=\"179\" y2=\"249\" class=\"a\"/><text x=\"169\" y=\"253\" text-anchor=\"end\" class=\"t\">−5</text><line x1=\"173\" y1=\"232\" x2=\"179\" y2=\"232\" class=\"a\"/><text x=\"169\" y=\"236\" text-anchor=\"end\" class=\"t\">−4</text><line x1=\"173\" y1=\"215\" x2=\"179\" y2=\"215\" class=\"a\"/><text x=\"169\" y=\"219\" text-anchor=\"end\" class=\"t\">−3</text><line x1=\"173\" y1=\"198\" x2=\"179\" y2=\"198\" class=\"a\"/><text x=\"169\" y=\"202\" text-anchor=\"end\" class=\"t\">−2</text><line x1=\"173\" y1=\"181\" x2=\"179\" y2=\"181\" class=\"a\"/><text x=\"169\" y=\"185\" text-anchor=\"end\" class=\"t\">−1</text><line x1=\"173\" y1=\"147\" x2=\"179\" y2=\"147\" class=\"a\"/><text x=\"169\" y=\"151\" text-anchor=\"end\" class=\"t\">1</text><line x1=\"173\" y1=\"130\" x2=\"179\" y2=\"130\" class=\"a\"/><text x=\"169\" y=\"134\" text-anchor=\"end\" class=\"t\">2</text><line x1=\"173\" y1=\"113\" x2=\"179\" y2=\"113\" class=\"a\"/><text x=\"169\" y=\"117\" text-anchor=\"end\" class=\"t\">3</text><line x1=\"173\" y1=\"96\" x2=\"179\" y2=\"96\" class=\"a\"/><text x=\"169\" y=\"100\" text-anchor=\"end\" class=\"t\">4</text><line x1=\"173\" y1=\"79\" x2=\"179\" y2=\"79\" class=\"a\"/><text x=\"169\" y=\"83\" text-anchor=\"end\" class=\"t\">5</text><line x1=\"173\" y1=\"62\" x2=\"179\" y2=\"62\" class=\"a\"/><text x=\"169\" y=\"66\" text-anchor=\"end\" class=\"t\">6</text><line x1=\"173\" y1=\"45\" x2=\"179\" y2=\"45\" class=\"a\"/><text x=\"169\" y=\"49\" text-anchor=\"end\" class=\"t\">7</text><line x1=\"173\" y1=\"28\" x2=\"179\" y2=\"28\" class=\"a\"/><text x=\"169\" y=\"32\" text-anchor=\"end\" class=\"t\">8</text><text x=\"170\" y=\"179\" text-anchor=\"end\" class=\"t i\">O</text><text x=\"331\" y=\"169\" text-anchor=\"start\" class=\"t i\">x</text><text x=\"184\" y=\"18\" text-anchor=\"start\" class=\"t i\">y</text><polyline points=\"152.88,28 153.18,30.2 153.57,33.05 154.02,36.42 154.54,40.21 155.09,44.32 155.67,48.61 156.27,52.99 156.87,57.34 157.46,61.55 158.02,65.5 158.54,69.09 159,72.2 159.42,74.92 159.81,77.43 160.17,79.74 160.52,81.9 160.86,83.91 161.19,85.8 161.51,87.6 161.84,89.33 162.17,91.01 162.51,92.66 162.87,94.32 163.25,96 163.64,97.65 164.02,99.23 164.41,100.73 164.79,102.17 165.19,103.57 165.59,104.93 166,106.26 166.43,107.59 166.88,108.91 167.34,110.25 167.83,111.6 168.35,113 168.9,114.44 169.47,115.93 170.06,117.45 170.68,118.98 171.31,120.51 171.96,122.03 172.62,123.52 173.29,124.96 173.97,126.35 174.65,127.66 175.33,128.88 176,130 176.68,131.01 177.37,131.93 178.07,132.76 178.77,133.53 179.48,134.23 180.2,134.89 180.91,135.51 181.64,136.11 182.35,136.69 183.07,137.28 183.79,137.88 184.5,138.5 185.18,139.12 185.82,139.72 186.43,140.29 187.02,140.85 187.61,141.39 188.22,141.93 188.86,142.47 189.54,143.01 190.28,143.56 191.09,144.12 191.99,144.7 193,145.3 194.12,145.93 195.34,146.6 196.65,147.29 198.04,147.99 199.48,148.71 200.97,149.42 202.49,150.13 204.02,150.82 205.55,151.49 207.07,152.13 208.56,152.73 210,153.29 211.42,153.81 212.83,154.29 214.25,154.75 215.67,155.18 217.08,155.59 218.5,155.98 219.92,156.35 221.33,156.71 222.75,157.06 224.17,157.39 225.58,157.72 227,158.05 228.42,158.37 229.83,158.67 231.25,158.97 232.67,159.25 234.08,159.51 235.5,159.77 236.92,160.02 238.33,160.25 239.75,160.48 241.17,160.7 242.58,160.91 244,161.11 245.42,161.3 246.83,161.48 248.25,161.65 249.67,161.82 251.08,161.97 252.5,162.11 253.92,162.24 255.33,162.37 256.75,162.49 258.17,162.6 259.58,162.71 261,162.81 262.36,162.9 263.64,162.99 264.85,163.06 266.04,163.12 267.22,163.18 268.44,163.24 269.71,163.28 271.07,163.33 272.55,163.37 274.18,163.41 275.99,163.45 278,163.49 280.35,163.53 283.08,163.57 286.1,163.61 289.33,163.64 292.68,163.67 296.06,163.7 299.38,163.73 302.55,163.76 305.49,163.78 308.1,163.8 310.3,163.81 312,163.83\" class=\"ln\"/><polyline points=\"40,191.2 40.82,191.34 41.85,191.52 43.05,191.73 44.41,191.95 45.88,192.21 47.44,192.48 49.06,192.76 50.7,193.05 52.35,193.35 53.97,193.65 55.53,193.96 57,194.26 58.42,194.55 59.83,194.84 61.25,195.13 62.67,195.42 64.08,195.72 65.5,196.03 66.92,196.36 68.33,196.7 69.75,197.07 71.17,197.46 72.58,197.88 74,198.34 75.42,198.82 76.83,199.31 78.25,199.81 79.67,200.34 81.08,200.88 82.5,201.45 83.92,202.05 85.33,202.69 86.75,203.36 88.17,204.08 89.58,204.84 91,205.65 92.44,206.52 93.93,207.45 95.45,208.43 96.98,209.46 98.51,210.53 100.03,211.63 101.52,212.75 102.96,213.88 104.35,215.03 105.66,216.16 106.88,217.29 108,218.4 109.01,219.47 109.91,220.5 110.72,221.5 111.46,222.49 112.14,223.49 112.78,224.51 113.39,225.57 113.98,226.68 114.57,227.86 115.18,229.13 115.82,230.51 116.5,232 117.22,233.63 117.98,235.38 118.74,237.23 119.52,239.18 120.3,241.19 121.07,243.26 121.82,245.37 122.55,247.49 123.23,249.61 123.88,251.71 124.47,253.78 125,255.8 125.47,257.79 125.88,259.81 126.24,261.83 126.56,263.86 126.85,265.89 127.1,267.91 127.34,269.92 127.56,271.92 127.77,273.89 127.97,275.83 128.18,277.74 128.4,279.6 128.62,281.48 128.84,283.43 129.05,285.42 129.26,287.41 129.45,289.37 129.63,291.29 129.8,293.12 129.96,294.84 130.11,296.41 130.23,297.82 130.35,299.03 130.44,300\" class=\"ln\"/></svg>","m2_q6":"<svg class=\"fsvg\" viewBox=\"0 0 338 324\" width=\"338\" role=\"img\" aria-label=\"Line slanting steeply up from left to right through (negative 2, negative 5), (0, 1), and (1, 4)\"><line x1=\"40\" y1=\"292\" x2=\"40\" y2=\"28\" class=\"g\"/><line x1=\"62\" y1=\"292\" x2=\"62\" y2=\"28\" class=\"g\"/><line x1=\"84\" y1=\"292\" x2=\"84\" y2=\"28\" class=\"g\"/><line x1=\"106\" y1=\"292\" x2=\"106\" y2=\"28\" class=\"g\"/><line x1=\"128\" y1=\"292\" x2=\"128\" y2=\"28\" class=\"g\"/><line x1=\"150\" y1=\"292\" x2=\"150\" y2=\"28\" class=\"g\"/><line x1=\"172\" y1=\"292\" x2=\"172\" y2=\"28\" class=\"g\"/><line x1=\"194\" y1=\"292\" x2=\"194\" y2=\"28\" class=\"g\"/><line x1=\"216\" y1=\"292\" x2=\"216\" y2=\"28\" class=\"g\"/><line x1=\"238\" y1=\"292\" x2=\"238\" y2=\"28\" class=\"g\"/><line x1=\"260\" y1=\"292\" x2=\"260\" y2=\"28\" class=\"g\"/><line x1=\"282\" y1=\"292\" x2=\"282\" y2=\"28\" class=\"g\"/><line x1=\"304\" y1=\"292\" x2=\"304\" y2=\"28\" class=\"g\"/><line x1=\"40\" y1=\"292\" x2=\"304\" y2=\"292\" class=\"g\"/><line x1=\"40\" y1=\"270\" x2=\"304\" y2=\"270\" class=\"g\"/><line x1=\"40\" y1=\"248\" x2=\"304\" y2=\"248\" class=\"g\"/><line x1=\"40\" y1=\"226\" x2=\"304\" y2=\"226\" class=\"g\"/><line x1=\"40\" y1=\"204\" x2=\"304\" y2=\"204\" class=\"g\"/><line x1=\"40\" y1=\"182\" x2=\"304\" y2=\"182\" class=\"g\"/><line x1=\"40\" y1=\"160\" x2=\"304\" y2=\"160\" class=\"g\"/><line x1=\"40\" y1=\"138\" x2=\"304\" y2=\"138\" class=\"g\"/><line x1=\"40\" y1=\"116\" x2=\"304\" y2=\"116\" class=\"g\"/><line x1=\"40\" y1=\"94\" x2=\"304\" y2=\"94\" class=\"g\"/><line x1=\"40\" y1=\"72\" x2=\"304\" y2=\"72\" class=\"g\"/><line x1=\"40\" y1=\"50\" x2=\"304\" y2=\"50\" class=\"g\"/><line x1=\"40\" y1=\"28\" x2=\"304\" y2=\"28\" class=\"g\"/><line x1=\"40\" y1=\"160\" x2=\"320\" y2=\"160\" class=\"a\"/><polygon points=\"320,160 313,156 313,164\" class=\"ah\"/><line x1=\"172\" y1=\"292\" x2=\"172\" y2=\"12\" class=\"a\"/><polygon points=\"172,12 168,19 176,19\" class=\"ah\"/><line x1=\"40\" y1=\"157\" x2=\"40\" y2=\"163\" class=\"a\"/><text x=\"40\" y=\"176\" text-anchor=\"middle\" class=\"t\">−6</text><line x1=\"84\" y1=\"157\" x2=\"84\" y2=\"163\" class=\"a\"/><text x=\"84\" y=\"176\" text-anchor=\"middle\" class=\"t\">−4</text><line x1=\"128\" y1=\"157\" x2=\"128\" y2=\"163\" class=\"a\"/><text x=\"128\" y=\"176\" text-anchor=\"middle\" class=\"t\">−2</text><line x1=\"216\" y1=\"157\" x2=\"216\" y2=\"163\" class=\"a\"/><text x=\"216\" y=\"176\" text-anchor=\"middle\" class=\"t\">2</text><line x1=\"260\" y1=\"157\" x2=\"260\" y2=\"163\" class=\"a\"/><text x=\"260\" y=\"176\" text-anchor=\"middle\" class=\"t\">4</text><line x1=\"304\" y1=\"157\" x2=\"304\" y2=\"163\" class=\"a\"/><text x=\"304\" y=\"176\" text-anchor=\"middle\" class=\"t\">6</text><line x1=\"169\" y1=\"292\" x2=\"175\" y2=\"292\" class=\"a\"/><text x=\"165\" y=\"296\" text-anchor=\"end\" class=\"t\">−6</text><line x1=\"169\" y1=\"248\" x2=\"175\" y2=\"248\" class=\"a\"/><text x=\"165\" y=\"252\" text-anchor=\"end\" class=\"t\">−4</text><line x1=\"169\" y1=\"204\" x2=\"175\" y2=\"204\" class=\"a\"/><text x=\"165\" y=\"208\" text-anchor=\"end\" class=\"t\">−2</text><line x1=\"169\" y1=\"116\" x2=\"175\" y2=\"116\" class=\"a\"/><text x=\"165\" y=\"120\" text-anchor=\"end\" class=\"t\">2</text><line x1=\"169\" y1=\"72\" x2=\"175\" y2=\"72\" class=\"a\"/><text x=\"165\" y=\"76\" text-anchor=\"end\" class=\"t\">4</text><line x1=\"169\" y1=\"28\" x2=\"175\" y2=\"28\" class=\"a\"/><text x=\"165\" y=\"32\" text-anchor=\"end\" class=\"t\">6</text><text x=\"166\" y=\"175\" text-anchor=\"end\" class=\"t i\">O</text><text x=\"323\" y=\"165\" text-anchor=\"start\" class=\"t i\">x</text><text x=\"180\" y=\"18\" text-anchor=\"start\" class=\"t i\">y</text><line x1=\"119.2\" y1=\"296.4\" x2=\"210.5\" y2=\"22.5\" class=\"ln\"/></svg>","m2_q10":"<svg class=\"fsvg\" viewBox=\"0 0 394 300\" width=\"394\" role=\"img\" aria-label=\"Horizontal dashed line through (negative 8, negative 9), (0, negative 9), and (8, negative 9); the region above the dashed line is shaded\"><polygon points=\"40,248 360,248 360,28 40,28\" style=\"fill:#9aa1ad;fill-opacity:.55;stroke:none\"/><line x1=\"40\" y1=\"268\" x2=\"40\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"60\" y1=\"268\" x2=\"60\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"80\" y1=\"268\" x2=\"80\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"100\" y1=\"268\" x2=\"100\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"120\" y1=\"268\" x2=\"120\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"140\" y1=\"268\" x2=\"140\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"160\" y1=\"268\" x2=\"160\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"180\" y1=\"268\" x2=\"180\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"200\" y1=\"268\" x2=\"200\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"220\" y1=\"268\" x2=\"220\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"240\" y1=\"268\" x2=\"240\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"260\" y1=\"268\" x2=\"260\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"280\" y1=\"268\" x2=\"280\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"300\" y1=\"268\" x2=\"300\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"320\" y1=\"268\" x2=\"320\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"340\" y1=\"268\" x2=\"340\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"360\" y1=\"268\" x2=\"360\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"268\" x2=\"360\" y2=\"268\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"248\" x2=\"360\" y2=\"248\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"228\" x2=\"360\" y2=\"228\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"208\" x2=\"360\" y2=\"208\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"188\" x2=\"360\" y2=\"188\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"168\" x2=\"360\" y2=\"168\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"148\" x2=\"360\" y2=\"148\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"128\" x2=\"360\" y2=\"128\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"108\" x2=\"360\" y2=\"108\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"88\" x2=\"360\" y2=\"88\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"68\" x2=\"360\" y2=\"68\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"48\" x2=\"360\" y2=\"48\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"28\" x2=\"360\" y2=\"28\" class=\"g\" style=\"stroke:#8d939e\"/><line x1=\"40\" y1=\"68\" x2=\"376\" y2=\"68\" class=\"a\"/><polygon points=\"376,68 369,64 369,72\" class=\"ah\"/><line x1=\"200\" y1=\"268\" x2=\"200\" y2=\"12\" class=\"a\"/><polygon points=\"200,12 196,19 204,19\" class=\"ah\"/><line x1=\"40\" y1=\"65\" x2=\"40\" y2=\"71\" class=\"a\"/><text x=\"40\" y=\"84\" text-anchor=\"middle\" class=\"t\">−8</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"71\" class=\"a\"/><text x=\"80\" y=\"84\" text-anchor=\"middle\" class=\"t\">−6</text><line x1=\"120\" y1=\"65\" x2=\"120\" y2=\"71\" class=\"a\"/><text x=\"120\" y=\"84\" text-anchor=\"middle\" class=\"t\">−4</text><line x1=\"160\" y1=\"65\" x2=\"160\" y2=\"71\" class=\"a\"/><text x=\"160\" y=\"84\" text-anchor=\"middle\" class=\"t\">−2</text><line x1=\"240\" y1=\"65\" x2=\"240\" y2=\"71\" class=\"a\"/><text x=\"240\" y=\"84\" text-anchor=\"middle\" class=\"t\">2</text><line x1=\"280\" y1=\"65\" x2=\"280\" y2=\"71\" class=\"a\"/><text x=\"280\" y=\"84\" text-anchor=\"middle\" class=\"t\">4</text><line x1=\"320\" y1=\"65\" x2=\"320\" y2=\"71\" class=\"a\"/><text x=\"320\" y=\"84\" text-anchor=\"middle\" class=\"t\">6</text><line x1=\"360\" y1=\"65\" x2=\"360\" y2=\"71\" class=\"a\"/><text x=\"360\" y=\"84\" text-anchor=\"middle\" class=\"t\">8</text><line x1=\"197\" y1=\"268\" x2=\"203\" y2=\"268\" class=\"a\"/><text x=\"193\" y=\"272\" text-anchor=\"end\" class=\"t\">−10</text><line x1=\"197\" y1=\"228\" x2=\"203\" y2=\"228\" class=\"a\"/><text x=\"193\" y=\"232\" text-anchor=\"end\" class=\"t\">−8</text><line x1=\"197\" y1=\"188\" x2=\"203\" y2=\"188\" class=\"a\"/><text x=\"193\" y=\"192\" text-anchor=\"end\" class=\"t\">−6</text><line x1=\"197\" y1=\"148\" x2=\"203\" y2=\"148\" class=\"a\"/><text x=\"193\" y=\"152\" text-anchor=\"end\" class=\"t\">−4</text><line x1=\"197\" y1=\"108\" x2=\"203\" y2=\"108\" class=\"a\"/><text x=\"193\" y=\"112\" text-anchor=\"end\" class=\"t\">−2</text><line x1=\"197\" y1=\"28\" x2=\"203\" y2=\"28\" class=\"a\"/><text x=\"193\" y=\"32\" text-anchor=\"end\" class=\"t\">2</text><text x=\"194\" y=\"83\" text-anchor=\"end\" class=\"t i\">O</text><text x=\"379\" y=\"73\" text-anchor=\"start\" class=\"t i\">x</text><text x=\"208\" y=\"18\" text-anchor=\"start\" class=\"t i\">y</text><line x1=\"40\" y1=\"248\" x2=\"360\" y2=\"248\" class=\"ln\" style=\"stroke-dasharray:7 5\"/></svg>","m2_q12":"<svg class=\"fsvg\" viewBox=\"0 0 394 380\" width=\"394\" role=\"img\" aria-label=\"Increasing exponential curve that approaches the horizontal line y = negative 3 on the left, passes through (0, negative 2) and (1, 2), and rises steeply to (1.6, 10)\"><line x1=\"40\" y1=\"348\" x2=\"40\" y2=\"28\" class=\"g\"/><line x1=\"56\" y1=\"348\" x2=\"56\" y2=\"28\" class=\"g\"/><line x1=\"72\" y1=\"348\" x2=\"72\" y2=\"28\" class=\"g\"/><line x1=\"88\" y1=\"348\" x2=\"88\" y2=\"28\" class=\"g\"/><line x1=\"104\" y1=\"348\" x2=\"104\" y2=\"28\" class=\"g\"/><line x1=\"120\" y1=\"348\" x2=\"120\" y2=\"28\" class=\"g\"/><line x1=\"136\" y1=\"348\" x2=\"136\" y2=\"28\" class=\"g\"/><line x1=\"152\" y1=\"348\" x2=\"152\" y2=\"28\" class=\"g\"/><line x1=\"168\" y1=\"348\" x2=\"168\" y2=\"28\" class=\"g\"/><line x1=\"184\" y1=\"348\" x2=\"184\" y2=\"28\" class=\"g\"/><line x1=\"200\" y1=\"348\" x2=\"200\" y2=\"28\" class=\"g\"/><line x1=\"216\" y1=\"348\" x2=\"216\" y2=\"28\" class=\"g\"/><line x1=\"232\" y1=\"348\" x2=\"232\" y2=\"28\" class=\"g\"/><line x1=\"248\" y1=\"348\" x2=\"248\" y2=\"28\" class=\"g\"/><line x1=\"264\" y1=\"348\" x2=\"264\" y2=\"28\" class=\"g\"/><line x1=\"280\" y1=\"348\" x2=\"280\" y2=\"28\" class=\"g\"/><line x1=\"296\" y1=\"348\" x2=\"296\" y2=\"28\" class=\"g\"/><line x1=\"312\" y1=\"348\" x2=\"312\" y2=\"28\" class=\"g\"/><line x1=\"328\" y1=\"348\" x2=\"328\" y2=\"28\" class=\"g\"/><line x1=\"344\" y1=\"348\" x2=\"344\" y2=\"28\" class=\"g\"/><line x1=\"360\" y1=\"348\" x2=\"360\" y2=\"28\" class=\"g\"/><line x1=\"40\" y1=\"348\" x2=\"360\" y2=\"348\" class=\"g\"/><line x1=\"40\" y1=\"332\" x2=\"360\" y2=\"332\" class=\"g\"/><line x1=\"40\" y1=\"316\" x2=\"360\" y2=\"316\" class=\"g\"/><line x1=\"40\" y1=\"300\" x2=\"360\" y2=\"300\" class=\"g\"/><line x1=\"40\" y1=\"284\" x2=\"360\" y2=\"284\" class=\"g\"/><line x1=\"40\" y1=\"268\" x2=\"360\" y2=\"268\" class=\"g\"/><line x1=\"40\" y1=\"252\" x2=\"360\" y2=\"252\" class=\"g\"/><line x1=\"40\" y1=\"236\" x2=\"360\" y2=\"236\" class=\"g\"/><line x1=\"40\" y1=\"220\" x2=\"360\" y2=\"220\" class=\"g\"/><line x1=\"40\" y1=\"204\" x2=\"360\" y2=\"204\" class=\"g\"/><line x1=\"40\" y1=\"188\" x2=\"360\" y2=\"188\" class=\"g\"/><line x1=\"40\" y1=\"172\" x2=\"360\" y2=\"172\" class=\"g\"/><line x1=\"40\" y1=\"156\" x2=\"360\" y2=\"156\" class=\"g\"/><line x1=\"40\" y1=\"140\" x2=\"360\" y2=\"140\" class=\"g\"/><line x1=\"40\" y1=\"124\" x2=\"360\" y2=\"124\" class=\"g\"/><line x1=\"40\" y1=\"108\" x2=\"360\" y2=\"108\" class=\"g\"/><line x1=\"40\" y1=\"92\" x2=\"360\" y2=\"92\" class=\"g\"/><line x1=\"40\" y1=\"76\" x2=\"360\" y2=\"76\" class=\"g\"/><line x1=\"40\" y1=\"60\" x2=\"360\" y2=\"60\" class=\"g\"/><line x1=\"40\" y1=\"44\" x2=\"360\" y2=\"44\" class=\"g\"/><line x1=\"40\" y1=\"28\" x2=\"360\" y2=\"28\" class=\"g\"/><line x1=\"40\" y1=\"188\" x2=\"376\" y2=\"188\" class=\"a\"/><polygon points=\"376,188 369,184 369,192\" class=\"ah\"/><line x1=\"200\" y1=\"348\" x2=\"200\" y2=\"12\" class=\"a\"/><polygon points=\"200,12 196,19 204,19\" class=\"ah\"/><line x1=\"40\" y1=\"185\" x2=\"40\" y2=\"191\" class=\"a\"/><text x=\"40\" y=\"204\" text-anchor=\"middle\" class=\"t\">−10</text><line x1=\"72\" y1=\"185\" x2=\"72\" y2=\"191\" class=\"a\"/><text x=\"72\" y=\"204\" text-anchor=\"middle\" class=\"t\">−8</text><line x1=\"104\" y1=\"185\" x2=\"104\" y2=\"191\" class=\"a\"/><text x=\"104\" y=\"204\" text-anchor=\"middle\" class=\"t\">−6</text><line x1=\"136\" y1=\"185\" x2=\"136\" y2=\"191\" class=\"a\"/><text x=\"136\" y=\"204\" text-anchor=\"middle\" class=\"t\">−4</text><line x1=\"168\" y1=\"185\" x2=\"168\" y2=\"191\" class=\"a\"/><text x=\"168\" y=\"204\" text-anchor=\"middle\" class=\"t\">−2</text><line x1=\"232\" y1=\"185\" x2=\"232\" y2=\"191\" class=\"a\"/><text x=\"232\" y=\"204\" text-anchor=\"middle\" class=\"t\">2</text><line x1=\"264\" y1=\"185\" x2=\"264\" y2=\"191\" class=\"a\"/><text x=\"264\" y=\"204\" text-anchor=\"middle\" class=\"t\">4</text><line x1=\"296\" y1=\"185\" x2=\"296\" y2=\"191\" class=\"a\"/><text x=\"296\" y=\"204\" text-anchor=\"middle\" class=\"t\">6</text><line x1=\"328\" y1=\"185\" x2=\"328\" y2=\"191\" class=\"a\"/><text x=\"328\" y=\"204\" text-anchor=\"middle\" class=\"t\">8</text><line x1=\"360\" y1=\"185\" x2=\"360\" y2=\"191\" class=\"a\"/><text x=\"360\" y=\"204\" text-anchor=\"middle\" class=\"t\">10</text><line x1=\"197\" y1=\"348\" x2=\"203\" y2=\"348\" class=\"a\"/><text x=\"193\" y=\"352\" text-anchor=\"end\" class=\"t\">−10</text><line x1=\"197\" y1=\"316\" x2=\"203\" y2=\"316\" class=\"a\"/><text x=\"193\" y=\"320\" text-anchor=\"end\" class=\"t\">−8</text><line x1=\"197\" y1=\"284\" x2=\"203\" y2=\"284\" class=\"a\"/><text x=\"193\" y=\"288\" text-anchor=\"end\" class=\"t\">−6</text><line x1=\"197\" y1=\"252\" x2=\"203\" y2=\"252\" class=\"a\"/><text x=\"193\" y=\"256\" text-anchor=\"end\" class=\"t\">−4</text><line x1=\"197\" y1=\"220\" x2=\"203\" y2=\"220\" class=\"a\"/><text x=\"193\" y=\"224\" text-anchor=\"end\" class=\"t\">−2</text><line x1=\"197\" y1=\"156\" x2=\"203\" y2=\"156\" class=\"a\"/><text x=\"193\" y=\"160\" text-anchor=\"end\" class=\"t\">2</text><line x1=\"197\" y1=\"124\" x2=\"203\" y2=\"124\" class=\"a\"/><text x=\"193\" y=\"128\" text-anchor=\"end\" class=\"t\">4</text><line x1=\"197\" y1=\"92\" x2=\"203\" y2=\"92\" class=\"a\"/><text x=\"193\" y=\"96\" text-anchor=\"end\" class=\"t\">6</text><line x1=\"197\" y1=\"60\" x2=\"203\" y2=\"60\" class=\"a\"/><text x=\"193\" y=\"64\" text-anchor=\"end\" class=\"t\">8</text><line x1=\"197\" y1=\"28\" x2=\"203\" y2=\"28\" class=\"a\"/><text x=\"193\" y=\"32\" text-anchor=\"end\" class=\"t\">10</text><text x=\"194\" y=\"203\" text-anchor=\"end\" class=\"t i\">O</text><text x=\"379\" y=\"193\" text-anchor=\"start\" class=\"t i\">x</text><text x=\"208\" y=\"18\" text-anchor=\"start\" class=\"t i\">y</text><polyline points=\"40,236 40.62,236 41.24,236 41.86,236 42.47,236 43.09,236 43.71,236 44.33,236 44.95,236 45.56,236 46.18,236 46.8,236 47.42,236 48.04,236 48.66,236 49.27,236 49.89,236 50.51,236 51.13,236 51.75,236 52.37,236 52.98,236 53.6,236 54.22,236 54.84,236 55.46,236 56.08,236 56.69,236 57.31,236 57.93,236 58.55,236 59.17,236 59.79,236 60.4,236 61.02,236 61.64,236 62.26,236 62.88,236 63.5,236 64.11,236 64.73,236 65.35,236 65.97,236 66.59,236 67.21,236 67.82,236 68.44,236 69.06,236 69.68,236 70.3,236 70.92,236 71.53,236 72.15,236 72.77,236 73.39,236 74.01,236 74.63,236 75.24,236 75.86,236 76.48,236 77.1,236 77.72,236 78.34,236 78.95,236 79.57,236 80.19,236 80.81,236 81.43,236 82.05,236 82.66,236 83.28,236 83.9,236 84.52,236 85.14,236 85.76,236 86.37,236 86.99,236 87.61,236 88.23,236 88.85,236 89.47,236 90.08,236 90.7,236 91.32,236 91.94,236 92.56,236 93.18,236 93.79,236 94.41,236 95.03,236 95.65,236 96.27,236 96.89,236 97.5,236 98.12,236 98.74,236 99.36,236 99.98,236 100.6,236 101.21,236 101.83,236 102.45,236 103.07,236 103.69,236 104.31,236 104.92,236 105.54,236 106.16,236 106.78,236 107.4,236 108.02,236 108.63,236 109.25,236 109.87,236 110.49,236 111.11,236 111.73,236 112.34,236 112.96,236 113.58,236 114.2,236 114.82,236 115.44,236 116.05,236 116.67,236 117.29,236 117.91,236 118.53,236 119.15,236 119.76,236 120.38,235.99 121,235.99 121.62,235.99 122.24,235.99 122.86,235.99 123.47,235.99 124.09,235.99 124.71,235.99 125.33,235.99 125.95,235.99 126.57,235.99 127.18,235.99 127.8,235.99 128.42,235.99 129.04,235.99 129.66,235.99 130.28,235.99 130.89,235.98 131.51,235.98 132.13,235.98 132.75,235.98 133.37,235.98 133.99,235.98 134.6,235.98 135.22,235.98 135.84,235.97 136.46,235.97 137.08,235.97 137.7,235.97 138.31,235.97 138.93,235.97 139.55,235.96 140.17,235.96 140.79,235.96 141.41,235.96 142.02,235.95 142.64,235.95 143.26,235.95 143.88,235.94 144.5,235.94 145.12,235.94 145.73,235.93 146.35,235.93 146.97,235.92 147.59,235.92 148.21,235.91 148.83,235.91 149.44,235.9 150.06,235.89 150.68,235.89 151.3,235.88 151.92,235.87 152.54,235.86 153.15,235.86 153.77,235.85 154.39,235.84 155.01,235.83 155.63,235.82 156.25,235.8 156.86,235.79 157.48,235.78 158.1,235.76 158.72,235.75 159.34,235.73 159.96,235.72 160.57,235.7 161.19,235.68 161.81,235.66 162.43,235.63 163.05,235.61 163.67,235.59 164.28,235.56 164.9,235.53 165.52,235.5 166.14,235.47 166.76,235.44 167.38,235.4 167.99,235.36 168.61,235.32 169.23,235.28 169.85,235.23 170.47,235.18 171.09,235.13 171.7,235.07 172.32,235.01 172.94,234.95 173.56,234.88 174.18,234.81 174.8,234.73 175.41,234.65 176.03,234.56 176.65,234.47 177.27,234.37 177.89,234.27 178.51,234.16 179.12,234.04 179.74,233.91 180.36,233.78 180.98,233.64 181.6,233.49 182.22,233.33 182.83,233.15 183.45,232.97 184.07,232.78 184.69,232.57 185.31,232.35 185.93,232.12 186.54,231.87 187.16,231.6 187.78,231.32 188.4,231.02 189.02,230.7 189.64,230.36 190.25,230 190.87,229.61 191.49,229.2 192.11,228.77 192.73,228.3 193.35,227.81 193.96,227.28 194.58,226.72 195.2,226.13 195.82,225.49 196.44,224.82 197.06,224.1 197.67,223.34 198.29,222.52 198.91,221.66 199.53,220.74 200.15,219.76 200.77,218.72 201.38,217.61 202,216.43 202.62,215.17 203.24,213.84 203.86,212.41 204.48,210.9 205.09,209.29 205.71,207.58 206.33,205.75 206.95,203.81 207.57,201.75 208.19,199.55 208.8,197.21 209.42,194.72 210.04,192.07 210.66,189.25 211.28,186.25 211.9,183.06 212.51,179.66 213.13,176.05 213.75,172.2 214.37,168.1 214.99,163.75 215.61,159.11 216.22,154.18 216.84,148.92 217.46,143.34 218.08,137.39 218.7,131.06 219.32,124.33 219.93,117.16 220.55,109.54 221.17,101.42 221.79,92.78 222.41,83.59 223.03,73.81 223.64,63.41 224.26,52.33 224.88,40.54 225.5,28\" class=\"ln\"/></svg>","m2_q16":"<table class=\"xy dt\"><tr><th><math><mi>x</mi></math></th><th><math><mrow><mi>h</mi><mrow><mo fence=\"true\" form=\"prefix\" stretchy=\"false\">(</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\" stretchy=\"false\">)</mo></mrow></mrow></math></th></tr><tr><td><math><mn>0</mn></math></td><td><math><mn>1.34</mn></math></td></tr><tr><td><math><mn>2</mn></math></td><td><math><mn>1.83</mn></math></td></tr><tr><td><math><mn>4</mn></math></td><td><math><mn>2.51</mn></math></td></tr></table>","m2_q21":"<table class=\"xy dt\"><tr><th></th><th>Volume (cubic units)</th></tr><tr><td>Right circular cylinder A</td><td><math><mrow><mn>500</mn><mi>π</mi></mrow></math></td></tr><tr><td>Right circular cylinder B</td><td><math><mrow><mn>32,000</mn><mi>π</mi></mrow></math></td></tr></table>"},"sprDir":"<h3>Student-produced response directions</h3><ul>\n<li>If you find <b>more than one correct answer</b>, enter only one answer.</li>\n<li>You can enter up to 5 characters for a <b>positive</b> answer and up to 6 characters (including the negative sign) for a <b>negative</b> answer.</li>\n<li>If your answer is a <b>fraction</b> that doesn't fit in the provided space, enter the decimal equivalent.</li>\n<li>If your answer is a <b>decimal</b> that doesn't fit in the provided space, enter it by truncating or rounding at the fourth digit.</li>\n<li>If your answer is a <b>mixed number</b> (such as 3½), enter it as an improper fraction (7/2) or its decimal equivalent (3.5).</li>\n<li>Don't enter <b>symbols</b> such as a percent sign, comma, or dollar sign.</li></ul>\n<h4>Examples</h4><table class=\"ex\"><tr><th>Answer</th><th>Acceptable ways to enter answer</th><th>Unacceptable: will NOT receive credit</th></tr>\n<tr><td>3.5</td><td>3.5<br>3.50<br>7/2</td><td>31/2<br>3 1/2</td></tr>\n<tr><td><math><mfrac><mn>2</mn><mn>3</mn></mfrac></math></td><td>2/3<br>.6666<br>.6667<br>0.666<br>0.667</td><td>0.66<br>.66<br>0.67<br>.67</td></tr>\n<tr><td><math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math></td><td>-1/3<br>-.3333<br>-0.333</td><td>-.33<br>-0.33</td></tr></table>","refHTML":"<div class=\"ref-grid\"><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><circle cx=\"62\" cy=\"50\" r=\"36\" class=\"s\"/><circle cx=\"62\" cy=\"50\" r=\"2\" class=\"f\"/><line x1=\"62\" y1=\"50\" x2=\"98\" y2=\"50\" class=\"s\"/><text x=\"80\" y=\"45\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text></svg><div><math><mrow><mi>A</mi><mo>=</mo><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup></mrow></math></div><div><math><mrow><mi>C</mi><mo>=</mo><mn>2</mn><mi>π</mi><mi>r</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><rect x=\"18\" y=\"24\" width=\"92\" height=\"52\" class=\"s\"/><text x=\"64\" y=\"92\" text-anchor=\"middle\"><tspan font-style=\"italic\">ℓ</tspan></text><text x=\"118\" y=\"55\" text-anchor=\"start\"><tspan font-style=\"italic\">w</tspan></text></svg><div><math><mrow><mi>A</mi><mo>=</mo><mi>ℓ</mi><mi>w</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"10,80 118,80 42,18\" class=\"s\"/><line x1=\"42\" y1=\"18\" x2=\"42\" y2=\"80\" class=\"d\"/><polyline points=\"42,72 50,72 50,80\" class=\"s\"/><text x=\"36\" y=\"56\" text-anchor=\"end\"><tspan font-style=\"italic\">h</tspan></text><text x=\"64\" y=\"95\" text-anchor=\"middle\"><tspan font-style=\"italic\">b</tspan></text></svg><div><math><mrow><mi>A</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mi>b</mi><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"14,80 110,80 110,20\" class=\"s\"/><polyline points=\"102,80 102,72 110,72\" class=\"s\"/><text x=\"56\" y=\"44\" text-anchor=\"end\"><tspan font-style=\"italic\">c</tspan></text><text x=\"117\" y=\"54\" text-anchor=\"start\"><tspan font-style=\"italic\">a</tspan></text><text x=\"62\" y=\"95\" text-anchor=\"middle\"><tspan font-style=\"italic\">b</tspan></text></svg><div><math><mrow><msup><mi>c</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 140 104\" width=\"140\" height=\"104\" aria-hidden=\"true\"><polygon points=\"22,84 22,22 120,84\" class=\"s\"/><polyline points=\"22,76 30,76 30,84\" class=\"s\"/><text x=\"16\" y=\"57\" text-anchor=\"end\"><tspan font-style=\"italic\">x</tspan></text><text x=\"71\" y=\"98\" text-anchor=\"middle\"><tspan font-style=\"italic\">x</tspan>√3</text><text x=\"76\" y=\"46\" text-anchor=\"start\">2<tspan font-style=\"italic\">x</tspan></text><text x=\"28\" y=\"40\" text-anchor=\"start\">60°</text><text x=\"94\" y=\"80\" text-anchor=\"end\">30°</text></svg><div class=\"ref-cap\">Special right triangles</div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 104\" width=\"130\" height=\"104\" aria-hidden=\"true\"><polygon points=\"22,84 22,24 82,84\" class=\"s\"/><polyline points=\"22,76 30,76 30,84\" class=\"s\"/><text x=\"16\" y=\"58\" text-anchor=\"end\"><tspan font-style=\"italic\">s</tspan></text><text x=\"52\" y=\"98\" text-anchor=\"middle\"><tspan font-style=\"italic\">s</tspan></text><text x=\"58\" y=\"50\" text-anchor=\"start\"><tspan font-style=\"italic\">s</tspan>√2</text><text x=\"28\" y=\"42\" text-anchor=\"start\">45°</text><text x=\"62\" y=\"80\" text-anchor=\"end\">45°</text></svg><div class=\"ref-cap\">Special right triangles</div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"14,40 84,40 84,86 14,86\" class=\"s\"/><polygon points=\"14,40 40,18 110,18 84,40\" class=\"s\"/><polygon points=\"84,40 110,18 110,64 84,86\" class=\"s\"/><polyline points=\"14,86 40,64 110,64\" class=\"d\"/><line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"64\" class=\"d\"/><text x=\"49\" y=\"98\" text-anchor=\"middle\"><tspan font-style=\"italic\">ℓ</tspan></text><text x=\"101\" y=\"84\" text-anchor=\"start\"><tspan font-style=\"italic\">w</tspan></text><text x=\"118\" y=\"44\" text-anchor=\"start\"><tspan font-style=\"italic\">h</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mi>ℓ</mi><mi>w</mi><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><ellipse cx=\"62\" cy=\"20\" rx=\"36\" ry=\"10\" class=\"s\"/><path d=\"M26 20 V80 A36 10 0 0 0 98 80 V20\" class=\"s\"/><path d=\"M26 80 A36 10 0 0 1 98 80\" class=\"d\"/><line x1=\"62\" y1=\"20\" x2=\"98\" y2=\"20\" class=\"s\"/><circle cx=\"62\" cy=\"20\" r=\"1.8\" class=\"f\"/><text x=\"80\" y=\"15\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text><text x=\"106\" y=\"54\" text-anchor=\"start\"><tspan font-style=\"italic\">h</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><circle cx=\"62\" cy=\"50\" r=\"38\" class=\"s\"/><path d=\"M24 50 A38 11 0 0 0 100 50\" class=\"s\"/><path d=\"M24 50 A38 11 0 0 1 100 50\" class=\"d\"/><line x1=\"62\" y1=\"50\" x2=\"100\" y2=\"50\" class=\"s\"/><circle cx=\"62\" cy=\"50\" r=\"1.8\" class=\"f\"/><text x=\"82\" y=\"45\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>4</mn><mn>3</mn></mfrac></mstyle><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">3</mn></msup></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><path d=\"M24 80 L62 12 L100 80\" class=\"s\"/><path d=\"M24 80 A38 10 0 0 0 100 80\" class=\"s\"/><path d=\"M24 80 A38 10 0 0 1 100 80\" class=\"d\"/><line x1=\"62\" y1=\"12\" x2=\"62\" y2=\"80\" class=\"d\"/><line x1=\"62\" y1=\"80\" x2=\"100\" y2=\"80\" class=\"s\"/><polyline points=\"62,73 69,73 69,80\" class=\"s\"/><text x=\"56\" y=\"52\" text-anchor=\"end\"><tspan font-style=\"italic\">h</tspan></text><text x=\"82\" y=\"76\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"14,82 86,82 112,64 40,64\" class=\"d\"/><polyline points=\"40,64 14,82 86,82 112,64\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"14\" y2=\"82\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"86\" y2=\"82\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"112\" y2=\"64\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"40\" y2=\"64\" class=\"d\"/><line x1=\"62\" y1=\"12\" x2=\"62\" y2=\"73\" class=\"d\"/><text x=\"56\" y=\"50\" text-anchor=\"end\"><tspan font-style=\"italic\">h</tspan></text><text x=\"50\" y=\"96\" text-anchor=\"middle\"><tspan font-style=\"italic\">ℓ</tspan></text><text x=\"104\" y=\"80\" text-anchor=\"start\"><tspan font-style=\"italic\">w</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mi>ℓ</mi><mi>w</mi><mi>h</mi></mrow></math></div></div></div><div class=\"ref-facts\"><p>The number of degrees of arc in a circle is 360.</p><p>The number of radians of arc in a circle is <math><mrow><mn>2</mn><mi>π</mi></mrow></math>.</p><p>The sum of the measures in degrees of the angles of a triangle is 180.</p></div>"};
+const MOD_SEC = 35 * 60;
+const LETTERS = ['A', 'B', 'C', 'D'];
+// Estimated raw score (0-44 correct) -> scaled Math score
+const SCALE = [200,200,210,230,250,270,290,310,330,350,370,390,400,410,420,430,440,450,460,470,480,490,500,510,520,530,540,550,560,570,580,600,610,620,640,650,670,680,700,710,730,750,770,790,800];
+const STORE_KEY = 'sat-mock-progress:' + DATA.id;
+const DESMOS_KEY = 'dcb31709b452b1cf9dc26972add0fda6'; // Desmos public demo key; replace with your own for production use
+
+const ICON = {
+  bookmark: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>',
+  pin: '<svg class="ic-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg>',
+  flag: '<svg class="ic-flag" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4.2L6 21z"/></svg>',
+  clock: '<svg class="clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-label="Timer hidden"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2.5h5"/></svg>',
+};
+
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const fmt = (sec) => `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`;
+
+const S = {
+  name: 'Student', mod: 0, idx: 0, view: 'q',
+  ans: DATA.modules.map((m) => m.questions.map(() => '')),
+  mark: DATA.modules.map((m) => m.questions.map(() => false)),
+  elim: DATA.modules.map((m) => m.questions.map(() => ({}))),
+  abc: false, endAt: 0, modStart: 0, timerHidden: false, warned: false,
+  used: DATA.modules.map(() => 0), inTest: false, timerId: null, phase: '',
+};
+let RES = null, RV = null, calc = null, desmosStarted = false;
+
+function show(id) { document.querySelectorAll('.screen').forEach((el) => (el.hidden = el.id !== id)); }
+const total = () => DATA.modules[S.mod].questions.length;
+const curQ = () => DATA.modules[S.mod].questions[S.idx];
+
+/* ---------------- flow ---------------- */
+function startTest() {
+  if (load() && !confirm('Start a new test? Your saved progress on this test will be erased.')) return;
+  clearSave();
+  S.name = $('#nameInput').value.trim() || 'Student';
+  $('#stuName').textContent = S.name;
+  S.inTest = true;
+  startModule(0);
+}
+
+function startModule(m) {
+  S.mod = m; S.idx = 0; S.view = 'q'; S.warned = false; S.timerHidden = false; S.phase = 'test';
+  S.modStart = Date.now();
+  S.endAt = S.modStart + MOD_SEC * 1000;
+  closeAllPopups();
+  show('test');
+  render();
+  clearInterval(S.timerId);
+  S.timerId = setInterval(tick, 250);
+  tick();
+}
+
+function tick() {
+  const left = Math.max(0, Math.ceil((S.endAt - Date.now()) / 1000));
+  const el = $('#timer');
+  if (left <= 300 && !S.warned) {
+    S.warned = true; S.timerHidden = false;
+    toast('5 minutes remain in this module.', true);
+    save();
+  }
+  el.classList.toggle('low', left <= 300);
+  if (S.timerHidden) { if (!el.querySelector('.clock')) el.innerHTML = ICON.clock; }
+  else el.textContent = fmt(left);
+  $('#hideBtn').textContent = S.timerHidden ? 'Show' : 'Hide';
+  if (left === 0) submitModule(true);
+}
+
+function submitModule(auto) {
+  clearInterval(S.timerId);
+  S.used[S.mod] = Math.min(MOD_SEC, Math.round((Date.now() - S.modStart) / 1000));
+  closeAllPopups();
+  $('#confirm').hidden = true;
+  if (S.mod < DATA.modules.length - 1) {
+    const a = S.mod + 1, b = S.mod + 2;
+    S.phase = 'trans';
+    save();
+    show('trans');
+    $('#transTitle').textContent = `Module ${a} complete`;
+    $('#transMsg').textContent = auto ? `Time's up. Your Module ${a} answers were submitted automatically.` : `Your Module ${a} answers were submitted.`;
+    $('#transNext').textContent = `Module ${b} begins automatically — the timer can't be paused.`;
+    let n = 5;
+    $('#transCount').textContent = n;
+    const t = setInterval(() => {
+      n -= 1;
+      $('#transCount').textContent = Math.max(n, 0);
+      if (n <= 0) { clearInterval(t); startModule(b - 1); }
+    }, 1000);
+  } else {
+    finish();
+  }
+}
+
+/* ---------------- rendering: test ---------------- */
+function render() {
+  const n = total();
+  $('#secTitle').textContent = `Section 2, Module ${S.mod + 1}: Math`;
+  $('#navLabel').textContent = `Question ${S.idx + 1} of ${n}`;
+  $('#navBtn').hidden = S.view !== 'q';
+  $('#backBtn').style.visibility = S.view === 'q' && S.idx === 0 ? 'hidden' : 'visible';
+  const area = $('#qArea');
+  area.innerHTML = S.view === 'q' ? questionHTML() : reviewPageHTML();
+  area.scrollTop = 0;
+  const inp = $('#sprInput');
+  if (inp) inp.addEventListener('input', onSprInput);
+  if (!$('#navPop').hidden) fillNavPop();
+  save();
+}
+
+// Re-render in place (same question) keeping scroll positions
+function refresh() {
+  const pos = [...document.querySelectorAll('#qArea, #qArea .spr-left, #qArea .spr-right')].map((e) => e.scrollTop);
+  render();
+  [...document.querySelectorAll('#qArea, #qArea .spr-left, #qArea .spr-right')].forEach((e, i) => (e.scrollTop = pos[i] || 0));
+}
+
+function stemHTML(q) {
+  const fig = q.fig ? `<div class="fig">${DATA.figs[q.fig]}</div>` : '';
+  return q.stem.includes('{{FIG}}')
+    ? `<div class="q-stem">${q.stem.replace('{{FIG}}', fig)}</div>`
+    : `${fig}<div class="q-stem">${q.stem}</div>`;
+}
+
+function questionHTML() {
+  const q = curQ(), m = S.mod, i = S.idx;
+  const marked = S.mark[m][i];
+  const head = `<div class="q-head"><div class="q-num">${i + 1}</div>
+    <button class="mark-btn${marked ? ' on' : ''}" data-act="mark" aria-pressed="${marked}">${ICON.bookmark}<span>Mark for Review</span></button>
+    ${q.type === 'mcq' ? `<button class="abc-btn${S.abc ? ' on' : ''}" data-act="abc" aria-pressed="${S.abc}" title="Cross out answer choices"><span>ABC</span></button>` : ''}</div>`;
+  if (q.type === 'mcq') {
+    const choices = q.choices.map((c, k) => {
+      const L = LETTERS[k], sel = S.ans[m][i] === L, el = !!S.elim[m][i][L];
+      const side = !S.abc ? '' : el
+        ? `<button class="undo-btn" data-act="elim" data-l="${L}" aria-label="Undo cross out for choice ${L}">Undo</button>`
+        : `<button class="elim-btn" data-act="elim" data-l="${L}" aria-label="Cross out choice ${L}">${L}</button>`;
+      return `<div class="choice-row"><button class="choice${sel ? ' sel' : ''}${el ? ' elim' : ''}" data-act="pick" data-l="${L}" aria-pressed="${sel}"><span class="ltr">${L}</span><span class="ctext">${c}</span></button>${side}</div>`;
+    }).join('');
+    return `<div class="q-col">${head}<div class="q-body">${stemHTML(q)}<div class="choices">${choices}</div></div></div>`;
+  }
+  return `<div class="spr"><div class="spr-left spr-dir">${DATA.sprDir}</div><div class="spr-div"></div>
+    <div class="spr-right">${head}<div class="q-body">${stemHTML(q)}
+      <div class="spr-entry"><input id="sprInput" class="spr-input" type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" value="${esc(S.ans[m][i])}" aria-label="Enter your answer"></div>
+      <div class="spr-preview">Answer Preview: <span id="sprPrev">${preview(S.ans[m][i])}</span></div>
+    </div></div></div>`;
+}
+
+function legendHTML(withCurrent) {
+  return `${withCurrent ? `<span><svg class="lg-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg>Current</span>` : ''}
+    <span><i class="lg-un"></i>Unanswered</span>
+    <span><svg class="lg-flag" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4.2L6 21z"/></svg>For Review</span>`;
+}
+
+function gridHTML(big) {
+  const m = S.mod;
+  return `<div class="ngrid${big ? ' big' : ''}">` + DATA.modules[m].questions.map((q, i) => {
+    const a = S.ans[m][i] !== '', mk = S.mark[m][i], cur = !big && S.view === 'q' && i === S.idx;
+    const cls = ['cell', a ? 'ans' : '', mk ? 'mk' : '', cur ? 'cur' : ''].filter(Boolean).join(' ');
+    const label = `Question ${i + 1}, ${a ? 'answered' : 'unanswered'}${mk ? ', marked for review' : ''}${cur ? ', current' : ''}`;
+    return `<button class="${cls}" data-act="goto" data-i="${i}" aria-label="${label}">${cur ? ICON.pin : ''}${mk ? ICON.flag : ''}${i + 1}</button>`;
+  }).join('') + '</div>';
+}
+
+function reviewPageHTML() {
+  const un = S.ans[S.mod].filter((a) => a === '').length;
+  return `<div class="review"><h1>Check Your Work</h1>
+    <p>Select any question to go back to it. When you're ready, select <b>Next</b> to submit Module ${S.mod + 1} early. You can't return to it after submitting.${un ? ` You have <b>${un}</b> unanswered question${un > 1 ? 's' : ''}.` : ''}</p>
+    <div class="rv-card"><div class="rv-head"><h2>Section 2, Module ${S.mod + 1}: Math Questions</h2><div class="legend">${legendHTML(false)}</div></div>${gridHTML(true)}</div></div>`;
+}
+
+/* ---------------- student-produced responses ---------------- */
+function onSprInput(e) {
+  let v = e.target.value.replace(/[^0-9./-]/g, '');
+  v = v.replace(/(?!^)-/g, '');
+  const parts = v.split('/');
+  if (parts.length > 2) v = parts[0] + '/' + parts.slice(1).join('');
+  v = v.slice(0, v.startsWith('-') ? 6 : 5);
+  if (v !== e.target.value) e.target.value = v;
+  S.ans[S.mod][S.idx] = v;
+  save();
+  $('#sprPrev').innerHTML = preview(v);
+}
+
+function preview(v) {
+  if (!v) return '';
+  const neg = v.startsWith('-');
+  const body = neg ? v.slice(1) : v;
+  const num = (t) => (t ? `<mn>${esc(t)}</mn>` : '<mrow></mrow>');
+  const inner = body.includes('/') ? `<mfrac>${num(body.split('/')[0])}${num(body.split('/')[1])}</mfrac>` : num(body);
+  return `<math>${neg ? '<mo>−</mo>' : ''}${inner}</math>`;
+}
+
+function checkSPR(raw, accept) {
+  const v = (raw || '').trim();
+  if (!v) return false;
+  let val, dec = 0;
+  if (/^-?\d+\/\d+$/.test(v)) {
+    const [a, b] = v.replace('-', '').split('/').map(Number);
+    if (b === 0) return false;
+    val = (v.startsWith('-') ? -1 : 1) * (a / b);
+  } else if (/^-?(\d+\.?\d*|\.\d+)$/.test(v)) {
+    val = parseFloat(v);
+    dec = v.includes('.') ? v.split('.')[1].length : 0;
+  } else return false;
+  const full = v.length >= (v.startsWith('-') ? 6 : 5);
+  return accept.some((x) => {
+    if (Math.abs(val - x) < 1e-9) return true;
+    if (dec > 0 && full) { // decimal that fills the box: truncated or rounded is accepted
+      const p = 10 ** dec, s = x < 0 ? -1 : 1;
+      const tr = (s * Math.floor(Math.abs(x) * p + 1e-9)) / p;
+      const rd = (s * Math.round(Math.abs(x) * p)) / p;
+      return Math.abs(val - tr) < 1e-9 || Math.abs(val - rd) < 1e-9;
+    }
+    return false;
+  });
+}
+
+/* ---------------- popups ---------------- */
+function fillNavPop() {
+  $('#npTitle').textContent = `Section 2, Module ${S.mod + 1}: Math Questions`;
+  $('#npLegend').innerHTML = legendHTML(true);
+  $('#npGrid').innerHTML = gridHTML(false);
+}
+function toggleNav(force) {
+  const p = $('#navPop');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#navBtn').setAttribute('aria-expanded', open);
+  if (open) { fillNavPop(); toggleDir(false); }
+}
+function toggleDir(force) {
+  const p = $('#dirPop');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#dirBtn').setAttribute('aria-expanded', open);
+  if (open) toggleNav(false);
+}
+function toggleRef(force) {
+  const p = $('#ref');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#refBtn').setAttribute('aria-pressed', open);
+}
+function toggleCalc(force) {
+  const p = $('#calc');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#calcBtn').setAttribute('aria-pressed', open);
+  if (open) {
+    if (!desmosStarted) { desmosStarted = true; loadDesmos(0); }
+    else if (calc) calc.resize();
+  }
+}
+function closeAllPopups() { toggleNav(false); toggleDir(false); }
+
+function loadDesmos(k) {
+  const versions = ['v1.11', 'v1.10', 'v1.9'];
+  if (k >= versions.length) {
+    $('#desmos').innerHTML = `<div class="calc-msg">The graphing calculator couldn't load. It needs an internet connection.<br><br><a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Open the Desmos calculator in a new tab</a></div>`;
+    return;
+  }
+  const s = document.createElement('script');
+  s.src = `https://www.desmos.com/api/${versions[k]}/calculator.js?apiKey=${DESMOS_KEY}`;
+  s.onload = () => {
+    try {
+      $('#desmos').innerHTML = '';
+      calc = Desmos.GraphingCalculator($('#desmos'), { keypad: true, expressions: true, settingsMenu: true, zoomButtons: true, border: false });
+    } catch (err) { s.onerror(); }
+  };
+  s.onerror = () => { s.remove(); loadDesmos(k + 1); };
+  document.head.appendChild(s);
+}
+
+function toast(msg, alert) {
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.toggle('alert', !!alert);
+  t.hidden = false;
+  clearTimeout(toast.tm);
+  toast.tm = setTimeout(() => (t.hidden = true), 5000);
+}
+
+function openConfirm() {
+  const un = S.ans[S.mod].filter((a) => a === '').length;
+  $('#cfTitle').textContent = `Submit Module ${S.mod + 1}?`;
+  $('#cfText').textContent = (un ? `You have ${un} unanswered question${un > 1 ? 's' : ''}. ` : 'All questions are answered. ') +
+    (S.mod < DATA.modules.length - 1 ? `Once you submit, you can't return to Module ${S.mod + 1}, and Module ${S.mod + 2} starts right away.` : 'Once you submit, the test ends and your score is calculated.') +
+    ' The timer keeps running while this message is open.';
+  $('#cfOk').textContent = S.mod < DATA.modules.length - 1 ? `Submit Module ${S.mod + 1}` : 'Submit Test';
+  $('#confirm').hidden = false;
+  $('#cfOk').focus();
+}
+
+/* ---------------- results ---------------- */
+function finish() {
+  S.inTest = false;
+  S.phase = 'done';
+  save();
+  RES = DATA.modules.map((mod, m) => mod.questions.map((q, i) => {
+    const a = S.ans[m][i];
+    if (a === '') return 'om';
+    return (q.type === 'mcq' ? a === q.answer : checkSPR(a, q.accept)) ? 'ok' : 'bad';
+  }));
+  const right = RES.map((r) => r.filter((x) => x === 'ok').length);
+  const raw = right.reduce((x, y) => x + y, 0);
+  const nq = RES.reduce((x, r) => x + r.length, 0);
+  const score = SCALE[Math.min(44, Math.round((raw * 44) / nq))];
+  const pct = ((score - 200) / 600) * 100;
+  const omitted = RES.flat().filter((x) => x === 'om').length;
+
+  const tile = (m, i) => {
+    const st = RES[m][i], q = DATA.modules[m].questions[i];
+    const word = st === 'ok' ? 'Correct' : st === 'bad' ? 'Incorrect' : 'Omitted';
+    const sym = st === 'ok' ? '✓' : st === 'bad' ? '✗' : '–';
+    return `<button class="rtile ${st}" data-m="${m}" data-i="${i}" aria-label="Module ${m + 1} question ${i + 1}: ${word}">${i + 1}<small>${sym} ${q.type === 'spr' ? 'SPR' : 'MC'}</small></button>`;
+  };
+  $('#resName').textContent = S.name;
+  $('#resWrap').innerHTML = `
+    <div class="score-card">
+      <div>
+        <div class="score-lbl">Estimated Math Score</div>
+        <div class="score-big">${score}</div>
+        <div class="score-range">on a 200–800 scale</div>
+      </div>
+      <div>
+        <div class="scale" aria-hidden="true"><div class="scale-fill" style="width:${pct}%"></div><div class="scale-mark" style="left:${pct}%"></div></div>
+        <div class="scale-ends"><span>200</span><span>500</span><span>800</span></div>
+        <div class="stats">
+          <div class="stat"><b>${raw} / ${nq}</b><span>correct overall</span></div>
+          ${RES.map((r, m) => `<div class="stat"><b>${right[m]} / ${r.length}</b><span>Module ${m + 1} · ${fmt(S.used[m])} used</span></div>`).join('')}
+        </div>
+      </div>
+      <p class="score-note">Estimate based on a typical raw-to-scaled conversion for the SAT Math section. Real SAT scores depend on the test form and adaptive routing.${omitted ? ` ${omitted} question${omitted > 1 ? 's were' : ' was'} left unanswered.` : ''}</p>
+    </div>
+    <h2 class="res-h2">Question Review</h2>
+    <p class="res-sub">Select a question to see your answer and the correct answer.</p>
+    <div class="res-legend"><span><i class="sw ok"></i>Correct</span><span><i class="sw bad"></i>Incorrect</span><span><i class="sw om"></i>Omitted</span></div>
+    ${DATA.modules.map((mod, m) => `
+      <div class="res-mod"><h3>Module ${m + 1}<span>${right[m]} of ${mod.questions.length} correct</span></h3>
+        <div class="rgrid">${mod.questions.map((_, i) => tile(m, i)).join('')}</div></div>`).join('')}
+    <div class="res-actions"><button class="btn-outline" id="retake">Retake Test</button></div>`;
+  show('results');
+  window.scrollTo(0, 0);
+}
+
+const FLAT = DATA.modules.flatMap((mod, m) => mod.questions.map((_, i) => [m, i]));
+function openReview(m, i) { RV = FLAT.findIndex(([a, b]) => a === m && b === i); renderReview(); $('#rvModal').hidden = false; $('#rvClose').focus(); }
+function renderReview() {
+  const [m, i] = FLAT[RV];
+  const q = DATA.modules[m].questions[i], a = S.ans[m][i], st = RES[m][i];
+  $('#rvTitle').textContent = `Module ${m + 1} · Question ${i + 1}`;
+  const stEl = $('#rvStatus');
+  stEl.className = `status ${st}`;
+  stEl.textContent = st === 'ok' ? 'Correct' : st === 'bad' ? 'Incorrect' : 'Omitted';
+  let ans;
+  if (q.type === 'mcq') {
+    ans = `<div class="choices">${q.choices.map((c, k) => {
+      const L = LETTERS[k], isKey = L === q.answer, isYou = L === a;
+      const cls = isKey ? ' r-ok' : isYou ? ' r-bad' : '';
+      const tag = isKey ? (isYou ? 'Your answer · Correct' : 'Correct answer') : isYou ? 'Your answer' : '';
+      return `<div class="choice-row"><div class="choice${cls}"><span class="ltr">${L}</span><span class="ctext">${c}</span>${tag ? `<span class="rtag">${tag}</span>` : ''}</div></div>`;
+    }).join('')}</div>`;
+    if (!a) ans = `<p class="res-sub" style="margin-top:14px">You didn't answer this question.</p>` + ans;
+  } else {
+    ans = `<div class="spr-review">
+      <div class="srow ${st}"><span class="slab">Your answer</span><span class="sval">${a ? preview(a) : '<em style="font-weight:400">Omitted</em>'}</span></div>
+      <div class="srow key"><span class="slab">Correct answer</span><span class="sval">${esc(q.show)}</span></div></div>`;
+  }
+  $('#rvBody').innerHTML = `<div class="q-body">${stemHTML(q)}${ans}</div>`;
+  $('#rvBody').scrollTop = 0;
+  $('#rvPos').textContent = `${RV + 1} of ${FLAT.length}`;
+  $('#rvPrev').disabled = RV === 0;
+  $('#rvNext').disabled = RV === FLAT.length - 1;
+  $('#rvPrev').style.opacity = RV === 0 ? 0.4 : 1;
+  $('#rvNext').style.opacity = RV === FLAT.length - 1 ? 0.4 : 1;
+}
+
+/* ---------------- events ---------------- */
+$('#startBtn').addEventListener('click', startTest);
+$('#nameInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') startTest(); });
+
+$('#qArea').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-act]');
+  if (!b) return;
+  const m = S.mod, i = S.idx, L = b.dataset.l;
+  switch (b.dataset.act) {
+    case 'mark': S.mark[m][i] = !S.mark[m][i]; break;
+    case 'abc': S.abc = !S.abc; break;
+    case 'pick': delete S.elim[m][i][L]; S.ans[m][i] = L; break;
+    case 'elim':
+      if (S.elim[m][i][L]) delete S.elim[m][i][L];
+      else { S.elim[m][i][L] = true; if (S.ans[m][i] === L) S.ans[m][i] = ''; }
+      break;
+    case 'goto': S.idx = +b.dataset.i; S.view = 'q'; render(); return;
+  }
+  refresh();
+});
+
+$('#npGrid').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-act=goto]');
+  if (!b) return;
+  S.idx = +b.dataset.i; S.view = 'q';
+  toggleNav(false);
+  render();
+});
+$('#goReview').addEventListener('click', () => { S.view = 'review'; toggleNav(false); render(); });
+$('#npClose').addEventListener('click', () => toggleNav(false));
+$('#navBtn').addEventListener('click', (e) => { e.stopPropagation(); toggleNav(); });
+$('#dirBtn').addEventListener('click', (e) => { e.stopPropagation(); toggleDir(); });
+$('#dirClose').addEventListener('click', () => toggleDir(false));
+$('#refBtn').addEventListener('click', () => toggleRef());
+$('#refClose').addEventListener('click', () => toggleRef(false));
+$('#calcBtn').addEventListener('click', () => toggleCalc());
+$('#calcClose').addEventListener('click', () => toggleCalc(false));
+$('#calcWide').addEventListener('click', () => {
+  const wide = $('#calc').classList.toggle('wide');
+  $('#calcWide').textContent = wide ? 'Collapse' : 'Expand';
+  if (calc) setTimeout(() => calc.resize(), 30);
+});
+$('#hideBtn').addEventListener('click', () => { S.timerHidden = !S.timerHidden; tick(); save(); });
+
+$('#nextBtn').addEventListener('click', () => {
+  if (S.view === 'q') {
+    if (S.idx < total() - 1) S.idx += 1; else S.view = 'review';
+    toggleNav(false);
+    render();
+  } else openConfirm();
+});
+$('#backBtn').addEventListener('click', () => {
+  if (S.view === 'review') { S.view = 'q'; S.idx = total() - 1; }
+  else if (S.idx > 0) S.idx -= 1;
+  toggleNav(false);
+  render();
+});
+$('#cfCancel').addEventListener('click', () => ($('#confirm').hidden = true));
+$('#cfOk').addEventListener('click', () => submitModule(false));
+
+document.addEventListener('click', (e) => {
+  if (!$('#navPop').hidden && !e.target.closest('#navPop, #navBtn')) toggleNav(false);
+  if (!$('#dirPop').hidden && !e.target.closest('#dirPop, #dirBtn')) toggleDir(false);
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (!$('#rvModal').hidden) $('#rvModal').hidden = true;
+    else if (!$('#confirm').hidden) $('#confirm').hidden = true;
+    else closeAllPopups();
+  }
+  if (!$('#rvModal').hidden) {
+    if (e.key === 'ArrowRight' && RV < FLAT.length - 1) { RV++; renderReview(); }
+    if (e.key === 'ArrowLeft' && RV > 0) { RV--; renderReview(); }
+  }
+});
+
+$('#resWrap').addEventListener('click', (e) => {
+  const t = e.target.closest('.rtile');
+  if (t) openReview(+t.dataset.m, +t.dataset.i);
+  if (e.target.closest('#retake') && confirm('Start a new attempt? Your current results will be cleared.')) { clearSave(); location.reload(); }
+});
+$('#rvClose').addEventListener('click', () => ($('#rvModal').hidden = true));
+$('#rvModal').addEventListener('click', (e) => { if (e.target.id === 'rvModal') $('#rvModal').hidden = true; });
+$('#rvPrev').addEventListener('click', () => { if (RV > 0) { RV--; renderReview(); } });
+$('#rvNext').addEventListener('click', () => { if (RV < FLAT.length - 1) { RV++; renderReview(); } });
+
+window.addEventListener('pagehide', () => { if (S.phase) save(); });
+document.addEventListener('visibilitychange', () => { if (S.phase) save(); });
+
+// Draggable reference sheet
+(() => {
+  const p = $('#ref'), h = $('#refHead');
+  let drag = null;
+  h.addEventListener('pointerdown', (e) => {
+    if (e.target.closest('button')) return;
+    const r = p.getBoundingClientRect();
+    drag = { sx: e.clientX, sy: e.clientY, ox: r.left, oy: r.top };
+    h.setPointerCapture(e.pointerId);
+  });
+  h.addEventListener('pointermove', (e) => {
+    if (!drag) return;
+    const x = Math.min(window.innerWidth - 80, Math.max(80 - p.offsetWidth, drag.ox + e.clientX - drag.sx));
+    const y = Math.min(window.innerHeight - 44, Math.max(0, drag.oy + e.clientY - drag.sy));
+    Object.assign(p.style, { left: x + 'px', top: y + 'px', right: 'auto' });
+  });
+  h.addEventListener('pointerup', () => (drag = null));
+})();
+
+$('#refBody').innerHTML = DATA.refHTML;
+
+/* ---------------- saved progress (this browser only) ---------------- */
+function save() {
+  if (!S.phase) return;
+  try {
+    localStorage.setItem(STORE_KEY, JSON.stringify({
+      v: 1, phase: S.phase, name: S.name, mod: S.mod, idx: S.idx, view: S.view, ans: S.ans, mark: S.mark, elim: S.elim,
+      abc: S.abc, endAt: S.endAt, modStart: S.modStart, used: S.used, timerHidden: S.timerHidden, warned: S.warned, savedAt: Date.now(),
+    }));
+  } catch (e) { /* storage unavailable (private mode, blocked) */ }
+}
+function load() {
+  try {
+    const d = JSON.parse(localStorage.getItem(STORE_KEY));
+    const ok = d && d.v === 1 && Array.isArray(d.ans) && d.ans.length === DATA.modules.length &&
+      d.ans.every((a, m) => Array.isArray(a) && a.length === DATA.modules[m].questions.length);
+    return ok ? d : null;
+  } catch (e) { return null; }
+}
+function clearSave() { try { localStorage.removeItem(STORE_KEY); } catch (e) { /* ignore */ } }
+
+function resume() {
+  const d = load();
+  if (!d) return;
+  for (const k of ['name', 'mod', 'idx', 'view', 'ans', 'mark', 'elim', 'abc', 'endAt', 'modStart', 'used', 'timerHidden', 'warned']) S[k] = d[k];
+  S.phase = d.phase;
+  $('#stuName').textContent = S.name;
+  if (d.phase === 'done') { finish(); return; }
+  S.inTest = true;
+  if (d.phase === 'trans') { startModule(S.mod + 1); return; }
+  closeAllPopups();
+  show('test');
+  render();
+  clearInterval(S.timerId);
+  S.timerId = setInterval(tick, 250);
+  tick();
+}
+
+(() => {
+  const d = load();
+  if (!d) return;
+  const n = DATA.modules.length;
+  if (d.name && d.name !== 'Student') $('#nameInput').value = d.name;
+  if (d.phase === 'done') {
+    $('#resumeTitle').textContent = 'You finished this test';
+    $('#resumeText').textContent = 'Your score and question review are saved in this browser.';
+    $('#resumeBtn').textContent = 'View Results';
+  } else {
+    const answered = d.ans[d.mod].filter((a) => a !== '').length;
+    const total = d.ans[d.mod].length;
+    const left = Math.max(0, Math.ceil((d.endAt - Date.now()) / 1000));
+    $('#resumeText').textContent = d.phase === 'trans'
+      ? `Module ${d.mod + 1} is submitted. Module ${d.mod + 2} starts when you resume.`
+      : `Module ${d.mod + 1}${n > 1 ? ` of ${n}` : ''} · ${answered} of ${total} answered · ` +
+        (left > 0 ? `${fmt(left)} left (the timer kept running)` : "time is up, so this module will be submitted when you resume");
+  }
+  $('#resumeBox').hidden = false;
+  $('#startBtn').textContent = 'Start New Test';
+})();
+$('#resumeBtn').addEventListener('click', resume);
+</script>
+</body>
+</html>
