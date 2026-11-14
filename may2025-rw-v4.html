@@ -1,0 +1,1400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAT Reading and Writing Mock Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Math&display=swap" rel="stylesheet">
+<style>
+/*
+Temml.woff2 is a clone of KaTeX_Script-Regular, except that the code points
+have been changed from ASCII to Unicode Mathematical Alphanumeric Symbols Script capitals,
+Unicode range 1D49C to 1D4B5.
+*/
+
+@font-face {
+  font-family: 'Temml';
+  src: url(data:font/woff2;base64,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) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+math {
+  font-family: "Cambria Math", 'STIXTwoMath-Regular', 'NotoSansMath-Regular', math;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size-adjust: none;
+  text-indent: 0;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  direction: ltr;
+  /* Prevent Firefox from omitting the dot on i or j. */
+  font-feature-settings: "dtls" off;
+}
+
+math * {
+  border-color: currentColor;
+}
+
+/* display: block is necessary in Firefox and Safari.
+ * Not in Chromium, which recognizes display: "block math" written inline. */
+ math.tml-display {
+  display: block;
+  width: 100%;
+}
+
+*.mathcal {
+  /* NotoSans */
+  font-feature-settings: 'ss01';
+}
+
+math .mathscr {
+  font-family: "Temml";
+}
+
+mo.tml-prime {
+  font-family: Temml;
+}
+
+/* Cramped superscripts in WebKit */
+mfrac > :nth-child(2),
+msqrt,
+mover > :first-child {
+  math-shift: compact
+}
+
+.menclose {
+  display: inline-block;
+  position: relative;
+  padding: 0.5ex 0ex;
+}
+.tml-cancelto {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5ex 0ex;
+  background-color: currentColor;
+  /* Use the SVG as an alpha mask (painted by background-color) */
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><defs><marker id='a' markerHeight='5' markerUnits='strokeWidth' markerWidth='7' orient='auto' refX='7' refY='2.5'><path fill='black' d='m0 0 7 2.5L0 5z'/></marker></defs><line x2='100%25' y1='100%25' stroke='black' stroke-width='.06em' marker-end='url(%23a)' vector-effect='non-scaling-stroke'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><defs><marker id='a' markerHeight='5' markerUnits='strokeWidth' markerWidth='7' orient='auto' refX='7' refY='2.5'><path fill='black' d='m0 0 7 2.5L0 5z'/></marker></defs><line x2='100%25' y1='100%25' stroke='black' stroke-width='.06em' marker-end='url(%23a)' vector-effect='non-scaling-stroke'/></svg>");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+}
+
+@supports (-moz-appearance: none) {
+  /* \vec w/o italic correction for Firefox */
+  .tml-vec {
+    transform: scale(0.75)
+  }
+  /* Fix \cancelto in Firefox */
+  .ff-narrow {
+    width: 0em;
+  }
+  .ff-nudge-left {
+    margin-left: -0.2em;
+  }
+  /* Squash hidden mrows in \bordermatrix. Messes with centering, but necessary to squash. */
+  .ff-squash mtd {
+    display: block;
+    height: 0;
+  }
+}
+
+@supports (not (-moz-appearance: none)) {
+  /* Chromium and WebKit */
+  /* prime vertical alignment */
+  mo.tml-prime {
+    font-family: Temml;
+  }
+  /* Italic correction on superscripts */
+  .tml-sml-pad {
+    padding-left: 0.05em;
+  }
+  .tml-med-pad {
+    padding-left: 0.10em;
+  }
+  .tml-lrg-pad {
+    padding-left: 0.15em;
+  }
+}
+
+@supports (-webkit-backdrop-filter: blur(1px)) {
+  /* WebKit vertical & italic correction on accents */
+  .wbk-acc {
+    /* lower by x-height distance */
+    transform: translate(0em, 0.431em);
+  }
+  .wbk-sml {
+    transform: translate(0.07em, 0);
+  }
+  .wbk-sml-acc {
+    transform: translate(0.07em, 0.431em);
+  }
+  .wbk-sml-vec {
+    transform: scale(0.75) translate(0.07em, 0);
+  }
+  .wbk-med {
+    transform: translate(0.14em, 0);
+  }
+  .wbk-med-acc {
+    transform: translate(0.14em, 0.431em);
+  }
+  .wbk-med-vec {
+    transform: scale(0.75) translate(0.14em, 0);
+  }
+  .wbk-lrg {
+    transform: translate(0.21em, 0);
+  }
+  .wbk-lrg-acc {
+    transform: translate(0.21em, 0.431em);
+  }
+  .wbk-lrg-vec {
+    transform: scale(0.75) translate(0.21em, 0);
+  }
+}
+
+/* \cancel & \phase use background images. Get them to print. */
+menclose {
+  -webkit-print-color-adjust: exact;  /* Chrome & Edge */
+          print-color-adjust: exact;
+}
+
+/* Array cell justification in Firefox & WebKit */
+.tml-right {
+  text-align: right;
+}
+.tml-left {
+  text-align: left;
+}
+
+/* For CD labels that grow to the left in Firefox and WebKit */
+.tml-shift-left { margin-left:-200% }
+
+/* Styles for Chromium only */
+@supports (not (-webkit-backdrop-filter: blur(1px))) and (not (-moz-appearance: none)) {
+  /* Italic correction on accents */
+  .chr-sml {
+    transform: translate(0.07em, 0)
+  }
+  .chr-sml-vec {
+    transform: scale(0.75) translate(0.07em, 0)
+  }
+  .chr-med {
+    transform: translate(0.14em, 0)
+  }
+  .chr-med-vec {
+    transform: scale(0.75) translate(0.14em, 0)
+  }
+  .chr-lrg {
+    transform: translate(0.21em, 0)
+  }
+  .chr-lrg-vec {
+    transform: scale(0.75) translate(0.21em, 0)
+  }
+
+  /* For CD labels that grow to the left */
+  .tml-shift-left { margin-left:-100% }
+
+  /* MathML Core & Chromium do not support the MathML 3.0 element <menclose> attributes. */
+  /* So use styles. */
+  menclose {
+    position: relative;
+    padding: 0.5ex 0ex;
+  }
+  
+    .tml-overline {
+    padding: 0.1em 0 0 0;
+    border-top: 0.065em solid;
+  }
+
+  .tml-underline {
+    padding: 0 0 0.1em 0;
+    border-bottom: 0.065em solid;
+  }
+
+  .tml-cancel {
+    display: inline-block;
+    position: absolute;
+    left: 0.5px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+  }
+  .upstrike {
+    clip-path: polygon(0.05em 100%, 0em calc(100% - 0.05em), calc(100% - 0.05em) 0em, 100% 0.05em);
+  }
+  .downstrike {
+    clip-path: polygon(0em 0.05em, 0.05em 0em, 100% calc(100% - 0.05em), calc(100% - 0.05em) 100%);
+  }
+  .sout {
+    clip-path: polygon(0em calc(55% + 0.0333em), 0em calc(55% - 0.0333em), 100% calc(55% - 0.0333em), 100% calc(55% + 0.0333em));
+  }
+  .tml-xcancel {
+    clip-path: polygon(0.05em 0em, 0em 0.05em, calc(50% - 0.05em) 50%, 0em calc(100% - 0.05em), 0.05em 100%, 50% calc(50% + 0.05em), calc(100% - 0.05em) 100%, 100% calc(100% - 0.05em), calc(50% + 0.05em) 50%, 100% 0.05em, calc(100% - 0.05em) 0%, 50% calc(50% - 0.05em));
+  }
+
+  .longdiv-top {
+    border-top: 0.067em solid;
+    padding: 0.1em 0.2em 0.2em 0.433em;
+  }
+  .longdiv-arc {
+    position: absolute;
+    top: 0;
+    bottom: 0.1em;
+    left: -0.4em;
+    width: 0.7em;
+    border: 0.067em solid;
+    transform: translateY(-0.067em);
+    border-radius: 70%;
+    clip-path: inset(0 0 0 0.4em);
+    box-sizing: border-box;}
+    .menclose {display: inline-block;
+    text-align: left;
+    position: relative;
+  }
+  
+  .phasor-bottom {
+    border-bottom: 0.067em solid;
+    padding: 0.2em 0.2em 0.1em 0.6em;
+  }
+  .phasor-angle {
+    display: inline-block;
+    position: absolute;
+    left: 0.5px;
+    bottom: -0.04em;
+    height: 100%;
+    aspect-ratio: 0.5;
+    background-color: currentColor;
+    clip-path: polygon(0.05em 100%, 0em calc(100% - 0.05em), calc(100% - 0.05em) 0em, 100% 0.05em);
+  }
+
+  .tml-fbox {
+    padding: 3pt;
+    border: 1px solid;
+  }
+
+  .circle-pad {
+    padding: 0.267em;
+  }
+  .textcircle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: 0.067em solid;
+    border-radius: 50%;
+   }
+
+   .actuarial {
+    padding: 0.03889em 0.03889em 0 0.03889em;
+    border-width: 0.08em 0.08em 0em 0em;
+    border-style: solid;
+    margin-right: 0.03889em;
+   }
+
+   /* Stretch \widetilde */
+  .tml-tilde-2 {
+    transform: scale(2.0, 1.1)
+  }
+  .tml-tilde-3 {
+    transform: scale(3.0, 1.1)
+  }
+  .tml-tilde-4 {
+    transform: scale(4.0, 1.1)
+  }
+  /* Stretch \widehat */
+  .tml-hat-1 {
+    transform: scale(1.9, 1.0)
+  }
+  .tml-hat-2 {
+    transform: scale(3.9, 1.0)
+  }
+  .tml-hat-3 {
+    transform: scale(5.8, 1.0)
+  }
+  .tml-hat-4 {
+    transform: scale(7.8, 1.0)
+  }
+  
+  /* set array cell justification */
+  .tml-right {
+    text-align: -webkit-right;
+  }
+  .tml-left {
+    text-align: -webkit-left;
+  }
+}
+
+.special-fraction {
+  font-family: 'STIX TWO', 'Times New Roman', Times, Tinos, serif;
+}
+
+/* flex-wrap for line-breaking in Chromium */
+math {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+math > mrow {
+  padding: 0.5ex 0ex;
+}
+
+/* Default mtd top padding is 0.5ex per MathML-Core and user-agent CSS */
+/* We adjust for jot and small */
+mtable.tml-jot > mtr > mtd {
+  padding-top: 0.7ex;
+  padding-bottom: 0.7ex;
+}
+mtable.tml-small mtd {
+  padding-top: 0.35ex;
+  padding-bottom: 0.35ex;
+}
+
+/* Firefox */
+@-moz-document url-prefix() {
+  /* Avoid flex-wrap */
+  math { display: inline; }
+  math > mrow { padding: 0 }
+  /* Adjust Firefox spacing between array rows */
+  mtd, mtable.tml-small mtd { padding-top: 0; padding-bottom: 0; }
+  mtable.tml-jot > mtr > mtd { padding-top: 0.2ex; padding-bottom: 0.2ex; }
+}
+
+/* AMS environment auto-numbering via CSS counter. */
+.tml-eqn::before {
+  counter-increment: tmlEqnNo;
+  content: "(" counter(tmlEqnNo) ")";
+}
+
+body {
+  counter-reset: tmlEqnNo;
+}
+
+:root{
+  --blue:#324dc7; --blue-dk:#273ea6; --ink:#1e1e1e; --muted:#5b6170; --line:#d5d9e0;
+  --soft:#f2f4f8; --bar:#f7f8fb; --red:#c8102e; --green:#17803d;
+  --ui:"Noto Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --serif:"Noto Serif",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#fff;color:var(--ink);font-family:var(--ui);-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer;color:inherit}
+[hidden]{display:none!important}
+math{font-family:"Cambria Math","STIX Two Math","STIXTwoMath-Regular","Latin Modern Math","Noto Sans Math",math;font-size:1.06em}
+math[display=block]{margin:.6em 0}
+.screen{min-height:100%}
+
+/* ---------- shared buttons ---------- */
+.btn-primary{background:var(--blue);color:#fff;border:0;border-radius:999px;padding:10px 26px;font-weight:600;font-size:15px;line-height:1.2}
+.btn-primary:hover{background:var(--blue-dk)}
+.btn-primary:focus-visible,.btn-outline:focus-visible,.choice:focus-visible,.cell:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.btn-outline{background:#fff;color:var(--blue);border:1.5px solid var(--blue);border-radius:999px;padding:9px 22px;font-weight:600;font-size:15px}
+.btn-outline:hover{background:#eef1fc}
+.btn-lg{padding:14px 40px;font-size:17px}
+.xbtn{background:none;border:0;font-size:26px;line-height:1;padding:2px 6px;color:inherit}
+
+/* ---------- start screen ---------- */
+#start{background:linear-gradient(180deg,#eef2fb 0,#fff 340px);display:flex;flex-direction:column}
+.start-top{height:64px;display:flex;align-items:center;padding:0 28px;font-weight:700;letter-spacing:.2px;color:#1d2b5c;gap:10px}
+.logo-dot{width:28px;height:28px;border-radius:7px;background:var(--blue);display:grid;place-items:center;color:#fff;font-size:15px;font-weight:700}
+.all-tests{margin-left:auto;font-size:14px;font-weight:600;color:var(--blue);text-decoration:none;border:1.5px solid var(--blue);border-radius:999px;padding:6px 14px}
+.all-tests:hover{background:#eef1fc}
+.start-main{flex:1;display:flex;justify-content:center;padding:24px 16px 48px}
+.start-card{width:min(680px,100%);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 30px rgba(29,43,92,.08);padding:36px 40px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.start-card h1{font-size:32px;margin:8px 0 4px;letter-spacing:-.01em}
+.start-sub{color:var(--muted);margin:0 0 24px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.fact{background:var(--soft);border-radius:12px;padding:14px 16px}
+.fact b{display:block;font-size:24px}
+.fact span{font-size:13px;color:var(--muted)}
+.rules{margin:0 0 24px;padding:0;list-style:none;display:grid;gap:10px}
+.rules li{display:flex;gap:10px;align-items:flex-start;line-height:1.45;font-size:15px}
+.rules li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--blue);margin-top:7px}
+.rules .warn::before{background:var(--red)}
+.resume{display:flex;align-items:center;justify-content:space-between;gap:12px 16px;flex-wrap:wrap;background:#eef1fc;border:1.5px solid var(--blue);border-radius:12px;padding:14px 16px;margin:0 0 22px}
+.resume b{display:block;font-size:16px;margin-bottom:2px}
+.resume span{font-size:14px;color:#3d4352}
+.name-field{display:block;font-size:14px;font-weight:600;margin-bottom:22px}
+.name-field input{display:block;width:100%;margin-top:6px;font:inherit;font-weight:400;font-size:16px;padding:11px 14px;border:1px solid #a9b0bd;border-radius:10px}
+.name-field input:focus{outline:2px solid var(--blue);border-color:var(--blue)}
+.start-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.start-note{font-size:13px;color:var(--muted)}
+@media (max-width:560px){.start-card{padding:26px 20px}.facts{grid-template-columns:1fr 1fr 1fr;gap:8px}.fact{padding:10px}.fact b{font-size:20px}.start-card h1{font-size:26px}}
+
+/* ---------- test shell ---------- */
+#test{height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.hdr{flex:none;height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 24px;background:var(--bar);position:relative}
+.hdr::after,.ftr::before{content:"";position:absolute;left:0;right:0;height:3px;background:repeating-linear-gradient(90deg,#26304a 0 16px,transparent 16px 22px)}
+.hdr::after{bottom:0}
+.ftr::before{top:0}
+.sec-title{font-weight:700;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dir-btn{background:none;border:0;padding:4px 0;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:4px;margin-top:2px}
+.dir-btn svg{width:14px;height:14px;transition:transform .15s}
+.dir-btn[aria-expanded=true] svg{transform:rotate(180deg)}
+.hdr-center{display:flex;flex-direction:column;align-items:center;gap:3px}
+.timer{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.02em;min-height:28px;display:flex;align-items:center}
+.timer.low{color:var(--red)}
+.timer .clock{width:24px;height:24px}
+.pill{background:#fff;border:1px solid #6b7280;border-radius:999px;font-size:12px;font-weight:600;padding:2px 12px}
+.hdr-right{display:flex;justify-content:flex-end;gap:6px}
+.tool{background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:600;padding:6px 10px;border-radius:8px}
+.tool:hover{background:#e9edf5}
+.tool[aria-pressed=true]{color:var(--blue)}
+.tool svg{width:22px;height:22px}
+.main{flex:1;min-height:0;display:flex;position:relative}
+.q-area{flex:1;min-width:0;overflow:auto;position:relative}
+.ftr{flex:none;height:60px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 24px;background:var(--bar);position:relative}
+.stu{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-pill{background:var(--ink);color:#fff;border:0;border-radius:8px;padding:8px 14px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:8px}
+.nav-pill svg{width:14px;height:14px;transition:transform .15s}
+.nav-pill[aria-expanded=true] svg{transform:rotate(180deg)}
+.ftr-right{display:flex;justify-content:flex-end;gap:10px}
+
+/* ---------- question: shared ---------- */
+.q-head{display:flex;align-items:stretch;gap:14px;background:#eceef2;height:40px;position:relative;margin-bottom:6px}
+.q-head::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:repeating-linear-gradient(90deg,#3a3f4b 0 6px,transparent 6px 10px)}
+.q-num{background:var(--ink);color:#fff;font-weight:700;min-width:36px;display:grid;place-items:center;font-size:16px}
+.mark-btn{background:none;border:0;display:flex;align-items:center;gap:6px;font-size:14px;font-weight:500;padding:0 4px}
+.mark-btn svg path{fill:none;stroke:var(--ink);stroke-width:1.8}
+.mark-btn.on svg path{fill:var(--red);stroke:var(--red)}
+.mark-btn.on{font-weight:700}
+.abc-btn{margin:6px 8px 6px auto;border:1.5px solid var(--ink);background:#fff;border-radius:5px;padding:0 6px;font-weight:700;font-size:12px;letter-spacing:.04em;position:relative}
+.abc-btn span{text-decoration:line-through;text-decoration-thickness:1.5px}
+.abc-btn.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.q-body{padding-top:10px}
+.q-stem{font-family:var(--serif);font-size:17px;line-height:1.65}
+.q-stem p{margin:12px 0}
+.fig{margin:14px 0 6px;text-align:center}
+.fig-row{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.fig-row .fsvg{margin:0}
+.fig-note{font-family:var(--serif);font-style:italic;font-size:14px;margin:4px 0 0;color:#333}
+.fsvg{max-width:100%;height:auto;display:block;margin:0 auto}
+.fsvg .g{stroke:#c7cbd3;stroke-width:1}
+.fsvg .a{stroke:#111;stroke-width:1.4;fill:none}
+.fsvg .ah{fill:#111}
+.fsvg .ln{stroke:#111;stroke-width:2.2;fill:none;stroke-linejoin:round}
+.fsvg .dot{fill:#111}
+.fsvg .bar{fill:#dfe3ea;stroke:#222;stroke-width:1.2}
+.fsvg text{font-family:Georgia,"Times New Roman",serif;fill:#111}
+.fsvg .t{font-size:12.5px;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
+.fsvg .t-s{font-size:11.5px}
+.fsvg .t-b{font-size:15px;font-weight:700}
+.fsvg .t-l{font-size:17px}
+.fsvg .i{font-style:italic}
+
+/* ---------- multiple choice ---------- */
+.q-col{max-width:780px;margin:0 auto;padding:26px 32px 56px}
+.choices{margin-top:14px}
+.choice-row{display:flex;align-items:center;gap:12px;margin:12px 0}
+.choice{flex:1;display:flex;align-items:center;gap:14px;text-align:left;background:#fff;border:1.5px solid var(--ink);border-radius:10px;padding:10px 14px;font-family:var(--serif);font-size:17px;line-height:1.45;min-height:52px;position:relative}
+button.choice:hover{box-shadow:0 0 0 1px var(--ink)}
+.choice .ltr{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-family:var(--ui);font-weight:700;font-size:14px;background:#fff}
+.choice .ctext{flex:1;min-width:0}
+.choice.sel{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue)}
+button.choice.sel:hover{box-shadow:0 0 0 2px var(--blue)}
+.choice.sel .ltr{background:var(--blue);border-color:var(--blue);color:#fff}
+.choice.elim{color:#8a909c;border-color:#9aa1ad}
+.choice.elim .ltr{border-color:#9aa1ad;color:#8a909c}
+.choice.elim::after{content:"";position:absolute;left:-7px;right:-7px;top:50%;height:2px;background:#2b2f38}
+.elim-btn{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;font-weight:700;font-size:13px;position:relative;padding:0}
+.elim-btn::after{content:"";position:absolute;left:-5px;right:-5px;top:50%;height:1.5px;background:var(--ink)}
+.undo-btn{flex:none;width:40px;background:none;border:0;text-decoration:underline;font-weight:700;font-size:13px;padding:0}
+table.dt{margin:10px auto}
+table.xy{border-collapse:collapse;font-family:var(--serif);font-size:16px;margin:2px 0}
+table.xy th,table.xy td{border:1.5px solid #111;padding:4px 22px;text-align:center;font-weight:400}
+
+/* ---------- student-produced response ---------- */
+.spr{display:grid;grid-template-columns:minmax(0,1fr) 5px minmax(0,1fr);height:100%}
+.spr-left,.spr-right{overflow:auto;padding:26px 32px 56px}
+.spr-div{background:#d3d7de}
+.spr-dir h3{font-size:18px;margin:0 0 10px}
+.spr-dir ul{padding-left:20px;margin:0 0 18px;line-height:1.5;font-size:15px}
+.spr-dir li{margin:6px 0}
+.spr-dir h4{margin:0 0 8px;font-size:15px}
+.ex{border-collapse:collapse;width:100%;font-size:14px}
+.ex th,.ex td{border:1px solid #b9bfca;padding:7px 8px;vertical-align:top;text-align:left}
+.ex th{background:var(--soft);font-weight:700}
+.spr-entry{margin:22px 0 10px}
+.spr-input{width:190px;max-width:100%;font-family:var(--ui);font-size:22px;padding:9px 12px;border:1.5px solid var(--ink);border-bottom-width:3px;border-radius:8px;letter-spacing:.04em}
+.spr-input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 2px rgba(50,77,199,.25)}
+.spr-preview{font-size:15px;display:flex;align-items:center;gap:8px;min-height:44px}
+.spr-preview math{font-size:1.25em}
+
+/* ---------- popups ---------- */
+.dir-pop{position:absolute;top:72px;left:16px;width:min(760px,calc(100vw - 32px));max-height:calc(100% - 150px);overflow:auto;background:#fff;border-radius:12px;box-shadow:0 14px 44px rgba(0,0,0,.25);padding:22px 26px;z-index:60;font-size:15px;line-height:1.55}
+.dir-pop h3{margin:0 0 8px}
+.dir-pop ul{margin:6px 0 12px;padding-left:22px}
+.dir-foot{display:flex;justify-content:flex-end;margin-top:10px}
+.navpop{position:fixed;bottom:74px;left:50%;transform:translateX(-50%);width:min(600px,calc(100vw - 24px));background:#fff;border-radius:14px;box-shadow:0 14px 44px rgba(0,0,0,.28);padding:18px 22px 20px;z-index:60}
+.navpop::after{content:"";position:absolute;bottom:-9px;left:50%;margin-left:-9px;width:18px;height:18px;background:#fff;transform:rotate(45deg);box-shadow:4px 4px 8px rgba(0,0,0,.08)}
+.np-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:10px}
+.np-head h3{margin:0;font-size:16px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;margin:12px 0 4px;color:#333}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.lg-un{width:16px;height:16px;border:1.5px dashed #6b7280;display:inline-block}
+.legend svg{width:15px;height:15px}
+.lg-pin path{fill:var(--ink)}
+.lg-flag path{fill:var(--red)}
+.ngrid{display:flex;flex-wrap:wrap;gap:20px 12px;padding:22px 2px 6px}
+.ngrid.big{gap:22px 16px;justify-content:center}
+.cell{width:40px;height:40px;border:1.5px dashed #6b7280;background:#fff;color:var(--blue);font-weight:700;font-size:15px;position:relative;padding:0;border-radius:2px}
+.ngrid.big .cell{width:46px;height:46px;font-size:17px}
+.cell:hover{background:#eef1fc}
+.cell.ans{background:var(--blue);color:#fff;border:1.5px solid var(--blue)}
+.cell.ans:hover{background:var(--blue-dk)}
+.cell .ic-pin{position:absolute;top:-19px;left:50%;margin-left:-8px;width:16px;height:16px}
+.cell .ic-pin path{fill:var(--ink)}
+.cell .ic-flag{position:absolute;top:-7px;right:-7px;width:15px;height:15px}
+.cell .ic-flag path{fill:var(--red);stroke:#fff;stroke-width:1.5}
+.np-foot{display:flex;justify-content:center;margin-top:12px}
+
+.review{max-width:760px;margin:0 auto;padding:36px 24px 56px;text-align:center}
+.review h1{font-size:30px;margin:0 0 10px}
+.review>p{color:#333;margin:0 auto 24px;max-width:600px;line-height:1.55}
+.rv-card{background:#fff;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.12);padding:20px 26px 26px;text-align:left}
+.rv-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.rv-head h2{font-size:17px;margin:0}
+.rv-head .legend{margin:0}
+
+/* ---------- calculator + reference ---------- */
+.calc{flex:none;width:430px;display:flex;flex-direction:column;border-right:2px solid #c3c8d1;background:#fff;z-index:30}
+.calc.wide{width:min(760px,62vw)}
+.calc-head,.ref-head{display:flex;align-items:center;justify-content:space-between;background:var(--ink);color:#fff;padding:7px 12px;font-weight:600;font-size:14px}
+.calc-head .xbtn,.ref-head .xbtn{color:#fff;font-size:22px}
+.calc-head button.wbtn{background:none;border:1px solid #888;color:#fff;border-radius:6px;font-size:12px;padding:3px 8px;margin-right:6px}
+.desmos{flex:1;min-height:0;position:relative}
+.calc-msg{padding:28px 22px;text-align:center;color:var(--muted);line-height:1.6;font-size:14px}
+.ref{position:fixed;top:86px;right:20px;width:min(640px,calc(100vw - 24px));max-height:calc(100vh - 170px);background:#fff;border-radius:12px;box-shadow:0 14px 44px rgba(0,0,0,.3);display:flex;flex-direction:column;z-index:55;overflow:hidden}
+.ref-head{cursor:move;user-select:none;touch-action:none}
+.ref-body{overflow:auto;padding:16px 18px 20px}
+.ref-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px 10px}
+.ref-item{text-align:center;font-size:15px}
+.ref-item .rsvg{display:block;margin:0 auto 4px}
+.rsvg .s{fill:none;stroke:#111;stroke-width:1.5}
+.rsvg .d{fill:none;stroke:#111;stroke-width:1.2;stroke-dasharray:4 3}
+.rsvg .f{fill:#111}
+.rsvg text{font-family:Georgia,"Times New Roman",serif;font-size:14px;fill:#111}
+.ref-item div{line-height:1.7}
+.ref-cap{font-size:12px;color:var(--muted)}
+.ref-facts{border-top:1px solid var(--line);margin-top:16px;padding-top:12px;font-size:14.5px;line-height:1.6}
+.ref-facts p{margin:4px 0}
+
+/* ---------- overlays ---------- */
+.overlay{position:fixed;inset:0;background:rgba(18,22,33,.45);display:flex;align-items:center;justify-content:center;padding:16px;z-index:80}
+.dialog{background:#fff;border-radius:14px;max-width:460px;width:100%;padding:26px 26px 22px;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.dialog h3{margin:0 0 8px;font-size:20px}
+.dialog p{margin:0 0 20px;line-height:1.55;color:#333}
+.dlg-btns{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.toast{position:fixed;top:84px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;font-weight:600;font-size:14px;z-index:90;box-shadow:0 8px 24px rgba(0,0,0,.25);max-width:calc(100vw - 32px);text-align:center}
+.toast.alert{background:var(--red)}
+
+/* ---------- transition ---------- */
+#trans{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bar);padding:16px}
+.trans-card{text-align:center;max-width:460px}
+.hourglass{width:64px;height:64px;margin:0 auto 18px;animation:spin 2s ease-in-out infinite}
+.hourglass path{fill:none;stroke:var(--blue);stroke-width:2.4;stroke-linejoin:round}
+.hourglass .sand{fill:var(--blue);stroke:none}
+@keyframes spin{0%,40%{transform:rotate(0)}60%,100%{transform:rotate(180deg)}}
+.trans-card h2{margin:0 0 8px;font-size:26px}
+.trans-card p{color:var(--muted);line-height:1.55;margin:6px 0}
+.count{font-size:46px;font-weight:700;color:var(--blue);margin-top:10px;font-variant-numeric:tabular-nums}
+
+/* ---------- results ---------- */
+#results{background:var(--soft);min-height:100vh}
+.res-top{height:64px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;gap:12px}
+.res-top b{font-size:16px}
+.res-wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+.score-card{background:#fff;border-radius:18px;box-shadow:0 4px 20px rgba(0,0,0,.06);padding:28px 32px;display:grid;grid-template-columns:auto 1fr;gap:12px 40px;align-items:center}
+.score-lbl{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.score-big{font-size:76px;font-weight:700;line-height:1;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.score-range{color:var(--muted);font-size:14px;margin-top:6px}
+.scale{position:relative;height:12px;border-radius:99px;background:#e3e7ef;margin:26px 0 8px}
+.scale-fill{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--blue)}
+.scale-mark{position:absolute;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:#fff;border:4px solid var(--blue)}
+.scale-ends{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.stat{background:var(--soft);border-radius:10px;padding:10px 14px}
+.stat b{display:block;font-size:20px;font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--muted)}
+.score-note{grid-column:1/-1;font-size:12.5px;color:var(--muted);margin:4px 0 0}
+.res-h2{font-size:22px;margin:34px 0 4px}
+.res-sub{color:var(--muted);margin:0 0 14px;font-size:14.5px}
+.res-legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13.5px;margin-bottom:14px}
+.res-legend span{display:inline-flex;align-items:center;gap:7px}
+.sw{width:16px;height:16px;border-radius:4px;border:2px solid}
+.sw.ok{background:#e4f5ea;border-color:var(--green)}
+.sw.bad{background:#fde9ec;border-color:var(--red)}
+.sw.om{background:#f3f4f6;border-color:#9ca3af;border-style:dashed}
+.res-mod{background:#fff;border-radius:14px;padding:18px 22px 22px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.res-mod h3{margin:0 0 14px;font-size:16px;display:flex;justify-content:space-between;gap:8px}
+.res-mod h3 span{color:var(--muted);font-weight:600;font-size:14px}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:10px}
+.rtile{height:64px;border-radius:10px;border:2px solid;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-weight:700;font-size:17px;background:#fff;padding:0}
+.rtile small{font-size:11.5px;font-weight:600;opacity:.9}
+.rtile.ok{background:#e4f5ea;border-color:var(--green);color:#0f5129}
+.rtile.bad{background:#fde9ec;border-color:var(--red);color:#7a0d1e}
+.rtile.om{background:#f6f7f9;border-color:#9ca3af;border-style:dashed;color:#4b5563}
+.rtile:hover{filter:brightness(.96);transform:translateY(-1px)}
+.res-actions{display:flex;justify-content:center;margin-top:26px}
+@media (max-width:700px){.score-card{grid-template-columns:1fr;padding:22px}.score-big{font-size:64px}.stats{grid-template-columns:1fr 1fr 1fr}.stat b{font-size:17px}}
+
+.rv-modal{position:fixed;inset:0;background:rgba(18,22,33,.5);z-index:85;display:flex;align-items:stretch;justify-content:center;padding:24px 16px}
+.rv-panel{background:#fff;border-radius:14px;width:min(860px,100%);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.rv-top{display:flex;align-items:center;gap:12px;padding:12px 16px 12px 20px;border-bottom:1px solid var(--line)}
+.rv-top h3{margin:0;font-size:17px;flex:1}
+.status{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:99px}
+.status.ok{background:#e4f5ea;color:#0f5129}
+.status.bad{background:#fde9ec;color:#7a0d1e}
+.status.om{background:#eceef2;color:#4b5563}
+.rv-body{flex:1;overflow:auto;padding:8px 28px 30px}
+.rv-bottom{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-top:1px solid var(--line);gap:10px}
+.rv-bottom span{font-size:13px;color:var(--muted)}
+.choice.r-ok{border-color:var(--green);box-shadow:0 0 0 2px var(--green);background:#f3fbf6}
+.choice.r-ok .ltr{background:var(--green);border-color:var(--green);color:#fff}
+.choice.r-bad{border-color:var(--red);box-shadow:0 0 0 2px var(--red);background:#fff6f7}
+.choice.r-bad .ltr{background:var(--red);border-color:var(--red);color:#fff}
+.rtag{flex:none;font-family:var(--ui);font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;margin-left:8px}
+.r-ok .rtag{background:var(--green);color:#fff}
+.r-bad .rtag{background:var(--red);color:#fff}
+.spr-review{display:grid;gap:10px;margin-top:20px;max-width:440px}
+.srow{display:flex;align-items:center;justify-content:space-between;gap:12px;border:2px solid;border-radius:10px;padding:12px 16px}
+.srow .slab{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.srow .sval{font-size:19px;font-weight:600}
+.srow.ok{border-color:var(--green);background:#f3fbf6}
+.srow.bad{border-color:var(--red);background:#fff6f7}
+.srow.om{border-color:#9ca3af;border-style:dashed;background:#f6f7f9}
+.srow.key{border-color:var(--green);background:#f3fbf6}
+
+/* ---------- small screens ---------- */
+@media (max-width:820px){
+  .hdr,.ftr{padding:0 12px}
+  .sec-title{font-size:14px}
+  .tool span{display:none}
+  .tool{padding:6px}
+  .q-col{padding:18px 16px 40px}
+  .spr{grid-template-columns:1fr;height:auto}
+  .spr-left,.spr-right{overflow:visible;padding:18px 16px}
+  .spr-left{order:2;border-top:5px solid #d3d7de}
+  .spr-div{display:none}
+  .calc,.calc.wide{position:absolute;inset:0;width:auto}
+  .stu{display:none}
+  .ftr{grid-template-columns:auto 1fr}
+  .ftr-center{justify-self:start}
+  .btn-primary{padding:9px 18px}
+  .q-stem,.choice{font-size:16px}
+  .rv-body{padding:6px 16px 24px}
+}
+@media (max-width:420px){.dir-btn{font-size:12px}.timer{font-size:18px}.nav-pill{padding:7px 10px;font-size:13px}}
+#calcBtn,#refBtn,#calc,#ref{display:none!important}
+.rw-pass{font-family:var(--serif);font-size:17px;line-height:1.65}
+.rw-pass p{margin:0 0 12px}
+.rw-pass ul{margin:6px 0 12px;padding-left:22px}
+.rw-pass li{margin:6px 0}
+.rw-pass .cite{text-align:right;font-style:italic;font-size:15px}
+.rw-pass table{border-collapse:collapse;margin:10px auto;font-family:var(--ui);font-size:14.5px}
+.rw-pass th,.rw-pass td{border:1px solid #888;padding:5px 10px;text-align:center;vertical-align:middle}
+.rw-pass th{background:var(--soft);font-weight:600}
+.rw-pass .tcap{font-family:var(--ui);font-weight:700;font-size:15px;text-align:center;margin:8px 0 2px}
+.blank{letter-spacing:-1px}
+.rw-review{border-left:4px solid #d3d7de;padding:4px 0 4px 16px;margin:0 0 16px}
+@media (max-width:820px){.rw-split .spr-left{order:0;border-top:0}.rw-split .spr-right{border-top:5px solid #d3d7de}}
+</style>
+</head>
+<body>
+<noscript><div style="background:#c8102e;color:#fff;padding:14px 18px;font:600 15px/1.5 system-ui,sans-serif;text-align:center">This test needs JavaScript, and this viewer can't run it. On iPhone, the Files app preview can't run it either. Open the test from a web link in Safari instead.</div></noscript>
+
+<!-- ======================= START ======================= -->
+<section id="start" class="screen">
+  <div class="start-top"><span class="logo-dot">∑</span> Practice Test<a class="all-tests" href="./">All tests</a></div>
+  <div class="start-main">
+    <div class="start-card">
+      <div class="kicker">Digital SAT · Reading and Writing</div>
+      <h1>SAT Reading and Writing Mock Test</h1>
+      <p class="start-sub">May 2025 · US · Version 4 · Reading and Writing section only</p>
+      <div class="facts">
+        <div class="fact"><b>54</b><span>questions</span></div>
+        <div class="fact"><b>2</b><span>modules (27 each)</span></div>
+        <div class="fact"><b>64</b><span>minutes (32 per module)</span></div>
+      </div>
+      <ul class="rules">
+        <li class="warn">The timer starts the moment you click Start and cannot be paused.</li>
+        <li class="warn">Module 2 starts automatically after Module 1. You can't go back to Module 1.</li>
+        <li>You can submit a module early from the review page. If time runs out, your answers are submitted automatically.</li>
+        <li>Your progress is saved in this browser. If you leave, you can come back and resume, but the timer keeps running while you're away.</li>
+        <li>Each question has a short passage on the left and the question on the right. You can cross out answer choices with the ABC button.</li>
+        <li>Unanswered questions are scored as incorrect, so answer every question.</li>
+      </ul>
+      <div class="resume" id="resumeBox" hidden>
+        <div><b id="resumeTitle">You have a test in progress</b><span id="resumeText"></span></div>
+        <button class="btn-primary" id="resumeBtn">Resume</button>
+      </div>
+      <label class="name-field">Your name (optional)
+        <input id="nameInput" type="text" maxlength="40" autocomplete="name" placeholder="Student">
+      </label>
+      <div class="start-actions">
+        <button id="startBtn" class="btn-primary btn-lg">Start Test</button>
+        <span class="start-note">You'll get an estimated score (200–800) and a question review at the end.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TEST ======================= -->
+<section id="test" class="screen" hidden>
+  <header class="hdr">
+    <div class="hdr-left" style="min-width:0">
+      <div class="sec-title" id="secTitle">Section 1, Module 1: Reading and Writing</div>
+      <button class="dir-btn" id="dirBtn" aria-expanded="false" aria-controls="dirPop">Directions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>
+    </div>
+    <div class="hdr-center">
+      <div class="timer" id="timer" role="timer" aria-live="off">35:00</div>
+      <button class="pill" id="hideBtn">Hide</button>
+    </div>
+    <div class="hdr-right">
+      <button class="tool" id="calcBtn" aria-pressed="false" title="Graphing calculator">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="2.5" width="14" height="19" rx="2.2"/><rect x="8" y="5.5" width="8" height="4" rx=".8"/><circle cx="9" cy="13" r=".9" fill="currentColor"/><circle cx="12" cy="13" r=".9" fill="currentColor"/><circle cx="15" cy="13" r=".9" fill="currentColor"/><circle cx="9" cy="16.5" r=".9" fill="currentColor"/><circle cx="12" cy="16.5" r=".9" fill="currentColor"/><circle cx="15" cy="16.5" r=".9" fill="currentColor"/></svg>
+        <span>Calculator</span></button>
+      <button class="tool" id="refBtn" aria-pressed="false" title="Reference sheet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2.5h8.5l4 4v15H6z"/><path d="M14.5 2.5v4h4"/><path d="M9 12.5h6M9 15.5h6M9 18.5h3.5"/></svg>
+        <span>Reference</span></button>
+    </div>
+  </header>
+
+  <div class="main">
+    <aside class="calc" id="calc" hidden aria-label="Graphing calculator">
+      <div class="calc-head"><span>Calculator</span><div><button class="wbtn" id="calcWide">Expand</button><button class="xbtn" id="calcClose" aria-label="Close calculator">×</button></div></div>
+      <div class="desmos" id="desmos"><div class="calc-msg">Loading calculator…</div></div>
+    </aside>
+    <div class="q-area" id="qArea"></div>
+
+    <div class="dir-pop" id="dirPop" hidden role="dialog" aria-label="Directions">
+      <h3>Directions</h3>
+      <p>The questions in this section address a number of important reading and writing skills. Each question includes one or more passages, which may include a table or graph. Read each passage and question carefully, and then choose the best answer to the question based on the passage(s).</p>
+      <p>All questions in this section are multiple-choice with four answer choices. Each question has a single best answer.</p>
+      <div class="dir-foot"><button class="btn-primary" id="dirClose">Close</button></div>
+    </div>
+  </div>
+
+  <footer class="ftr">
+    <div class="stu" id="stuName">Student</div>
+    <div class="ftr-center"><button class="nav-pill" id="navBtn" aria-expanded="false" aria-controls="navPop"><span id="navLabel">Question 1 of 22</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M6 15l6-6 6 6"/></svg></button></div>
+    <div class="ftr-right"><button class="btn-primary" id="backBtn">Back</button><button class="btn-primary" id="nextBtn">Next</button></div>
+  </footer>
+
+  <div class="navpop" id="navPop" hidden role="dialog" aria-label="Question navigation">
+    <div class="np-head"><h3 id="npTitle">Section 1, Module 1: Reading and Writing Questions</h3><button class="xbtn" id="npClose" aria-label="Close">×</button></div>
+    <div class="legend" id="npLegend"></div>
+    <div id="npGrid"></div>
+    <div class="np-foot"><button class="btn-outline" id="goReview">Go to Review Page</button></div>
+  </div>
+
+  <div class="ref" id="ref" hidden role="dialog" aria-label="Reference sheet">
+    <div class="ref-head" id="refHead"><span>Reference Sheet</span><button class="xbtn" id="refClose" aria-label="Close reference sheet">×</button></div>
+    <div class="ref-body" id="refBody"></div>
+  </div>
+</section>
+
+<!-- ======================= TRANSITION ======================= -->
+<section id="trans" class="screen" hidden>
+  <div class="trans-card">
+    <svg class="hourglass" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 5h24M12 43h24M14 5c0 10 10 13 10 19S14 33 14 43M34 5c0 10-10 13-10 19s10 9 10 19"/><path class="sand" d="M18 39c2-4 4-5 6-6 2 1 4 2 6 6z"/></svg>
+    <h2 id="transTitle">Module 1 complete</h2>
+    <p id="transMsg">Your answers were submitted.</p>
+    <p id="transNext">Module 2 begins automatically — the timer can't be paused.</p>
+    <div class="count" id="transCount">5</div>
+  </div>
+</section>
+
+<!-- ======================= RESULTS ======================= -->
+<section id="results" class="screen" hidden>
+  <div class="res-top"><b>SAT Reading and Writing Mock Test · Results</b><span id="resName" style="color:var(--muted);font-size:14px"></span></div>
+  <div class="res-wrap" id="resWrap"></div>
+</section>
+
+<div class="rv-modal" id="rvModal" hidden role="dialog" aria-modal="true" aria-labelledby="rvTitle">
+  <div class="rv-panel">
+    <div class="rv-top"><h3 id="rvTitle">Question</h3><span class="status" id="rvStatus"></span><button class="xbtn" id="rvClose" aria-label="Close review">×</button></div>
+    <div class="rv-body" id="rvBody"></div>
+    <div class="rv-bottom"><button class="btn-outline" id="rvPrev">Previous</button><span id="rvPos"></span><button class="btn-primary" id="rvNext">Next</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="confirm" hidden role="dialog" aria-modal="true" aria-labelledby="cfTitle">
+  <div class="dialog">
+    <h3 id="cfTitle">Submit Module 1?</h3>
+    <p id="cfText"></p>
+    <div class="dlg-btns"><button class="btn-outline" id="cfCancel">Keep Working</button><button class="btn-primary" id="cfOk">Submit Module</button></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+const DATA = {"id":"May 2025 · US · Version 4 · Reading and Writing section only","modules":[{"title":"Module 1","questions":[{"type":"mcq","passage":"<p>The following text is from Lilliam Rivera’s 2020 novel <i>Never Look Back</i>. The text describes the narrator arriving at his father’s apartment.</p><p>“Pops, I’m here!” I <u>drop</u> my bag and set my guitar case against a wall. I place my keys on the bowl right next to the ceramic elephant Pops got me on one of his trips to Santo Domingo when I was a little kid.</p><p class=\"cite\">©2020 by Lilliam Rivera</p>","stem":"<p>As used in the text, what does the word “drop” most nearly mean?</p>","choices":["Forget about","Put down","Unbolt","Empty"],"answer":"B"},{"type":"mcq","passage":"<p>The invertebrates <i>Haywardozoon pacificum</i> and <i>Trophomera mangani</i> have recently been discovered inhabiting the Clarion-Clipperton Zone (CCZ), an area of abyssal plain between Hawaii and Mexico where mining is permitted. The number of other invertebrates that may inhabit the CCZ is currently <span class=\"blank\">______</span>, as the area’s biota is poorly sampled and the few samples that have been taken cannot be presumed to be representative.</p>","stem":"<p>Which choice completes the text with the most logical and precise word or phrase?</p>","choices":["infinitesimal","verifiable","tenuous","inestimable"],"answer":"D"},{"type":"mcq","passage":"<p>Given that healthy genetic diversity supports honey bee population robustness—a matter of public interest given the bees’ crucial role as pollinators of many crops, such as watermelon—a study revealing a <span class=\"blank\">______</span> of diversity among US honey bees raised concern, though it also noted the potential to enhance the number of bees carrying several newly discovered genetic variants (e.g., A2-829-4-USA).</p>","stem":"<p>Which choice completes the text with the most logical and precise word or phrase?</p>","choices":["paucity","redundancy","disparity","repository"],"answer":"A"},{"type":"mcq","passage":"<p>Maryam Hosseini and her team used aerial images of well-mapped areas of Boston to train a computer program to identify sidewalks. When it was tested on images of Brooklyn, it <span class=\"blank\">______</span> identified sidewalks in the vast majority of cases and even whether sidewalks were concrete or brick. Hosseini believes the program will improve on this already-strong performance as it gets used more.</p>","stem":"<p>Which choice completes the text with the most logical and precise word or phrase?</p>","choices":["clumsily","reliably","rarely","slowly"],"answer":"B"},{"type":"mcq","passage":"<p>The Polynesian languages, a group of related languages originating on islands in the Pacific, typically have <span class=\"blank\">______</span> array of consonant sounds. For example, the Tokelauan language of the South Pacific has eleven consonants, and ‘Olelo Hawai‘i, the language of the Native Hawaiian people, has eight. Globally, however, the median number of consonants per language is over twenty-two.</p>","stem":"<p>Which choice completes the text with the most logical and precise word or phrase?</p>","choices":["a musical","an unvarying","an exclusive","a modest"],"answer":"D"},{"type":"mcq","passage":"<p>Movies that are part of larger franchises are often criticized for being predictable. Take, for instance, <i>Spider Man: Far From Home</i> (2019), which is part of the Marvel Cinematic Universe franchise. It’s true that this movie resembles earlier Marvel movies. But just because a movie has familiar elements doesn’t mean it can’t also be worth watching. Critics generally agree that <i>Spider Man: Far From Home</i> isn’t the most exciting franchise movie, but franchise movies are rarely as stale as some people claim. And some franchise movies, like <i>Logan</i> (2017), are wonderfully original.</p>","stem":"<p>Which choice best describes the overall structure of the text?</p>","choices":["The text summarizes the plot of a franchise movie, then explains how the plot is continued in a later movie in that franchise.","The text explains why some people enjoyed a particular franchise movie, then considers why other people disliked it.","The text describes audiences’ reactions to a movie that is part of a larger franchise, then presents some critics reactions to that movie.","The text discusses a common criticism of franchise movies, then argues that the criticism is mostly undeserved."],"answer":"D"},{"type":"mcq","passage":"<p>The following text is from Julia Alvarez’s 2000 novel <i>In the Name of Salomé</i>. Salomé, a poet, is hosting guests in the front parlor of her family home, and Ramona is her sister: A salon is a social gathering for the exploration of intellectual ideas.</p><p>It was evening when the two men got up to leave. Tía Ana had already come into the room several times to see if these guests had departed yet. The front parlor had always been her <u>special province</u>, as she used it for her little school. Now, every evening, it turned into Salomé’s salon, as Ramona called it, and it was never in order for its transformation back to a classroom the following morning.</p><p class=\"cite\">©2000 by Julia Alvarez</p>","stem":"<p>Which choice best describes the function of the reference to the parlor as Tía Ana’s “special province”?</p>","choices":["It reveals that Tía Ana feels as if Salomé has betrayed her trust by allowing guests into space she considers her own.","It indicates the joy that Tía Ana feels when she uses her classroom for varying purposes.","It characterizes the room as a place where Tía Ana can go to escape social pressures.","It introduces an idea that helps explain Tía Ana’s apparent eagerness for Salomé’s guests to leave the space."],"answer":"D"},{"type":"mcq","passage":"<p><b>Text 1</b></p><p>Despite how the Indian dish madras differs from Mauritius’s gato pima, both dishes are described as a “curry.” The word’s history, however, is fraught. It’s a term created by British and Portuguese colonizers to refer to the myriad spiced sauces with ties to the Indian subcontinent. In 1973, chef Madhur Jaffrey dismissed the term “curry” as inaccurate, and in 2021 blogger Nisha Vedi Pawar suggested that people abandon the term both for its colonial origin and for its failure to grasp the intricacies of India’s cuisines.</p><p><b>Text 2</b></p><p>Growing up in India, chef Chintan Pandya didn’t encounter the term “curry” often: his family didn’t cook curries, but some of his neighbors did. Although the blanket use of the term is rooted in colonialism, Pandya calls some of his dishes curries. Having traveled throughout India as part of his training, he came to appreciate the country’s diverse cuisines and the diverse uses of the term “curry.”</p>","stem":"<p>Text 1 and Text 2 present points of view about which topic?</p>","choices":["The history about the peoples on the Indian subcontinent","The use of the term “curry”","The difference between madras and gato pima","The best method for studying a region’s cuisine"],"answer":"B"},{"type":"mcq","passage":"<p>Sandra Cisneros’s English-language short story “Eyes of Zapata” occasionally includes words and phrases from the Mexican dialect of Spanish. While the story doesn’t translate the Spanish text into English, the meaning can be inferred from the surrounding English text. Ana Castillo adopts a comparable approach to Spanish in her English language novel <i>So Far from God</i>. Both works thus remain accessible to all readers of English, not just those who can also read Spanish.</p>","stem":"<p>What is the main topic of the text?</p>","choices":["The difficulty of translating Sandra Cisneros’s works into languages other than English","The commercial success of English-language literature around the world","The enduring popularity of Ana Castillo’s works in Mexico","The use of non-English vocabulary in two English-language literary works"],"answer":"D"},{"type":"mcq","passage":"<p>In a large community science effort, biologist Grace Herzel and colleagues collaborated with hundreds of students and other amateur science enthusiasts for more than three years to study how butterfly color and weather conditions relate to butterfly behavior. They found that butterfly color might influence behavior more than butterfly size does, and that butterflies tended to prefer orange and red flowers on cloudy days and multicolor flowers on partly cloudy days.</p>","stem":"<p>Which choice best states the main idea of the text?</p>","choices":["Collaboration between professional scientists and members of the public is especially useful when studying the behavior of butterflies and other flying insects.","A recent study suggested that butterflies’ coloring seems to be less relevant to their behavior than weather conditions.","Weather conditions and butterfly color seem to have less influence on butterfly behavior than the location where the butterflies are studied does.","A large study suggested that butterfly color and weather conditions might influence the behavior of certain butterflies."],"answer":"D"},{"type":"mcq","passage":"<p><i>Uncle Boonmee Who Can Recall His Past Lives</i> (2010) and other films by Thai director Apichatpong Weerasethakul are contributions to slow cinema, an art house genre whose contemplative pacing and deprivileging of narrative are further exemplified by films such as Andrei Tarkovsky’s <i>Solaris</i> (1972). Apichatpong describes his films as sleep inducing, which might suggest that they bore their audiences, but boredom does not necessarily cause sleep: in the absence of a goal to which one attaches attention and interest, the tension of boredom can be anxiety inducing rather than soporific. Thus, Apichatpong’s description of his films is not self-deprecation; rather, his work invites sleep and thereby strips the description of its negative connotation.</p>","stem":"<p>Which choice best states the main idea of the text?</p>","choices":["Audiences will fail to enjoy both <i>Solaris</i> and <i>Uncle Boonmee Who Can Recall His Past Lives</i> if they confuse sleepiness with boredom.","Slow-cinema films can relieve anxiety for those who embrace their languid pace, but the films increase anxiety for those experiencing boredom as a result of the lack of a cohesive narrative.","<i>Solaris</i> and many other slow cinema films often induce anxiety in their audiences due to their measured pace, but films by Apichatpong do not, despite possessing other traits characteristic of the genre.","It would be a misunderstanding to interpret Apichatpong’s reflection on his work as a confession of its failure, because the effects his films produce on audiences are intentional."],"answer":"D"},{"type":"mcq","fig":"m1_q12","passage":"{{FIG}}<p>The Pueblo of Laguna is the largest of the nineteen Pueblo tribal nations in New Mexico, covering nearly 800 square miles. Most Pueblo tribal nations are much smaller. For example, the total area of Pueblo of Sandia is 38.9 square miles, and the total area of Pueblo de Cochiti is <span class=\"blank\">______</span></p>","stem":"<p>Which choice most effectively uses data from the table to complete the statement?</p>","choices":["156.2 square miles.","595.7 square miles.","82.1 square miles.","21.4 square miles."],"answer":"C"},{"type":"mcq","fig":"m1_q13","passage":"{{FIG}}<p>A student who is researching volcanoes in Ecuador notes that the country is home to different types of volcanoes. For example, <span class=\"blank\">______</span></p>","stem":"<p>Which choice most effectively uses information from the table to complete the example?</p>","choices":["Chacana is a caldera volcano, and Fernandina is a stratovolcano.","Chimborazo is a caldera volcano, and Imbabura is a stratovolcano.","Imbabura is a compound volcano, and Chacana is a shield volcano.","Fernandina is a shield volcano, and Chimborazo is a stratovolcano."],"answer":"D"},{"type":"mcq","passage":"<p>Many studies have found a positive association between levels of dissolved organic carbon and mercury in bodies of fresh water in North America. But Enelton Fagnani, José Roberto Guimarães, and Pedro Sérgio Fadini did not find this correlation in a study conducted in Brazil, leading some scientists to hypothesize that the pattern is particular to North America. However, Kerstin Leopold, Anja Zierhut, and Jessica Huber reported dissolved organic carbon and mercury rising or falling together in a study conducted in Germany, and several other studies from outside North America have yielded similar results, suggesting that <span class=\"blank\">______</span></p>","stem":"<p>Which choice most logically completes the text?</p>","choices":["bodies of fresh water outside North America are more likely to show a negative association between dissolved organic carbon and mercury levels than a positive association.","there may be circumstances specific to the bodies of water examined in Fagnani, Guimarães, and Fadini’s study that disrupted a general positive association between dissolved organic carbon and mercury levels.","environmental characteristics unique to Brazil likely result in dissolved organic carbon and mercury levels in bodies of fresh water both being significantly higher there than elsewhere.","the bodies of water examined in Fagnani, Guimarães, and Fadini’s study may be more similar to the bodies of water examined in studies conducted in North America than to those examined in Leopold, Zierhut, and Huber’s study."],"answer":"B"},{"type":"mcq","passage":"<p>British professional soccer team Manchester United Football Club, whose home uniform color is mainly red, won more than half its home matches between 1947 and 2003. This is a higher proportion of home matches than Hull City Association Football Club, whose home uniform color is not red, won during the same period. According to a study by Martin J. Attrill and colleagues, the color red can cause people to respond with fear and hesitation, which the researchers think helps explain Manchester United’s success. Nadav Goldschmied and colleagues reanalyzed the published data from this study, however, and found no evidence that red uniformed teams are more likely than other teams to win, suggesting that Manchester United’s performance at its home stadium <span class=\"blank\">______</span></p>","stem":"<p>Which choice most logically completes the text?</p>","choices":["would probably have remained roughly the same if its players had not been wearing red uniforms.","was likely influenced by its opponents associations with the color red.","was directly tied to its players’ general satisfaction with their uniform color","may have influenced other teams to change their uniform colors."],"answer":"A"},{"type":"mcq","passage":"<p>London-based Nigerian sculptor Sokari Douglas Camp creates art by cutting, bending, and welding recycled metal materials into new and thought-provoking shapes. Her work—which has been featured in galleries around the world, such as the Potters Field Commission for Southwark Council in London and Skidmore College’s Tang Teaching Museum and Art Gallery in New York—often references at least one of several <span class=\"blank\">______</span> the environment, and Kalabari culture.</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["themes; movement,","themes. Movement,","themes movement,","themes: movement,"],"answer":"D"},{"type":"mcq","passage":"<p>Drummer Dennis Chambers’s distinguished career includes many memorable achievements, such as working on the Brecker Brothers’ album <i>Return of the Brecker Brothers</i>. However, as house drummer at Sugar Hill Records, a record label that was a pioneer of early hip hop <span class=\"blank\">______</span> Chambers joined too late to play drums on the label’s classic song “Rapper’s Delight.”</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["music,","music;","music, which","music"],"answer":"A"},{"type":"mcq","passage":"<p>Blaise Pascal’s Pascaline device—conceived, like William Oughtred’s earlier Circular Slide Rule, amid the seventeenth century push to replace manual calculations with faster and more accurate machine-based methods—<span class=\"blank\">______</span> among the first reproducible calculating machines.</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["being","were","was","are"],"answer":"C"},{"type":"mcq","passage":"<p>When a soil is classified using the International Union of Soil Sciences’ system, its similarity to each of the 32 soil reference groups—defined by several criteria—<span class=\"blank\">______</span> evaluated, one group at a time, until a match is found. The comparisons are made in a specific order: thus, the criteria for lixisols (soils with clay-rich subsoil) are only applied if the soil doesn’t match the criteria for ferralsols.</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["have been","are","is","was"],"answer":"C"},{"type":"mcq","passage":"<p>Enacted in 1944, Iceland’s constitution, according to legal <span class=\"blank\">______</span> contains one of the six constitutional features that enhance judicial independence. Explicit provisions for judicial independence, Melton and Ginsburg’s research explains, are more likely to be found in constitutions enacted after 1985.</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["researchers James Melton and Tom Ginsburg","researchers, James Melton and Tom Ginsburg","researchers James Melton and Tom Ginsburg,","researchers, James Melton and Tom Ginsburg,"],"answer":"C"},{"type":"mcq","passage":"<p>In a 2024 study, researchers investigating the biodiversity of trees in Amsterdam counted and classified the city’s trees. They found notable variation in the percentage of native trees in different areas of the city. <span class=\"blank\">______</span> more than half of the trees in administrative unit GE05 (54%) were native species, but only 12% of the trees in administrative unit GE04 were native species.</p>","stem":"<p>Which choice completes the text with the most logical transition?</p>","choices":["As was previously stated,","Exemplifying this variation,","Contrary to this finding,","Resulting from this conclusion,"],"answer":"B"},{"type":"mcq","passage":"<p>Amruta Yelamanchili has worked at NASA’s famed Jet Propulsion Laboratory (JPL), one of the world’s leading facilities for robotic space exploration. <span class=\"blank\">______</span> Yelamanchili worked as a data scientist on the JPL’s Mars 2020 Perseverance rover team, which improved upon the 2011 <i>Curiosity</i> rover design by adding a coring drill to the robot that could collect rock samples for later analysis.</p>","stem":"<p>Which choice completes the text with the most logical transition?</p>","choices":["Specifically,","Conversely,","Finally,","Nevertheless,"],"answer":"A"},{"type":"mcq","passage":"<p>Two siblings from the same biological parents can inherit different physical traits. For instance, one sibling might inherit thin lips; the other sibling, <span class=\"blank\">______</span> might inherit full lips.</p>","stem":"<p>Which choice completes the text with the most logical transition?</p>","choices":["by contrast,","for example,","with this in mind,","lastly,"],"answer":"A"},{"type":"mcq","passage":"<p>While researching a topic, a student has taken the following notes:</p><ul><li>Grimanesa Amoros is a Peruvian American artist well known for her LED light sculptures.</li><li>Her sculpture <i>Uros House</i> is made of smooth multicolored LED domes.</li><li>It occupies 250 cubic feet of space.</li><li>Her sculpture <i>Golden Waters</i> is made of entangled blue and white LED tubes.</li><li>It occupies 118,080 cubic feet of space.</li></ul>","stem":"<p>The student wants to emphasize a similarity between <i>Uros House</i> and <i>Golden Waters</i>. Which choice most effectively uses relevant information from the notes to accomplish this goal?</p>","choices":["<i>Uros House</i> is an LED light sculpture made by Grimanesa Amoros, as is <i>Golden Waters</i>.","The smooth LED domes of Grimanesa Amoros’s <i>Uros House</i> stand in contrast to the tangled LED tubes of <i>Golden Waters</i>.","Grimanesa Amoros is the artist behind <i>Uros House</i>—a sculpture made of smooth multicolored LED domes.","At 118,080 cubic feet in size, Grimanesa Amoros’s <i>Golden Waters</i> cuts a larger figure than the 250-cubic-foot <i>Uros House</i>."],"answer":"A"},{"type":"mcq","passage":"<p>While researching a topic, a student has taken the following notes:</p><ul><li>E.M. Forster was an acclaimed writer.</li><li>He is best known for his novels.</li><li>Forster’s most famous novels include <i>A Room with a View</i> (1908) and <i>Howards End</i> (1910).</li><li>His first published work of fiction was a short story called “Albergo Empedocle.”</li><li>It was published in <i>Temple Bar</i> in 1903.</li></ul>","stem":"<p>The student wants to provide a specific example of one of E.M. Forster’s most famous works. Which choice most effectively uses relevant information from the notes to accomplish this goal?</p>","choices":["E.M. Forster was an acclaimed writer known for his novels.","“Albergo Empedocle” was published before some of E. M. Forster’s most famous novels.","The 1908 novel <i>A Room with a View</i> is one of E. M. Forster’s most famous works.","E. M. Forster’s first published work of fiction was a 1903 short story called “Albergo Empedocle.”"],"answer":"C"},{"type":"mcq","passage":"<p>While researching a topic, a student has taken the following notes:</p><ul><li>The Carnegie Prize is an international art competition administered by the Carnegie Museum of Art in Pittsburgh, Pennsylvania.</li><li>Painter Anselm Kiefer of Germany won a Carnegie Prize gold medal in 1985.</li><li>Kiefer’s winning artwork was a painting entitled <i>Midgard</i>.</li><li>Sculptor Jean Arp of Germany won a Carnegie Prize gold medal in 1964.</li><li>Arp’s winning artwork was a sculpture entitled <i>Sculpture Classique</i>.</li></ul>","stem":"<p>The student wants to contrast the two artworks. Which choice most effectively uses relevant information from the notes to accomplish this goal?</p>","choices":["Kiefer’s <i>Midgard</i> is a painting, while Arp’s <i>Sculpture Classique</i> is a sculpture.","Kiefer won a Carnegie Prize gold medal in 1985 for the painting <i>Midgard</i>.","Carnegie Prize gold medals have been awarded to both painters and sculptors.","Both <i>Midgard</i> and <i>Sculpture Classique</i> are Carnegie Prize gold medal-winning artworks."],"answer":"A"},{"type":"mcq","passage":"<ul><li>In a 2003 study, Alexander and Schrag tested the effect of plant litter on seedling emergence in a grassland setting.</li><li>The test site was a mesic grassland in a dry midlatitude climate in the United States.</li><li>The researchers found that in these environmental conditions the presence of plant litter had a positive effect on seedling emergence.</li><li>Seedling emergence is when a seedling sprouts above ground and begins photosynthesis.</li></ul>","stem":"<p>Which choice most effectively uses information from the given sentences to present the study’s findings to an audience already familiar with the concept of seedling emergence?</p>","choices":["The findings of Alexander and Schrag’s study were published in 2003.","In a 2003 study by Alexander and Schrag, plant litter was found to have a positive effect on seedling emergence, which is when a seedling sprouts and begins photosynthesis.","The effect of plant litter, which includes dead leaves and other plant matter, on seedling emergence has been the subject of scientific study.","Alexander and Schrag found that in a mesic grassland and a dry midlatitude climate the presence of plant litter had a positive effect on seedling emergence."],"answer":"D"}]},{"title":"Module 2","questions":[{"type":"mcq","passage":"<p>Writer Lydia Davis observed that while <span class=\"blank\">______</span> literary forms, such as the short story, are recognizable as such even as they evolve, there are rarer “intergeneric” forms that might, for example, use elements of both fiction and essays to create something unclassifiable. The very short publications of Diane Williams arguably fit in this category, since they straddle the line between prose and poetry.</p>","stem":"<p>Which choice completes the text with the most logical and precise word or phrase?</p>","choices":["equivocal","orthodox","intermediate","neutral"],"answer":"B"},{"type":"mcq","passage":"<p>For most of its length, the Pungue River has sufficiently high flow velocity to suspend sedimentary particles; but when the river reaches the calmer waters of the Indian Ocean, its channel widens and divides, reducing flow velocity and thereby <span class=\"blank\">______</span> sedimentary particle suspension. Particles are thus deposited, eventually forming deltaic lobes.</p>","stem":"<p>Which choice completes the text with the most logical and precise word or phrase?</p>","choices":["compounding","obscuring","interrupting","expediting"],"answer":"C"},{"type":"mcq","passage":"<p>Postcranial skeletal pneumaticity (PSP) refers to the presence of extensions of an animal’s lungs and air sacs inside its bones. Though such structures do not typically fossilize, they are believed to have been present in <i>Tyrannosaurus</i>, <i>Anhanguera</i>, and other Cretaceous theropods and pterosaurs. To <span class=\"blank\">______</span> PSP from fossils, researchers look for indicators such as large foramina (holes in bones).</p>","stem":"<p>Which choice completes the text with the most logical and precise word or phrase?</p>","choices":["infer","preserve","isolate","acquire"],"answer":"A"},{"type":"mcq","passage":"<p>The subscription model in which consumers who do not deliberately cancel their subscriptions automatically pay recurring fees for access to products and services benefits retailers when consumer <span class=\"blank\">______</span> is high. Many of the 8.5 percent of subscribers who canceled their food and beverage subscriptions in January 2022 had stopped valuing their subscriptions long before then, but sellers profited from those customers’ passivity in the interim.</p>","stem":"<p>Which choice completes the text with the most logical and precise word or phrase?</p>","choices":["inertia","evasion","decisiveness","turnover"],"answer":"A"},{"type":"mcq","passage":"<p>Urban green spaces can improve air quality, as vegetation absorbs pollutants and also dilutes pollutant concentrations through ventilation. However, data from air-quality monitoring stations in locations throughout Romania suggest that this often-cited benefit of vegetation is not always <span class=\"blank\">______</span>: researchers found that when there are many trees along a busy street, ventilation has minimal effect on the air quality.</p>","stem":"<p>Which choice completes the text with the most logical and precise word or phrase?</p>","choices":["immoderate","realized","unappreciated","compressed"],"answer":"B"},{"type":"mcq","passage":"<p>Founded in Denver in 1991, the Museo de Las Americas is one of the best-known US based institutions showcasing Latino cultures. Since its founding, it has acquired more than 4,800 objects for its permanent collection. <u>Since 2000, the number of Latino cultural institutions in the US has expanded considerably.</u> LA Plaza de Cultura y Artes, which opened in Los Angeles in 2011 and focuses on Mexican American art and culture, is among the most prominent.</p>","stem":"<p>Which choice best states the function of the underlined sentence in the text as a whole?</p>","choices":["It contrasts the focus of the Latino cultural institution discussed earlier in the text with the focus of the institution discussed later in the text.","It identifies a historical trend of which the Latino cultural institution discussed later in the text is a part.","It analyzes how two institutions’ approach to exhibiting artworks reflects the approach taken by most Latino cultural institutions.","It describes a historical development that encouraged the founding of the two Latino cultural institutions discussed in the text."],"answer":"B"},{"type":"mcq","passage":"<p>In Bhutan, use of solid fuel (e.g., coal wood) as a share of total household fuel use fell by approximately two thirds between 2000 and 2019; such shifts are often explained by appeal to the energy ladder, a model holding that fuel choice is mediated mainly by household income (specifically, high technology fuels displace solid fuels as incomes rise). Rasmus Heltberg’s study of fuel use in Nepal shows this model to be reductive, however; household fuel use was heterogeneous, flexible, and influenced by several factors, including the stability of the local electrical grid.</p>","stem":"<p>Which choice best describes the main purpose of the text?</p>","choices":["To challenge a common explanation for households fuel choices","To contrast patterns in household fuel use in two countries","To account for the effect of fuel use on household income","To critique a frequently used model of changes in household fuel prices"],"answer":"A"},{"type":"mcq","passage":"<p>The following text is from George Eliot’s 1857 short story “The Sad Fortunes of the Rev. Amos Barton.” The Countess Czerlaski is a newcomer to the town of Milby.</p><p>It is true, the Countess was a little vain, a little ambitious, a little selfish, a little shallow and frivolous, a little given to white lies.—But who considers such slight blemishes, such moral pimples as these, disqualifications for entering into the most respectable society! Indeed, the severest ladies in Milby would have been perfectly aware that these characteristics would have created no wide distinction between the Countess Czerlaski and themselves; and since it was clear there was a wide distinction—why it must lie in the possession of some vices from which they were undeniably free.</p>","stem":"<p>Which choice best states the main idea of the text?</p>","choices":["The residents of Milby had initially viewed the Countess Czerlaski with suspicion, but they have gradually come to see her as mostly harmless.","Although the Countess Czerlaski actively cultivates a sense of mystery about her, her background is less interesting than what many residents of Milby have been led to believe.","Although the residents of Milby are generally thought to be hospitable, the Countess Czerlaski has committed many social blunders that have caused her to be widely disliked.","Some residents of Milby are determined to disapprove of the Countess Czerlaski, even though the reasons for their dislike are largely groundless."],"answer":"D"},{"type":"mcq","passage":"<p>Some researchers posit that species on the South Pacific island of Grande Terre are the surviving members of clades that inhabited other islands in the region before the complete emergence of Grande Terre 37 million years ago. In a 2012 study, however, Hervé Sauquet et al. found that the crown age (the age of the most recent common ancestor of all living and extinct species in the clade) of the clade of southern beeches on Grande Terre is 16.4 million years; Sauquet et al. further found that the crown age of the clade of southern beeches in the South Pacific generally is also approximately 16.4 million years.</p>","stem":"<p>As presented in the text, the findings of Sauquet et al. best support which statement?</p>","choices":["The southern beeches found on Grande Terre are members of a clade that likely originated outside the South Pacific.","The most recent common ancestor of the southern beeches found on Grande Terre lived at least 37 million years ago.","The southern beeches found on Grande Terre are not members of a clade that existed before the island completely emerged.","The ancestors of most species found on Grande Terre arrived on the island earlier than did the most recent common ancestor of the island’s southern beeches."],"answer":"C"},{"type":"mcq","passage":"<p>A student is writing a research paper on the history of irrigation in the southwestern United States, situating the development of Lake Sabrina (a man-made body of water created in Inyo County, California, in 1908) in a larger historical context. The student claims that some modern-day irrigation methods used in southwestern states, such as California, Arizona, and New Mexico, have a lineage that long predates the completion of Lake Sabrina.</p>","stem":"<p>Which quotation from a historian best supports the student’s claim?</p>","choices":["“Sprinkler irrigation systems, which were developed in the late 20th century, are a convenient technique of irrigating that makes use of machinery in order to spray water in all directions. Many areas of the Southwestern United States are currently irrigated by this method.”","“In the decades following the Second World War, irrigation of arid areas for agriculture increased to such a degree that it now accounts for roughly 70% of the world’s water usage.”","“The irrigation system developed by the Hohokam people in what is now central Arizona in the 7th century CE was simple but made use of hydraulic engineering design principles that are still utilized by today’s engineers.”","“The importance of the development of irrigation infrastructure in the American Southwest today cannot be overstated, since it is the most common means of conveying water for food production.”"],"answer":"C"},{"type":"mcq","passage":"<p>Periods of subfreezing temperatures in Alaska have been growing shorter as a result of climate changes, potentially enabling increased carbon dioxide (CO<sub>2</sub>) absorption through greater productivity of sidebells wintergreen (<i>Orthilia secunda</i>) plants and other vegetation, but also potentially enabling increased CO<sub>2</sub> output through greater heterotrophic respiration (CO<sub>2</sub> generated by the activity of soil microorganisms). Hydrologist Yonghong Yi and her colleagues developed a model incorporating numerous inputs—years of soil moisture and snow cover data among them—to evaluate the effects of climate changes on the CO<sub>2</sub> balance in Alaska, concluding that net CO<sub>2</sub> is likely to increase if seasonal snow cover arrives earlier relative to the onset of soil surface freezing.</p>","stem":"<p>Which finding, if true, would most directly support the researchers’ conclusion?</p>","choices":["Relatively early snow cover reduces the amount of soil moisture available for the growth of plant species such as <i>O. secunda</i> and lowers the rate of heterotrophic respiration.","The soil insulation provided by snow cover enables heterotrophic respiration to continue during a period in which plant species such as <i>O. secunda</i> are typically not growing.","The effect of soil moisture on the growth of vegetation and on the rate of heterotrophic respiration is stronger during the period of seasonal snow cover than during the period without snow cover.","Seasonal snow cover tends to persist longer in areas of relatively low vegetation growth and high heterotrophic respiration than in areas of relatively high vegetation growth and low heterotrophic respiration"],"answer":"B"},{"type":"mcq","fig":"m2_q12","passage":"{{FIG}}<p>To understand the extent of deforestation in the Chorotega region of Costa Rica, Juan Pablo Arroyo Mora and colleagues used historical aerial photography and remote sensing data to track changes in the total number of forest patches in areas of different land use capability classes (categories that indicate possible uses of forest land). Due to the Chorotega region’s accessibility, various types of forested areas were converted to cattle pasture as rising international meat prices drove a cattle ranching boom in the 1960s and 1970s: this conversion is evident in the <span class=\"blank\">______</span></p>","stem":"<p>Which choice most effectively uses data from the graph to complete the assertion?</p>","choices":["high number of patches in class VII and class VIII in 1986.","difference between the number of patches in Class VII and in Class VI in 2000.","increase in the number of patches for all classes from 1979 to 2000.","decrease in the number of patches for all classes from 1960 to 1979."],"answer":"D"},{"type":"mcq","fig":"m2_q13","passage":"{{FIG}}<p>Issuing a one-dollar coin yields positive seigniorage—profit generated when the face value of a coin exceeds the unit cost of producing it—for Singapore’s government, which can be used to fund such services as education. Issuing coins can also result in negative seigniorage, however, and this phenomenon led Australia to stop producing certain coins. A student argues that it is in the financial interest of the United States to follow the example of Australia with regard to each of the four coins shown in the table.</p>","stem":"<p>Which choice best describes data from the table that weaken the student’s argument?</p>","choices":["Seigniorage per dollar issued was slightly greater for quarter-dollar coins than for ten-cent coins, but seigniorage in millions of dollars was much greater for quarter-dollar coins than for ten-cent coins.","Although issuing one-cent and five-cent coins resulted in negative seigniorage in millions of dollars, issuing ten-cent and quarter-dollar coins resulted in positive seigniorage in millions of dollars.","Issuing one-cent and five-cent coins created negative seigniorage in millions of dollars, but for each of those coins, the gross cost of issuing the coin was lower than the gross cost of issuing ten-cent or quarter-dollar coins was.","Although issuing five-cent coins created the greatest negative seigniorage in millions of dollars, issuing one-cent coins created the greatest negative seigniorage per dollar issued."],"answer":"B"},{"type":"mcq","passage":"<p>Though longitudinal studies like the Northern Ireland Longitudinal Study (NILS), which has surveyed approximately 500,000 participants in Northern Ireland to find trends in public health, are expensive because they are conducted over many years, by spanning these time frames, they can reveal causal patterns. But studies for which cause and effect is not at issue, like a public opinion study that merely seeks to determine the proportion of a city’s population that supports a particular tax proposal, can succeed without longitudinal methods, which means that <span class=\"blank\">______</span></p>","stem":"<p>Which choice most logically completes the text?</p>","choices":["the public opinion study could likely be completed at a considerably lower cost than NILS.","longitudinal methods would likely be less suitable for studies in public opinion than for studies in public health.","longitudinal methods would likely be less expensive for studies in public opinion than for studies in public health.","the results from NILS would likely be more reliable than those from the public opinion study."],"answer":"A"},{"type":"mcq","passage":"<p>The Virgin Group’s introduction of the Virgin Atlantic airline in 1984 is an instance of brand extension—the company leveraged its brand recognition as a music retailer to enter a new product category. To investigate how market share affects consumers’ likelihood of purchasing brand extensions, Alicia Grasby et al. identified 30 extended brand pairs (e.g., the same brand of vacuum cleaner and microwave) in household purchasing data; for each pair, Grasby et al. calculated the branded products’ market share and calculated the increase in probability of a brand in one category being purchased if the same brand was purchased in the other category. A broad inverse relationship between the two values emerged, which can most reasonably be attributed to the fact that <span class=\"blank\">______</span></p>","stem":"<p>Which choice most logically completes the text?</p>","choices":["the purchase probability of a brand is affected by the purchase probability of the particular product category to which it belongs, and thus brands in categories that are rarely purchased tend to have low purchase probabilities regardless of market share.","as a brand’s market share increases, the number of competing brands in the same product category tends to decrease, and thus the rate of increase in market share tends to accelerate as a brand’s market share grows.","brands with high market share have high purchase probability regardless of whether the other product in the pair is purchased and thus have less potential to increase in purchase probability than brands with low market share do.","consumers tend to be less familiar with brands with low market share than brands with high market share and thus may purchase both products in a pair with low market share without recognizing that the products are the same brand."],"answer":"C"},{"type":"mcq","passage":"<p>The small celestial body known as 2060 Chiron is expected to have a relatively short lifetime in the outer solar system. Within just a few million years, 2060 Chiron is likely to migrate into the inner solar system or be destroyed, according to <span class=\"blank\">______</span> trajectory.</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["astronomers modeling of the objects","astronomer’s modeling of the object’s","astronomers modeling of the object’s","astronomers’ modeling of the object’s"],"answer":"D"},{"type":"mcq","passage":"<p>Focusing on <i>Mirounga angustirostris</i>—or <span class=\"blank\">______</span> 2021 study by researchers Akinori Takahashi, Daniel Costa, and Patrick Robinson found that female elephant seals devote more than 80% of their time to foraging for prey in the northern Pacific Ocean.</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["northern elephant seals, as they’re more commonly known, a","northern elephant seals, as they’re more commonly known—a","northern elephant seals, as they’re more commonly known. A","northern elephant seals—as they’re more commonly known, a"],"answer":"B"},{"type":"mcq","passage":"<p>A 2016 study by researchers Andreas Keller and Leslie Vosshall evaluating how participants described the odors of various chemical compounds revealed some similarities between the odor of sample 15 (linoleic acid) and that of sample 18 (propionic acid). The <span class=\"blank\">______</span> primary descriptors both included “sour”; however, the next most common word used for sample 15 was “decayed,” while that for sample 18 was “musky.”</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["sample’s odors","samples’ odor’s","samples odors’","samples’ odors’"],"answer":"D"},{"type":"mcq","passage":"<p>The Orionid meteor shower’s brightness typically surpasses that of the Daytime Arietid meteor shower due to the interplay of three main factors—namely the size and composition of the <span class=\"blank\">______</span> velocity upon entering Earth’s mesosphere, with higher velocity meteoroids releasing more energy; and atmospheric fluctuations, such as changes in sky conditions.</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["meteoroids; their","meteoroids. Their","meteoroids, their","meteoroids—their"],"answer":"A"},{"type":"mcq","passage":"<p>Despite differences in history, language, and geography, the geopolitical entities that constitute the South Pacific regions of Micronesia, Melanesia, and Polynesia share one feature: <span class=\"blank\">______</span> an island or a group of islands. For example, the Pitcairn Islands in Polynesia is a territory that is part of Great Britain and consists of only one inhabited island with fewer than one hundred residents.</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["all of them are","all of them is","each of them is","each of them are"],"answer":"C"},{"type":"mcq","passage":"<p>The parks of Memphis, Tennessee, seem to be making people happier. In 2022, a team of researchers <span class=\"blank\">______</span> to find connections between the physical location in which a social media post was created and the content of that post analyzed geotagged social media posts from various sites in Memphis. The team found that posts from the city’s parks contained more words associated with happiness than did the other posts.</p>","stem":"<p>Which choice completes the text so that it conforms to the conventions of Standard English?</p>","choices":["hoped","hoping","was hoping","were hoping"],"answer":"B"},{"type":"mcq","passage":"<p>Space scientist Antonella Nota is excited about the potential of the new James Webb Space Telescope (JWST). Unlike its predecessor, the Hubble Telescope, the JWST is primarily an infrared telescope. Most light from distant galaxies is infrared; <span class=\"blank\">______</span> the JWST can provide Nota and her team much more information about these galaxies than the Hubble could.</p>","stem":"<p>Which choice completes the text with the most logical transition?</p>","choices":["alternatively,","in contrast,","for instance,","hence,"],"answer":"D"},{"type":"mcq","passage":"<p>While researching a topic, a student has taken the following notes:</p><ul><li>Hina Hanta is an online archive curated by the Choctaw Nation of Oklahoma.</li><li>It features images of many cultural artifacts relevant to the history of the Choctaw people.</li><li>It features basketry, including a trunk basket (<i>tapushik pothoma</i> in Choctaw) made from cane.</li><li>The trunk basket was made in 2019.</li><li>The archive features household items, including a stamp (<i>isht inchunwa</i>) made from rubber.</li><li>The stamp was made in the 1800s.</li></ul>","stem":"<p>The student wants to support the claim that the online archive features both older and newer artifacts. Which choice most effectively uses relevant information from the notes to accomplish this goal?</p>","choices":["The rubber stamp (<i>isht inchunwa</i>) was made in the 1800s.","Hina Hanta, an online archive, features both basketry and household items.","Not all artifacts in the Hina Hanta archive are from the 1800s.","The Hina Hanta online archive features cultural artifacts both old and new, including a rubber stamp from the 1800s and a cane trunk basket from 2019."],"answer":"D"},{"type":"mcq","passage":"<p>While researching a topic, a student has taken the following notes:</p><ul><li>The Peloncillo-Pan Duro Mountains are located in northwestern Mexico.</li><li>They cover an area of 1,360 square miles (mi<sup>2</sup>).</li><li>The Big Hatchet Mountains are located in the southwestern United States.</li><li>They cover an area of 65 mi<sup>2</sup>.</li><li>These mountain ranges are two of the dozens of “sky islands” in the southwestern US and northwestern Mexico.</li><li>A sky island is an isolated mountain range whose environment differs drastically from that of the surrounding lowlands.</li></ul>","stem":"<p>The student wants to compare the sizes of the two mountain ranges. Which choice most effectively uses relevant information from the notes to accomplish this goal?</p>","choices":["There are dozens of isolated mountain ranges located in the southwestern US and northwestern Mexico.","In terms of area, the Peloncillo-Pan Duro Mountains (which cover 1,360 mi<sup>2</sup>) are larger than the Big Hatchet Mountains (65 mi<sup>2</sup>).","Sky islands in northwestern Mexico and the southwestern US can vary in size.","The Peloncillo-Pan Duro Mountains and the Big Hatchet Mountains are both isolated mountain ranges whose environments differ drastically from that of the surrounding lowlands."],"answer":"B"},{"type":"mcq","passage":"<p>While researching a topic, a student has taken the following notes:</p><ul><li>Bengali is a language in the Indo-Aryan language family.</li><li>In Bengali, a noun takes a different form when that noun functions as a location in a sentence.</li><li>The Bengali noun <i>bari</i> (house) is combined with the locative suffix <i>-te</i> to become the locative noun <i>barite</i> (in the house).</li><li>Danish is a language in the Germanic language family.</li><li>In Danish, nouns do not change form to indicate location.</li><li>In Danish, nouns used as a location must be indicated by prepositions such as <i>i</i> (in) or <i>på</i> (on).</li></ul>","stem":"<p>The student wants to emphasize a difference between Bengali and Danish nouns. Which choice most effectively uses relevant information from the notes to accomplish this goal?</p>","choices":["To indicate location in Bengali, a suffix is appended to a noun, but in Danish, the noun is unchanged and a preposition is used.","Bengali and Danish belong to two distinct language families; the former is in the Indo-Aryan family, while the latter is a Germanic language.","Though nouns in Bengali change form to indicate location, this Indo-Aryan language belongs to a different language family than Danish does.","In Bengali, nouns take a different form when they function as a location, as the language belongs to the Indo-Aryan family: Danish, however, belongs to the Germanic family."],"answer":"A"},{"type":"mcq","passage":"<p>While researching a topic, a student has taken the following notes:</p><ul><li>Lou Scheper-Berkenkamp was a painter and author born in Wesel, Germany.</li><li>She began attending the Bauhaus in 1920.</li><li>The Bauhaus was an influential German art and design school.</li><li>The school famously espoused the design principle of “form follows function.”</li><li>“Form follows function” means that an object’s shape should be determined primarily by its intended purpose.</li></ul>","stem":"<p>The student wants to explain the principle espoused by the Bauhaus. Which choice most effectively uses relevant information from the notes to accomplish this goal?</p>","choices":["According to the Bauhaus, an object’s intended purpose (function) should primarily determine its shape (form).","Lou Scheper-Berkenkamp was a painter and author who attended the Bauhaus, famous for espousing the principle of “form follows function.”","Famous for its principle of “form follows function,” the Bauhaus was an influential German art and design school.","An object’s intended purpose and its shape are two elements of the design principle “form follows function.”"],"answer":"A"},{"type":"mcq","passage":"<p>While researching a topic, a student has taken the following notes:</p><ul><li>According to researcher Muhammad Rayyan Fazal, “geothermal electric energy... [is] capable of producing more energy per megawatt per year as compared to similar capacity solar and wind power systems.”</li><li>Geothermal power plants typically employ dry steam systems, flash steam systems, or binary cycle systems to produce electricity from high-temperature geothermal fluid.</li><li>The Platanares geothermal power plant in Honduras uses a binary cycle system.</li><li>Fazal says that binary cycle systems “pump 100% geothermal fluid back to the injection well, hence offering the least environmental impact with little or no emissions.”</li></ul>","stem":"<p>The student wants to use a quotation from Fazal to explain an advantage of the geothermal system at the Platanares plant. Which choice most effectively uses relevant information from the notes to accomplish this goal?</p>","choices":["Compared with dry steam systems and flash steam systems, the binary cycle system used at the Platanares plant is “capable of producing more energy per megawatt per year,” Fazal notes.","According to Fazal, because it uses high-temperature geothermal fluid to produce electricity, the system used at the Platanares plant results in “little or no emissions,” making it environmentally friendly.","Since they return all geothermal fluid to the injection well, binary cycle systems—such as the one at the Platanares plant—produce “the least environmental impact,” according to Fazal.","The Platanares plant uses a binary cycle system to produce electricity; in this type of geothermal system, fluid is pumped “back to the injection well,” Fazal explains."],"answer":"C"}]}],"figs":{"m1_q12":"<p class=\"tcap\">Total Areas of Five Pueblo Nations in New Mexico</p><table class=\"xy dt\"><tr><th>Tribal nation</th><th>Area (square miles)</th></tr><tr><td>Pueblo of Acoma</td><td>595.7</td></tr><tr><td>Taos Pueblo</td><td>156.2</td></tr><tr><td>Pueblo of Sandia</td><td>38.9</td></tr><tr><td>Pueblo de Cochiti</td><td>82.1</td></tr><tr><td>Pueblo of Pojoaque</td><td>21.4</td></tr></table>","m1_q13":"<p class=\"tcap\">Volcanoes in Ecuador</p><table class=\"xy dt\"><tr><th>Name of volcano</th><th>Year of last eruption</th><th>Volcano type</th></tr><tr><td>Chacana</td><td>1773 CE</td><td>caldera</td></tr><tr><td>Imbabura</td><td>5550 BCE</td><td>compound</td></tr><tr><td>Chimborazo</td><td>550 BCE</td><td>stratovolcano</td></tr><tr><td>Fernandina</td><td>2020 CE</td><td>shield</td></tr></table>","m2_q12":"<p class=\"tcap\">Annual Number of Forest Patches for Three Land Use Capability Classes in the Chorotega Region, Costa Rica</p><svg class=\"fsvg\" viewBox=\"0 0 480 400\" width=\"480\" role=\"img\" aria-label=\"Bar graph of the annual number of forest patches for three land use capability classes in the Chorotega region in 1960, 1979, 1986, and 2000. Approximate values: 1960 — Class VI 540, Class VIII 580, Class VII 610; 1979 — Class VI 345, Class VIII 345, Class VII 385; 1986 — Class VI 1,330, Class VIII 1,400, Class VII 1,500; 2000 — Class VI 1,460, Class VIII 1,570, Class VII 1,590.\"><line x1=\"70\" y1=\"254\" x2=\"450\" y2=\"254\" class=\"a\"/><text x=\"62\" y=\"258\" text-anchor=\"end\" class=\"t\">0</text><line x1=\"70\" y1=\"214\" x2=\"450\" y2=\"214\" class=\"g\"/><text x=\"62\" y=\"218\" text-anchor=\"end\" class=\"t\">300</text><line x1=\"70\" y1=\"174\" x2=\"450\" y2=\"174\" class=\"g\"/><text x=\"62\" y=\"178\" text-anchor=\"end\" class=\"t\">600</text><line x1=\"70\" y1=\"134\" x2=\"450\" y2=\"134\" class=\"g\"/><text x=\"62\" y=\"138\" text-anchor=\"end\" class=\"t\">900</text><line x1=\"70\" y1=\"94\" x2=\"450\" y2=\"94\" class=\"g\"/><text x=\"62\" y=\"98\" text-anchor=\"end\" class=\"t\">1,200</text><line x1=\"70\" y1=\"54\" x2=\"450\" y2=\"54\" class=\"g\"/><text x=\"62\" y=\"58\" text-anchor=\"end\" class=\"t\">1,500</text><line x1=\"70\" y1=\"14\" x2=\"450\" y2=\"14\" class=\"g\"/><text x=\"62\" y=\"18\" text-anchor=\"end\" class=\"t\">1,800</text><line x1=\"70\" y1=\"14\" x2=\"70\" y2=\"254\" class=\"a\"/><rect x=\"84.5\" y=\"182\" width=\"22\" height=\"72\" class=\"bar\" style=\"fill:#5a5a5a\"/><rect x=\"106.5\" y=\"176.66666666666666\" width=\"22\" height=\"77.33333333333334\" class=\"bar\" style=\"fill:#ffffff\"/><rect x=\"128.5\" y=\"172.66666666666666\" width=\"22\" height=\"81.33333333333334\" class=\"bar\" style=\"fill:#000000\"/><text x=\"117.5\" y=\"272\" text-anchor=\"middle\" class=\"t\">1960</text><rect x=\"179.5\" y=\"208\" width=\"22\" height=\"46\" class=\"bar\" style=\"fill:#5a5a5a\"/><rect x=\"201.5\" y=\"208\" width=\"22\" height=\"46\" class=\"bar\" style=\"fill:#ffffff\"/><rect x=\"223.5\" y=\"202.66666666666669\" width=\"22\" height=\"51.333333333333314\" class=\"bar\" style=\"fill:#000000\"/><text x=\"212.5\" y=\"272\" text-anchor=\"middle\" class=\"t\">1979</text><rect x=\"274.5\" y=\"76.66666666666666\" width=\"22\" height=\"177.33333333333334\" class=\"bar\" style=\"fill:#5a5a5a\"/><rect x=\"296.5\" y=\"67.33333333333334\" width=\"22\" height=\"186.66666666666666\" class=\"bar\" style=\"fill:#ffffff\"/><rect x=\"318.5\" y=\"54\" width=\"22\" height=\"200\" class=\"bar\" style=\"fill:#000000\"/><text x=\"307.5\" y=\"272\" text-anchor=\"middle\" class=\"t\">1986</text><rect x=\"369.5\" y=\"59.33333333333334\" width=\"22\" height=\"194.66666666666666\" class=\"bar\" style=\"fill:#5a5a5a\"/><rect x=\"391.5\" y=\"44.66666666666666\" width=\"22\" height=\"209.33333333333334\" class=\"bar\" style=\"fill:#ffffff\"/><rect x=\"413.5\" y=\"42\" width=\"22\" height=\"212\" class=\"bar\" style=\"fill:#000000\"/><text x=\"402.5\" y=\"272\" text-anchor=\"middle\" class=\"t\">2000</text><text x=\"260\" y=\"296\" text-anchor=\"middle\" class=\"t\">Year</text><text transform=\"translate(16 134) rotate(-90)\" text-anchor=\"middle\" class=\"t\">Number of patches</text><rect x=\"70\" y=\"316\" width=\"14\" height=\"14\" class=\"bar\" style=\"fill:#5a5a5a\"/><text x=\"92\" y=\"328\" class=\"t\">Class VI (severe limitations on use for crops)</text><rect x=\"70\" y=\"340\" width=\"14\" height=\"14\" class=\"bar\" style=\"fill:#ffffff\"/><text x=\"92\" y=\"352\" class=\"t\">Class VIII (cannot be used for commercial crops)</text><rect x=\"70\" y=\"364\" width=\"14\" height=\"14\" class=\"bar\" style=\"fill:#000000\"/><text x=\"92\" y=\"376\" class=\"t\">Class VII (very severe limitations on use for crops)</text></svg>","m2_q13":"<p class=\"tcap\">Value, Cost, and Seigniorage of US Coins by Denomination, 2023</p><table class=\"xy dt\"><tr><th style=\"padding:4px 8px\">Denomination</th><th style=\"padding:4px 8px\">Total value of units produced (in millions of dollars)</th><th style=\"padding:4px 8px\">Gross cost (in millions of dollars)</th><th style=\"padding:4px 8px\">Seigniorage (in millions of dollars)</th><th style=\"padding:4px 8px\">Seigniorage per &#36;1 issued (dollars)</th></tr><tr><td style=\"padding:4px 8px\">One-cent</td><td style=\"padding:4px 8px\">41.4</td><td style=\"padding:4px 8px\">127.4</td><td style=\"padding:4px 8px\">−86.0</td><td style=\"padding:4px 8px\">−2.08</td></tr><tr><td style=\"padding:4px 8px\">Five-cent</td><td style=\"padding:4px 8px\">70.8</td><td style=\"padding:4px 8px\">163.4</td><td style=\"padding:4px 8px\">−92.6</td><td style=\"padding:4px 8px\">−1.31</td></tr><tr><td style=\"padding:4px 8px\">Ten-cent</td><td style=\"padding:4px 8px\">266.6</td><td style=\"padding:4px 8px\">141.1</td><td style=\"padding:4px 8px\">125.5</td><td style=\"padding:4px 8px\">0.47</td></tr><tr><td style=\"padding:4px 8px\">Quarter dollar</td><td style=\"padding:4px 8px\">568.4</td><td style=\"padding:4px 8px\">264.4</td><td style=\"padding:4px 8px\">304.0</td><td style=\"padding:4px 8px\">0.53</td></tr></table>"},"sprDir":"<h3>Student-produced response directions</h3><ul>\n<li>If you find <b>more than one correct answer</b>, enter only one answer.</li>\n<li>You can enter up to 5 characters for a <b>positive</b> answer and up to 6 characters (including the negative sign) for a <b>negative</b> answer.</li>\n<li>If your answer is a <b>fraction</b> that doesn't fit in the provided space, enter the decimal equivalent.</li>\n<li>If your answer is a <b>decimal</b> that doesn't fit in the provided space, enter it by truncating or rounding at the fourth digit.</li>\n<li>If your answer is a <b>mixed number</b> (such as 3½), enter it as an improper fraction (7/2) or its decimal equivalent (3.5).</li>\n<li>Don't enter <b>symbols</b> such as a percent sign, comma, or dollar sign.</li></ul>\n<h4>Examples</h4><table class=\"ex\"><tr><th>Answer</th><th>Acceptable ways to enter answer</th><th>Unacceptable: will NOT receive credit</th></tr>\n<tr><td>3.5</td><td>3.5<br>3.50<br>7/2</td><td>31/2<br>3 1/2</td></tr>\n<tr><td><math><mfrac><mn>2</mn><mn>3</mn></mfrac></math></td><td>2/3<br>.6666<br>.6667<br>0.666<br>0.667</td><td>0.66<br>.66<br>0.67<br>.67</td></tr>\n<tr><td><math><mrow><mo form=\"prefix\" stretchy=\"false\">−</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math></td><td>-1/3<br>-.3333<br>-0.333</td><td>-.33<br>-0.33</td></tr></table>","refHTML":"<div class=\"ref-grid\"><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><circle cx=\"62\" cy=\"50\" r=\"36\" class=\"s\"/><circle cx=\"62\" cy=\"50\" r=\"2\" class=\"f\"/><line x1=\"62\" y1=\"50\" x2=\"98\" y2=\"50\" class=\"s\"/><text x=\"80\" y=\"45\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text></svg><div><math><mrow><mi>A</mi><mo>=</mo><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup></mrow></math></div><div><math><mrow><mi>C</mi><mo>=</mo><mn>2</mn><mi>π</mi><mi>r</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><rect x=\"18\" y=\"24\" width=\"92\" height=\"52\" class=\"s\"/><text x=\"64\" y=\"92\" text-anchor=\"middle\"><tspan font-style=\"italic\">ℓ</tspan></text><text x=\"118\" y=\"55\" text-anchor=\"start\"><tspan font-style=\"italic\">w</tspan></text></svg><div><math><mrow><mi>A</mi><mo>=</mo><mi>ℓ</mi><mi>w</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"10,80 118,80 42,18\" class=\"s\"/><line x1=\"42\" y1=\"18\" x2=\"42\" y2=\"80\" class=\"d\"/><polyline points=\"42,72 50,72 50,80\" class=\"s\"/><text x=\"36\" y=\"56\" text-anchor=\"end\"><tspan font-style=\"italic\">h</tspan></text><text x=\"64\" y=\"95\" text-anchor=\"middle\"><tspan font-style=\"italic\">b</tspan></text></svg><div><math><mrow><mi>A</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mi>b</mi><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"14,80 110,80 110,20\" class=\"s\"/><polyline points=\"102,80 102,72 110,72\" class=\"s\"/><text x=\"56\" y=\"44\" text-anchor=\"end\"><tspan font-style=\"italic\">c</tspan></text><text x=\"117\" y=\"54\" text-anchor=\"start\"><tspan font-style=\"italic\">a</tspan></text><text x=\"62\" y=\"95\" text-anchor=\"middle\"><tspan font-style=\"italic\">b</tspan></text></svg><div><math><mrow><msup><mi>c</mi><mn class=\"tml-sml-pad\">2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 140 104\" width=\"140\" height=\"104\" aria-hidden=\"true\"><polygon points=\"22,84 22,22 120,84\" class=\"s\"/><polyline points=\"22,76 30,76 30,84\" class=\"s\"/><text x=\"16\" y=\"57\" text-anchor=\"end\"><tspan font-style=\"italic\">x</tspan></text><text x=\"71\" y=\"98\" text-anchor=\"middle\"><tspan font-style=\"italic\">x</tspan>√3</text><text x=\"76\" y=\"46\" text-anchor=\"start\">2<tspan font-style=\"italic\">x</tspan></text><text x=\"28\" y=\"40\" text-anchor=\"start\">60°</text><text x=\"94\" y=\"80\" text-anchor=\"end\">30°</text></svg><div class=\"ref-cap\">Special right triangles</div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 104\" width=\"130\" height=\"104\" aria-hidden=\"true\"><polygon points=\"22,84 22,24 82,84\" class=\"s\"/><polyline points=\"22,76 30,76 30,84\" class=\"s\"/><text x=\"16\" y=\"58\" text-anchor=\"end\"><tspan font-style=\"italic\">s</tspan></text><text x=\"52\" y=\"98\" text-anchor=\"middle\"><tspan font-style=\"italic\">s</tspan></text><text x=\"58\" y=\"50\" text-anchor=\"start\"><tspan font-style=\"italic\">s</tspan>√2</text><text x=\"28\" y=\"42\" text-anchor=\"start\">45°</text><text x=\"62\" y=\"80\" text-anchor=\"end\">45°</text></svg><div class=\"ref-cap\">Special right triangles</div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"14,40 84,40 84,86 14,86\" class=\"s\"/><polygon points=\"14,40 40,18 110,18 84,40\" class=\"s\"/><polygon points=\"84,40 110,18 110,64 84,86\" class=\"s\"/><polyline points=\"14,86 40,64 110,64\" class=\"d\"/><line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"64\" class=\"d\"/><text x=\"49\" y=\"98\" text-anchor=\"middle\"><tspan font-style=\"italic\">ℓ</tspan></text><text x=\"101\" y=\"84\" text-anchor=\"start\"><tspan font-style=\"italic\">w</tspan></text><text x=\"118\" y=\"44\" text-anchor=\"start\"><tspan font-style=\"italic\">h</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mi>ℓ</mi><mi>w</mi><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><ellipse cx=\"62\" cy=\"20\" rx=\"36\" ry=\"10\" class=\"s\"/><path d=\"M26 20 V80 A36 10 0 0 0 98 80 V20\" class=\"s\"/><path d=\"M26 80 A36 10 0 0 1 98 80\" class=\"d\"/><line x1=\"62\" y1=\"20\" x2=\"98\" y2=\"20\" class=\"s\"/><circle cx=\"62\" cy=\"20\" r=\"1.8\" class=\"f\"/><text x=\"80\" y=\"15\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text><text x=\"106\" y=\"54\" text-anchor=\"start\"><tspan font-style=\"italic\">h</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><circle cx=\"62\" cy=\"50\" r=\"38\" class=\"s\"/><path d=\"M24 50 A38 11 0 0 0 100 50\" class=\"s\"/><path d=\"M24 50 A38 11 0 0 1 100 50\" class=\"d\"/><line x1=\"62\" y1=\"50\" x2=\"100\" y2=\"50\" class=\"s\"/><circle cx=\"62\" cy=\"50\" r=\"1.8\" class=\"f\"/><text x=\"82\" y=\"45\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>4</mn><mn>3</mn></mfrac></mstyle><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">3</mn></msup></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><path d=\"M24 80 L62 12 L100 80\" class=\"s\"/><path d=\"M24 80 A38 10 0 0 0 100 80\" class=\"s\"/><path d=\"M24 80 A38 10 0 0 1 100 80\" class=\"d\"/><line x1=\"62\" y1=\"12\" x2=\"62\" y2=\"80\" class=\"d\"/><line x1=\"62\" y1=\"80\" x2=\"100\" y2=\"80\" class=\"s\"/><polyline points=\"62,73 69,73 69,80\" class=\"s\"/><text x=\"56\" y=\"52\" text-anchor=\"end\"><tspan font-style=\"italic\">h</tspan></text><text x=\"82\" y=\"76\" text-anchor=\"middle\"><tspan font-style=\"italic\">r</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mi>π</mi><msup><mi>r</mi><mn class=\"tml-sml-pad\">2</mn></msup><mi>h</mi></mrow></math></div></div><div class=\"ref-item\"><svg class=\"rsvg\" viewBox=\"0 0 130 100\" width=\"130\" height=\"100\" aria-hidden=\"true\"><polygon points=\"14,82 86,82 112,64 40,64\" class=\"d\"/><polyline points=\"40,64 14,82 86,82 112,64\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"14\" y2=\"82\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"86\" y2=\"82\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"112\" y2=\"64\" class=\"s\"/><line x1=\"62\" y1=\"12\" x2=\"40\" y2=\"64\" class=\"d\"/><line x1=\"62\" y1=\"12\" x2=\"62\" y2=\"73\" class=\"d\"/><text x=\"56\" y=\"50\" text-anchor=\"end\"><tspan font-style=\"italic\">h</tspan></text><text x=\"50\" y=\"96\" text-anchor=\"middle\"><tspan font-style=\"italic\">ℓ</tspan></text><text x=\"104\" y=\"80\" text-anchor=\"start\"><tspan font-style=\"italic\">w</tspan></text></svg><div><math><mrow><mi>V</mi><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mi>ℓ</mi><mi>w</mi><mi>h</mi></mrow></math></div></div></div><div class=\"ref-facts\"><p>The number of degrees of arc in a circle is 360.</p><p>The number of radians of arc in a circle is <math><mrow><mn>2</mn><mi>π</mi></mrow></math>.</p><p>The sum of the measures in degrees of the angles of a triangle is 180.</p></div>"};
+const MOD_SEC = 32 * 60;
+const LETTERS = ['A', 'B', 'C', 'D'];
+// Estimated raw score (scaled to 0-44) -> scaled Reading and Writing score
+const SCALE = [200,200,210,230,250,270,290,310,330,350,370,390,400,410,420,430,440,450,460,470,480,490,500,510,520,530,540,550,560,570,580,600,610,620,640,650,670,680,700,710,730,750,770,790,800];
+const STORE_KEY = 'sat-mock-progress:' + DATA.id;
+const DESMOS_KEY = 'dcb31709b452b1cf9dc26972add0fda6'; // Desmos public demo key; replace with your own for production use
+
+const ICON = {
+  bookmark: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>',
+  pin: '<svg class="ic-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg>',
+  flag: '<svg class="ic-flag" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4.2L6 21z"/></svg>',
+  clock: '<svg class="clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-label="Timer hidden"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2.5h5"/></svg>',
+};
+
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const fmt = (sec) => `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`;
+
+const S = {
+  name: 'Student', mod: 0, idx: 0, view: 'q',
+  ans: DATA.modules.map((m) => m.questions.map(() => '')),
+  mark: DATA.modules.map((m) => m.questions.map(() => false)),
+  elim: DATA.modules.map((m) => m.questions.map(() => ({}))),
+  abc: false, endAt: 0, modStart: 0, timerHidden: false, warned: false,
+  used: DATA.modules.map(() => 0), inTest: false, timerId: null, phase: '',
+};
+let RES = null, RV = null, calc = null, desmosStarted = false;
+
+function show(id) { document.querySelectorAll('.screen').forEach((el) => (el.hidden = el.id !== id)); }
+const total = () => DATA.modules[S.mod].questions.length;
+const curQ = () => DATA.modules[S.mod].questions[S.idx];
+
+/* ---------------- flow ---------------- */
+function startTest() {
+  if (load() && !confirm('Start a new test? Your saved progress on this test will be erased.')) return;
+  clearSave();
+  S.name = $('#nameInput').value.trim() || 'Student';
+  $('#stuName').textContent = S.name;
+  S.inTest = true;
+  startModule(0);
+}
+
+function startModule(m) {
+  S.mod = m; S.idx = 0; S.view = 'q'; S.warned = false; S.timerHidden = false; S.phase = 'test';
+  S.modStart = Date.now();
+  S.endAt = S.modStart + MOD_SEC * 1000;
+  closeAllPopups();
+  show('test');
+  render();
+  clearInterval(S.timerId);
+  S.timerId = setInterval(tick, 250);
+  tick();
+}
+
+function tick() {
+  const left = Math.max(0, Math.ceil((S.endAt - Date.now()) / 1000));
+  const el = $('#timer');
+  if (left <= 300 && !S.warned) {
+    S.warned = true; S.timerHidden = false;
+    toast('5 minutes remain in this module.', true);
+    save();
+  }
+  el.classList.toggle('low', left <= 300);
+  if (S.timerHidden) { if (!el.querySelector('.clock')) el.innerHTML = ICON.clock; }
+  else el.textContent = fmt(left);
+  $('#hideBtn').textContent = S.timerHidden ? 'Show' : 'Hide';
+  if (left === 0) submitModule(true);
+}
+
+function submitModule(auto) {
+  clearInterval(S.timerId);
+  S.used[S.mod] = Math.min(MOD_SEC, Math.round((Date.now() - S.modStart) / 1000));
+  closeAllPopups();
+  $('#confirm').hidden = true;
+  if (S.mod < DATA.modules.length - 1) {
+    const a = S.mod + 1, b = S.mod + 2;
+    S.phase = 'trans';
+    save();
+    show('trans');
+    $('#transTitle').textContent = `Module ${a} complete`;
+    $('#transMsg').textContent = auto ? `Time's up. Your Module ${a} answers were submitted automatically.` : `Your Module ${a} answers were submitted.`;
+    $('#transNext').textContent = `Module ${b} begins automatically — the timer can't be paused.`;
+    let n = 5;
+    $('#transCount').textContent = n;
+    const t = setInterval(() => {
+      n -= 1;
+      $('#transCount').textContent = Math.max(n, 0);
+      if (n <= 0) { clearInterval(t); startModule(b - 1); }
+    }, 1000);
+  } else {
+    finish();
+  }
+}
+
+/* ---------------- rendering: test ---------------- */
+function render() {
+  const n = total();
+  $('#secTitle').textContent = `Section 1, Module ${S.mod + 1}: Reading and Writing`;
+  $('#navLabel').textContent = `Question ${S.idx + 1} of ${n}`;
+  $('#navBtn').hidden = S.view !== 'q';
+  $('#backBtn').style.visibility = S.view === 'q' && S.idx === 0 ? 'hidden' : 'visible';
+  const area = $('#qArea');
+  area.innerHTML = S.view === 'q' ? questionHTML() : reviewPageHTML();
+  area.scrollTop = 0;
+  const inp = $('#sprInput');
+  if (inp) inp.addEventListener('input', onSprInput);
+  if (!$('#navPop').hidden) fillNavPop();
+  save();
+}
+
+// Re-render in place (same question) keeping scroll positions
+function refresh() {
+  const pos = [...document.querySelectorAll('#qArea, #qArea .spr-left, #qArea .spr-right')].map((e) => e.scrollTop);
+  render();
+  [...document.querySelectorAll('#qArea, #qArea .spr-left, #qArea .spr-right')].forEach((e, i) => (e.scrollTop = pos[i] || 0));
+}
+
+function passageHTML(q) {
+  const fig = q.fig ? `<div class="fig">${DATA.figs[q.fig]}</div>` : '';
+  return q.passage.includes('{{FIG}}') ? q.passage.replace('{{FIG}}', fig) : q.passage + (q.fig ? fig : '');
+}
+function stemHTML(q) {
+  if (q.passage) return `<div class="rw-pass rw-review">${passageHTML(q)}</div><div class="q-stem">${q.stem}</div>`;
+  const fig = q.fig ? `<div class="fig">${DATA.figs[q.fig]}</div>` : '';
+  return q.stem.includes('{{FIG}}')
+    ? `<div class="q-stem">${q.stem.replace('{{FIG}}', fig)}</div>`
+    : `${fig}<div class="q-stem">${q.stem}</div>`;
+}
+
+function questionHTML() {
+  const q = curQ(), m = S.mod, i = S.idx;
+  const marked = S.mark[m][i];
+  const head = `<div class="q-head"><div class="q-num">${i + 1}</div>
+    <button class="mark-btn${marked ? ' on' : ''}" data-act="mark" aria-pressed="${marked}">${ICON.bookmark}<span>Mark for Review</span></button>
+    ${q.type === 'mcq' ? `<button class="abc-btn${S.abc ? ' on' : ''}" data-act="abc" aria-pressed="${S.abc}" title="Cross out answer choices"><span>ABC</span></button>` : ''}</div>`;
+  if (q.type === 'mcq') {
+    const choices = q.choices.map((c, k) => {
+      const L = LETTERS[k], sel = S.ans[m][i] === L, el = !!S.elim[m][i][L];
+      const side = !S.abc ? '' : el
+        ? `<button class="undo-btn" data-act="elim" data-l="${L}" aria-label="Undo cross out for choice ${L}">Undo</button>`
+        : `<button class="elim-btn" data-act="elim" data-l="${L}" aria-label="Cross out choice ${L}">${L}</button>`;
+      return `<div class="choice-row"><button class="choice${sel ? ' sel' : ''}${el ? ' elim' : ''}" data-act="pick" data-l="${L}" aria-pressed="${sel}"><span class="ltr">${L}</span><span class="ctext">${c}</span></button>${side}</div>`;
+    }).join('');
+    if (q.passage) return `<div class="spr rw-split"><div class="spr-left rw-pass">${passageHTML(q)}</div><div class="spr-div"></div><div class="spr-right">${head}<div class="q-body"><div class="q-stem">${q.stem}</div><div class="choices">${choices}</div></div></div></div>`;
+    return `<div class="q-col">${head}<div class="q-body">${stemHTML(q)}<div class="choices">${choices}</div></div></div>`;
+  }
+  return `<div class="spr"><div class="spr-left spr-dir">${DATA.sprDir}</div><div class="spr-div"></div>
+    <div class="spr-right">${head}<div class="q-body">${stemHTML(q)}
+      <div class="spr-entry"><input id="sprInput" class="spr-input" type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" value="${esc(S.ans[m][i])}" aria-label="Enter your answer"></div>
+      <div class="spr-preview">Answer Preview: <span id="sprPrev">${preview(S.ans[m][i])}</span></div>
+    </div></div></div>`;
+}
+
+function legendHTML(withCurrent) {
+  return `${withCurrent ? `<span><svg class="lg-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg>Current</span>` : ''}
+    <span><i class="lg-un"></i>Unanswered</span>
+    <span><svg class="lg-flag" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4.2L6 21z"/></svg>For Review</span>`;
+}
+
+function gridHTML(big) {
+  const m = S.mod;
+  return `<div class="ngrid${big ? ' big' : ''}">` + DATA.modules[m].questions.map((q, i) => {
+    const a = S.ans[m][i] !== '', mk = S.mark[m][i], cur = !big && S.view === 'q' && i === S.idx;
+    const cls = ['cell', a ? 'ans' : '', mk ? 'mk' : '', cur ? 'cur' : ''].filter(Boolean).join(' ');
+    const label = `Question ${i + 1}, ${a ? 'answered' : 'unanswered'}${mk ? ', marked for review' : ''}${cur ? ', current' : ''}`;
+    return `<button class="${cls}" data-act="goto" data-i="${i}" aria-label="${label}">${cur ? ICON.pin : ''}${mk ? ICON.flag : ''}${i + 1}</button>`;
+  }).join('') + '</div>';
+}
+
+function reviewPageHTML() {
+  const un = S.ans[S.mod].filter((a) => a === '').length;
+  return `<div class="review"><h1>Check Your Work</h1>
+    <p>Select any question to go back to it. When you're ready, select <b>Next</b> to submit Module ${S.mod + 1} early. You can't return to it after submitting.${un ? ` You have <b>${un}</b> unanswered question${un > 1 ? 's' : ''}.` : ''}</p>
+    <div class="rv-card"><div class="rv-head"><h2>Section 1, Module ${S.mod + 1}: Reading and Writing Questions</h2><div class="legend">${legendHTML(false)}</div></div>${gridHTML(true)}</div></div>`;
+}
+
+/* ---------------- student-produced responses ---------------- */
+function onSprInput(e) {
+  let v = e.target.value.replace(/[^0-9./-]/g, '');
+  v = v.replace(/(?!^)-/g, '');
+  const parts = v.split('/');
+  if (parts.length > 2) v = parts[0] + '/' + parts.slice(1).join('');
+  v = v.slice(0, v.startsWith('-') ? 6 : 5);
+  if (v !== e.target.value) e.target.value = v;
+  S.ans[S.mod][S.idx] = v;
+  save();
+  $('#sprPrev').innerHTML = preview(v);
+}
+
+function preview(v) {
+  if (!v) return '';
+  const neg = v.startsWith('-');
+  const body = neg ? v.slice(1) : v;
+  const num = (t) => (t ? `<mn>${esc(t)}</mn>` : '<mrow></mrow>');
+  const inner = body.includes('/') ? `<mfrac>${num(body.split('/')[0])}${num(body.split('/')[1])}</mfrac>` : num(body);
+  return `<math>${neg ? '<mo>−</mo>' : ''}${inner}</math>`;
+}
+
+function checkSPR(raw, accept) {
+  const v = (raw || '').trim();
+  if (!v) return false;
+  let val, dec = 0;
+  if (/^-?\d+\/\d+$/.test(v)) {
+    const [a, b] = v.replace('-', '').split('/').map(Number);
+    if (b === 0) return false;
+    val = (v.startsWith('-') ? -1 : 1) * (a / b);
+  } else if (/^-?(\d+\.?\d*|\.\d+)$/.test(v)) {
+    val = parseFloat(v);
+    dec = v.includes('.') ? v.split('.')[1].length : 0;
+  } else return false;
+  const full = v.length >= (v.startsWith('-') ? 6 : 5);
+  return accept.some((x) => {
+    if (Math.abs(val - x) < 1e-9) return true;
+    if (dec > 0 && full) { // decimal that fills the box: truncated or rounded is accepted
+      const p = 10 ** dec, s = x < 0 ? -1 : 1;
+      const tr = (s * Math.floor(Math.abs(x) * p + 1e-9)) / p;
+      const rd = (s * Math.round(Math.abs(x) * p)) / p;
+      return Math.abs(val - tr) < 1e-9 || Math.abs(val - rd) < 1e-9;
+    }
+    return false;
+  });
+}
+
+/* ---------------- popups ---------------- */
+function fillNavPop() {
+  $('#npTitle').textContent = `Section 1, Module ${S.mod + 1}: Reading and Writing Questions`;
+  $('#npLegend').innerHTML = legendHTML(true);
+  $('#npGrid').innerHTML = gridHTML(false);
+}
+function toggleNav(force) {
+  const p = $('#navPop');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#navBtn').setAttribute('aria-expanded', open);
+  if (open) { fillNavPop(); toggleDir(false); }
+}
+function toggleDir(force) {
+  const p = $('#dirPop');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#dirBtn').setAttribute('aria-expanded', open);
+  if (open) toggleNav(false);
+}
+function toggleRef(force) {
+  const p = $('#ref');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#refBtn').setAttribute('aria-pressed', open);
+}
+function toggleCalc(force) {
+  const p = $('#calc');
+  const open = force ?? p.hidden;
+  p.hidden = !open;
+  $('#calcBtn').setAttribute('aria-pressed', open);
+  if (open) {
+    if (!desmosStarted) { desmosStarted = true; loadDesmos(0); }
+    else if (calc) calc.resize();
+  }
+}
+function closeAllPopups() { toggleNav(false); toggleDir(false); }
+
+function loadDesmos(k) {
+  const versions = ['v1.11', 'v1.10', 'v1.9'];
+  if (k >= versions.length) {
+    $('#desmos').innerHTML = `<div class="calc-msg">The graphing calculator couldn't load. It needs an internet connection.<br><br><a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Open the Desmos calculator in a new tab</a></div>`;
+    return;
+  }
+  const s = document.createElement('script');
+  s.src = `https://www.desmos.com/api/${versions[k]}/calculator.js?apiKey=${DESMOS_KEY}`;
+  s.onload = () => {
+    try {
+      $('#desmos').innerHTML = '';
+      calc = Desmos.GraphingCalculator($('#desmos'), { keypad: true, expressions: true, settingsMenu: true, zoomButtons: true, border: false });
+    } catch (err) { s.onerror(); }
+  };
+  s.onerror = () => { s.remove(); loadDesmos(k + 1); };
+  document.head.appendChild(s);
+}
+
+function toast(msg, alert) {
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.toggle('alert', !!alert);
+  t.hidden = false;
+  clearTimeout(toast.tm);
+  toast.tm = setTimeout(() => (t.hidden = true), 5000);
+}
+
+function openConfirm() {
+  const un = S.ans[S.mod].filter((a) => a === '').length;
+  $('#cfTitle').textContent = `Submit Module ${S.mod + 1}?`;
+  $('#cfText').textContent = (un ? `You have ${un} unanswered question${un > 1 ? 's' : ''}. ` : 'All questions are answered. ') +
+    (S.mod < DATA.modules.length - 1 ? `Once you submit, you can't return to Module ${S.mod + 1}, and Module ${S.mod + 2} starts right away.` : 'Once you submit, the test ends and your score is calculated.') +
+    ' The timer keeps running while this message is open.';
+  $('#cfOk').textContent = S.mod < DATA.modules.length - 1 ? `Submit Module ${S.mod + 1}` : 'Submit Test';
+  $('#confirm').hidden = false;
+  $('#cfOk').focus();
+}
+
+/* ---------------- results ---------------- */
+function finish() {
+  S.inTest = false;
+  S.phase = 'done';
+  save();
+  RES = DATA.modules.map((mod, m) => mod.questions.map((q, i) => {
+    const a = S.ans[m][i];
+    if (a === '') return 'om';
+    return (q.type === 'mcq' ? a === q.answer : checkSPR(a, q.accept)) ? 'ok' : 'bad';
+  }));
+  const right = RES.map((r) => r.filter((x) => x === 'ok').length);
+  const raw = right.reduce((x, y) => x + y, 0);
+  const nq = RES.reduce((x, r) => x + r.length, 0);
+  const score = SCALE[Math.min(44, Math.round((raw * 44) / nq))];
+  const pct = ((score - 200) / 600) * 100;
+  const omitted = RES.flat().filter((x) => x === 'om').length;
+
+  const tile = (m, i) => {
+    const st = RES[m][i], q = DATA.modules[m].questions[i];
+    const word = st === 'ok' ? 'Correct' : st === 'bad' ? 'Incorrect' : 'Omitted';
+    const sym = st === 'ok' ? '✓' : st === 'bad' ? '✗' : '–';
+    return `<button class="rtile ${st}" data-m="${m}" data-i="${i}" aria-label="Module ${m + 1} question ${i + 1}: ${word}">${i + 1}<small>${sym} ${q.type === 'spr' ? 'SPR' : 'MC'}</small></button>`;
+  };
+  $('#resName').textContent = S.name;
+  $('#resWrap').innerHTML = `
+    <div class="score-card">
+      <div>
+        <div class="score-lbl">Estimated Reading and Writing Score</div>
+        <div class="score-big">${score}</div>
+        <div class="score-range">on a 200–800 scale</div>
+      </div>
+      <div>
+        <div class="scale" aria-hidden="true"><div class="scale-fill" style="width:${pct}%"></div><div class="scale-mark" style="left:${pct}%"></div></div>
+        <div class="scale-ends"><span>200</span><span>500</span><span>800</span></div>
+        <div class="stats">
+          <div class="stat"><b>${raw} / ${nq}</b><span>correct overall</span></div>
+          ${RES.map((r, m) => `<div class="stat"><b>${right[m]} / ${r.length}</b><span>Module ${m + 1} · ${fmt(S.used[m])} used</span></div>`).join('')}
+        </div>
+      </div>
+      <p class="score-note">Estimate based on a typical raw-to-scaled conversion for the SAT Reading and Writing section. Real SAT scores depend on the test form and adaptive routing.${omitted ? ` ${omitted} question${omitted > 1 ? 's were' : ' was'} left unanswered.` : ''}</p>
+    </div>
+    <h2 class="res-h2">Question Review</h2>
+    <p class="res-sub">Select a question to see your answer and the correct answer.</p>
+    <div class="res-legend"><span><i class="sw ok"></i>Correct</span><span><i class="sw bad"></i>Incorrect</span><span><i class="sw om"></i>Omitted</span></div>
+    ${DATA.modules.map((mod, m) => `
+      <div class="res-mod"><h3>Module ${m + 1}<span>${right[m]} of ${mod.questions.length} correct</span></h3>
+        <div class="rgrid">${mod.questions.map((_, i) => tile(m, i)).join('')}</div></div>`).join('')}
+    <div class="res-actions"><button class="btn-outline" id="retake">Retake Test</button></div>`;
+  show('results');
+  window.scrollTo(0, 0);
+}
+
+const FLAT = DATA.modules.flatMap((mod, m) => mod.questions.map((_, i) => [m, i]));
+function openReview(m, i) { RV = FLAT.findIndex(([a, b]) => a === m && b === i); renderReview(); $('#rvModal').hidden = false; $('#rvClose').focus(); }
+function renderReview() {
+  const [m, i] = FLAT[RV];
+  const q = DATA.modules[m].questions[i], a = S.ans[m][i], st = RES[m][i];
+  $('#rvTitle').textContent = `Module ${m + 1} · Question ${i + 1}`;
+  const stEl = $('#rvStatus');
+  stEl.className = `status ${st}`;
+  stEl.textContent = st === 'ok' ? 'Correct' : st === 'bad' ? 'Incorrect' : 'Omitted';
+  let ans;
+  if (q.type === 'mcq') {
+    ans = `<div class="choices">${q.choices.map((c, k) => {
+      const L = LETTERS[k], isKey = L === q.answer, isYou = L === a;
+      const cls = isKey ? ' r-ok' : isYou ? ' r-bad' : '';
+      const tag = isKey ? (isYou ? 'Your answer · Correct' : 'Correct answer') : isYou ? 'Your answer' : '';
+      return `<div class="choice-row"><div class="choice${cls}"><span class="ltr">${L}</span><span class="ctext">${c}</span>${tag ? `<span class="rtag">${tag}</span>` : ''}</div></div>`;
+    }).join('')}</div>`;
+    if (!a) ans = `<p class="res-sub" style="margin-top:14px">You didn't answer this question.</p>` + ans;
+  } else {
+    ans = `<div class="spr-review">
+      <div class="srow ${st}"><span class="slab">Your answer</span><span class="sval">${a ? preview(a) : '<em style="font-weight:400">Omitted</em>'}</span></div>
+      <div class="srow key"><span class="slab">Correct answer</span><span class="sval">${esc(q.show)}</span></div></div>`;
+  }
+  $('#rvBody').innerHTML = `<div class="q-body">${stemHTML(q)}${ans}</div>`;
+  $('#rvBody').scrollTop = 0;
+  $('#rvPos').textContent = `${RV + 1} of ${FLAT.length}`;
+  $('#rvPrev').disabled = RV === 0;
+  $('#rvNext').disabled = RV === FLAT.length - 1;
+  $('#rvPrev').style.opacity = RV === 0 ? 0.4 : 1;
+  $('#rvNext').style.opacity = RV === FLAT.length - 1 ? 0.4 : 1;
+}
+
+/* ---------------- events ---------------- */
+$('#startBtn').addEventListener('click', startTest);
+$('#nameInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') startTest(); });
+
+$('#qArea').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-act]');
+  if (!b) return;
+  const m = S.mod, i = S.idx, L = b.dataset.l;
+  switch (b.dataset.act) {
+    case 'mark': S.mark[m][i] = !S.mark[m][i]; break;
+    case 'abc': S.abc = !S.abc; break;
+    case 'pick': delete S.elim[m][i][L]; S.ans[m][i] = L; break;
+    case 'elim':
+      if (S.elim[m][i][L]) delete S.elim[m][i][L];
+      else { S.elim[m][i][L] = true; if (S.ans[m][i] === L) S.ans[m][i] = ''; }
+      break;
+    case 'goto': S.idx = +b.dataset.i; S.view = 'q'; render(); return;
+  }
+  refresh();
+});
+
+$('#npGrid').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-act=goto]');
+  if (!b) return;
+  S.idx = +b.dataset.i; S.view = 'q';
+  toggleNav(false);
+  render();
+});
+$('#goReview').addEventListener('click', () => { S.view = 'review'; toggleNav(false); render(); });
+$('#npClose').addEventListener('click', () => toggleNav(false));
+$('#navBtn').addEventListener('click', (e) => { e.stopPropagation(); toggleNav(); });
+$('#dirBtn').addEventListener('click', (e) => { e.stopPropagation(); toggleDir(); });
+$('#dirClose').addEventListener('click', () => toggleDir(false));
+$('#refBtn').addEventListener('click', () => toggleRef());
+$('#refClose').addEventListener('click', () => toggleRef(false));
+$('#calcBtn').addEventListener('click', () => toggleCalc());
+$('#calcClose').addEventListener('click', () => toggleCalc(false));
+$('#calcWide').addEventListener('click', () => {
+  const wide = $('#calc').classList.toggle('wide');
+  $('#calcWide').textContent = wide ? 'Collapse' : 'Expand';
+  if (calc) setTimeout(() => calc.resize(), 30);
+});
+$('#hideBtn').addEventListener('click', () => { S.timerHidden = !S.timerHidden; tick(); save(); });
+
+$('#nextBtn').addEventListener('click', () => {
+  if (S.view === 'q') {
+    if (S.idx < total() - 1) S.idx += 1; else S.view = 'review';
+    toggleNav(false);
+    render();
+  } else openConfirm();
+});
+$('#backBtn').addEventListener('click', () => {
+  if (S.view === 'review') { S.view = 'q'; S.idx = total() - 1; }
+  else if (S.idx > 0) S.idx -= 1;
+  toggleNav(false);
+  render();
+});
+$('#cfCancel').addEventListener('click', () => ($('#confirm').hidden = true));
+$('#cfOk').addEventListener('click', () => submitModule(false));
+
+document.addEventListener('click', (e) => {
+  if (!$('#navPop').hidden && !e.target.closest('#navPop, #navBtn')) toggleNav(false);
+  if (!$('#dirPop').hidden && !e.target.closest('#dirPop, #dirBtn')) toggleDir(false);
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (!$('#rvModal').hidden) $('#rvModal').hidden = true;
+    else if (!$('#confirm').hidden) $('#confirm').hidden = true;
+    else closeAllPopups();
+  }
+  if (!$('#rvModal').hidden) {
+    if (e.key === 'ArrowRight' && RV < FLAT.length - 1) { RV++; renderReview(); }
+    if (e.key === 'ArrowLeft' && RV > 0) { RV--; renderReview(); }
+  }
+});
+
+$('#resWrap').addEventListener('click', (e) => {
+  const t = e.target.closest('.rtile');
+  if (t) openReview(+t.dataset.m, +t.dataset.i);
+  if (e.target.closest('#retake') && confirm('Start a new attempt? Your current results will be cleared.')) { clearSave(); location.reload(); }
+});
+$('#rvClose').addEventListener('click', () => ($('#rvModal').hidden = true));
+$('#rvModal').addEventListener('click', (e) => { if (e.target.id === 'rvModal') $('#rvModal').hidden = true; });
+$('#rvPrev').addEventListener('click', () => { if (RV > 0) { RV--; renderReview(); } });
+$('#rvNext').addEventListener('click', () => { if (RV < FLAT.length - 1) { RV++; renderReview(); } });
+
+window.addEventListener('pagehide', () => { if (S.phase) save(); });
+document.addEventListener('visibilitychange', () => { if (S.phase) save(); });
+
+// Draggable reference sheet
+(() => {
+  const p = $('#ref'), h = $('#refHead');
+  let drag = null;
+  h.addEventListener('pointerdown', (e) => {
+    if (e.target.closest('button')) return;
+    const r = p.getBoundingClientRect();
+    drag = { sx: e.clientX, sy: e.clientY, ox: r.left, oy: r.top };
+    h.setPointerCapture(e.pointerId);
+  });
+  h.addEventListener('pointermove', (e) => {
+    if (!drag) return;
+    const x = Math.min(window.innerWidth - 80, Math.max(80 - p.offsetWidth, drag.ox + e.clientX - drag.sx));
+    const y = Math.min(window.innerHeight - 44, Math.max(0, drag.oy + e.clientY - drag.sy));
+    Object.assign(p.style, { left: x + 'px', top: y + 'px', right: 'auto' });
+  });
+  h.addEventListener('pointerup', () => (drag = null));
+})();
+
+$('#refBody').innerHTML = DATA.refHTML;
+
+/* ---------------- saved progress (this browser only) ---------------- */
+function save() {
+  if (!S.phase) return;
+  try {
+    localStorage.setItem(STORE_KEY, JSON.stringify({
+      v: 1, phase: S.phase, name: S.name, mod: S.mod, idx: S.idx, view: S.view, ans: S.ans, mark: S.mark, elim: S.elim,
+      abc: S.abc, endAt: S.endAt, modStart: S.modStart, used: S.used, timerHidden: S.timerHidden, warned: S.warned, savedAt: Date.now(),
+    }));
+  } catch (e) { /* storage unavailable (private mode, blocked) */ }
+}
+function load() {
+  try {
+    const d = JSON.parse(localStorage.getItem(STORE_KEY));
+    const ok = d && d.v === 1 && Array.isArray(d.ans) && d.ans.length === DATA.modules.length &&
+      d.ans.every((a, m) => Array.isArray(a) && a.length === DATA.modules[m].questions.length);
+    return ok ? d : null;
+  } catch (e) { return null; }
+}
+function clearSave() { try { localStorage.removeItem(STORE_KEY); } catch (e) { /* ignore */ } }
+
+function resume() {
+  const d = load();
+  if (!d) return;
+  for (const k of ['name', 'mod', 'idx', 'view', 'ans', 'mark', 'elim', 'abc', 'endAt', 'modStart', 'used', 'timerHidden', 'warned']) S[k] = d[k];
+  S.phase = d.phase;
+  $('#stuName').textContent = S.name;
+  if (d.phase === 'done') { finish(); return; }
+  S.inTest = true;
+  if (d.phase === 'trans') { startModule(S.mod + 1); return; }
+  closeAllPopups();
+  show('test');
+  render();
+  clearInterval(S.timerId);
+  S.timerId = setInterval(tick, 250);
+  tick();
+}
+
+(() => {
+  const d = load();
+  if (!d) return;
+  const n = DATA.modules.length;
+  if (d.name && d.name !== 'Student') $('#nameInput').value = d.name;
+  if (d.phase === 'done') {
+    $('#resumeTitle').textContent = 'You finished this test';
+    $('#resumeText').textContent = 'Your score and question review are saved in this browser.';
+    $('#resumeBtn').textContent = 'View Results';
+  } else {
+    const answered = d.ans[d.mod].filter((a) => a !== '').length;
+    const total = d.ans[d.mod].length;
+    const left = Math.max(0, Math.ceil((d.endAt - Date.now()) / 1000));
+    $('#resumeText').textContent = d.phase === 'trans'
+      ? `Module ${d.mod + 1} is submitted. Module ${d.mod + 2} starts when you resume.`
+      : `Module ${d.mod + 1}${n > 1 ? ` of ${n}` : ''} · ${answered} of ${total} answered · ` +
+        (left > 0 ? `${fmt(left)} left (the timer kept running)` : "time is up, so this module will be submitted when you resume");
+  }
+  $('#resumeBox').hidden = false;
+  $('#startBtn').textContent = 'Start New Test';
+})();
+$('#resumeBtn').addEventListener('click', resume);
+</script>
+</body>
+</html>
